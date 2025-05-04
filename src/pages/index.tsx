@@ -93,7 +93,7 @@ const pricingTiers = [
     features: [
       "30+ technical indicators",
       "Advanced backtesting",
-      "Real-time signal alerts",
+      "Advanced signal alerts",
       "3 market data sources",
       "Strategy optimization",
       "Code export for NinjaTrader & TradeStation",
@@ -130,11 +130,12 @@ const features = [
     title: "Advanced Technical Analysis",
     description: "Access over 50 technical indicators including Moving Averages, RSI, MACD, Bollinger Bands, and more to identify powerful trading opportunities."
   },
-  {
-    icon: <BellIcon className="h-10 w-10 text-primary" />,
-    title: "Real-time Signal Alerts",
-    description: "Never miss a trading opportunity with customizable alerts that notify you when your strategies detect potential entry and exit points."
-  },
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+              Join thousands of successful traders who use StratGen to identify profitable opportunities and manage risk effectively.
+=======
+              Join thousands of successful traders who use StratGen to identify robust opportunities and manage risk effectively.
   {
     icon: <BarChartIcon className="h-10 w-10 text-primary" />,
     title: "Comprehensive Backtesting",
@@ -143,7 +144,7 @@ const features = [
   {
     icon: <ZapIcon className="h-10 w-10 text-primary" />,
     title: "Strategy Optimization",
-    description: "Fine-tune your trading strategies with our optimization engine that helps identify the most profitable parameters."
+    description: "Fine-tune your trading strategies with our optimization engine that helps identify the most robust parameters."
   },
   {
     icon: <SettingsIcon className="h-10 w-10 text-primary" />,
@@ -192,7 +193,7 @@ export default function Home() {
                   Version 2.5 Now Available
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Generate Profitable Trading Signals with <span className="text-primary">StratGen</span>
+                  Generate Robust Trading Signals with <span className="text-primary">StratGen</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
                   The professional-grade desktop application for traders who demand precision, reliability, and performance. Automatically generates code for NinjaTrader, TradeStation, and Python.
@@ -383,8 +384,8 @@ export default function Home() {
               {/* Screenshot 4 - Alerts */}
               <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Real-time Alerts</h3>
-                  <p className="text-muted-foreground mb-4">Get notified instantly when your strategies detect trading opportunities.</p>
+                  <h3 className="text-xl font-semibold mb-2">Smart Alerts</h3>
+                  <p className="text-muted-foreground mb-4">Get notified when your strategies detect potential trading opportunities.</p>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
                   <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md flex items-center justify-center">
@@ -538,7 +539,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Trading?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Join thousands of successful traders who use StratGen to identify profitable opportunities and manage risk effectively.
+              Join thousands of successful traders who use StratGen to identify robust opportunities and manage risk effectively.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="font-medium">
