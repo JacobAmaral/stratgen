@@ -147,8 +147,8 @@ const features = [
   },
   {
     icon: <DownloadIcon className="h-10 w-10 text-primary" />,
-    title: "Multi-Exchange Support",
-    description: "Connect to all major exchanges and trade multiple asset classes including stocks, forex, crypto, and futures."
+    title: "Robustness testing tools",
+    description: "Validate your strategies with Monte Carlo simulations, walk-forward analysis, and stress testing to ensure they perform in various market conditions."
   },
   {
     icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
