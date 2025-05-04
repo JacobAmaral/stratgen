@@ -206,84 +206,101 @@ export default function Home() {
               </div>
               
               <div className="rounded-lg overflow-hidden border border-border/40 shadow-xl bg-card">
-                {/* Demo Chart */}
-                <div className="h-[400px] w-full p-4">
-                  <ChartContainer config={chartConfig}>
-                    <LineChart data={mockPriceData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis 
-                        dataKey="date" 
-                        tick={{ fontSize: 12 }}
-                        tickFormatter={(value) => {
-                          const date = new Date(value);
-                          return date.getDate() + '/' + (date.getMonth() + 1);
-                        }}
-                      />
-                      <YAxis 
-                        domain={['auto', 'auto']}
-                        tick={{ fontSize: 12 }}
-                      />
-                      <ChartTooltip content={<ChartTooltipContent />} />
-                      <ChartLegend content={<ChartLegendContent />} />
-                      
-                      {/* Price Line */}
-                      <Line 
-                        type="monotone" 
-                        dataKey="price" 
-                        stroke="#3b82f6" 
-                        dot={false}
-                        strokeWidth={2}
-                      />
-                      
-                      {/* SMA Lines */}
-                      <Line 
-                        type="monotone" 
-                        dataKey="sma20" 
-                        stroke="#4ade80" 
-                        dot={false}
-                        strokeWidth={1.5}
-                      />
-                      <Line 
-                        type="monotone" 
-                        dataKey="sma50" 
-                        stroke="#f97316" 
-                        dot={false}
-                        strokeWidth={1.5}
-                      />
-                      
-                      {/* Buy Signals */}
-                      <Scatter
-                        data={buySignals}
-                        dataKey="price"
-                        fill="#22c55e"
-                        shape={(props) => {
-                          const { cx, cy } = props;
-                          return (
-                            <svg x={cx - 8} y={cy - 8} width={16} height={16} viewBox="0 0 16 16">
-                              <circle cx="8" cy="8" r="6" fill="#22c55e" stroke="#fff" strokeWidth="2" />
-                              <path d="M5 8L7 10L11 6" stroke="#fff" strokeWidth="2" fill="none" />
+                {/* StratGen Application Image */}
+                <div className="relative h-[400px] w-full overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-10 bg-gray-800 flex items-center px-4">
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div className="text-white text-xs ml-4">StratGen Professional Trading Platform</div>
+                  </div>
+                  
+                  <div className="mt-10 h-[calc(100%-40px)] bg-gray-900 p-4 flex flex-col">
+                    <div className="flex border-b border-gray-700 pb-2">
+                      <div className="text-primary text-sm font-medium">Dashboard</div>
+                      <div className="text-gray-400 text-sm font-medium ml-4">Backtesting</div>
+                      <div className="text-gray-400 text-sm font-medium ml-4">Strategies</div>
+                      <div className="text-gray-400 text-sm font-medium ml-4">Data Import</div>
+                      <div className="text-gray-400 text-sm font-medium ml-4">Settings</div>
+                    </div>
+                    
+                    <div className="grid grid-cols-3 gap-4 mt-4 flex-grow">
+                      <div className="col-span-2 bg-gray-800 rounded-md p-3 flex flex-col">
+                        <div className="text-xs text-gray-300 mb-2">BTC/USD - 4H Chart</div>
+                        <div className="flex-grow relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded">
+                            {/* Simulated chart lines */}
+                            <div className="absolute top-1/4 left-0 right-0 h-px bg-gray-600"></div>
+                            <div className="absolute top-2/4 left-0 right-0 h-px bg-gray-600"></div>
+                            <div className="absolute top-3/4 left-0 right-0 h-px bg-gray-600"></div>
+                            
+                            <div className="absolute top-0 bottom-0 left-1/4 w-px bg-gray-600"></div>
+                            <div className="absolute top-0 bottom-0 left-2/4 w-px bg-gray-600"></div>
+                            <div className="absolute top-0 bottom-0 left-3/4 w-px bg-gray-600"></div>
+                            
+                            {/* Price line */}
+                            <svg className="absolute inset-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+                              <path d="M0,50 L10,45 L20,55 L30,40 L40,60 L50,35 L60,45 L70,30 L80,25 L90,35 L100,20" 
+                                    stroke="#3b82f6" 
+                                    strokeWidth="1.5" 
+                                    fill="none" />
+                              
+                              <path d="M0,60 L10,58 L20,62 L30,55 L40,65 L50,50 L60,55 L70,45 L80,40 L90,48 L100,35" 
+                                    stroke="#4ade80" 
+                                    strokeWidth="1" 
+                                    strokeDasharray="2,2"
+                                    fill="none" />
                             </svg>
-                          );
-                        }}
-                      />
+                            
+                            {/* Buy/Sell markers */}
+                            <div className="absolute top-[40%] left-[30%] w-4 h-4 rounded-full bg-green-500/20 border-2 border-green-500"></div>
+                            <div className="absolute top-[25%] left-[80%] w-4 h-4 rounded-full bg-green-500/20 border-2 border-green-500"></div>
+                            <div className="absolute top-[35%] left-[50%] w-4 h-4 rounded-full bg-red-500/20 border-2 border-red-500"></div>
+                          </div>
+                        </div>
+                      </div>
                       
-                      {/* Sell Signals */}
-                      <Scatter
-                        data={sellSignals}
-                        dataKey="price"
-                        fill="#ef4444"
-                        shape={(props) => {
-                          const { cx, cy } = props;
-                          return (
-                            <svg x={cx - 8} y={cy - 8} width={16} height={16} viewBox="0 0 16 16">
-                              <circle cx="8" cy="8" r="6" fill="#ef4444" stroke="#fff" strokeWidth="2" />
-                              <path d="M5 8L11 8" stroke="#fff" strokeWidth="2" fill="none" />
-                            </svg>
-                          );
-                        }}
-                      />
-                    </LineChart>
-                  </ChartContainer>
+                      <div className="space-y-4">
+                        <div className="bg-gray-800 rounded-md p-3 h-1/2">
+                          <div className="text-xs text-gray-300 mb-2">Strategy Performance</div>
+                          <div className="grid grid-cols-2 gap-2">
+                            <div className="bg-gray-700 rounded p-2">
+                              <div className="text-xs text-gray-400">Win Rate</div>
+                              <div className="text-sm text-green-400 font-medium">68.5%</div>
+                            </div>
+                            <div className="bg-gray-700 rounded p-2">
+                              <div className="text-xs text-gray-400">Profit Factor</div>
+                              <div className="text-sm text-green-400 font-medium">2.3</div>
+                            </div>
+                            <div className="bg-gray-700 rounded p-2">
+                              <div className="text-xs text-gray-400">Drawdown</div>
+                              <div className="text-sm text-yellow-400 font-medium">12.4%</div>
+                            </div>
+                            <div className="bg-gray-700 rounded p-2">
+                              <div className="text-xs text-gray-400">Trades</div>
+                              <div className="text-sm text-blue-400 font-medium">124</div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-gray-800 rounded-md p-3 h-1/2">
+                          <div className="text-xs text-gray-300 mb-2">Alerts</div>
+                          <div className="space-y-2">
+                            <div className="bg-green-500/10 border-l-2 border-green-500 rounded p-2">
+                              <div className="text-xs text-green-400">BUY Signal: ETH/USD</div>
+                              <div className="text-xs text-gray-400">5m ago</div>
+                            </div>
+                            <div className="bg-red-500/10 border-l-2 border-red-500 rounded p-2">
+                              <div className="text-xs text-red-400">SELL Signal: BTC/USD</div>
+                              <div className="text-xs text-gray-400">27m ago</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
