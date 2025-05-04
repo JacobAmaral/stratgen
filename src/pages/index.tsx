@@ -110,7 +110,7 @@ const pricingTiers = [
     features: [
       "50+ technical indicators",
       "Institutional-grade backtesting",
-      "Custom indicator development",
+      "Import data from any source",
       "All market data sources",
       "Code export for all platforms (NinjaTrader, TradeStation, Python)",
       "API access",
@@ -142,8 +142,8 @@ const features = [
   },
   {
     icon: <SettingsIcon className="h-10 w-10 text-primary" />,
-    title: "Custom Indicator Builder",
-    description: "Create your own proprietary indicators with our intuitive visual builder - no coding required."
+    title: "Import your own data",
+    description: "Import OHLCV data to test any instrument - stocks, forex, crypto, or custom datasets for comprehensive backtesting."
   },
   {
     icon: <DownloadIcon className="h-10 w-10 text-primary" />,
@@ -500,7 +500,7 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="mb-4 italic">"The custom indicator builder is incredible. I've created strategies that would be impossible with other software. Worth every penny."</p>
+                  <p className="mb-4 italic">"The ability to import my own data is incredible. I've tested strategies on instruments that would be impossible with other software. Worth every penny."</p>
                   <div>
                     <p className="font-semibold">Sarah K.</p>
                     <p className="text-sm text-muted-foreground">Swing Trader, 2 years with StratGen</p>
