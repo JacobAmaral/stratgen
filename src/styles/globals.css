@@ -9,7 +9,7 @@
 /* Theme: zinc */
 @layer base {
   :root {
-    --background: 238 42% 23%; /* #212355 */
+    --background: 240 18% 13%; /* #212322 */
     --foreground: 0 0% 98%;
     --card: 238 42% 28%;
     --card-foreground: 0 0% 98%;
@@ -36,7 +36,7 @@
     --radius: 0.5rem
   }
   .dark {
-    --background: 238 42% 23%; /* #212355 */
+    --background: 240 18% 13%; /* #212322 */
     --foreground: 0 0% 98%;
     --card: 238 42% 28%;
     --card-foreground: 0 0% 98%;

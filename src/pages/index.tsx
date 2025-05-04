@@ -208,7 +208,7 @@ export default function Home() {
               <div className="rounded-lg overflow-hidden border border-border/40 shadow-xl bg-card">
                 {/* StratGen Application Image */}
                 <div className="relative h-[400px] w-full overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-10 bg-[#1a1d45] flex items-center px-4">
+                  <div className="absolute top-0 left-0 w-full h-10 bg-[#1a1d22] flex items-center px-4">
                     <div className="flex space-x-2">
                       <div className="w-3 h-3 rounded-full bg-red-500"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -217,8 +217,8 @@ export default function Home() {
                     <div className="text-white text-xs ml-4">StratGen Professional Trading Platform</div>
                   </div>
                   
-                  <div className="mt-10 h-[calc(100%-40px)] bg-[#212355] p-4 flex flex-col">
-                    <div className="flex border-b border-[#2d2f6a] pb-2">
+                  <div className="mt-10 h-[calc(100%-40px)] bg-[#212322] p-4 flex flex-col">
+                    <div className="flex border-b border-[#2d2f42] pb-2">
                       <div className="text-primary text-sm font-medium">Dashboard</div>
                       <div className="text-gray-300 text-sm font-medium ml-4">Backtesting</div>
                       <div className="text-gray-300 text-sm font-medium ml-4">Strategies</div>
@@ -227,18 +227,18 @@ export default function Home() {
                     </div>
                     
                     <div className="grid grid-cols-3 gap-4 mt-4 flex-grow">
-                      <div className="col-span-2 bg-[#2d2f6a] rounded-md p-3 flex flex-col">
+                      <div className="col-span-2 bg-[#2d2f42] rounded-md p-3 flex flex-col">
                         <div className="text-xs text-gray-200 mb-2">BTC/USD - 4H Chart</div>
                         <div className="flex-grow relative">
                           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 rounded">
                             {/* Simulated chart lines */}
-                            <div className="absolute top-1/4 left-0 right-0 h-px bg-[#3d3f7a]"></div>
-                            <div className="absolute top-2/4 left-0 right-0 h-px bg-[#3d3f7a]"></div>
-                            <div className="absolute top-3/4 left-0 right-0 h-px bg-[#3d3f7a]"></div>
+                            <div className="absolute top-1/4 left-0 right-0 h-px bg-[#3d3f52]"></div>
+                            <div className="absolute top-2/4 left-0 right-0 h-px bg-[#3d3f52]"></div>
+                            <div className="absolute top-3/4 left-0 right-0 h-px bg-[#3d3f52]"></div>
                             
-                            <div className="absolute top-0 bottom-0 left-1/4 w-px bg-[#3d3f7a]"></div>
-                            <div className="absolute top-0 bottom-0 left-2/4 w-px bg-[#3d3f7a]"></div>
-                            <div className="absolute top-0 bottom-0 left-3/4 w-px bg-[#3d3f7a]"></div>
+                            <div className="absolute top-0 bottom-0 left-1/4 w-px bg-[#3d3f52]"></div>
+                            <div className="absolute top-0 bottom-0 left-2/4 w-px bg-[#3d3f52]"></div>
+                            <div className="absolute top-0 bottom-0 left-3/4 w-px bg-[#3d3f52]"></div>
                             
                             {/* Price line */}
                             <svg className="absolute inset-0" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -263,29 +263,29 @@ export default function Home() {
                       </div>
                       
                       <div className="space-y-4">
-                        <div className="bg-[#2d2f6a] rounded-md p-3 h-1/2">
+                        <div className="bg-[#2d2f42] rounded-md p-3 h-1/2">
                           <div className="text-xs text-gray-200 mb-2">Strategy Performance</div>
                           <div className="grid grid-cols-2 gap-2">
-                            <div className="bg-[#3d3f7a] rounded p-2">
+                            <div className="bg-[#3d3f52] rounded p-2">
                               <div className="text-xs text-gray-300">Win Rate</div>
                               <div className="text-sm text-primary font-medium">68.5%</div>
                             </div>
-                            <div className="bg-[#3d3f7a] rounded p-2">
+                            <div className="bg-[#3d3f52] rounded p-2">
                               <div className="text-xs text-gray-300">Profit Factor</div>
                               <div className="text-sm text-primary font-medium">2.3</div>
                             </div>
-                            <div className="bg-[#3d3f7a] rounded p-2">
+                            <div className="bg-[#3d3f52] rounded p-2">
                               <div className="text-xs text-gray-300">Drawdown</div>
                               <div className="text-sm text-yellow-300 font-medium">12.4%</div>
                             </div>
-                            <div className="bg-[#3d3f7a] rounded p-2">
+                            <div className="bg-[#3d3f52] rounded p-2">
                               <div className="text-xs text-gray-300">Trades</div>
                               <div className="text-sm text-blue-300 font-medium">124</div>
                             </div>
                           </div>
                         </div>
                         
-                        <div className="bg-[#2d2f6a] rounded-md p-3 h-1/2">
+                        <div className="bg-[#2d2f42] rounded-md p-3 h-1/2">
                           <div className="text-xs text-gray-200 mb-2">Alerts</div>
                           <div className="space-y-2">
                             <div className="bg-primary/10 border-l-2 border-primary rounded p-2">
