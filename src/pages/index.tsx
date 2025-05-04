@@ -130,12 +130,6 @@ const features = [
     title: "Advanced Technical Analysis",
     description: "Access over 50 technical indicators including Moving Averages, RSI, MACD, Bollinger Bands, and more to identify powerful trading opportunities."
   },
->>>>>>> REPLACE
-
-<<<<<<< SEARCH
-              Join thousands of successful traders who use StratGen to identify profitable opportunities and manage risk effectively.
-=======
-              Join thousands of successful traders who use StratGen to identify robust opportunities and manage risk effectively.
   {
     icon: <BarChartIcon className="h-10 w-10 text-primary" />,
     title: "Comprehensive Backtesting",
