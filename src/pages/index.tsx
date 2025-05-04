@@ -127,8 +127,8 @@ const pricingTiers = [
 const features = [
   {
     icon: <LineChartIcon className="h-10 w-10 text-primary" />,
-    title: "Advanced Technical Analysis",
-    description: "Access over 50 technical indicators including Moving Averages, RSI, MACD, Bollinger Bands, and more to identify powerful trading opportunities."
+    title: "Advanced Signal Analysis",
+    description: "Test over 600 fundamental and technical signals including Moving Averages, RSI, MACD, Bollinger Bands, and more to identify powerful trading opportunities."
   },
   {
     icon: <BarChartIcon className="h-10 w-10 text-primary" />,
