@@ -80,6 +80,7 @@ const pricingTiers = [
       "Basic backtesting",
       "Daily signal alerts",
       "1 market data source",
+      "Code export for NinjaTrader",
       "Email support"
     ],
     cta: "Download Basic",
@@ -95,6 +96,7 @@ const pricingTiers = [
       "Real-time signal alerts",
       "3 market data sources",
       "Strategy optimization",
+      "Code export for NinjaTrader & TradeStation",
       "Priority email support",
       "Trading journal"
     ],
@@ -110,6 +112,7 @@ const pricingTiers = [
       "Institutional-grade backtesting",
       "Custom indicator development",
       "All market data sources",
+      "Code export for all platforms (NinjaTrader, TradeStation, Python)",
       "API access",
       "Strategy automation",
       "24/7 priority support",
@@ -151,6 +154,17 @@ const features = [
     icon: <DownloadIcon className="h-10 w-10 text-primary" />,
     title: "Multi-Exchange Support",
     description: "Connect to all major exchanges and trade multiple asset classes including stocks, forex, crypto, and futures."
+  },
+  {
+    icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="16" y1="13" x2="8" y2="13" />
+      <line x1="16" y1="17" x2="8" y2="17" />
+      <polyline points="10 9 9 9 8 9" />
+    </svg>,
+    title: "Automatic Code Generation",
+    description: "Export your strategies as ready-to-use code for NinjaTrader, TradeStation, and Python without writing a single line of code yourself."
   }
 ];
 
@@ -181,7 +195,7 @@ export default function Home() {
                   Generate Profitable Trading Signals with <span className="text-primary">StratGen</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  The professional-grade desktop application for traders who demand precision, reliability, and performance.
+                  The professional-grade desktop application for traders who demand precision, reliability, and performance. Automatically generates code for NinjaTrader, TradeStation, and Python.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium">
