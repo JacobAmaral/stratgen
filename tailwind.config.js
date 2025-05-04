@@ -8,15 +8,15 @@ const config = {
   	extend: {
   		colors: {
   			primary: {
-  				'100': '#e6f5e6',
-  				'200': '#c2e0c2',
-  				'300': '#9ecb9e',
-  				'400': '#7ab67a',
-  				'500': '#56a156',
-  				'600': '#3d8c3d',
-  				'700': '#2b772b',
-  				'800': '#1a611a',
-  				'900': '#0a4c0a',
+  				'100': '#e6faf2',
+  				'200': '#c2f2e0',
+  				'300': '#9eeace',
+  				'400': '#8EEDC7', /* Our mint color */
+  				'500': '#65e0b3',
+  				'600': '#3dd49f',
+  				'700': '#2bb889',
+  				'800': '#1a9c73',
+  				'900': '#0a805e',
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
