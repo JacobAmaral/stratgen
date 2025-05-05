@@ -88,7 +88,7 @@ const pricingTier = {
     "24/7 priority support",
     "Multi-user license"
   ],
-  cta: "Download StratGen Premium"
+  cta: "Get Started Today"
 };
 
 // Features list
@@ -162,7 +162,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium">
-                    Download Free Trial <ArrowRightIcon className="ml-2 h-4 w-4" />
+                    Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
                   </Button>
                   <Button size="lg" variant="outline" className="font-medium">
                     Watch Demo
@@ -299,7 +299,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Plan</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Select the perfect plan for your trading needs. All plans include a 14-day free trial.
+                Select the perfect plan for your trading needs and get started today.
               </p>
               
               <div className="flex justify-center mt-8">
@@ -431,14 +431,14 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="font-medium">
-                Download Free Trial <ArrowRightIcon className="ml-2 h-4 w-4" />
+                Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
               </Button>
               <Button size="lg" variant="outline" className="font-medium">
                 Schedule Demo
               </Button>
             </div>
             <p className="mt-6 text-sm text-muted-foreground">
-              No credit card required. 14-day free trial with all features.
+              No credit card required to get started. Full access to all features.
             </p>
           </div>
         </section>
