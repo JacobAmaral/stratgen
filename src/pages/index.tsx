@@ -69,59 +69,27 @@ const chartConfig = {
   sell: { label: "Sell Signal", color: "#ef4444" },
 };
 
-// Pricing tiers
-const pricingTiers = [
-  {
-    name: "Basic",
-    price: "$49",
-    description: "Perfect for beginners and casual traders",
-    features: [
-      "10 technical indicators",
-      "Basic backtesting",
-      "Daily signal alerts",
-      "1 market data source",
-      "Code export for NinjaTrader",
-      "Email support"
-    ],
-    cta: "Download Basic",
-    popular: false
-  },
-  {
-    name: "Pro",
-    price: "$99",
-    description: "For serious traders who need more power",
-    features: [
-      "30+ technical indicators",
-      "Advanced backtesting",
-      "Advanced signal alerts",
-      "3 market data sources",
-      "Strategy optimization",
-      "Code export for NinjaTrader & TradeStation",
-      "Priority email support",
-      "Trading journal"
-    ],
-    cta: "Download Pro",
-    popular: true
-  },
-  {
-    name: "Enterprise",
-    price: "$199",
-    description: "For professional traders and institutions",
-    features: [
-      "50+ technical indicators",
-      "Institutional-grade backtesting",
-      "Import data from any source",
-      "All market data sources",
-      "Code export for all platforms (NinjaTrader, TradeStation, Python)",
-      "API access",
-      "Strategy automation",
-      "24/7 priority support",
-      "Multi-user license"
-    ],
-    cta: "Contact Sales",
-    popular: false
-  }
-];
+// Pricing tier
+const pricingTier = {
+  name: "StratGen Premium",
+  monthlyPrice: "$100",
+  yearlyPrice: "$1000",
+  description: "All-inclusive professional trading platform",
+  features: [
+    "600+ technical and fundamental signals",
+    "Institutional-grade backtesting",
+    "Import data from any source",
+    "All market data sources",
+    "Strategy optimization",
+    "Robustness testing tools",
+    "Code export for all platforms (NinjaTrader, TradeStation, Python)",
+    "API access",
+    "Strategy automation",
+    "24/7 priority support",
+    "Multi-user license"
+  ],
+  cta: "Download StratGen Premium"
+};
 
 // Features list
 const features = [
@@ -344,46 +312,41 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => (
-                <Card key={index} className={`border ${tier.popular ? 'border-primary shadow-lg' : 'border-border/40'} relative`}>
-                  {tier.popular && (
-                    <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
-                      <Badge className="bg-primary text-primary-foreground">Most Popular</Badge>
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle>{tier.name}</CardTitle>
-                    <CardDescription>{tier.description}</CardDescription>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold">{tier.price}</span>
-                      {selectedPricingTier === "monthly" ? (
-                        <span className="text-muted-foreground ml-2">/month</span>
-                      ) : (
-                        <span className="text-muted-foreground ml-2">/year</span>
-                      )}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {tier.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <CheckIcon className="h-5 w-5 text-primary shrink-0 mr-2 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Button 
-                      className={`w-full ${tier.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
-                      variant={tier.popular ? "default" : "outline"}
-                    >
-                      {tier.cta}
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
+            <div className="max-w-xl mx-auto">
+              <Card className="border border-primary shadow-lg relative">
+                <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
+                  <Badge className="bg-primary text-primary-foreground">Premium</Badge>
+                </div>
+                <CardHeader>
+                  <CardTitle>{pricingTier.name}</CardTitle>
+                  <CardDescription>{pricingTier.description}</CardDescription>
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold">
+                      {selectedPricingTier === "monthly" ? pricingTier.monthlyPrice : pricingTier.yearlyPrice}
+                    </span>
+                    <span className="text-muted-foreground ml-2">
+                      {selectedPricingTier === "monthly" ? "/month" : "/year"}
+                    </span>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {pricingTier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <CheckIcon className="h-5 w-5 text-primary shrink-0 mr-2 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90"
+                  >
+                    {pricingTier.cta}
+                  </Button>
+                </CardFooter>
+              </Card>
             </div>
             
             <div className="mt-12 text-center">
