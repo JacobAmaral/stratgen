@@ -177,7 +177,7 @@ export default function Home() {
                 {/* StratGen Application Image */}
                 <div className="relative h-[400px] w-full overflow-hidden">
                   <Image 
-                    src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/screenshot-2025-05-04-143511-31fbfd4.png"
+                    src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-74acab0.png"
                     alt="StratGen Professional Trading Platform"
                     fill
                     style={{ objectFit: 'cover' }}
