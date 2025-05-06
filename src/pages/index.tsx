@@ -286,17 +286,21 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Screenshot 4 - Alerts */}
+              {/* Screenshot 4 - Coding Generator */}
               <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Smart Alerts</h3>
-                  <p className="text-muted-foreground mb-4">Get notified when your strategies detect potential trading opportunities.</p>
+                  <h3 className="text-xl font-semibold mb-2">Coding Generator</h3>
+                  <p className="text-muted-foreground mb-4">No need to code when StratGen does it for you automatically for NinjaTrader, TradeStation, and Python.</p>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <BellIcon className="h-16 w-16 text-primary/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Alerts Screenshot</p>
+                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-9db68ff.png"
+                        alt="StratGen Automatic Code Generator"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
                     </div>
                   </div>
                 </div>
