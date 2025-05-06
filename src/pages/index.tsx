@@ -137,9 +137,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>StratGen - Professional Trading Signal Generator</title>
-        <meta name="description" content="StratGen is a powerful desktop application for generating trading signals and backtesting strategies across multiple markets." />
+        <title>StratGen - Algorithmic Trading & Backtesting Platform for Quantitative Traders</title>
+        <meta name="description" content="StratGen is a powerful no-code platform for algorithmic trading, backtesting, and robustness testing. Generate trading signals and code for futures, day trading, and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="quantitative trading, backtesting, no-code, coding generation, robustness testing, futures trading, algo trading, algorithmic trading, day trading, trading signals, trading strategy" />
+        <meta property="og:title" content="StratGen - Algorithmic Trading & Backtesting Platform" />
+        <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="StratGen - Algorithmic Trading & Backtesting Platform" />
+        <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation." />
+        <link rel="canonical" href="https://stratgen.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -155,10 +163,10 @@ export default function Home() {
                   Version 2.5 Now Available
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Generate Robust Trading Signals with <span className="text-primary">StratGen</span>
+                  Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  The professional-grade desktop application for quantitative traders who demand rigorous out-of-sample testing and robustness analysis. Automatically generates code for NinjaTrader, TradeStation, and Python.
+                  The professional-grade no-code platform for quantitative traders who demand rigorous out-of-sample testing and robustness analysis. Perfect for futures trading, day trading, and algorithmic strategy development with automatic code generation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
@@ -192,9 +200,9 @@ export default function Home() {
         <section className="py-20 px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features for Serious Traders</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features for Quantitative & Algo Traders</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                StratGen combines advanced technical analysis with intuitive design to help you make better trading decisions.
+                StratGen combines advanced algorithmic trading tools with no-code simplicity to help you develop robust strategies for day trading and futures markets.
               </p>
             </div>
             
@@ -218,9 +226,9 @@ export default function Home() {
         <section className="py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">See StratGen in Action</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">See StratGen's Algorithmic Trading Tools in Action</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Explore the intuitive interface designed for both novice and professional traders.
+                Explore our no-code platform designed for quantitative traders, day traders, and algorithmic strategy developers.
               </p>
             </div>
             
@@ -311,9 +319,9 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-20 px-4 md:px-6 lg:px-8" id="pricing">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Trading?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Algorithmic Trading?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Join thousands of successful traders who use StratGen to identify robust opportunities and manage risk effectively.
+              Join thousands of quantitative traders and day traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, and generate trading signals with automatic code generation.
             </p>
             <div className="flex justify-center">
               <Button size="lg" className="font-medium" asChild>
@@ -329,9 +337,9 @@ export default function Home() {
         <section className="py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Quantitative Traders Say</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Join thousands of traders who have improved their trading results with StratGen.
+                Join thousands of algorithmic and day traders who have improved their backtesting results and trading strategies with StratGen's no-code platform.
               </p>
             </div>
             
@@ -434,7 +442,7 @@ export default function Home() {
               <div>
                 <h3 className="font-bold text-lg mb-4">StratGen</h3>
                 <p className="text-muted-foreground mb-4">
-                  Professional trading signal generator and backtesting platform.
+                  Professional algorithmic trading platform for quantitative traders with backtesting, robustness testing, and no-code strategy development.
                 </p>
               </div>
               
