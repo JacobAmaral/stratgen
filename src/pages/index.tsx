@@ -170,7 +170,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
-                    <a href="mailto:jake@cscbmanagement.com">
+                    <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
                       Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -325,7 +325,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center">
               <Button size="lg" className="font-medium" asChild>
-                <a href="mailto:jake@cscbmanagement.com">
+                <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
                   Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -447,7 +447,7 @@ export default function Home() {
               </div>
               
               <div>
-                <a href="mailto:jake@cscbmanagement.com" className="text-primary hover:text-primary/80 font-medium">
+                <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
                   Contact Us
                 </a>
               </div>
