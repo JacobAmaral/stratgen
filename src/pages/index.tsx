@@ -161,8 +161,10 @@ export default function Home() {
                   The professional-grade desktop application for quantitative traders who demand rigorous out-of-sample testing and robustness analysis. Automatically generates code for NinjaTrader, TradeStation, and Python.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="font-medium">
-                    Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
+                  <Button size="lg" className="font-medium" asChild>
+                    <a href="mailto:jake@cscbmanagement.com">
+                      Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                   <Button size="lg" variant="outline" className="font-medium">
                     Watch Demo
@@ -309,66 +311,19 @@ export default function Home() {
           </div>
         </section>
         
-        {/* Pricing Section */}
+        {/* CTA Section */}
         <section className="py-20 px-4 md:px-6 lg:px-8" id="pricing">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Plan</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Select the perfect plan for your trading needs and get started today.
-              </p>
-              
-              <div className="flex justify-center mt-8">
-                <Tabs defaultValue="monthly" className="w-[300px]" onValueChange={setSelectedPricingTier}>
-                  <TabsList className="grid w-full grid-cols-2">
-                    <TabsTrigger value="monthly">Monthly</TabsTrigger>
-                    <TabsTrigger value="annual">Annual (20% off)</TabsTrigger>
-                  </TabsList>
-                </Tabs>
-              </div>
-            </div>
-            
-            <div className="max-w-xl mx-auto">
-              <Card className="border border-primary shadow-lg relative">
-                <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
-                  <Badge className="bg-primary text-primary-foreground">Premium</Badge>
-                </div>
-                <CardHeader>
-                  <CardTitle>{pricingTier.name}</CardTitle>
-                  <CardDescription>{pricingTier.description}</CardDescription>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">
-                      {selectedPricingTier === "monthly" ? pricingTier.monthlyPrice : pricingTier.yearlyPrice}
-                    </span>
-                    <span className="text-muted-foreground ml-2">
-                      {selectedPricingTier === "monthly" ? "/month" : "/year"}
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {pricingTier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <CheckIcon className="h-5 w-5 text-primary shrink-0 mr-2 mt-0.5" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/90"
-                  >
-                    {pricingTier.cta}
-                  </Button>
-                </CardFooter>
-              </Card>
-            </div>
-            
-            <div className="mt-12 text-center">
-              <p className="text-muted-foreground">
-                Need a custom solution? <a href="#" className="text-primary hover:underline">Contact our sales team</a>
-              </p>
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Trading?</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Join thousands of successful traders who use StratGen to identify robust opportunities and manage risk effectively.
+            </p>
+            <div className="flex justify-center">
+              <Button size="lg" className="font-medium" asChild>
+                <a href="mailto:jake@cscbmanagement.com">
+                  Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -438,26 +393,7 @@ export default function Home() {
           </div>
         </section>
         
-        {/* CTA Section */}
-        <section className="py-20 px-4 md:px-6 lg:px-8 bg-primary/10">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Trading?</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Join thousands of successful traders who use StratGen to identify robust opportunities and manage risk effectively.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="font-medium">
-                Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="font-medium">
-                Schedule Demo
-              </Button>
-            </div>
-            <p className="mt-6 text-sm text-muted-foreground">
-              No credit card required to get started. Full access to all features.
-            </p>
-          </div>
-        </section>
+
         
         {/* Risk Disclaimer Section */}
         <section className="py-12 px-4 md:px-6 lg:px-8 bg-muted/50">
