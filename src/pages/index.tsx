@@ -158,7 +158,7 @@ export default function Home() {
                   Generate Robust Trading Signals with <span className="text-primary">StratGen</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  The professional-grade desktop application for traders who demand precision, reliability, and performance. Automatically generates code for NinjaTrader, TradeStation, and Python.
+                  The professional-grade desktop application for quantitative traders who demand rigorous out-of-sample testing and robustness analysis. Automatically generates code for NinjaTrader, TradeStation, and Python.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium">
