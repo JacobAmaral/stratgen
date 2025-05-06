@@ -233,10 +233,14 @@ export default function Home() {
                   <p className="text-muted-foreground mb-4">Monitor multiple markets and strategies at a glance.</p>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <LineChartIcon className="h-16 w-16 text-primary/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Dashboard Screenshot</p>
+                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/animation-faec11f.gif"
+                        alt="StratGen Powerful Dashboard Animation"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
                     </div>
                   </div>
                 </div>
