@@ -242,17 +242,21 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Screenshot 2 - Strategy Builder */}
+              {/* Screenshot 2 - Signal Tester */}
               <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Visual Strategy Builder</h3>
-                  <p className="text-muted-foreground mb-4">Create complex strategies with our drag-and-drop interface.</p>
+                  <h3 className="text-xl font-semibold mb-2">Signal Tester</h3>
+                  <p className="text-muted-foreground mb-4">Test and validate trading signals with comprehensive analysis tools.</p>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md flex items-center justify-center">
-                    <div className="text-center p-4">
-                      <SettingsIcon className="h-16 w-16 text-primary/40 mx-auto mb-4" />
-                      <p className="text-muted-foreground">Strategy Builder Screenshot</p>
+                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
+                    <div className="relative w-full h-full">
+                      <Image 
+                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-39a10ef.png"
+                        alt="StratGen Signal Tester Interface"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
                     </div>
                   </div>
                 </div>
