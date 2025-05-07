@@ -137,16 +137,19 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>StratGen - Algorithmic Trading & Backtesting Platform for Quantitative Traders</title>
-        <meta name="description" content="StratGen is a powerful no-code platform for algorithmic trading, backtesting, and robustness testing. Generate trading signals and code for futures, equities trading, crypto trading, quant trading, and more." />
+        <title>StratGen | Professional Algorithmic Trading & Backtesting Platform for Quant Traders</title>
+        <meta name="description" content="StratGen is the professional-grade no-code platform for algorithmic trading, backtesting, and robustness testing. Generate trading signals and export code for NinjaTrader, TradeStation, and Python. Perfect for futures, equities, and crypto trading." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="quantitative trading, backtesting, no-code, coding generation, robustness testing, futures trading, equities trading, crypto trading, algo trading, algorithmic trading, quant trading, trading signals, trading strategy" />
-        <meta property="og:title" content="StratGen - Algorithmic Trading & Backtesting Platform" />
-        <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation." />
+        <meta name="keywords" content="quantitative trading, backtesting, no-code, coding generation, robustness testing, futures trading, equities trading, crypto trading, algo trading, algorithmic trading, quant trading, trading signals, trading strategy, ninjatrader, tradestation, python" />
+        <meta property="og:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
+        <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://stratgen.com" />
+        <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="StratGen - Algorithmic Trading & Backtesting Platform" />
-        <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation." />
+        <meta name="twitter:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
+        <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
+        <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
         <link rel="canonical" href="https://stratgen.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -155,7 +158,7 @@ export default function Home() {
         <Header />
         
         {/* Hero Section */}
-        <section className="relative py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-background">
+        <section id="home" className="relative py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-background">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -197,7 +200,7 @@ export default function Home() {
         </section>
         
         {/* Features Section */}
-        <section className="py-20 px-4 md:px-6 lg:px-8">
+        <section id="features" className="py-20 px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features for Quantitative & Algo Traders</h2>
@@ -223,7 +226,7 @@ export default function Home() {
         </section>
         
         {/* Screenshots Section */}
-        <section className="py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
+        <section id="screenshots" className="py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">See StratGen's Algorithmic Trading Tools in Action</h2>
@@ -336,7 +339,7 @@ export default function Home() {
 
         
         {/* Risk Disclaimer Section */}
-        <section className="py-12 px-4 md:px-6 lg:px-8 bg-muted/50">
+        <section id="disclaimer" className="py-12 px-4 md:px-6 lg:px-8 bg-muted/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold mb-2">Risk Disclaimer</h2>
@@ -371,20 +374,60 @@ export default function Home() {
         </section>
         
         {/* Footer */}
-        <footer className="py-12 px-4 md:px-6 lg:px-8 border-t">
+        <footer id="footer" className="py-12 px-4 md:px-6 lg:px-8 border-t">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div>
+            <div className="flex flex-col md:flex-row justify-between items-start">
+              <div className="mb-8 md:mb-0">
                 <h3 className="font-bold text-lg mb-4">StratGen</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 max-w-md">
                   Professional algorithmic trading platform for quantitative traders with backtesting, robustness testing, and no-code strategy development.
                 </p>
               </div>
               
-              <div>
-                <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
-                  Contact Us
-                </a>
+              <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-3">
+                <div>
+                  <h4 className="text-sm font-semibold mb-4">Platform</h4>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link href="/#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Features
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/#screenshots" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Screenshots
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Get Started
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-sm font-semibold mb-4">Resources</h4>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link href="/#disclaimer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Risk Disclaimer
+                      </Link>
+                    </li>
+                    <li>
+                      <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Contact Support
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-sm font-semibold mb-4">Contact</h4>
+                  <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
+                    Contact Us
+                  </a>
+                </div>
               </div>
             </div>
             
