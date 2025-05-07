@@ -297,7 +297,7 @@ export default function Home() {
               <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">Coding Generator</h3>
-                  <p className="text-muted-foreground mb-4">No need to code when StratGen does it for you automatically for NinjaTrader, TradeStation, and Python.</p>
+                  <p className="text-muted-foreground mb-4">Automatically generate code for NinjaTrader, TradeStation and Python.</p>
                 </div>
                 <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
                   <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
