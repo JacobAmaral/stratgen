@@ -139,7 +139,7 @@ export default function Home() {
     <>
       <Head>
         <title>StratGen | Professional Algorithmic Trading & Backtesting Platform for Quant Traders</title>
-        <meta name="description" content="StratGen is the professional-grade no-code platform for algorithmic trading, backtesting, and robustness testing. Generate trading signals and export code for NinjaTrader, TradeStation, and Python. Perfect for futures, equities, and crypto trading." />
+        <meta name="description" content="Professional no-code algorithmic trading platform with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation & Python." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="quantitative trading, backtesting, no-code, coding generation, robustness testing, futures trading, equities trading, crypto trading, algo trading, algorithmic trading, quant trading, trading signals, trading strategy, ninjatrader, tradestation, python" />
         <meta property="og:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
@@ -153,6 +153,42 @@ export default function Home() {
         <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
         <link rel="canonical" href="https://stratgen.com" />
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "StratGen",
+              "description": "Professional no-code algorithmic trading platform with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation & Python.",
+              "url": "https://stratgen.com",
+              "applicationCategory": "FinanceApplication",
+              "operatingSystem": ["Windows", "macOS", "Linux"],
+              "offers": {
+                "@type": "Offer",
+                "price": "1000",
+                "priceCurrency": "USD",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock"
+              },
+              "creator": {
+                "@type": "Organization",
+                "name": "StratGen",
+                "url": "https://stratgen.com"
+              },
+              "featureList": [
+                "600+ technical and fundamental signals",
+                "Advanced backtesting engine",
+                "Robustness testing tools",
+                "Automatic code generation for NinjaTrader, TradeStation, Python",
+                "Import custom OHLCV data",
+                "Strategy optimization",
+                "Monte Carlo simulations"
+              ],
+              "screenshot": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
+            })
+          }}
+        />
       </Head>
       
       <div className="bg-background min-h-screen flex flex-col">
@@ -189,7 +225,7 @@ export default function Home() {
                 <div className="relative h-[400px] w-full overflow-hidden">
                   <Image 
                     src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
-                    alt="StratGen Professional Trading Platform"
+                    alt="StratGen algorithmic trading platform interface showing backtesting results and quantitative analysis tools for futures, equities, and crypto trading"
                     fill
                     style={{ objectFit: 'cover' }}
                     priority
@@ -248,7 +284,7 @@ export default function Home() {
                     <div className="relative w-full h-full">
                       <Image 
                         src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/animation-faec11f.gif"
-                        alt="StratGen Powerful Dashboard Animation"
+                        alt="StratGen algorithmic trading dashboard showing real-time market data, backtesting results, and quantitative analysis for futures and crypto trading"
                         fill
                         style={{ objectFit: 'cover' }}
                       />
@@ -268,7 +304,7 @@ export default function Home() {
                     <div className="relative w-full h-full">
                       <Image 
                         src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-39a10ef.png"
-                        alt="StratGen Signal Tester Interface"
+                        alt="StratGen signal tester interface for quantitative trading analysis with 600+ technical indicators for algorithmic trading strategies"
                         fill
                         style={{ objectFit: 'cover' }}
                       />
@@ -288,7 +324,7 @@ export default function Home() {
                     <div className="relative w-full h-full">
                       <Image 
                         src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-3a930e3.png"
-                        alt="StratGen Advanced Backtesting Interface"
+                        alt="StratGen advanced backtesting interface with robustness testing, Monte Carlo simulations, and out-of-sample analysis for algorithmic trading"
                         fill
                         style={{ objectFit: 'cover' }}
                       />
@@ -308,7 +344,7 @@ export default function Home() {
                     <div className="relative w-full h-full">
                       <Image 
                         src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-9db68ff.png"
-                        alt="StratGen Automatic Code Generator"
+                        alt="StratGen automatic code generator for NinjaTrader, TradeStation, and Python - no-code algorithmic trading strategy export"
                         fill
                         style={{ objectFit: 'cover' }}
                       />
@@ -320,6 +356,108 @@ export default function Home() {
           </div>
         </section>
         
+        {/* FAQ Section */}
+        <section id="faq" className="py-20 px-4 md:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-muted-foreground">
+                Common questions about StratGen's algorithmic trading and backtesting platform
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">What is StratGen and how does it help with algorithmic trading?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python. Our platform helps you develop and validate trading strategies without requiring programming knowledge.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">Can I use StratGen for futures trading, equities trading, and crypto trading?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Yes, StratGen supports all major asset classes including futures trading, equities trading, crypto trading, and forex. You can import OHLCV data from any source to test strategies across different markets and instruments.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">How many technical indicators and signals does StratGen offer?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    StratGen provides access to over 600 technical and fundamental signals including Moving Averages, RSI, MACD, Bollinger Bands, and many more. This comprehensive library allows for extensive quantitative analysis and strategy development.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">What platforms can I export my trading strategies to?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    StratGen automatically generates ready-to-use code for NinjaTrader, TradeStation, and Python. This no-code approach means you can develop sophisticated algorithmic trading strategies and deploy them across multiple platforms without writing any code yourself.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">What robustness testing tools are available?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    StratGen includes comprehensive robustness testing tools such as Monte Carlo simulations, walk-forward analysis, out-of-sample testing, and stress testing. These tools help ensure your strategies perform consistently across different market conditions.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">Is StratGen suitable for quantitative traders and quant trading?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Absolutely. StratGen is specifically designed for quantitative traders who demand rigorous analysis and validation. Our platform provides institutional-grade backtesting, advanced statistical analysis, and comprehensive performance metrics essential for quant trading.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">What operating systems does StratGen support?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    StratGen is available for Windows, macOS, and Linux, ensuring compatibility across all major desktop operating systems for algorithmic trading and strategy development.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-border/40">
+                <CardHeader>
+                  <CardTitle className="text-lg">How does the backtesting engine work?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Our advanced backtesting engine allows you to test trading strategies against historical data with detailed performance metrics. It includes features like slippage modeling, commission calculations, and realistic market conditions to provide accurate strategy validation.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 md:px-6 lg:px-8" id="pricing">
           <div className="max-w-5xl mx-auto text-center">
@@ -397,6 +535,11 @@ export default function Home() {
                     <li>
                       <Link href="/#screenshots" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         Screenshots
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/#faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        FAQ
                       </Link>
                     </li>
                     <li>
