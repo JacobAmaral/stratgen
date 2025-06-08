@@ -210,7 +210,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
-                    <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
+                    <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
                       Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
@@ -467,7 +467,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center">
               <Button size="lg" className="font-medium" asChild>
-                <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
+                <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
                   Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -559,7 +559,7 @@ export default function Home() {
                       </Link>
                     </li>
                     <li>
-                      <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         Contact Support
                       </a>
                     </li>
@@ -568,7 +568,7 @@ export default function Home() {
                 
                 <div>
                   <h4 className="text-sm font-semibold mb-4">Contact</h4>
-                  <a href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
+                  <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
                     Contact Us
                   </a>
                 </div>

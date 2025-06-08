@@ -28,7 +28,7 @@ const Header = () => {
           <Link href="/#disclaimer" className="text-sm font-medium hover:text-primary transition-colors">
             Risk Disclaimer
           </Link>
-          <Link href="mailto:jake@cscbmanagement?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+          <Link href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
             Contact Us
           </Link>
         </nav>
