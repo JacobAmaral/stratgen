@@ -268,7 +268,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">See StratGen's Algorithmic Trading Tools in Action</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Explore our no-code platform designed for quantitative traders, quant traders, and algorithmic strategy developers.
+                Explore our no-code platform designed for quantitative traders and algorithmic strategy developers.
               </p>
             </div>
             
@@ -463,7 +463,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Algorithmic Trading?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Join thousands of quantitative traders and quant traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, and generate trading signals with automatic code generation.
+              Join thousands of quantitative traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, and generate trading signals with automatic code generation.
             </p>
             <div className="flex justify-center">
               <Button size="lg" className="font-medium" asChild>
