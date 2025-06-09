@@ -206,7 +206,7 @@ export default function Home() {
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  The professional-grade no-code platform for quantitative traders who demand rigorous out-of-sample testing and robustness analysis. Perfect for futures trading, equities trading, crypto trading, quant trading, and algorithmic strategy development with automatic code generation.
+                  The professional-grade no-code platform for quantitative traders who demand rigorous out-of-sample testing and robustness analysis.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
@@ -242,7 +242,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features for Quantitative & Algo Traders</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                StratGen combines advanced algorithmic trading tools with no-code simplicity to help you develop robust strategies for futures trading, equities trading, crypto trading, and quant trading markets.
+                StratGen combines advanced algorithmic trading tools with no-code simplicity to help you develop robust strategies.
               </p>
             </div>
             
