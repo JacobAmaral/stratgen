@@ -543,6 +543,11 @@ export default function Home() {
                       </Link>
                     </li>
                     <li>
+                      <Link href="/user-manual" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        User Manual
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         Get Started
                       </Link>
