@@ -8,24 +8,110 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ArrowLeftIcon, DownloadIcon, BookOpenIcon } from "lucide-react";
 
 export default function UserManual() {
+  const manualPages = [
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-731014f.jpg",
+      alt: "StratGen User Manual Page 1 - Introduction and Overview of Quantitative Trading Platform",
+      title: "Introduction & Overview"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0002-043e258.jpg",
+      alt: "StratGen User Manual Page 2 - Getting Started with Installation and Setup",
+      title: "Installation & Setup"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0003-9318201.jpg",
+      alt: "StratGen User Manual Page 3 - Platform Interface and Navigation Guide",
+      title: "Platform Interface"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0004-3b9ed81.jpg",
+      alt: "StratGen User Manual Page 4 - Creating Trading Strategies and Signal Testing",
+      title: "Strategy Creation"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0005-b1bf529.jpg",
+      alt: "StratGen User Manual Page 5 - Advanced Backtesting and Robustness Testing Tools",
+      title: "Backtesting & Analysis"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0006-695e954.jpg",
+      alt: "StratGen User Manual Page 6 - Data Import and OHLCV Analysis Features",
+      title: "Data Import & Analysis"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0007-74bd88d.jpg",
+      alt: "StratGen User Manual Page 7 - Code Generation for NinjaTrader, TradeStation, and Python",
+      title: "Automated Code Generation"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0008-40f820a.jpg",
+      alt: "StratGen User Manual Page 8 - Advanced Signal Analysis and Technical Indicators",
+      title: "Signal Analysis"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0009-bcde2f5.jpg",
+      alt: "StratGen User Manual Page 9 - Out-of-Sample Testing and Strategy Validation",
+      title: "Strategy Validation"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0010-1ad42c7.jpg",
+      alt: "StratGen User Manual Page 10 - Troubleshooting and Advanced Tips",
+      title: "Troubleshooting & Tips"
+    }
+  ];
+
   return (
     <>
       <Head>
         <title>StratGen User Manual | Complete Guide to Algorithmic Trading Platform</title>
-        <meta name="description" content="Complete user manual for StratGen - Learn how to use our professional algorithmic trading platform with backtesting, robustness testing, and code generation features." />
+        <meta name="description" content="Complete 10-page user manual for StratGen quantitative trading platform. Learn backtesting, signal generation, code generation for NinjaTrader, TradeStation, Python, and robustness testing." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation" />
+        <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing" />
         <meta property="og:title" content="StratGen User Manual | Complete Guide to Algorithmic Trading Platform" />
-        <meta property="og:description" content="Complete user manual for StratGen - Learn how to use our professional algorithmic trading platform with backtesting, robustness testing, and code generation features." />
+        <meta property="og:description" content="Complete 10-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stratgen.com/user-manual" />
-        <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
+        <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-731014f.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="StratGen User Manual | Complete Guide to Algorithmic Trading Platform" />
-        <meta name="twitter:description" content="Complete user manual for StratGen - Learn how to use our professional algorithmic trading platform with backtesting, robustness testing, and code generation features." />
-        <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
+        <meta name="twitter:description" content="Complete 10-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+        <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-731014f.jpg" />
         <link rel="canonical" href="https://stratgen.com/user-manual" />
         <link rel="icon" href="/favicon.ico" />
+        
+        {/* JSON-LD Schema for Documentation */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "TechArticle",
+              "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
+              "description": "Complete 10-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation.",
+              "author": {
+                "@type": "Organization",
+                "name": "WeTradeLabs"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "WeTradeLabs"
+              },
+              "datePublished": "2024-01-01",
+              "dateModified": "2024-12-01",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://stratgen.com/user-manual"
+              },
+              "about": {
+                "@type": "SoftwareApplication",
+                "name": "StratGen",
+                "applicationCategory": "Trading Software",
+                "operatingSystem": "Windows"
+              }
+            })
+          }}
+        />
       </Head>
       
       <div className="bg-background min-h-screen flex flex-col">
@@ -50,93 +136,141 @@ export default function UserManual() {
                   StratGen User Manual
                 </h1>
               </div>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Complete guide to using StratGen's professional algorithmic trading platform. Learn how to leverage our backtesting, robustness testing, and automatic code generation features.
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
+                Complete 10-page guide to mastering StratGen for quantitative trading, backtesting, robustness testing, 
+                and automated code generation. Perfect for quantitative researchers and algorithmic strategy developers.
               </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-primary">
+                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ No-Code Platform</span>
+                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Advanced Backtesting</span>
+                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Code Generation</span>
+                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Robustness Testing</span>
+                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Out-of-Sample Testing</span>
+              </div>
             </div>
           </div>
         </section>
         
-        {/* Manual Content Section */}
+        {/* Table of Contents */}
+        <section className="py-12 px-4 md:px-6 lg:px-8 bg-muted/30">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">Table of Contents</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {manualPages.map((page, index) => (
+                <Card key={index} className="border border-border/40 hover:border-primary/50 transition-colors">
+                  <CardContent className="p-4">
+                    <a href={`#page-${index + 1}`} className="block">
+                      <div className="text-primary font-semibold mb-1">Page {index + 1}</div>
+                      <div className="text-sm text-muted-foreground">{page.title}</div>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Manual Pages Section */}
         <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Complete User Manual</h2>
+            
+            <div className="space-y-16">
+              {manualPages.map((page, index) => (
+                <Card key={index} id={`page-${index + 1}`} className="border border-border/40 shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">
+                      Page {index + 1}: {page.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="relative w-full bg-muted/20 flex items-center justify-center p-8">
+                      <div className="w-full max-w-4xl">
+                        <div className="relative w-full" style={{ aspectRatio: '8.5/11' }}>
+                          <Image 
+                            src={page.url}
+                            alt={page.alt}
+                            fill
+                            style={{ objectFit: 'contain' }}
+                            className="rounded-lg border border-border/20 shadow-md"
+                            priority={index < 3}
+                            quality={90}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Manual Information */}
+        <section className="py-12 px-4 md:px-6 lg:px-8 bg-muted/30">
+          <div className="max-w-6xl mx-auto">
             <Card className="border border-border/40 shadow-lg">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl mb-4">StratGen User Manual</CardTitle>
-                <p className="text-muted-foreground">
-                  This comprehensive manual covers all aspects of using StratGen for quantitative trading and algorithmic strategy development.
-                </p>
-              </CardHeader>
-              <CardContent className="p-0">
-                {/* PDF Image Display */}
-                <div className="relative w-full bg-muted/20 flex items-center justify-center p-8">
-                  <div className="w-full max-w-4xl">
-                    <div className="relative w-full" style={{ aspectRatio: '8.5/11' }}>
-                      <Image 
-                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0006-695e954.jpg"
-                        alt="StratGen User Manual - Complete guide to algorithmic trading platform with backtesting, robustness testing, and code generation features"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                        className="rounded-lg border border-border/20 shadow-md"
-                        priority
-                      />
-                    </div>
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">What's Covered in This Manual</h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Getting started with StratGen platform setup
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Creating and testing quantitative trading strategies
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Using the 600+ technical and fundamental signals
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Advanced backtesting and robustness testing
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Importing custom OHLCV data for any instrument
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Automatic code generation for NinjaTrader, TradeStation, and Python
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Strategy optimization and performance analysis
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Out-of-sample testing and Monte Carlo simulations
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Quantitative research methodologies and best practices
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        Troubleshooting and advanced tips for optimal performance
+                      </li>
+                    </ul>
                   </div>
-                </div>
-                
-                {/* Manual Information */}
-                <div className="p-8 border-t border-border/40">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-4">What's Covered in This Manual</h3>
-                      <ul className="space-y-2 text-muted-foreground">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Getting started with StratGen platform
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Setting up your first trading strategy
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Using the 600+ technical and fundamental signals
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Advanced backtesting and robustness testing
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Importing custom OHLCV data
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Automatic code generation for NinjaTrader, TradeStation, and Python
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Strategy optimization and performance analysis
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          Monte Carlo simulations and walk-forward analysis
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-lg font-semibold mb-4">Need Help?</h3>
-                      <p className="text-muted-foreground mb-4">
-                        If you have questions about using StratGen or need additional support, our team is here to help.
-                      </p>
-                      <Button asChild>
-                        <a href="mailto:jacob@wetradelabs.com?subject=StratGen%20Support&body=Hi%2C%20I%20need%20help%20with%20StratGen.%20Please%20assist%20me%20with%3A%0A%0A">
-                          <DownloadIcon className="h-4 w-4 mr-2" />
-                          Contact Support
-                        </a>
-                      </Button>
-                    </div>
+                  
+                  <div>
+                    <h3 className="text-lg font-semibold mb-4">Need Help?</h3>
+                    <p className="text-muted-foreground mb-4">
+                      If you have questions about using StratGen or need additional support with quantitative research, 
+                      our team is here to help you maximize your trading strategy development.
+                    </p>
+                    <Button asChild>
+                      <a href="mailto:jacob@wetradelabs.com?subject=StratGen%20Support&body=Hi%2C%20I%20need%20help%20with%20StratGen.%20Please%20assist%20me%20with%3A%0A%0A">
+                        <DownloadIcon className="h-4 w-4 mr-2" />
+                        Contact Support
+                      </a>
+                    </Button>
                   </div>
                 </div>
               </CardContent>
@@ -145,7 +279,7 @@ export default function UserManual() {
         </section>
         
         {/* Additional Resources Section */}
-        <section className="py-12 px-4 md:px-6 lg:px-8 bg-muted/30">
+        <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4">Additional Resources</h2>
@@ -161,7 +295,7 @@ export default function UserManual() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    Learn about all the powerful features available in StratGen for quantitative trading.
+                    Learn about all the powerful features available in StratGen for quantitative trading and research.
                   </p>
                   <Button variant="outline" size="sm" asChild>
                     <Link href="/#features">
