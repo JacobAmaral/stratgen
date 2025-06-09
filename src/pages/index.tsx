@@ -163,7 +163,7 @@ export default function Home() {
               "description": "Professional no-code algorithmic trading platform with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation & Python.",
               "url": "https://stratgen.com",
               "applicationCategory": "FinanceApplication",
-              "operatingSystem": ["Windows", "macOS", "Linux"],
+              "operatingSystem": ["Windows"],
               "offers": {
                 "@type": "Offer",
                 "price": "1000",
@@ -216,7 +216,7 @@ export default function Home() {
                   </Button>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <CheckIcon className="h-4 w-4 text-primary" /> Available for Windows, macOS, and Linux
+                  <CheckIcon className="h-4 w-4 text-primary" /> Available for Windows
                 </div>
               </div>
               
@@ -439,7 +439,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    StratGen is available for Windows, macOS, and Linux, ensuring compatibility across all major desktop operating systems for algorithmic trading and strategy development.
+                    StratGen is available for Windows, providing a robust desktop platform for algorithmic trading and strategy development.
                   </p>
                 </CardContent>
               </Card>
