@@ -26,7 +26,7 @@ const Header = () => {
             User Manual
           </Link>
           <Link href="/#pricing" className="text-sm font-medium hover:text-primary transition-colors">
-            Get Started
+            Pricing
           </Link>
           <Link href="/#disclaimer" className="text-sm font-medium hover:text-primary transition-colors">
             Risk Disclaimer

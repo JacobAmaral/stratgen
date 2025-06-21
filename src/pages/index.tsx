@@ -210,8 +210,8 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
-                    <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
-                      Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
+                    <a href="#pricing">
+                      View Pricing <ArrowRightIcon className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </div>
@@ -458,19 +458,80 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4 md:px-6 lg:px-8" id="pricing">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Algorithmic Trading?</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Join thousands of quantitative traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, and generate trading signals with automatic code generation.
-            </p>
-            <div className="flex justify-center">
-              <Button size="lg" className="font-medium" asChild>
-                <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!">
-                  Get Started Today <ArrowRightIcon className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Choose Your StratGen Plan</h2>
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Join thousands of quantitative traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, and generate trading signals with automatic code generation.
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Card className="border-2 border-primary/20 shadow-xl">
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl font-bold">StratGen Premium</CardTitle>
+                  <CardDescription className="text-lg">
+                    All-inclusive professional trading platform
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-8">
+                  {/* Pricing Options */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Monthly Plan */}
+                    <div className="border border-border/40 rounded-lg p-6 text-center">
+                      <h3 className="text-lg font-semibold mb-2">Monthly</h3>
+                      <div className="text-3xl font-bold mb-4">$99<span className="text-lg font-normal text-muted-foreground">/month</span></div>
+                      <Button size="lg" className="w-full font-medium" asChild>
+                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6G695380H8515921NNBFO5IQ" target="_blank" rel="noopener noreferrer">
+                          Subscribe Monthly <ArrowRightIcon className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                    
+                    {/* Yearly Plan */}
+                    <div className="border-2 border-primary rounded-lg p-6 text-center relative">
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <Badge className="bg-primary text-primary-foreground px-3 py-1">Save $188</Badge>
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">Yearly</h3>
+                      <div className="text-3xl font-bold mb-2">$1000<span className="text-lg font-normal text-muted-foreground">/year</span></div>
+                      <div className="text-sm text-muted-foreground mb-4">$83.33/month when paid annually</div>
+                      <Button size="lg" className="w-full font-medium" asChild>
+                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-9LN24145W5037140NNBFO7DY" target="_blank" rel="noopener noreferrer">
+                          Subscribe Yearly <ArrowRightIcon className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  {/* Features List */}
+                  <div className="border-t border-border/40 pt-8">
+                    <h4 className="text-lg font-semibold mb-6 text-center">Everything Included:</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {[
+                        "600+ technical and fundamental signals",
+                        "Institutional-grade backtesting",
+                        "Import data from any source",
+                        "All market data sources",
+                        "Strategy optimization",
+                        "Robustness testing tools",
+                        "Code export for all platforms (NinjaTrader, TradeStation, Python)",
+                        "API access",
+                        "Strategy automation",
+                        "24/7 priority support",
+                        "Multi-user license"
+                      ].map((feature, index) => (
+                        <div key={index} className="flex items-center gap-3">
+                          <CheckIcon className="h-5 w-5 text-primary flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -549,7 +610,7 @@ export default function Home() {
                     </li>
                     <li>
                       <Link href="/#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        Get Started
+                        Pricing
                       </Link>
                     </li>
                   </ul>
