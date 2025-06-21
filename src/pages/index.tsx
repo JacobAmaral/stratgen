@@ -84,10 +84,8 @@ const pricingTier = {
     "Strategy optimization",
     "Robustness testing tools",
     "Code export for all platforms (NinjaTrader, TradeStation, Python)",
-    "API access",
     "Strategy automation",
-    "24/7 priority support",
-    "Multi-user license"
+    "24/7 priority support"
   ],
   cta: "Get Started Today"
 };
@@ -518,10 +516,8 @@ export default function Home() {
                         "Strategy optimization",
                         "Robustness testing tools",
                         "Code export for all platforms (NinjaTrader, TradeStation, Python)",
-                        "API access",
                         "Strategy automation",
-                        "24/7 priority support",
-                        "Multi-user license"
+                        "24/7 priority support"
                       ].map((feature, index) => (
                         <div key={index} className="flex items-center gap-3">
                           <CheckIcon className="h-5 w-5 text-primary flex-shrink-0" />
