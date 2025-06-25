@@ -89,32 +89,125 @@ export default function UserManual() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "TechArticle",
-              "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
-              "description": "Complete 11-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation.",
-              "author": {
-                "@type": "Organization",
-                "name": "WeTradeLabs"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "TechArticle",
+                "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
+                "description": "Complete 11-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation.",
+                "author": {
+                  "@type": "Organization",
+                  "name": "WeTradeLabs",
+                  "email": "jacob@wetradelabs.com",
+                  "url": "https://stratgensoft.com/"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "WeTradeLabs",
+                  "email": "jacob@wetradelabs.com",
+                  "url": "https://stratgensoft.com/"
+                },
+                "datePublished": "2024-01-01",
+                "dateModified": "2024-12-01",
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://stratgen.com/user-manual"
+                },
+                "about": {
+                  "@type": "SoftwareApplication",
+                  "name": "StratGen",
+                  "applicationCategory": "FinancialApplication",
+                  "operatingSystem": "Windows"
+                },
+                "keywords": [
+                  "stratgen user manual",
+                  "algorithmic trading guide", 
+                  "backtesting tutorial",
+                  "quantitative trading manual",
+                  "trading platform documentation",
+                  "no-code trading",
+                  "robustness testing",
+                  "out-of-sample testing"
+                ]
               },
-              "publisher": {
-                "@type": "Organization",
-                "name": "WeTradeLabs"
+              {
+                "@context": "https://schema.org",
+                "@type": "HowTo",
+                "name": "How to Use StratGen for Quantitative Trading",
+                "description": "Step-by-step guide to using StratGen's algorithmic trading platform for backtesting, signal generation, and code generation.",
+                "image": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-eba9996.jpg",
+                "totalTime": "PT2H",
+                "estimatedCost": {
+                  "@type": "MonetaryAmount",
+                  "currency": "USD",
+                  "value": "99"
+                },
+                "supply": [
+                  {
+                    "@type": "HowToSupply",
+                    "name": "StratGen Software"
+                  },
+                  {
+                    "@type": "HowToSupply", 
+                    "name": "Windows Computer"
+                  }
+                ],
+                "tool": [
+                  {
+                    "@type": "HowToTool",
+                    "name": "StratGen Platform"
+                  }
+                ],
+                "step": [
+                  {
+                    "@type": "HowToStep",
+                    "name": "Installation & Setup",
+                    "text": "Install StratGen on your Windows computer and complete initial setup."
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Platform Interface",
+                    "text": "Learn to navigate the StratGen interface and understand key features."
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Strategy Creation",
+                    "text": "Create trading strategies using the no-code platform."
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Backtesting & Analysis",
+                    "text": "Test your strategies with advanced backtesting and robustness testing tools."
+                  },
+                  {
+                    "@type": "HowToStep",
+                    "name": "Code Generation",
+                    "text": "Generate code for NinjaTrader, TradeStation, and Python platforms."
+                  }
+                ]
               },
-              "datePublished": "2024-01-01",
-              "dateModified": "2024-12-01",
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://stratgen.com/user-manual"
-              },
-              "about": {
-                "@type": "SoftwareApplication",
-                "name": "StratGen",
-                "applicationCategory": "Trading Software",
-                "operatingSystem": "Windows"
+              {
+                "@context": "https://schema.org",
+                "@type": "CreativeWork",
+                "name": "StratGen User Manual",
+                "description": "Comprehensive documentation for StratGen algorithmic trading platform",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "WeTradeLabs"
+                },
+                "about": {
+                  "@type": "SoftwareApplication",
+                  "name": "StratGen"
+                },
+                "inLanguage": "en-US",
+                "learningResourceType": "User Manual",
+                "educationalLevel": "Intermediate to Advanced",
+                "audience": {
+                  "@type": "Audience",
+                  "audienceType": "Quantitative Traders"
+                }
               }
-            })
+            ])
           }}
         />
       </Head>

@@ -154,37 +154,164 @@ export default function Home() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "StratGen",
-              "description": "Professional no-code algorithmic trading platform with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation & Python.",
-              "url": "https://stratgen.com",
-              "applicationCategory": "FinanceApplication",
-              "operatingSystem": ["Windows"],
-              "offers": {
-                "@type": "Offer",
-                "price": "1000",
-                "priceCurrency": "USD",
-                "priceValidUntil": "2025-12-31",
-                "availability": "https://schema.org/InStock"
-              },
-              "creator": {
-                "@type": "Organization",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
                 "name": "StratGen",
-                "url": "https://stratgen.com"
+                "url": "https://stratgensoft.com/",
+                "applicationCategory": "FinancialApplication",
+                "operatingSystem": "Windows",
+                "offers": [
+                  {
+                    "@type": "Offer",
+                    "name": "Monthly Subscription",
+                    "price": "99.00",
+                    "priceCurrency": "USD",
+                    "billingIncrement": "P1M",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6G695380H8515921NNBFO5IQ"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "Annual Subscription",
+                    "price": "1000.00",
+                    "priceCurrency": "USD",
+                    "billingIncrement": "P1Y",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-9LN24145W5037140NNBFO7DY"
+                  }
+                ],
+                "description": "StratGen is a desktop app for designing, backtesting, and exporting algorithmic trading strategies for platforms like NinjaTrader and QuantConnect. Professional trading signal generator and backtesting platform for quantitative traders with automatic code generation.",
+                "author": {
+                  "@type": "Organization",
+                  "name": "WeTradeLabs",
+                  "email": "jacob@wetradelabs.com"
+                },
+                "featureList": [
+                  "Advanced Signal Analysis with 600+ fundamental and technical signals",
+                  "Signal Tester for strategy validation",
+                  "Advanced Backtesting Engine",
+                  "Robustness testing tools",
+                  "Import your own data, OHLCV data to test any instrument",
+                  "Coding Generator for NinjaTrader, TradeStation, and Python",
+                  "Powerful Dashboard with analytics"
+                ],
+                "screenshot": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
               },
-              "featureList": [
-                "600+ technical and fundamental signals",
-                "Advanced backtesting engine",
-                "Robustness testing tools",
-                "Automatic code generation for NinjaTrader, TradeStation, Python",
-                "Import custom OHLCV data",
-                "Strategy optimization",
-                "Monte Carlo simulations"
-              ],
-              "screenshot": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
-            })
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "WeTradeLabs",
+                "url": "https://stratgensoft.com/",
+                "email": "jacob@wetradelabs.com",
+                "description": "Developer of StratGen, professional trading software for quantitative traders and algorithmic strategy development.",
+                "makesOffer": {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "SoftwareApplication",
+                    "name": "StratGen"
+                  }
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "StratGen",
+                "description": "Professional trading signal generator and backtesting platform for quantitative traders. Features automatic code generation for NinjaTrader, TradeStation, and Python with advanced robustness testing tools.",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "WeTradeLabs"
+                },
+                "category": "Financial Software",
+                "offers": [
+                  {
+                    "@type": "Offer",
+                    "name": "Monthly Subscription",
+                    "price": "99.00",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "Annual Subscription", 
+                    "price": "1000.00",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                  }
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is StratGen and how does it help with algorithmic trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python. Our platform helps you develop and validate trading strategies without requiring programming knowledge."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can I use StratGen for futures trading, equities trading, and crypto trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, StratGen supports all major asset classes including futures trading, equities trading, crypto trading, and forex. You can import OHLCV data from any source to test strategies across different markets and instruments."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How many technical indicators and signals does StratGen offer?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "StratGen provides access to over 600 technical and fundamental signals including Moving Averages, RSI, MACD, Bollinger Bands, and many more. This comprehensive library allows for extensive quantitative analysis and strategy development."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What platforms can I export my trading strategies to?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "StratGen automatically generates ready-to-use code for NinjaTrader, TradeStation, and Python. This no-code approach means you can develop sophisticated algorithmic trading strategies and deploy them across multiple platforms without writing any code yourself."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What robustness testing tools are available?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "StratGen includes comprehensive robustness testing tools such as Monte Carlo simulations, walk-forward analysis, out-of-sample testing, and stress testing. These tools help ensure your strategies perform consistently across different market conditions."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is StratGen suitable for quantitative traders and quant trading?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely. StratGen is specifically designed for quantitative traders who demand rigorous analysis and validation. Our platform provides institutional-grade backtesting, advanced statistical analysis, and comprehensive performance metrics essential for quant trading."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What operating systems does StratGen support?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "StratGen is available for Windows, providing a robust desktop platform for algorithmic trading and strategy development."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does the backtesting engine work?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our advanced backtesting engine allows you to test trading strategies against historical data with detailed performance metrics. It includes features like slippage modeling, commission calculations, and realistic market conditions to provide accurate strategy validation."
+                    }
+                  }
+                ]
+              }
+            ])
           }}
         />
       </Head>
