@@ -209,7 +209,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
                     <a href="#pricing">
-                      View Pricing <ArrowRightIcon className="ml-2 h-4 w-4" />
+                      Get Started Now <ArrowRightIcon className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
                 </div>
