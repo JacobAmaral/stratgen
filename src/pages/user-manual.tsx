@@ -11,57 +11,57 @@ export default function UserManual() {
   const manualPages = [
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-eba9996.jpg",
-      alt: "StratGen User Manual Page 1 - Introduction and Overview of Quantitative Trading Platform",
+      alt: "StratGen User Manual Page 1 - Complete introduction and overview of the professional algorithmic trading platform for quantitative traders with no-code strategy development",
       title: "Introduction & Overview"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0002-4db32db.jpg",
-      alt: "StratGen User Manual Page 2 - Getting Started with Installation and Setup",
+      alt: "StratGen User Manual Page 2 - Step-by-step installation guide and initial setup instructions for Windows algorithmic trading software",
       title: "Installation & Setup"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0003-cc1c000.jpg",
-      alt: "StratGen User Manual Page 3 - Platform Interface and Navigation Guide",
+      alt: "StratGen User Manual Page 3 - Comprehensive platform interface guide and navigation tutorial for quantitative trading dashboard and tools",
       title: "Platform Interface"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0004-cc6a602.jpg",
-      alt: "StratGen User Manual Page 4 - Creating Trading Strategies and Signal Testing",
+      alt: "StratGen User Manual Page 4 - Creating algorithmic trading strategies and signal testing tutorial with 600+ technical indicators for quantitative analysis",
       title: "Strategy Creation"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0005-158e2db.jpg",
-      alt: "StratGen User Manual Page 5 - Advanced Backtesting and Robustness Testing Tools",
+      alt: "StratGen User Manual Page 5 - Advanced backtesting engine and robustness testing tools including Monte Carlo simulations and out-of-sample analysis",
       title: "Backtesting & Analysis"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0006-99ea843.jpg",
-      alt: "StratGen User Manual Page 6 - Data Import and OHLCV Analysis Features",
+      alt: "StratGen User Manual Page 6 - Data import tutorial for OHLCV data analysis covering futures, equities, crypto, and forex trading instruments",
       title: "Data Import & Analysis"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0007-d64c56e.jpg",
-      alt: "StratGen User Manual Page 7 - Code Generation for NinjaTrader, TradeStation, and Python",
+      alt: "StratGen User Manual Page 7 - Automated code generation guide for exporting trading strategies to NinjaTrader, TradeStation, and Python platforms",
       title: "Automated Code Generation"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0008-563c1b7.jpg",
-      alt: "StratGen User Manual Page 8 - Advanced Signal Analysis and Technical Indicators",
+      alt: "StratGen User Manual Page 8 - Advanced signal analysis tutorial covering technical indicators, fundamental analysis, and quantitative research methodologies",
       title: "Signal Analysis"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0009-321143a.jpg",
-      alt: "StratGen User Manual Page 9 - Out-of-Sample Testing and Strategy Validation",
+      alt: "StratGen User Manual Page 9 - Strategy validation guide with out-of-sample testing, walk-forward analysis, and performance optimization for algorithmic trading",
       title: "Strategy Validation"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0010-1c45711.jpg",
-      alt: "StratGen User Manual Page 10 - Troubleshooting and Advanced Tips",
+      alt: "StratGen User Manual Page 10 - Troubleshooting guide and advanced tips for optimizing quantitative trading strategies and platform performance",
       title: "Troubleshooting & Tips"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0011-57743c7.jpg",
-      alt: "StratGen User Manual Page 11 - Additional Resources and Support Information",
+      alt: "StratGen User Manual Page 11 - Additional resources, support information, and advanced features for professional algorithmic trading platform users",
       title: "Additional Resources"
     }
   ];

@@ -350,7 +350,7 @@ export default function Home() {
                 <div className="relative h-[400px] w-full overflow-hidden">
                   <Image 
                     src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
-                    alt="StratGen algorithmic trading platform interface showing backtesting results and quantitative analysis tools for futures, equities, and crypto trading"
+                    alt="StratGen professional algorithmic trading platform dashboard displaying advanced backtesting results, quantitative analysis charts, and trading signals for automated strategy development"
                     fill
                     style={{ objectFit: 'cover' }}
                     priority

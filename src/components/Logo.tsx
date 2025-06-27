@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <div className="relative h-10 w-40">
       <Image 
         src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/newlogo2ext-94a7d0c.png"
-        alt="StratGen Logo"
+        alt="StratGen automated trading strategy generator logo"
         fill
         style={{ objectFit: 'contain' }}
         priority
