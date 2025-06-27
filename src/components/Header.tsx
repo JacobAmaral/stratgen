@@ -25,11 +25,11 @@ const Header = () => {
           <Link href="/user-manual" className="text-sm font-medium hover:text-primary transition-colors">
             User Manual
           </Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">
+            Blog
+          </Link>
           <Link href="/#pricing" className="text-sm font-medium hover:text-primary transition-colors">
             Pricing
-          </Link>
-          <Link href="/#disclaimer" className="text-sm font-medium hover:text-primary transition-colors">
-            Risk Disclaimer
           </Link>
           <Link href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
             Contact Us

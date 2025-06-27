@@ -743,6 +743,16 @@ export default function Home() {
                   <h4 className="text-sm font-semibold mb-4">Resources</h4>
                   <ul className="space-y-3">
                     <li>
+                      <Link href="/what-is-stratgen" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        What is StratGen?
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Blog
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/#disclaimer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         Risk Disclaimer
                       </Link>
