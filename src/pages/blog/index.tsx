@@ -10,6 +10,33 @@ import { ArrowLeftIcon, ArrowRightIcon, CalendarIcon, ClockIcon } from "lucide-r
 export default function BlogIndex() {
   const blogPosts = [
     {
+      slug: "machine-learning-trading-strategies-2025",
+      title: "Machine Learning Trading Strategies: 2025 Trends and Innovations",
+      description: "Discover the latest machine learning innovations transforming algorithmic trading in 2025, from advanced neural networks to reinforcement learning systems that adapt to market conditions in real-time.",
+      category: "Machine Learning",
+      readTime: "20 min read",
+      publishDate: "2025-07-01",
+      tags: ["Machine Learning", "AI Trading", "Neural Networks", "Reinforcement Learning", "Deep Learning"]
+    },
+    {
+      slug: "cryptocurrency-trading-algorithms-2025",
+      title: "Cryptocurrency Trading Algorithms: Advanced Strategies for 2025",
+      description: "Master cryptocurrency algorithmic trading in 2025. Learn about DeFi arbitrage, MEV strategies, cross-chain trading, and advanced crypto quantitative techniques.",
+      category: "Cryptocurrency",
+      readTime: "22 min read",
+      publishDate: "2025-06-15",
+      tags: ["Cryptocurrency", "DeFi", "MEV", "Cross-Chain", "Crypto Trading"]
+    },
+    {
+      slug: "futures-trading-strategies-systematic-approach",
+      title: "Futures Trading Strategies: A Systematic Approach to Derivatives",
+      description: "Explore comprehensive systematic approaches to futures trading, from understanding market structure and roll yield to implementing advanced spread strategies and risk management techniques.",
+      category: "Futures Trading",
+      readTime: "25 min read",
+      publishDate: "2025-05-20",
+      tags: ["Futures Trading", "Derivatives", "Contango", "Backwardation", "Spread Trading"]
+    },
+    {
       slug: "how-stratgen-automates-strategy-coding",
       title: "How StratGen Automates Your Strategy Coding",
       description: "Learn how StratGen's no-code platform automatically generates ready-to-use code for NinjaTrader, TradeStation, and Python, eliminating the need for manual programming.",
@@ -28,31 +55,31 @@ export default function BlogIndex() {
       tags: ["Backtesting", "Strategy Validation", "Best Practices", "Quantitative Trading"]
     },
     {
-      slug: "robustness-testing-trading-strategies",
-      title: "Robustness Testing for Trading Strategies",
-      description: "Master the art of robustness testing with Monte Carlo simulations, walk-forward analysis, and out-of-sample testing to ensure your strategies perform in all market conditions.",
-      category: "Strategy Validation",
-      readTime: "8 min read",
-      publishDate: "2025-01-05",
-      tags: ["Robustness Testing", "Monte Carlo", "Out-of-Sample", "Strategy Validation"]
+      slug: "advanced-risk-management-techniques",
+      title: "Advanced Risk Management Techniques for Algorithmic Trading",
+      description: "Master advanced risk management techniques for algorithmic trading. Learn portfolio optimization, VaR calculations, drawdown control, and position sizing strategies.",
+      category: "Risk Management",
+      readTime: "15 min read",
+      publishDate: "2024-12-10",
+      tags: ["Risk Management", "Portfolio Optimization", "VaR", "Position Sizing"]
     },
     {
-      slug: "quantitative-trading-beginners-guide",
-      title: "Quantitative Trading: A Beginner's Guide",
-      description: "Complete introduction to quantitative trading, systematic strategies, and how StratGen makes professional-grade quant trading accessible to everyone.",
+      slug: "market-microstructure-algorithmic-trading",
+      title: "Understanding Market Microstructure for Algorithmic Trading Success",
+      description: "Master market microstructure concepts essential for algorithmic trading. Learn about order flow, market impact, liquidity, and execution strategies.",
+      category: "Market Structure",
+      readTime: "18 min read",
+      publishDate: "2024-12-05",
+      tags: ["Market Microstructure", "Order Flow", "Liquidity", "Execution"]
+    },
+    {
+      slug: "quantitative-trading-strategies-beginners",
+      title: "Quantitative Trading Strategies for Beginners: A Complete Guide",
+      description: "Learn the fundamentals of quantitative trading strategies. Discover how beginners can start with algorithmic trading, backtesting, and automated strategy development.",
       category: "Education",
-      readTime: "10 min read",
-      publishDate: "2025-01-01",
-      tags: ["Quantitative Trading", "Systematic Trading", "Beginner Guide", "Education"]
-    },
-    {
-      slug: "600-technical-indicators-guide",
-      title: "Mastering 600+ Technical Indicators in StratGen",
-      description: "Comprehensive guide to utilizing StratGen's extensive library of technical and fundamental signals for advanced quantitative analysis and strategy development.",
-      category: "Technical Analysis",
       readTime: "12 min read",
-      publishDate: "2024-12-28",
-      tags: ["Technical Indicators", "Signal Analysis", "Quantitative Research", "Strategy Development"]
+      publishDate: "2024-12-15",
+      tags: ["Quantitative Trading", "Beginner Guide", "Algorithmic Trading", "Education"]
     }
   ];
 
