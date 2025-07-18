@@ -325,7 +325,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 border-primary/20 text-primary">
-                  Version 0.5 Now Available
+                  Version 0.6 Now Available
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
