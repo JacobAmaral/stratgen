@@ -653,6 +653,16 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Refund Policy */}
+                  <div className="border-t border-border/40 pt-6">
+                    <div className="bg-muted/30 rounded-lg p-4">
+                      <h5 className="font-semibold mb-2 text-center">Subscription Policy</h5>
+                      <p className="text-sm text-muted-foreground text-center">
+                        We do not offer refunds. However, you can cancel your monthly or yearly subscription at any time and will not be billed thereafter.
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
