@@ -85,14 +85,87 @@ export default function Changelog() {
         <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Version 0.6 */}
+            {/* Version 0.7 */}
             <Card className="border-2 border-primary/20 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <CardTitle className="text-2xl">Version 0.6</CardTitle>
+                    <CardTitle className="text-2xl">Version 0.7</CardTitle>
                     <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                   </div>
+                  <div className="text-sm text-muted-foreground">
+                    Released: July 24, 2025
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <ZapIcon className="h-5 w-5 text-primary" />
+                    New Features
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>PivotPoint & FibPivotPoints Entry/Exit Signals:</strong> Added new pivot point and Fibonacci pivot point indicators for enhanced entry and exit signal generation.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Quarter, QTD, YTD Entry/Exit Signals:</strong> Implemented quarterly, quarter-to-date, and year-to-date based entry and exit signals for seasonal trading strategies.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>WMA Entry/Exit Signals:</strong> Added Weighted Moving Average (WMA) based entry and exit signals for improved trend analysis.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>OHLC Entry/Exit Signals:</strong> Implemented Open, High, Low, Close (OHLC) based entry and exit signals for price action trading strategies.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <BugIcon className="h-5 w-5 text-orange-500" />
+                    Bug Fixes & Improvements
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>VWAP Period Fix:</strong> Resolved issues with VWAP period calculations for more accurate volume-weighted average price analysis.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Memory Leak Fix:</strong> Fixed potential memory leak during optimizations, improving system stability and performance during long optimization runs.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Portfolio Systems Display Fix:</strong> Resolved issue where portfolio systems would sometimes not show properly, ensuring consistent portfolio visibility.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Version 0.6 */}
+            <Card className="border border-border/40">
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-2xl">Version 0.6</CardTitle>
                   <div className="text-sm text-muted-foreground">
                     Released: July 2025
                   </div>
