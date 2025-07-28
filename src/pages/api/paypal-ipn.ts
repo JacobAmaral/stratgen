@@ -182,9 +182,9 @@ function parseIPNData(body: string): PayPalIPNData {
   const params = new URLSearchParams(body);
   const data: PayPalIPNData = {};
   
-  for (const [key, value] of params.entries()) {
+  params.forEach((value, key) => {
     data[key] = value;
-  }
+  });
   
   return data;
 }
