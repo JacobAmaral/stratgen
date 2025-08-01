@@ -85,14 +85,75 @@ export default function Changelog() {
         <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Version 0.7 */}
+            {/* Version 0.8 */}
             <Card className="border-2 border-primary/20 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <CardTitle className="text-2xl">Version 0.7</CardTitle>
+                    <CardTitle className="text-2xl">Version 0.8</CardTitle>
                     <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                   </div>
+                  <div className="text-sm text-muted-foreground">
+                    Released: August 1, 2025
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <ZapIcon className="h-5 w-5 text-primary" />
+                    New Features
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Enhanced Profit Target & Stop Loss Options:</strong> Added ticks and $ per contract profit target, stop loss and trail stop functionality for more precise risk management and position sizing.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <BugIcon className="h-5 w-5 text-orange-500" />
+                    Bug Fixes & Improvements
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Stop Loss Cancellation Fix:</strong> Fixed issue where stop loss orders would sometimes not cancel properly when profit target was hit, ensuring proper order management.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Return/Drawdown Sorting Fix:</strong> Resolved issue where return/drawdown values were not sorting numerically, improving results analysis and interpretation.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>NinjaTrader Backtest Matching:</strong> Fixed issue where some strategies were not matching properly in NinjaTrader backtests, ensuring consistent results across platforms.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>WMA Calculation Fix:</strong> Corrected Weighted Moving Average (WMA) calculation algorithm for more accurate technical analysis results.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Version 0.7 */}
+            <Card className="border border-border/40">
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-2xl">Version 0.7</CardTitle>
                   <div className="text-sm text-muted-foreground">
                     Released: July 24, 2025
                   </div>
