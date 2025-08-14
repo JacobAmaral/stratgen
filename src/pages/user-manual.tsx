@@ -56,23 +56,23 @@ export default function UserManual() {
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-10-a570981.png",
-      alt: "StratGen User Manual v0.9 Page 10 - Troubleshooting guide and advanced tips for optimizing quantitative trading strategies and platform performance",
-      title: "Troubleshooting & Tips"
+      alt: "StratGen User Manual v0.9 Page 10 - Code exporting guide for generating trading strategies for NinjaTrader, TradeStation, and Python platforms",
+      title: "Code Exporting"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-11-1118413.png",
-      alt: "StratGen User Manual v0.9 Page 11 - Additional resources, support information, and advanced features for professional algorithmic trading platform users",
-      title: "Additional Resources"
+      alt: "StratGen User Manual v0.9 Page 11 - Portfolio management and analysis tools for professional algorithmic trading platform users",
+      title: "Portfolio"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-12-17f4fb3.png",
-      alt: "StratGen User Manual v0.9 Page 12 - Extended features and advanced configuration options for professional quantitative trading and strategy development",
-      title: "Advanced Features"
+      alt: "StratGen User Manual v0.9 Page 12 - Advanced portfolio features and configuration options for professional quantitative trading and strategy development",
+      title: "Advanced Portfolio Features"
     },
     {
       url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-13-061f586.png",
-      alt: "StratGen User Manual v0.9 Page 13 - Final reference guide with comprehensive index and quick reference for all StratGen features and capabilities",
-      title: "Reference Guide"
+      alt: "StratGen User Manual v0.9 Page 13 - Summary with comprehensive overview and quick reference for all StratGen features and capabilities",
+      title: "Summary"
     }
   ];
 
