@@ -10,78 +10,88 @@ import { ArrowLeftIcon, DownloadIcon, BookOpenIcon } from "lucide-react";
 export default function UserManual() {
   const manualPages = [
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-eba9996.jpg",
-      alt: "StratGen User Manual Page 1 - Complete introduction and overview of the professional algorithmic trading platform for quantitative traders with no-code strategy development",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png",
+      alt: "StratGen User Manual v0.9 Page 1 - Complete introduction and overview of the professional algorithmic trading platform for quantitative traders with no-code strategy development",
       title: "Introduction & Overview"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0002-4db32db.jpg",
-      alt: "StratGen User Manual Page 2 - Step-by-step installation guide and initial setup instructions for Windows algorithmic trading software",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-02-25dc147.png",
+      alt: "StratGen User Manual v0.9 Page 2 - Step-by-step installation guide and initial setup instructions for Windows algorithmic trading software",
       title: "Installation & Setup"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0003-cc1c000.jpg",
-      alt: "StratGen User Manual Page 3 - Comprehensive platform interface guide and navigation tutorial for quantitative trading dashboard and tools",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-03-1570ba8.png",
+      alt: "StratGen User Manual v0.9 Page 3 - Comprehensive platform interface guide and navigation tutorial for quantitative trading dashboard and tools",
       title: "Platform Interface"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0004-cc6a602.jpg",
-      alt: "StratGen User Manual Page 4 - Creating algorithmic trading strategies and signal testing tutorial with 600+ technical indicators for quantitative analysis",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-04-607f20d.png",
+      alt: "StratGen User Manual v0.9 Page 4 - Creating algorithmic trading strategies and signal testing tutorial with 600+ technical indicators for quantitative analysis",
       title: "Strategy Creation"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0005-158e2db.jpg",
-      alt: "StratGen User Manual Page 5 - Advanced backtesting engine and robustness testing tools including Monte Carlo simulations and out-of-sample analysis",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-05-b93be6c.png",
+      alt: "StratGen User Manual v0.9 Page 5 - Advanced backtesting engine and robustness testing tools including Monte Carlo simulations and out-of-sample analysis",
       title: "Backtesting & Analysis"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0006-99ea843.jpg",
-      alt: "StratGen User Manual Page 6 - Data import tutorial for OHLCV data analysis covering futures, equities, crypto, and forex trading instruments",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-06-3769cc7.png",
+      alt: "StratGen User Manual v0.9 Page 6 - Data import tutorial for OHLCV data analysis covering futures, equities, crypto, and forex trading instruments",
       title: "Data Import & Analysis"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0007-d64c56e.jpg",
-      alt: "StratGen User Manual Page 7 - Automated code generation guide for exporting trading strategies to NinjaTrader, TradeStation, and Python platforms",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-07-8e3c421.png",
+      alt: "StratGen User Manual v0.9 Page 7 - Automated code generation guide for exporting trading strategies to NinjaTrader, TradeStation, and Python platforms",
       title: "Automated Code Generation"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0008-563c1b7.jpg",
-      alt: "StratGen User Manual Page 8 - Advanced signal analysis tutorial covering technical indicators, fundamental analysis, and quantitative research methodologies",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-08-45df199.png",
+      alt: "StratGen User Manual v0.9 Page 8 - Advanced signal analysis tutorial covering technical indicators, fundamental analysis, and quantitative research methodologies",
       title: "Signal Analysis"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0009-321143a.jpg",
-      alt: "StratGen User Manual Page 9 - Strategy validation guide with out-of-sample testing, walk-forward analysis, and performance optimization for algorithmic trading",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-09-f309e20.png",
+      alt: "StratGen User Manual v0.9 Page 9 - Strategy validation guide with out-of-sample testing, walk-forward analysis, and performance optimization for algorithmic trading",
       title: "Strategy Validation"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0010-1c45711.jpg",
-      alt: "StratGen User Manual Page 10 - Troubleshooting guide and advanced tips for optimizing quantitative trading strategies and platform performance",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-10-a570981.png",
+      alt: "StratGen User Manual v0.9 Page 10 - Troubleshooting guide and advanced tips for optimizing quantitative trading strategies and platform performance",
       title: "Troubleshooting & Tips"
     },
     {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0011-57743c7.jpg",
-      alt: "StratGen User Manual Page 11 - Additional resources, support information, and advanced features for professional algorithmic trading platform users",
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-11-1118413.png",
+      alt: "StratGen User Manual v0.9 Page 11 - Additional resources, support information, and advanced features for professional algorithmic trading platform users",
       title: "Additional Resources"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-12-17f4fb3.png",
+      alt: "StratGen User Manual v0.9 Page 12 - Extended features and advanced configuration options for professional quantitative trading and strategy development",
+      title: "Advanced Features"
+    },
+    {
+      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-13-061f586.png",
+      alt: "StratGen User Manual v0.9 Page 13 - Final reference guide with comprehensive index and quick reference for all StratGen features and capabilities",
+      title: "Reference Guide"
     }
   ];
 
   return (
     <>
       <Head>
-        <title>StratGen User Manual | Complete Guide to Algorithmic Trading Platform</title>
-        <meta name="description" content="Complete 11-page user manual for StratGen quantitative trading platform. Learn backtesting, signal generation, code generation for NinjaTrader, TradeStation, Python, and robustness testing." />
+        <title>StratGen User Manual v0.9 | Complete Guide to Algorithmic Trading Platform</title>
+        <meta name="description" content="Complete 13-page user manual for StratGen v0.9 quantitative trading platform. Learn backtesting, signal generation, code generation for NinjaTrader, TradeStation, Python, and robustness testing." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing" />
-        <meta property="og:title" content="StratGen User Manual | Complete Guide to Algorithmic Trading Platform" />
-        <meta property="og:description" content="Complete 11-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+        <meta property="og:title" content="StratGen User Manual v0.9 | Complete Guide to Algorithmic Trading Platform" />
+        <meta property="og:description" content="Complete 13-page user manual for StratGen v0.9 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stratgen.com/user-manual" />
-        <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-eba9996.jpg" />
+        <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="StratGen User Manual | Complete Guide to Algorithmic Trading Platform" />
-        <meta name="twitter:description" content="Complete 11-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation." />
-        <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-eba9996.jpg" />
+        <meta name="twitter:title" content="StratGen User Manual v0.9 | Complete Guide to Algorithmic Trading Platform" />
+        <meta name="twitter:description" content="Complete 13-page user manual for StratGen v0.9 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+        <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
         <link rel="canonical" href="https://stratgen.com/user-manual" />
         <link rel="icon" href="/favicon.ico" />
         
@@ -94,7 +104,7 @@ export default function UserManual() {
                 "@context": "https://schema.org",
                 "@type": "TechArticle",
                 "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
-                "description": "Complete 11-page user manual for StratGen quantitative trading platform covering backtesting, signal generation, and automated code generation.",
+                "description": "Complete 13-page user manual for StratGen v0.9 quantitative trading platform covering backtesting, signal generation, and automated code generation.",
                 "author": {
                   "@type": "Organization",
                   "name": "WeTradeLabs",
@@ -135,7 +145,7 @@ export default function UserManual() {
                 "@type": "HowTo",
                 "name": "How to Use StratGen for Quantitative Trading",
                 "description": "Step-by-step guide to using StratGen's algorithmic trading platform for backtesting, signal generation, and code generation.",
-                "image": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manual_page-0001-eba9996.jpg",
+                "image": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png",
                 "totalTime": "PT2H",
                 "estimatedCost": {
                   "@type": "MonetaryAmount",
@@ -235,7 +245,7 @@ export default function UserManual() {
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-                Complete 11-page guide to mastering StratGen for quantitative trading, backtesting, robustness testing, 
+                Complete 13-page guide to mastering StratGen v0.9 for quantitative trading, backtesting, robustness testing, 
                 and automated code generation. Perfect for quantitative researchers and algorithmic strategy developers.
               </p>
               
