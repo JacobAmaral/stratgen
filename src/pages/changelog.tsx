@@ -85,14 +85,75 @@ export default function Changelog() {
         <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Version 0.9.3 */}
+            {/* Version 0.9.4 */}
             <Card className="border-2 border-primary/20 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <CardTitle className="text-2xl">Version 0.9.3</CardTitle>
+                    <CardTitle className="text-2xl">Version 0.9.4</CardTitle>
                     <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                   </div>
+                  <div className="text-sm text-muted-foreground">
+                    Released: September 15, 2025
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <ZapIcon className="h-5 w-5 text-primary" />
+                    New Features
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Economic Indicator Signals:</strong> Added comprehensive economic data signals including CPI (Consumer Price Index), PPI (Producer Price Index), ISM (Institute for Supply Management), Jobs reports, Housing data, Oil EIA Report, and Natural Gas EIA Report for fundamental analysis integration.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Advanced Chart Pattern Recognition:</strong> Implemented DoubleBottom and HeadAndShoulders pattern detection algorithms for enhanced technical analysis and automated pattern-based trading signals.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <BugIcon className="h-5 w-5 text-orange-500" />
+                    Improvements & Fixes
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Pattern Recognition Optimization:</strong> Optimized DoubleBottom and HeadAndShoulders pattern detection algorithms for improved accuracy and reduced false signals in volatile market conditions.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Stop Loss Order Management Fix:</strong> Resolved critical issue where stop losses were not properly cancelling when indicator-based exits were triggered, ensuring proper risk management and order execution.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Entry Delay Resolution:</strong> Fixed entry delay issues affecting certain signals, improving signal timing accuracy and reducing latency in strategy execution.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Version 0.9.3 */}
+            <Card className="border border-border/40">
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-2xl">Version 0.9.3</CardTitle>
                   <div className="text-sm text-muted-foreground">
                     Released: September 5, 2025
                   </div>
