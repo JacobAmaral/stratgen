@@ -85,13 +85,82 @@ export default function Changelog() {
         <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Version 0.9.5 */}
+            {/* Version 0.9.6 */}
             <Card className="border-2 border-primary/20 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <CardTitle className="text-2xl">Version 0.9.5</CardTitle>
+                    <CardTitle className="text-2xl">Version 0.9.6</CardTitle>
                     <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Released: October 17, 2025
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <ZapIcon className="h-5 w-5 text-primary" />
+                    Performance Improvements
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Multi-Core Backtesting Performance:</strong> Significantly increased individual backtest performance by efficiently utilizing multiple CPU cores, resulting in faster optimization runs and reduced testing time for complex strategies.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Optimized Backtest Code:</strong> Enhanced individual backtest code optimization for improved execution speed and memory efficiency during strategy testing.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <BugIcon className="h-5 w-5 text-orange-500" />
+                    Bug Fixes & Improvements
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Data Import Fix:</strong> Resolved issue where importing second or tick data was not working properly, ensuring accurate high-resolution data analysis for intraday strategies.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Startup Settings Fix:</strong> Fixed startup settings mismatch that could cause configuration inconsistencies when launching the application.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>NinjaTrader Code Generation Fix:</strong> Resolved issue with NinjaTrader code generation when using stops and indicator exits together, ensuring proper order management in exported strategies.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Custom Signals Performance Fix:</strong> Fixed performance lag issues that occurred with custom signals on some backtests, improving overall testing speed and responsiveness.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Version 0.9.5 */}
+            <Card className="border border-border/40">
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <CardTitle className="text-2xl">Version 0.9.5</CardTitle>
                   </div>
                   <div className="text-sm text-muted-foreground">
                     Released: October 1, 2025
