@@ -85,13 +85,76 @@ export default function Changelog() {
         <section className="py-12 px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             
-            {/* Version 0.9.6 */}
+            {/* Version 0.9.7 */}
             <Card className="border-2 border-primary/20 shadow-lg">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <CardTitle className="text-2xl">Version 0.9.6</CardTitle>
+                    <CardTitle className="text-2xl">Version 0.9.7</CardTitle>
                     <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    Released: October 27, 2025
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <ZapIcon className="h-5 w-5 text-primary" />
+                    New Features
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Walk-Forward Optimization:</strong> Implemented comprehensive walk-forward optimization feature for robust out-of-sample testing. This advanced technique divides your data into multiple in-sample and out-of-sample periods, optimizing parameters on in-sample data and testing on out-of-sample data to validate strategy robustness and reduce overfitting risk.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Walk-Forward Export & Visualization:</strong> Added ability to export walk-forward optimization results to CSV format and view comprehensive equity charts showing performance across all walk-forward periods, making it easier to analyze strategy consistency over time.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <BugIcon className="h-5 w-5 text-orange-500" />
+                    Bug Fixes & Improvements
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Walk-Forward Trades Display Fix:</strong> Resolved issue where walk-forward trades were not showing properly in the results view, ensuring complete visibility of all trades across walk-forward periods.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>News Events Backtesting Fix:</strong> Fixed critical issue where news events (CPI, PPI, ISM, Jobs, Housing, Oil EIA Report, Natural Gas EIA Report) were not generating any trades during backtesting, ensuring proper fundamental signal integration.
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Monte Carlo OOS Trade Selection Fix:</strong> Corrected issue where Monte Carlo simulations were not using the proper trades for out-of-sample (OOS) analysis, improving the accuracy of robustness testing and risk assessment.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Version 0.9.6 */}
+            <Card className="border border-border/40">
+              <CardHeader className="pb-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <CardTitle className="text-2xl">Version 0.9.6</CardTitle>
                   </div>
                   <div className="text-sm text-muted-foreground">
                     Released: October 17, 2025
