@@ -86,13 +86,85 @@ export default function Changelog() {
                     <div className="max-w-4xl mx-auto space-y-8">
 
 
+                        
+                        {/* Version 0.9.9 */}
+                        <Card className="border-2 border-primary/20 shadow-lg">
+                            <CardHeader className="pb-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <CardTitle className="text-2xl">Version 0.9.9</CardTitle>
+                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                        Released: January 12, 2026
+                                    </div>
+                                </div>
+                            </CardHeader>
+
+                            <CardContent className="space-y-6">
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        Performance Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>History Data Caching:</strong> Added caching of historical data to significantly speed up walk-forward analysis and large-scale backtests.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Large Optimization Performance Fixes:</strong> Resolved performance bottlenecks affecting bigger optimization runs.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <BugIcon className="h-5 w-5 text-orange-500" />
+                                        Bug Fixes & Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Signal Update Fix:</strong> Fixed issue where some signals were not updating correctly during <code>OnData</code> processing.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Expression Engine Upgrade:</strong> Replaced NCalc with Roslyn-based evaluation for improved execution speed and scalability.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Expanded Walk-Forward Code Export:</strong> Added TradeStation and Python walk-forward code generation support.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Reduced Logging Overhead:</strong> Further optimized backtest execution by reducing unnecessary logging.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+
                         {/* Version 0.9.8 */}
                         <Card className="border-2 border-primary/20 shadow-lg">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
                                         <CardTitle className="text-2xl">Version 0.9.8</CardTitle>
-                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: December 10, 2025
