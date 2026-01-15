@@ -373,7 +373,7 @@ export default function UserManual() {
 
                   <h3>3.4 Understand P1 and P2 (parameters)</h3>
                   <p>
-                      Many signals have parameters like <strong>{P1}</strong> or <strong>{P2}</strong>.
+                      Many signals have parameters like <strong>P1</strong> or <strong>P2</strong>.
                       These are numbers StratGen can test. Example: a moving average length.
                   </p>
                   <p>
