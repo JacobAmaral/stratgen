@@ -248,19 +248,13 @@ export default function UserManual() {
                 Complete 13-page guide to mastering StratGen v0.9.9 for quantitative trading, backtesting, robustness testing, 
                 and automated code generation. Perfect for quantitative researchers and algorithmic strategy developers.
               </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-primary">
-                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ No-Code Platform</span>
-                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Advanced Backtesting</span>
-                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Code Generation</span>
-                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Robustness Testing</span>
-                <span className="bg-primary/10 px-3 py-1 rounded-full">✓ Out-of-Sample Testing</span>
-              </div>
             </div>
           </div>
         </section>
               {/* Table Content and Manual Text */}
-              <section className="sg-manual" id="top">
+              <section className="py-16 px-4 md:px-6 lg:px-8">
+                  <div className="max-w-4xl mx-auto">
+                      <article className="sg-manual prose prose-invert max-w-none" id="top">
                   <h1>StratGen User Manual</h1>
 
                   <p>
@@ -295,91 +289,94 @@ export default function UserManual() {
 
                   {/* 1 */}
                   <h2 id="launch">1) Launch StratGen</h2>
-                  <img src="/stratgen_manual_images/01-opening-stratgen.jpg" alt="Opening StratGen" />
+                          <img src="/stratgen_manual_images/01-opening-stratgen.jpg" alt="Opening StratGen" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>When StratGen starts, wait for the loading bar to finish before interacting with the platform.</p>
 
                   {/* 2 */}
                   <h2 id="settings-window">2) Settings Window</h2>
-                  <img src="/stratgen_manual_images/02-signals-tab-empty.jpg" alt="Settings window" />
+                          <img src="/stratgen_manual_images/02-signals-tab-empty.jpg" alt="Settings window" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>The Settings window controls all strategy configuration including signals, risk, data, and portfolios.</p>
 
                   {/* 3 */}
                   <h2 id="signals-tab">3) Signals</h2>
-                  <img src="/stratgen_manual_images/06-signals-selected.jpg" alt="Signals selected" />
+                          <img src="/stratgen_manual_images/06-signals-selected.jpg" alt="Signals selected" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Select Entry and Exit rules. These define exactly when trades are opened and closed.</p>
 
                   {/* 4 */}
                   <h2 id="strategy-settings">4) Strategy Settings</h2>
-                  <img src="/stratgen_manual_images/03-settings-top.jpg" alt="Strategy settings" />
+                          <img src="/stratgen_manual_images/03-settings-top.jpg" alt="Strategy settings" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Configure starting capital, exits, out-of-sample percentage, and rule count.</p>
 
                   {/* 5 */}
                   <h2 id="walk-forward">5) Walk-Forward & Realism</h2>
-                  <img src="/stratgen_manual_images/04-settings-walkforward.jpg" alt="Walk-forward settings" />
+                          <img src="/stratgen_manual_images/04-settings-walkforward.jpg" alt="Walk-forward settings" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Enable walk-forward testing, slippage, commissions, and performance filters.</p>
 
                   {/* 6 */}
                   <h2 id="import-data">6) Import Data</h2>
-                  <img src="/stratgen_manual_images/05-import-data.jpg" alt="Import data" />
+                          <img src="/stratgen_manual_images/05-import-data.jpg" alt="Import data" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Define symbols, point values, margins, and file paths for futures, stocks, and crypto.</p>
 
                   {/* 7 */}
                   <h2 id="run-sim">7) Run Simulation</h2>
-                  <img src="/stratgen_manual_images/07-simulating.jpg" alt="Simulation running" />
+                          <img src="/stratgen_manual_images/07-simulating.jpg" alt="Simulation running" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Click Run to test strategies. StratGen evaluates every valid rule combination.</p>
 
                   {/* 8 */}
                   <h2 id="results-list">8) Strategy Results</h2>
-                  <img src="/stratgen_manual_images/08-strategy-results-list.jpg" alt="Strategy results" />
+                          <img src="/stratgen_manual_images/08-strategy-results-list.jpg" alt="Strategy results" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Compare strategies by Net PnL, Drawdown, Sharpe, and Ret/DD.</p>
 
                   {/* 9 */}
                   <h2 id="dashboard">9) Backtest Dashboard</h2>
-                  <img src="/stratgen_manual_images/09-backtest-dashboard.jpg" alt="Backtest dashboard" />
+                          <img src="/stratgen_manual_images/09-backtest-dashboard.jpg" alt="Backtest dashboard" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Review equity curves, trades, logs, and full performance metrics.</p>
 
                   {/* 10 */}
                   <h2 id="generated-code">10) Generated Code</h2>
-                  <img src="/stratgen_manual_images/10-generated-code.jpg" alt="Generated code" />
+                          <img src="/stratgen_manual_images/10-generated-code.jpg" alt="Generated code" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Export strategies to NinjaTrader, TradeStation, or Python.</p>
 
                   {/* 11 */}
                   <h2 id="monte-carlo">11) Monte Carlo Simulation</h2>
-                  <img src="/stratgen_manual_images/11-monte-carlo-simulation.jpg" alt="Monte Carlo simulation" />
+                          <img src="/stratgen_manual_images/11-monte-carlo-simulation.jpg" alt="Monte Carlo simulation" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Tests strategy robustness by randomizing trade order and outcomes.</p>
 
                   {/* 12 */}
                   <h2 id="portfolio">12) Portfolio</h2>
-                  <img src="/stratgen_manual_images/12-portfolio-tab.jpg" alt="Portfolio tab" />
+                          <img src="/stratgen_manual_images/12-portfolio-tab.jpg" alt="Portfolio tab" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Combine multiple strategies into a single portfolio.</p>
 
                   {/* 13 */}
                   <h2 id="portfolio-equity">13) Portfolio Equity</h2>
-                  <img src="/stratgen_manual_images/13-portfolio-equity.jpg" alt="Portfolio equity" />
+                          <img src="/stratgen_manual_images/13-portfolio-equity.jpg" alt="Portfolio equity" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>View the combined equity curve of all portfolio strategies.</p>
 
                   {/* 14 */}
                   <h2 id="correlation">14) Correlation</h2>
-                  <img src="/stratgen_manual_images/14-correlation-matrix.jpg" alt="Correlation matrix" />
+                          <img src="/stratgen_manual_images/14-correlation-matrix.jpg" alt="Correlation matrix" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Identify diversification benefits by measuring correlation between strategies.</p>
 
                   {/* 15 */}
                   <h2 id="templates">15) Templates</h2>
-                  <img src="/stratgen_manual_images/15-templates.jpg" alt="Templates" />
+                          <img src="/stratgen_manual_images/15-templates.jpg" alt="Templates" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Save and reuse strategy configurations.</p>
 
                   {/* 16 */}
                   <h2 id="custom-signals">16) Custom Signals</h2>
-                  <img src="/stratgen_manual_images/16-custom-signals.jpg" alt="Custom signals" />
+                          <img src="/stratgen_manual_images/16-custom-signals.jpg" alt="Custom signals" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Create your own signals using C# MiniSignal templates.</p>
 
                   {/* 17 */}
                   <h2 id="walk-forward-results">17) Walk-Forward Results</h2>
-                  <img src="/stratgen_manual_images/17-walk-forward-results.jpg" alt="Walk-forward results" />
+                          <img src="/stratgen_manual_images/17-walk-forward-results.jpg" alt="Walk-forward results" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
                   <p>Analyze performance consistency across rolling in-sample and out-of-sample windows.</p>
 
                   <p><a href="#top">Back to top</a></p>
+                      </article>
+                  </div>
               </section>
+
 
 
         
