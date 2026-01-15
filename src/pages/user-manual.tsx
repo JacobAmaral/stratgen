@@ -8,73 +8,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ArrowLeftIcon, DownloadIcon, BookOpenIcon } from "lucide-react";
 
 export default function UserManual() {
-  const manualPages = [
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png",
-      alt: "StratGen User Manual v0.9 Page 1 - Complete introduction and overview of the professional algorithmic trading platform for quantitative traders with no-code strategy development",
-      title: "Introduction & Overview"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-02-25dc147.png",
-      alt: "StratGen User Manual v0.9 Page 2 - Step-by-step installation guide and initial setup instructions for Windows algorithmic trading software",
-      title: "Installation & Setup"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-03-1570ba8.png",
-      alt: "StratGen User Manual v0.9 Page 3 - Comprehensive platform interface guide and navigation tutorial for quantitative trading dashboard and tools",
-      title: "Platform Interface"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-04-607f20d.png",
-      alt: "StratGen User Manual v0.9 Page 4 - Creating algorithmic trading strategies and signal testing tutorial with 600+ technical indicators for quantitative analysis",
-      title: "Strategy Creation"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-05-b93be6c.png",
-      alt: "StratGen User Manual v0.9 Page 5 - Advanced backtesting engine and robustness testing tools including Monte Carlo simulations and out-of-sample analysis",
-      title: "Backtesting & Analysis"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-06-3769cc7.png",
-      alt: "StratGen User Manual v0.9 Page 6 - Data import tutorial for OHLCV data analysis covering futures, equities, crypto, and forex trading instruments",
-      title: "Data Import & Analysis"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-07-8e3c421.png",
-      alt: "StratGen User Manual v0.9 Page 7 - Automated code generation guide for exporting trading strategies to NinjaTrader, TradeStation, and Python platforms",
-      title: "Automated Code Generation"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-08-45df199.png",
-      alt: "StratGen User Manual v0.9 Page 8 - Advanced signal analysis tutorial covering technical indicators, fundamental analysis, and quantitative research methodologies",
-      title: "Signal Analysis"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-09-f309e20.png",
-      alt: "StratGen User Manual v0.9 Page 9 - Strategy validation guide with out-of-sample testing, walk-forward analysis, and performance optimization for algorithmic trading",
-      title: "Strategy Validation"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-10-a570981.png",
-      alt: "StratGen User Manual v0.9 Page 10 - Code exporting guide for generating trading strategies for NinjaTrader, TradeStation, and Python platforms",
-      title: "Code Exporting"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-11-1118413.png",
-      alt: "StratGen User Manual v0.9 Page 11 - Portfolio management and analysis tools for professional algorithmic trading platform users",
-      title: "Portfolio"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-12-17f4fb3.png",
-      alt: "StratGen User Manual v0.9 Page 12 - Advanced portfolio features and configuration options for professional quantitative trading and strategy development",
-      title: "Advanced Portfolio Features"
-    },
-    {
-      url: "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-13-061f586.png",
-      alt: "StratGen User Manual v0.9 Page 13 - Summary with comprehensive overview and quick reference for all StratGen features and capabilities",
-      title: "Summary"
-    }
-  ];
 
   return (
     <>
@@ -264,26 +197,33 @@ export default function UserManual() {
 
                   <p><strong>Get Started Now</strong><br />Available for Windows</p>
 
-                  <h2>Table of Contents</h2>
-                  <ol>
-                      <li><a href="#launch">Launch StratGen</a></li>
-                      <li><a href="#settings-window">Settings Window</a></li>
-                      <li><a href="#signals-tab">Signals</a></li>
-                      <li><a href="#strategy-settings">Strategy Settings</a></li>
-                      <li><a href="#walk-forward">Walk-Forward Settings</a></li>
-                      <li><a href="#import-data">Import Data</a></li>
-                      <li><a href="#run-sim">Run Simulation</a></li>
-                      <li><a href="#results-list">Strategy Results</a></li>
-                      <li><a href="#dashboard">Backtest Dashboard</a></li>
-                      <li><a href="#generated-code">Generated Code</a></li>
-                      <li><a href="#monte-carlo">Monte Carlo</a></li>
-                      <li><a href="#portfolio">Portfolio</a></li>
-                      <li><a href="#portfolio-equity">Portfolio Equity</a></li>
-                      <li><a href="#correlation">Correlation</a></li>
-                      <li><a href="#templates">Templates</a></li>
-                      <li><a href="#custom-signals">Custom Signals</a></li>
-                      <li><a href="#walk-forward-results">Walk-Forward Results</a></li>
-                  </ol>
+                <h2 className="mt-12 mb-4 text-center">Table of Contents</h2>
+
+                <nav
+                    aria-label="Table of contents"
+                    className="my-8 rounded-xl border border-border/40 bg-muted/20 p-6"
+                >
+                    <ol className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2 list-decimal list-inside text-sm">
+                        <li><a href="#launch" className="hover:underline">Launch StratGen</a></li>
+                        <li><a href="#settings-window" className="hover:underline">Settings Window</a></li>
+                        <li><a href="#signals-tab" className="hover:underline">Signals</a></li>
+                        <li><a href="#strategy-settings" className="hover:underline">Strategy Settings</a></li>
+                        <li><a href="#walk-forward" className="hover:underline">Walk-Forward Settings</a></li>
+                        <li><a href="#import-data" className="hover:underline">Import Data</a></li>
+                        <li><a href="#run-sim" className="hover:underline">Run Simulation</a></li>
+                        <li><a href="#results-list" className="hover:underline">Strategy Results</a></li>
+                        <li><a href="#dashboard" className="hover:underline">Backtest Dashboard</a></li>
+                        <li><a href="#generated-code" className="hover:underline">Generated Code</a></li>
+                        <li><a href="#monte-carlo" className="hover:underline">Monte Carlo</a></li>
+                        <li><a href="#portfolio" className="hover:underline">Portfolio</a></li>
+                        <li><a href="#portfolio-equity" className="hover:underline">Portfolio Equity</a></li>
+                        <li><a href="#correlation" className="hover:underline">Correlation</a></li>
+                        <li><a href="#templates" className="hover:underline">Templates</a></li>
+                        <li><a href="#custom-signals" className="hover:underline">Custom Signals</a></li>
+                        <li><a href="#walk-forward-results" className="hover:underline">Walk-Forward Results</a></li>
+                    </ol>
+                </nav>
+
 
                   <hr />
 
