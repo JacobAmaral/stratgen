@@ -344,55 +344,221 @@ export default function UserManual() {
 
 
                             {/* 4 */}
-                            <h2 id="strategy-settings">Strategy Settings (Capital, Exits, OOS Split)</h2>
+                            <h2 id="strategy-settings">4) Strategy Settings (Risk, Exits, OOS Split, Rule Count)</h2>
                             <img
                                 src="/stratgen_manual_images/03-settings-top.jpg"
                                 alt="Strategy settings"
                                 className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
                             />
 
+                            <p>
+                                This tab is where you control “realism” and “risk.” It affects how strategies are tested and how trustworthy results are.
+                            </p>
+
                             <h3>Starting Cash</h3>
                             <p>
-                                <strong>Starting Cash</strong> sets the starting account size for the backtest. This affects position sizing and percent returns.
+                                <strong>Starting Cash</strong> is your starting account size for the backtest (example: 100000). This impacts percent return,
+                                and can impact position sizing (depending on your system rules).
                             </p>
 
-                            <h3>Exit Settings (Profit Target, Stop Loss, Trailing Stop)</h3>
+                            <h3>Profit Target, Stop Loss, Trailing Stop</h3>
                             <p>
-                                These settings control risk and trade duration. If you leave a field at 0, it may be effectively disabled depending on the setting.
-                            </p>
-
-                            <h3>Out-of-Sample % (OOS)</h3>
-                            <p>
-                                <strong>Out Of Sample %</strong> splits your historical data into two parts:
+                                These settings define how a trade can exit. If a value is 0, that exit is effectively off.
                             </p>
                             <ul>
-                                <li><strong>In-Sample (IS)</strong>: used to find the best strategy and parameters</li>
-                                <li><strong>Out-of-Sample (OOS)</strong>: used to confirm it still works on unseen data</li>
+                                <li><strong>Profit Target</strong>: take profits once price moves in your favor.</li>
+                                <li><strong>Stop Loss</strong>: cut losses when price moves against you.</li>
+                                <li><strong>Trail Stop</strong>: a stop that moves up as the trade becomes profitable.</li>
                             </ul>
 
+                            <h3>Exit after N bars</h3>
                             <p>
-                                Example: OOS = 50% means half the data is used for IS and half for OOS.
-                                If IS is strong and OOS is also strong, the strategy is more likely robust.
+                                This forces trades to exit after a certain number of bars. It is useful to stop “forever trades” that never close.
                             </p>
+
+                            <h3># Of Entry/Exit Rules (very important)</h3>
+                            <p>
+                                This tells StratGen how many signals must be used together to form an entry or exit condition.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    If <strong># Of Entry Rules = 1</strong>, StratGen tests entries like: <strong>Rule1</strong>.
+                                </li>
+                                <li>
+                                    If <strong># Of Entry Rules = 2</strong>, StratGen tests entries like: <strong>Rule1 AND Rule2</strong>.
+                                    Both must be true on the same bar to enter.
+                                </li>
+                                <li>
+                                    Same idea for exits: if you set <strong># Of Exit Rules = 2</strong>, then <strong>ExitRule1 AND ExitRule2</strong>
+                                    must both be true to exit.
+                                </li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Beginner advice</h4>
+                                <ul className="mb-0">
+                                    <li>Start with 1 entry rule and 1 exit rule.</li>
+                                    <li>More rules creates more combinations, slower runs, and higher risk of overfitting.</li>
+                                </ul>
+                            </div>
+
+                            <h3>Out Of Sample % (OOS)</h3>
+                            <p>
+                                <strong>OOS</strong> means Out-of-Sample. This is the “test” period that the strategy did not train on.
+                            </p>
+                            <ul>
+                                <li><strong>IS (In-Sample)</strong>: training period, where StratGen searches for good rules and parameters.</li>
+                                <li><strong>OOS (Out-of-Sample)</strong>: validation period, where you confirm it still works.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">The two most important performance numbers: Ret/DD and Sharpe</h4>
+
+                                <h5 className="mb-2">Ret/DD (Return divided by Drawdown)</h5>
+                                <p>
+                                    <strong>Ret/DD</strong> is a “profit per pain” metric:
+                                    it compares how much money you made versus how deep the worst drawdown was.
+                                </p>
+                                <ul>
+                                    <li><strong>Higher is better</strong> (it means you earned more for the risk taken).</li>
+                                    <li>
+                                        If two strategies have similar profit, pick the one with <strong>higher Ret/DD</strong> (usually lower drawdown).
+                                    </li>
+                                </ul>
+
+                                <h5 className="mb-2 mt-6">Sharpe (risk-adjusted consistency)</h5>
+                                <p>
+                                    <strong>Sharpe</strong> is a “smoothness/consistency” score. It compares average return versus volatility of returns.
+                                </p>
+                                <ul className="mb-0">
+                                    <li>Higher Sharpe usually means smoother equity and more consistent returns.</li>
+                                    <li>Lower Sharpe usually means the returns were more erratic, even if the profit was high.</li>
+                                </ul>
+                            </div>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Common mistake</h4>
                                 <p className="mb-0">
-                                    Users often sort the results by IS performance and pick the top one. This usually selects overfit strategies.
-                                    Better approach: sort by OOS stability or use Combined only after OOS passes.
+                                    Do not pick strategies by In-Sample (IS) performance alone. That often selects overfit strategies.
+                                    Use Out-of-Sample (OOS) and Walk-Forward as your real filter.
                                 </p>
                             </div>
 
 
+
                             {/* 5 */}
-                            <h2 id="walk-forward">5) Walk-Forward & Realism</h2>
-                            <img src="/stratgen_manual_images/04-settings-walkforward.jpg" alt="Walk-forward settings" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>Enable walk-forward testing, slippage, commissions, and performance filters.</p>
+                            {/* 5 */}
+                            <h2 id="walk-forward">5) Walk-Forward & Realism (Recommended)</h2>
+                            <img
+                                src="/stratgen_manual_images/04-settings-walkforward.jpg"
+                                alt="Walk-forward settings"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                Walk-forward testing is strongly recommended for every strategy. It gives you the most Out-of-Sample (OOS) coverage,
+                                and it is harder to “cheat” by accident.
+                            </p>
+
+                            <h3>What walk-forward means (simple)</h3>
+                            <p>
+                                Instead of doing one big IS/OOS split, walk-forward repeats many smaller splits:
+                                train on one time window (IS), then test the next window (OOS), then slide forward and repeat.
+                            </p>
+
+                            <ul>
+                                <li><strong>More OOS data</strong> means a tougher, more realistic test.</li>
+                                <li><strong>More windows</strong> means you see if the strategy works in different market conditions.</li>
+                            </ul>
+
+                            <h3>Slippage and Commissions (make results realistic)</h3>
+                            <ul>
+                                <li><strong>Slippage %</strong>: a small penalty for imperfect fills.</li>
+                                <li><strong>Commissions $ per side</strong>: cost per entry and per exit.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Strong recommendation</h4>
+                                <ul className="mb-0">
+                                    <li>Walk-forward every strategy before exporting code.</li>
+                                    <li>Walk-forward gives you the maximum amount of OOS validation.</li>
+                                    <li>If walk-forward fails, treat it as a warning sign, even if IS looks amazing.</li>
+                                </ul>
+                            </div>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Walk-Forward Monte Carlo (OOS-only)</h4>
+                                <p className="mb-0">
+                                    The Monte Carlo button on the Walk-Forward Results page uses <strong>only OOS trades</strong>.
+                                    This is deliberate: it is the strictest robustness test because it avoids “training period trades.”
+                                </p>
+                            </div>
+
 
                             {/* 6 */}
-                            <h2 id="import-data">6) Import Data</h2>
-                            <img src="/stratgen_manual_images/05-import-data.jpg" alt="Import data" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>Define symbols, point values, margins, and file paths for futures, stocks, and crypto.</p>
+                            <h2 id="import-data">6) Import Data (CSV Requirements)</h2>
+                            <img
+                                src="/stratgen_manual_images/05-import-data.jpg"
+                                alt="Import data"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                StratGen loads historical price data from CSV files on your computer. Each symbol row points to one CSV file.
+                                If the CSV format is wrong, the symbol will not load correctly.
+                            </p>
+
+                            <h3>What the table columns mean</h3>
+                            <ul>
+                                <li><strong>Symbol</strong>: market name (example: NQ, ES, CL, SPY, BTCUSD).</li>
+                                <li><strong>PointValue</strong>: how much 1 point is worth (critical for futures).</li>
+                                <li><strong>InitialMargin</strong>: margin required per contract (futures).</li>
+                                <li><strong>Security Type</strong>: Future, Stock, Crypto.</li>
+                                <li><strong>FilePath</strong>: full path to the CSV file on your PC.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">CSV format (simple)</h4>
+                                <p>
+                                    The CSV must contain OHLCV rows in this order:
+                                    <strong> Time, Open, High, Low, Close, Volume</strong>
+                                </p>
+
+                                <p className="mb-2">
+                                    Time format should be:
+                                    <code className="ml-2">MM/dd/yyyy HH:mm</code>
+                                </p>
+
+                                <p className="mb-2">Example row (one bar):</p>
+                                <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
+                                    01/15/2026 09:30,21500.25,21510.75,21490.00,21505.50,12345
+                                </pre>
+
+                                <p className="mb-0">
+                                    One row per bar. Keep the values numeric. Do not add extra columns.
+                                </p>
+                            </div>
+
+                            <h3>How to create the CSV (recommended)</h3>
+                            <p>
+                                A helper strategy called <strong>StratGenDataPrinter.cs</strong> is included. It prints data in the correct format.
+                                It outputs each bar like this:
+                            </p>
+
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
+                                Time (MM/dd/yyyy HH:mm), Open, High, Low, Close, Volume
+                            </pre>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Beginner warnings</h4>
+                                <ul className="mb-0">
+                                    <li>If <strong>PointValue</strong> is wrong, PnL and drawdown can be wrong.</li>
+                                    <li>If <strong>FilePath</strong> is wrong, StratGen cannot load that symbol.</li>
+                                    <li>If <strong>Time format</strong> is wrong, bars may not parse correctly.</li>
+                                </ul>
+                            </div>
+
 
                             {/* 7 */}
                             <h2 id="run-sim">7) Run Simulation</h2>
@@ -461,6 +627,18 @@ export default function UserManual() {
                                     <li>If the median path is profitable and drawdowns stay reasonable, that is a good sign.</li>
                                     <li>If outcomes vary wildly, you probably have an overfit strategy.</li>
                                     <li>Do not export code until Monte Carlo looks acceptable.</li>
+                                </ul>
+                            </div>
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">What you should be looking for</h4>
+                                <ul className="mb-0">
+                                    <li>
+                                        A strong target is <strong>Median Ret/DD greater than 2</strong>.
+                                        This generally indicates good performance relative to drawdown.
+                                    </li>
+                                    <li>
+                                        If the lines spread wildly (very wide fan), the strategy may be fragile and dependent on luck or sequencing.
+                                    </li>
                                 </ul>
                             </div>
 
