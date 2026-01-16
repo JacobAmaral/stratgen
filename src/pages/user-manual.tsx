@@ -561,14 +561,89 @@ export default function UserManual() {
 
 
                             {/* 7 */}
-                            <h2 id="run-sim">7) Run Simulation</h2>
-                            <img src="/stratgen_manual_images/07-simulating.jpg" alt="Simulation running" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>Click Run to test strategies. StratGen evaluates every valid rule combination.</p>
+                            <h2 id="run-sim">7) Run Simulation (Backtest Generation)</h2>
+                            <img
+                                src="/stratgen_manual_images/07-simulating.jpg"
+                                alt="Simulation running"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                When you click <strong>Run</strong>, StratGen generates and tests many strategies based on your selected signals, parameters,
+                                and settings. This is where StratGen does the “heavy lifting.”
+                            </p>
+
+                            <h3>Important performance note</h3>
+                            <p>
+                                StratGen uses <strong>all available CPU cores</strong> to run backtests in parallel (simultaneously). This is why the system can test many
+                                combinations quickly, but it also means your PC may run at high CPU usage during simulations.
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Recommended PC specs (for smooth performance)</h4>
+                                <ul className="mb-0">
+                                    <li><strong>RAM</strong>: 8 to 16+ GB DDR4 or DDR5 (minimum recommended).</li>
+                                    <li><strong>CPU</strong>: 4 to 8+ core processor (more cores generally means faster results).</li>
+                                </ul>
+                            </div>
+
+                            <h3>What to do</h3>
+                            <ol>
+                                <li>Click <strong>Run</strong> in the Signals tab.</li>
+                                <li>Wait for the progress window to complete.</li>
+                                <li>When finished, StratGen will show the Strategy Results list.</li>
+                            </ol>
+
 
                             {/* 8 */}
-                            <h2 id="results-list">8) Strategy Results</h2>
-                            <img src="/stratgen_manual_images/08-strategy-results-list.jpg" alt="Strategy results" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>Compare strategies by Net PnL, Drawdown, Sharpe, and Ret/DD.</p>
+                            <h2 id="results-list">8) Strategy Results (Select, Inspect, Export)</h2>
+                            <img
+                                src="/stratgen_manual_images/08-strategy-results-list.jpg"
+                                alt="Strategy results list"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                This table shows all strategies StratGen generated. You compare them by performance metrics like Net PnL, MaxDD (drawdown),
+                                Sharpe, and Ret/DD.
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Important: you must select a strategy first</h4>
+                                <p className="mb-0">
+                                    Before you can use <strong>Chart</strong>, <strong>Generate Code</strong>, <strong>Add To Portfolio</strong>, or <strong>Monte Carlo</strong>,
+                                    you must <strong>left-click a strategy row</strong> to select it.
+                                </p>
+                            </div>
+
+                            <h3>What the Chart button does</h3>
+                            <p>
+                                Clicking <strong>Chart</strong> loads the selected strategy into the <strong>Backtest Dashboard</strong>.
+                                This is where you inspect the equity curve, trade list, logs, and detailed metrics.
+                            </p>
+
+                            <h3>Buttons on the right (simple)</h3>
+                            <ul>
+                                <li><strong>Chart</strong>: opens the Backtest Dashboard for the selected strategy.</li>
+                                <li><strong>NinjaTrader Code</strong>: generates a NinjaTrader strategy file.</li>
+                                <li><strong>TradeStation Code</strong>: generates an EasyLanguage strategy.</li>
+                                <li><strong>Python Code</strong>: generates a Python algorithm template.</li>
+                                <li><strong>Monte Carlo</strong>: runs robustness testing (randomized equity paths).</li>
+                                <li><strong>Add To Portfolio</strong>: saves this strategy for portfolio testing.</li>
+                                <li><strong>Walk-Forward</strong>: runs walk-forward testing for deeper OOS validation.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Beginner workflow (recommended)</h4>
+                                <ol className="mb-0">
+                                    <li>Select a strategy row (left-click).</li>
+                                    <li>Click <strong>Chart</strong> and review drawdown and equity curve behavior.</li>
+                                    <li>Run <strong>Monte Carlo</strong> to validate robustness.</li>
+                                    <li>Run <strong>Walk-Forward</strong> for the strongest out-of-sample validation.</li>
+                                    <li>Only then export code.</li>
+                                </ol>
+                            </div>
+
 
                             {/* 9 */}
                             <h2 id="dashboard">9) Backtest Dashboard</h2>
@@ -576,9 +651,71 @@ export default function UserManual() {
                             <p>Review equity curves, trades, logs, and full performance metrics.</p>
 
                             {/* 10 */}
-                            <h2 id="generated-code">10) Generated Code</h2>
-                            <img src="/stratgen_manual_images/10-generated-code.jpg" alt="Generated code" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>Export strategies to NinjaTrader, TradeStation, or Python.</p>
+                            <h2 id="generated-code">10) Generated Code (NinjaTrader, TradeStation, Python)</h2>
+
+                            <p>
+                                StratGen can export your selected strategy into platform-specific code. This helps you go from research to execution without rewriting logic by hand.
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Important</h4>
+                                <p className="mb-0">
+                                    You must <strong>left-click</strong> a strategy in the results list to select it before generating code.
+                                </p>
+                            </div>
+
+                            <h3>NinjaTrader code export</h3>
+                            <img
+                                src="/stratgen_manual_images/18-generated-code-ninjatrader.jpg"
+                                alt="Generated NinjaTrader code"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+                            <p>
+                                The NinjaTrader export generates a full NinjaScript strategy class. It includes default strategy settings and the strategy logic that StratGen discovered.
+                            </p>
+                            <ul>
+                                <li><strong>What it is</strong>: a ready-to-compile NinjaTrader strategy.</li>
+                                <li><strong>Where it goes</strong>: paste into NinjaTrader’s Strategy Editor (or a new .cs file in NinjaTrader).</li>
+                                <li><strong>What to do</strong>: copy all, paste into NinjaTrader, compile, then run in the Strategy Analyzer.</li>
+                            </ul>
+
+                            <h3>TradeStation code export (EasyLanguage)</h3>
+                            <img
+                                src="/stratgen_manual_images/19-generated-code-tradestation.jpg"
+                                alt="Generated TradeStation EasyLanguage code"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+                            <p>
+                                The TradeStation export generates an EasyLanguage strategy. It includes Inputs (settings), Variables (state), and the Entry/Exit conditions.
+                            </p>
+                            <ul>
+                                <li><strong>What it is</strong>: a TradeStation and MultiCharts compatible strategy script.</li>
+                                <li><strong>How it works</strong>: StratGen turns your signals into boolean entry/exit conditions and writes the order statements for you.</li>
+                                <li><strong>What to do</strong>: paste into a new EasyLanguage strategy, compile, and backtest inside TradeStation.</li>
+                            </ul>
+
+                            <h3>Python code export</h3>
+                            <img
+                                src="/stratgen_manual_images/20-generated-code-python.jpg"
+                                alt="Generated Python algorithm code"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+                            <p>
+                                The Python export generates a Python algorithm template that contains your strategy logic. This is intended for users who want a programmable environment.
+                            </p>
+                            <ul>
+                                <li><strong>What it is</strong>: a Python strategy scaffold with indicators and entry/exit logic.</li>
+                                <li><strong>Use case</strong>: porting into your Python trading environment or research workflow.</li>
+                                <li><strong>What to do</strong>: copy into your Python platform, verify data mappings, then run a backtest.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Practical warning</h4>
+                                <p className="mb-0">
+                                    Exported code is only as good as your validation. Always run Out-of-Sample, Walk-Forward, and Monte Carlo before trading live.
+                                </p>
+                            </div>
+
 
                             {/* 11 */}
                             <h2 id="monte-carlo">Monte Carlo Simulation (Robustness Test)</h2>
@@ -736,6 +873,16 @@ export default function UserManual() {
                                 <p className="mb-0">
                                     Degradation is the drop from IS performance to OOS performance. Some degradation is expected.
                                     Extreme degradation usually means the strategy is tuned too specifically to the IS window.
+                                </p>
+                            </div>
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Walk-Forward code export (advanced, recommended)</h4>
+                                <p>
+                                    StratGen can generate <strong>walk-forward-aware code</strong> that changes parameters across walk-forward windows.
+                                    This lets you backtest the realistic scenario where the “best parameters” evolve over time as the walk-forward process advances.
+                                </p>
+                                <p className="mb-0">
+                                    Simple interpretation: instead of one static parameter set forever, the exported code can apply the right parameter set for each historical window.
                                 </p>
                             </div>
 
