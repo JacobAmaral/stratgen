@@ -144,11 +144,11 @@ export default function Home() {
         <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stratgen.com" />
-        <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
+        <meta property="og:image" content="/stratgen_manual_images/homescreen.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
         <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
-        <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
+        <meta name="twitter:image" content="/stratgen_manual_images/homescreen.jpg" />
         <link rel="canonical" href="https://stratgen.com" />
         <link rel="icon" href="/favicon.ico" />
         <script
@@ -197,7 +197,7 @@ export default function Home() {
                   "Coding Generator for NinjaTrader, TradeStation, and Python",
                   "Powerful Dashboard with analytics"
                 ],
-                "screenshot": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
+                    "screenshot": "/stratgen_manual_images/homescreen.jpg"
               },
               {
                 "@context": "https://schema.org",
@@ -349,7 +349,7 @@ export default function Home() {
                 {/* StratGen Application Image */}
                 <div className="relative h-[400px] w-full overflow-hidden">
                   <Image 
-                    src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png"
+                    src="/stratgen_manual_images/homescreen.jpg"
                     alt="StratGen professional algorithmic trading platform dashboard displaying advanced backtesting results, quantitative analysis charts, and trading signals for automated strategy development"
                     fill
                     style={{ objectFit: 'cover' }}
@@ -408,7 +408,7 @@ export default function Home() {
                   <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
                     <div className="relative w-full h-full">
                       <Image 
-                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/animation-faec11f.gif"
+                        src="/stratgen_manual_images/dashboard.jpg"
                         alt="StratGen algorithmic trading dashboard showing real-time market data, backtesting results, and quantitative analysis for futures and crypto trading"
                         fill
                         style={{ objectFit: 'cover' }}
@@ -428,7 +428,7 @@ export default function Home() {
                   <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
                     <div className="relative w-full h-full">
                       <Image 
-                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-39a10ef.png"
+                        src="/stratgen_manual_images/signaltester.jpg"
                         alt="StratGen signal tester interface for quantitative trading analysis with 600+ technical indicators for algorithmic trading strategies"
                         fill
                         style={{ objectFit: 'cover' }}
@@ -448,7 +448,7 @@ export default function Home() {
                   <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
                     <div className="relative w-full h-full">
                       <Image 
-                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-3a930e3.png"
+                        src="/stratgen_manual_images/advbacktest.jpg"
                         alt="StratGen advanced backtesting interface with robustness testing, Monte Carlo simulations, and out-of-sample analysis for algorithmic trading"
                         fill
                         style={{ objectFit: 'cover' }}
@@ -468,7 +468,7 @@ export default function Home() {
                   <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
                     <div className="relative w-full h-full">
                       <Image 
-                        src="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-9db68ff.png"
+                        src="/stratgen_manual_images/codinggen.jpg"
                         alt="StratGen automatic code generator for NinjaTrader, TradeStation, and Python - no-code algorithmic trading strategy export"
                         fill
                         style={{ objectFit: 'cover' }}
