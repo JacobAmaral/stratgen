@@ -12,18 +12,18 @@ export default function UserManual() {
     return (
         <>
             <Head>
-                <title>StratGen User Manual v0.9.9 | Complete Guide to Algorithmic Trading Platform</title>
-                <meta name="description" content="Complete 13-page user manual for StratGen v0.9.9 quantitative trading platform. Learn backtesting, signal generation, code generation for NinjaTrader, TradeStation, Python, and robustness testing." />
+                <title>StratGen User Manual v1.0.2 | Complete Guide to Algorithmic Trading Platform</title>
+                <meta name="description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform. Learn backtesting, signal generation, code generation for NinjaTrader, TradeStation, Python, and robustness testing." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing" />
-                <meta property="og:title" content="StratGen User Manual v0.9.9 | Complete Guide to Algorithmic Trading Platform" />
-                <meta property="og:description" content="Complete 13-page user manual for StratGen v0.9 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+                <meta property="og:title" content="StratGen User Manual v1.0.2 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://stratgen.com/user-manual" />
                 <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="StratGen User Manual v0.9.9 | Complete Guide to Algorithmic Trading Platform" />
-                <meta name="twitter:description" content="Complete 13-page user manual for StratGen v0.9 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+                <meta name="twitter:title" content="StratGen User Manual v1.0.2 | Complete Guide to Algorithmic Trading Platform" />
+                <meta name="twitter:description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
                 <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
                 <link rel="canonical" href="https://stratgen.com/user-manual" />
                 <link rel="icon" href="/favicon.ico" />
@@ -37,7 +37,7 @@ export default function UserManual() {
                                 "@context": "https://schema.org",
                                 "@type": "TechArticle",
                                 "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
-                                "description": "Complete 13-page user manual for StratGen v0.9.9 quantitative trading platform covering backtesting, signal generation, and automated code generation.",
+                                "description": "Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation.",
                                 "author": {
                                     "@type": "Organization",
                                     "name": "WeTradeLabs",
@@ -178,7 +178,7 @@ export default function UserManual() {
                                 </h1>
                             </div>
                             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-                                Complete 13-page guide to mastering StratGen v0.9.9 for quantitative trading, backtesting, robustness testing,
+                                Complete 13-page guide to mastering StratGen v1.0.2 for quantitative trading, backtesting, robustness testing,
                                 and automated code generation. Perfect for quantitative researchers and algorithmic strategy developers.
                             </p>
                         </div>
@@ -222,6 +222,7 @@ export default function UserManual() {
                                     <li><a href="#templates" className="hover:underline">Templates</a></li>
                                     <li><a href="#custom-signals" className="hover:underline">Custom Signals</a></li>
                                     <li><a href="#walk-forward-results" className="hover:underline">Walk-Forward Results</a></li>
+                                    <li><a href="#ai-workflows" className="hover:underline">AI Workflow</a></li>
                                 </ol>
                             </nav>
 
@@ -886,6 +887,66 @@ export default function UserManual() {
                                 </p>
                             </div>
 
+
+                            {/* 18 */}
+                            <h2 id="ai-workflows">AI Workflows (Settings Page)</h2>
+                            <img
+                                src="/stratgen_manual_images/ai-workflows-settings.png"
+                                alt="AI Workflows settings page"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                AI Workflows automates repeated strategy runs (backtests and walk-forward cycles), filtering results by quality thresholds and retry rules until it finds viable candidates.
+                            </p>
+
+                            <h3>Core Evaluation Filters</h3>
+                            <ul>
+                                <li><strong>Min Ret/DD</strong>: Minimum return-to-drawdown ratio required for a candidate to pass (global threshold).</li>
+                                <li><strong>Evaluation mode</strong>: Decides how results are scored.</li>
+                                <li><strong>Combined</strong>: Uses both long and short performance together.</li>
+                                <li><strong>Other modes (if available)</strong>: Typically evaluate long and short independently.</li>
+                                <li><strong>Long Min Ret/DD</strong>: Minimum Ret/DD required for the long side.</li>
+                                <li><strong>Short Min Ret/DD</strong>: Minimum Ret/DD required for the short side.</li>
+                                <li><strong>Combined Min Ret/DD</strong>: Minimum Ret/DD required when long+short are merged into one system view.</li>
+                                <li><strong>Min Trades</strong>: Minimum number of trades required before a result is considered valid (prevents overfitting on tiny sample sizes).</li>
+                                <li><strong>Top candidates / side</strong>: Number of highest-ranked strategies kept per side (long or short) after each evaluation pass.</li>
+                            </ul>
+
+                            <h3>Run Direction and Strategy Construction</h3>
+                            <ul>
+                                <li><strong>Start Side</strong>: Which direction workflow begins with (Long or Short).</li>
+                                <li><strong>EntryExit policy</strong>: Rule set for how entries/exits are generated during search (example shown: RandomEntry).</li>
+                                <li><strong>Code platform</strong>: Target execution/runtime format for generated strategy code (example shown: Ninja, likely NinjaTrader-compatible output).</li>
+                            </ul>
+
+                            <h3>Execution Limits and Throughput Control</h3>
+                            <ul>
+                                <li><strong>Max Attempts (0=unlimited)</strong>: Max number of strategy-generation/evaluation tries before stopping.</li>
+                                <li><strong>Max Runtime Minutes (0=unlimited)</strong>: Hard time limit for the workflow.</li>
+                                <li><strong>Cool-down Seconds (0=off)</strong>: Delay between attempts to reduce load, pacing API/simulation usage.</li>
+                            </ul>
+
+                            <h3>Retry Behavior</h3>
+                            <ul>
+                                <li><strong>Retry Policy</strong>: What happens after a failed/invalid attempt.</li>
+                                <li><strong>Example shown</strong>: FlipSideAndRetry (switch side and try again).</li>
+                            </ul>
+
+                            <h3>Controls and Status</h3>
+                            <ul>
+                                <li><strong>Start</strong>: Begins the automated workflow with current settings.</li>
+                                <li><strong>Stop</strong>: Stops the active workflow.</li>
+                                <li><strong>Status text (example: Idle)</strong>: Current workflow state (idle/running/stopped/error).</li>
+                            </ul>
+
+                            <h3>Practical Tuning Guidance</h3>
+                            <ul>
+                                <li>Use higher Min Ret/DD values for stricter quality; lower values for broader exploration.</li>
+                                <li>Keep Min Trades high enough to avoid fragile results.</li>
+                                <li>Use Max Attempts and Max Runtime Minutes together to cap cost/time.</li>
+                                <li>If search stalls on one direction, FlipSideAndRetry helps maintain momentum.</li>
+                            </ul>
 
                             <p><a href="#top">Back to top</a></p>
                         </article>
