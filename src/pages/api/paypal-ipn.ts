@@ -194,8 +194,8 @@ function getPlanType(data: PayPalIPNData): string {
   const itemName = data.item_name || '';
   const amount = parseFloat(data.mc_gross || '0');
   
-  if (itemName.toLowerCase().includes('yearly') || amount >= 1000) {
-    return 'Yearly Plan';
+  if (itemName.toLowerCase().includes('lifetime') || itemName.toLowerCase().includes('yearly') || amount >= 1000) {
+    return 'Lifetime Plan';
   } else if (itemName.toLowerCase().includes('monthly') || amount >= 99) {
     return 'Monthly Plan';
   }

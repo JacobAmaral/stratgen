@@ -86,14 +86,140 @@ export default function Changelog() {
                     <div className="max-w-4xl mx-auto space-y-8">
 
 
-                        
+                        {/* Version 1.0.2 */}
+                        <Card className="border-2 border-primary/20 shadow-lg">
+                            <CardHeader className="pb-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <CardTitle className="text-2xl">Version 1.0.2</CardTitle>
+                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                        Released: February 25, 2026
+                                    </div>
+                                </div>
+                            </CardHeader>
+
+                            <CardContent className="space-y-6">
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        New Features
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>AI Workflows:</strong> Added AI workflows to automate your research.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>AI Workflow Auto-Combine:</strong> AI workflows now automatically combine outputted strategy code.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Symbol Coverage Expansion:</strong> Added server-side symbols, more server-side symbols, and micro contracts in server-side variables.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Symbol Search:</strong> Added symbol search.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        Performance Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Workflow Defaults:</strong> Updated recommended default AI workflow settings and added better default WF settings.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Workflow Summaries:</strong> Added a better summary for AI workflow outputs.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>AIWF Candidate Stability:</strong> AIWF now snapshots and restores combo config per candidate run.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Backtest Guardrails:</strong> Added a backtest ceiling limit and clamped WF median ret/dd close to 0.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Save Flow Reliability:</strong> Added debounce on save changes and one global cancellation token.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <BugIcon className="h-5 w-5 text-orange-500" />
+                                        Bug Fixes & Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Backtest Accuracy Fixes:</strong> Fixed timezone issue, bar-shifting backtests, and order fill resolution.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Window Ordering Fix:</strong> Fixed window ordering.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Monte Carlo Stability:</strong> Fixed Monte Carlo VM leak/runaway worker and added more cleanup on Monte Carlo chart close.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Result Write Contention Fix:</strong> Resolved result file write contention (`UnauthorizedAccessException`).
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Server Symbol Point Values:</strong> Fixed point values on server-side symbols.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </CardContent>
+                        </Card>
+
                         {/* Version 0.9.9 */}
                         <Card className="border-2 border-primary/20 shadow-lg">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
                                         <CardTitle className="text-2xl">Version 0.9.9</CardTitle>
-                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: January 12, 2026

@@ -74,7 +74,7 @@ const chartConfig = {
 const pricingTier = {
   name: "StratGen Premium",
   monthlyPrice: "$100",
-  yearlyPrice: "$1000",
+  lifetimePrice: "$1000",
   description: "All-inclusive professional trading platform",
   features: [
     "600+ technical and fundamental signals",
@@ -174,12 +174,11 @@ export default function Home() {
                   },
                   {
                     "@type": "Offer",
-                    "name": "Annual Subscription",
+                    "name": "Lifetime Access",
                     "price": "1000.00",
                     "priceCurrency": "USD",
-                    "billingIncrement": "P1Y",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-9LN24145W5037140NNBFO7DY"
+                    "url": "https://codealgotrading.com/l/pdp/coding-great-trading-bots"
                   }
                 ],
                 "description": "StratGen is a desktop app for designing, backtesting, and exporting algorithmic trading strategies for platforms like NinjaTrader and QuantConnect. Professional trading signal generator and backtesting platform for quantitative traders with automatic code generation.",
@@ -234,7 +233,7 @@ export default function Home() {
                   },
                   {
                     "@type": "Offer",
-                    "name": "Annual Subscription", 
+                    "name": "Lifetime Access", 
                     "price": "1000.00",
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/InStock"
@@ -325,7 +324,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 border-primary/20 text-primary">
-                  Version 0.9.9 Now Available
+                  Version 1.0.2 Now Available
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
@@ -615,17 +614,17 @@ export default function Home() {
                       </Button>
                     </div>
                     
-                    {/* Yearly Plan */}
+                    {/* Lifetime Plan */}
                     <div className="border-2 border-primary rounded-lg p-6 text-center relative">
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                         <Badge className="bg-primary text-primary-foreground px-3 py-1">Save $188</Badge>
                       </div>
-                      <h3 className="text-lg font-semibold mb-2">Yearly</h3>
-                      <div className="text-3xl font-bold mb-2">$1000<span className="text-lg font-normal text-muted-foreground">/year</span></div>
-                      <div className="text-sm text-muted-foreground mb-4">$83.33/month when paid annually</div>
+                      <h3 className="text-lg font-semibold mb-2">Lifetime</h3>
+                      <div className="text-3xl font-bold mb-2">$1000<span className="text-lg font-normal text-muted-foreground"> one-time</span></div>
+                      <div className="text-sm text-muted-foreground mb-4">Lifetime access</div>
                       <Button size="lg" className="w-full font-medium" asChild>
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-9LN24145W5037140NNBFO7DY" target="_blank" rel="noopener noreferrer">
-                          Subscribe Yearly <ArrowRightIcon className="ml-2 h-4 w-4" />
+                        <a href="https://codealgotrading.com/l/pdp/coding-great-trading-bots" target="_blank" rel="noopener noreferrer">
+                          Buy Lifetime <ArrowRightIcon className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
                     </div>
@@ -659,7 +658,7 @@ export default function Home() {
                     <div className="bg-muted/30 rounded-lg p-4">
                       <h5 className="font-semibold mb-2 text-center">Subscription Policy</h5>
                       <p className="text-sm text-muted-foreground text-center">
-                        We do not offer refunds. However, you can cancel your monthly or yearly subscription at any time and will not be billed thereafter.
+                        We do not offer refunds. Monthly subscriptions can be canceled at any time and will not be billed thereafter. Lifetime access is a one-time purchase.
                       </p>
                     </div>
                   </div>
