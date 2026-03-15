@@ -11,17 +11,17 @@ export default function WhatIsStratGen() {
     <>
       <Head>
         <title>What is StratGen? | Professional No-Code Algorithmic Trading Platform</title>
-        <meta name="description" content="StratGen is a professional no-code algorithmic trading platform designed for quantitative traders, systematic traders, and algorithmic strategy developers. Learn about backtesting, robustness testing, and automatic code generation." />
+        <meta name="description" content="StratGen is a professional no-code algorithmic trading platform designed for quantitative traders, systematic traders, and algorithmic strategy developers. Learn about backtesting, robustness testing, automatic code generation, and live training on best practices included." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="what is stratgen, algorithmic trading platform, quantitative trading software, no-code trading, systematic trading, backtesting platform, robustness testing, code generation, ninjatrader, tradestation, python" />
         <meta property="og:title" content="What is StratGen? | Professional No-Code Algorithmic Trading Platform" />
-        <meta property="og:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
+        <meta property="og:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stratgen.com/what-is-stratgen" />
         <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="What is StratGen? | Professional No-Code Algorithmic Trading Platform" />
-        <meta name="twitter:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, and automatic code generation." />
+        <meta name="twitter:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, automatic code generation, and live training on best practices included." />
         <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
         <link rel="canonical" href="https://stratgen.com/what-is-stratgen" />
         <link rel="icon" href="/favicon.ico" />
@@ -34,7 +34,7 @@ export default function WhatIsStratGen() {
               "@context": "https://schema.org",
               "@type": "Article",
               "headline": "What is StratGen? Complete Guide to Professional Algorithmic Trading Platform",
-              "description": "Comprehensive guide explaining StratGen's no-code algorithmic trading platform for quantitative traders, systematic traders, and algorithmic strategy developers.",
+              "description": "Comprehensive guide explaining StratGen's no-code algorithmic trading platform for quantitative traders, systematic traders, and algorithmic strategy developers, including live training on best practices.",
               "author": {
                 "@type": "Organization",
                 "name": "WeTradeLabs",
@@ -81,7 +81,7 @@ export default function WhatIsStratGen() {
                 What is <span className="text-primary">StratGen</span>?
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                The complete guide to understanding StratGen's professional no-code algorithmic trading platform designed for quantitative traders and systematic strategy developers.
+                The complete guide to understanding StratGen's professional no-code algorithmic trading platform designed for quantitative traders and systematic strategy developers, with live training on best practices included.
               </p>
             </div>
           </div>
@@ -100,13 +100,13 @@ export default function WhatIsStratGen() {
                     Professional No-Code Algorithmic Trading Platform
                   </h2>
                   <p className="text-muted-foreground mb-4">
-                    StratGen is a comprehensive desktop application specifically designed for quantitative traders, systematic traders, and algorithmic strategy developers who demand institutional-grade tools without the complexity of traditional coding. Our platform bridges the gap between sophisticated quantitative analysis and user-friendly design, enabling traders to develop, test, and deploy robust trading strategies across multiple markets and platforms.
+                    StratGen is a comprehensive desktop application specifically designed for quantitative traders, systematic traders, and algorithmic strategy developers who demand institutional-grade tools without the complexity of traditional coding. Our platform bridges the gap between sophisticated quantitative analysis and user-friendly design, enabling traders to develop, test, and deploy robust trading strategies across multiple markets and platforms, with live training on best practices included to help accelerate implementation.
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    Built for Windows, StratGen empowers both experienced quantitative researchers and aspiring systematic traders to harness the power of algorithmic trading through an intuitive no-code interface. Whether you're testing strategies on futures, equities, crypto, or forex markets, StratGen provides the professional-grade tools you need to validate your trading ideas with rigorous statistical analysis.
+                    Built for Windows, StratGen empowers both experienced quantitative researchers and aspiring systematic traders to harness the power of algorithmic trading through an intuitive no-code interface. Whether you're testing strategies on futures, equities, crypto, or forex markets, StratGen provides the professional-grade tools you need to validate your trading ideas with rigorous statistical analysis and the benefit of live training on best practices included with the software.
                   </p>
                   <p className="text-muted-foreground">
-                    What sets StratGen apart is its unique combination of advanced quantitative research capabilities, comprehensive backtesting engine, and automatic code generation for popular trading platforms like NinjaTrader, TradeStation, and Python. This means you can develop sophisticated algorithmic trading strategies without writing a single line of code, then seamlessly deploy them to your preferred trading platform.
+                    What sets StratGen apart is its unique combination of advanced quantitative research capabilities, comprehensive backtesting engine, automatic code generation for popular trading platforms like NinjaTrader, TradeStation, and Python, and live training on best practices included. This means you can develop sophisticated algorithmic trading strategies without writing a single line of code, then seamlessly deploy them to your preferred trading platform with expert guidance available along the way.
                   </p>
                 </CardContent>
               </Card>
@@ -202,6 +202,16 @@ export default function WhatIsStratGen() {
                         </p>
                       </div>
                     </div>
+
+                    <div className="flex items-start gap-4">
+                      <ZapIcon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2">Live Training on Best Practices Included</h3>
+                        <p className="text-muted-foreground">
+                          StratGen includes live training on best practices so you can get hands-on guidance, ask questions in real time, and shorten the learning curve from setup to deployment.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -247,7 +257,7 @@ export default function WhatIsStratGen() {
                       <div>
                         <h3 className="text-lg font-semibold mb-2">Code Export & Deployment</h3>
                         <p className="text-muted-foreground">
-                          Generate ready-to-use code for your preferred trading platform (NinjaTrader, TradeStation, or Python) and deploy your validated strategies for live trading.
+                          Generate ready-to-use code for your preferred trading platform (NinjaTrader, TradeStation, or Python), deploy your validated strategies for live trading, and use the included live training on best practices to support your rollout.
                         </p>
                       </div>
                     </div>
@@ -297,6 +307,10 @@ export default function WhatIsStratGen() {
                         <CheckIcon className="h-5 w-5 text-primary" />
                         <span className="font-medium">Professional Support</span>
                       </div>
+                      <div className="flex items-center gap-3">
+                        <CheckIcon className="h-5 w-5 text-primary" />
+                        <span className="font-medium">Live Training on Best Practices Included</span>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -307,7 +321,7 @@ export default function WhatIsStratGen() {
                 <CardContent className="p-8 text-center">
                   <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
                   <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                    Join thousands of quantitative traders who use StratGen to develop, test, and deploy robust algorithmic trading strategies. Start your journey with professional-grade tools designed for serious traders.
+                    Join thousands of quantitative traders who use StratGen to develop, test, and deploy robust algorithmic trading strategies. Start your journey with professional-grade tools designed for serious traders and live training on best practices included.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button size="lg" asChild>
@@ -334,7 +348,7 @@ export default function WhatIsStratGen() {
               <div className="mb-8 md:mb-0">
                 <h3 className="font-bold text-lg mb-4">StratGen</h3>
                 <p className="text-muted-foreground mb-4 max-w-md">
-                  Professional algorithmic trading platform for quantitative research and trading with backtesting, robustness testing, and no-code strategy development.
+                  Professional algorithmic trading platform for quantitative research and trading with backtesting, robustness testing, no-code strategy development, and live training on best practices included.
                 </p>
               </div>
               

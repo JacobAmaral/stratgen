@@ -75,7 +75,7 @@ const pricingTier = {
   name: "StratGen Premium",
   monthlyPrice: "$100",
   lifetimePrice: "$1000",
-  description: "All-inclusive professional trading platform",
+  description: "All-inclusive professional trading platform with live training on best practices included",
   features: [
     "600+ technical and fundamental signals",
     "Institutional-grade backtesting",
@@ -85,6 +85,7 @@ const pricingTier = {
     "Robustness testing tools",
     "Code export for all platforms (NinjaTrader, TradeStation, Python)",
     "Strategy automation",
+    "Live training on best practices included",
     "24/7 priority support"
   ],
   cta: "Get Started Today"
@@ -92,6 +93,11 @@ const pricingTier = {
 
 // Features list
 const features = [
+  {
+    icon: <BellIcon className="h-10 w-10 text-primary" />,
+    title: "Live Training on Best Practices Included",
+    description: "Every StratGen plan includes live training on best practices so you can learn the workflow, ask questions in real time, and get up to speed faster."
+  },
   {
     icon: <LineChartIcon className="h-10 w-10 text-primary" />,
     title: "Advanced Signal Analysis",
@@ -137,17 +143,17 @@ export default function Home() {
     <>
       <Head>
         <title>StratGen | Professional Algorithmic Trading & Backtesting Platform for Quant Traders</title>
-        <meta name="description" content="Professional no-code algorithmic trading platform with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation & Python." />
+        <meta name="description" content="Professional no-code algorithmic trading platform with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation & Python, and live training on best practices included." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="quantitative trading, quantitative research, backtesting, no-code, coding generation, robustness testing, futures trading, equities trading, crypto trading, algo trading, algorithmic trading, quant trading, trading signals, trading strategy, ninjatrader, tradestation, python" />
         <meta property="og:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
-        <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
+        <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, plus live training on best practices included." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stratgen.com" />
         <meta property="og:image" content="/stratgen_manual_images/homescreen.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
-        <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python." />
+        <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, plus live training on best practices included." />
         <meta name="twitter:image" content="/stratgen_manual_images/homescreen.jpg" />
         <link rel="canonical" href="https://stratgen.com" />
         <link rel="icon" href="/favicon.ico" />
@@ -181,7 +187,7 @@ export default function Home() {
                     "url": "https://codealgotrading.com/l/pdp/coding-great-trading-bots"
                   }
                 ],
-                "description": "StratGen is a desktop app for designing, backtesting, and exporting algorithmic trading strategies for platforms like NinjaTrader and QuantConnect. Professional trading signal generator and backtesting platform for quantitative traders with automatic code generation.",
+                "description": "StratGen is a desktop app for designing, backtesting, and exporting algorithmic trading strategies for platforms like NinjaTrader and QuantConnect. Professional trading signal generator and backtesting platform for quantitative traders with automatic code generation and live training on best practices included.",
                 "author": {
                   "@type": "Organization",
                   "name": "WeTradeLabs",
@@ -194,6 +200,7 @@ export default function Home() {
                   "Robustness testing tools",
                   "Import your own data, OHLCV data to test any instrument",
                   "Coding Generator for NinjaTrader, TradeStation, and Python",
+                  "Live training on best practices included",
                   "Powerful Dashboard with analytics"
                 ],
                     "screenshot": "/stratgen_manual_images/homescreen.jpg"
@@ -204,7 +211,7 @@ export default function Home() {
                 "name": "WeTradeLabs",
                 "url": "https://stratgensoft.com/",
                 "email": "jacob@wetradelabs.com",
-                "description": "Developer of StratGen, professional trading software for quantitative traders and algorithmic strategy development.",
+                "description": "Developer of StratGen, professional trading software for quantitative traders and algorithmic strategy development with live training on best practices included.",
                 "makesOffer": {
                   "@type": "Offer",
                   "itemOffered": {
@@ -217,7 +224,7 @@ export default function Home() {
                 "@context": "https://schema.org",
                 "@type": "Product",
                 "name": "StratGen",
-                "description": "Professional trading signal generator and backtesting platform for quantitative traders. Features automatic code generation for NinjaTrader, TradeStation, and Python with advanced robustness testing tools.",
+                "description": "Professional trading signal generator and backtesting platform for quantitative traders. Features automatic code generation for NinjaTrader, TradeStation, and Python with advanced robustness testing tools and live training on best practices included.",
                 "brand": {
                   "@type": "Brand",
                   "name": "WeTradeLabs"
@@ -249,7 +256,7 @@ export default function Home() {
                     "name": "What is StratGen and how does it help with algorithmic trading?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python. Our platform helps you develop and validate trading strategies without requiring programming knowledge."
+                      "text": "StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included. Our platform helps you develop and validate trading strategies without requiring programming knowledge."
                     }
                   },
                   {
@@ -330,7 +337,7 @@ export default function Home() {
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
                 </h1>
                 <p className="text-xl text-muted-foreground">
-                  The professional-grade no-code platform for quantitative research and trading, designed for quant traders who demand rigorous out-of-sample testing and robustness analysis.
+                  The professional-grade no-code platform for quantitative research and trading, designed for quant traders who demand rigorous out-of-sample testing and robustness analysis, with live training on best practices included.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="font-medium" asChild>
@@ -366,7 +373,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features for Quantitative & Algo Traders</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                StratGen combines advanced algorithmic trading tools with no-code simplicity to help you develop robust strategies for quantitative research and trading.
+                StratGen combines advanced algorithmic trading tools with no-code simplicity and live training on best practices included to help you develop robust strategies for quantitative research and trading.
               </p>
             </div>
             
@@ -497,7 +504,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, and automatic code generation for NinjaTrader, TradeStation, and Python. Our platform helps you develop and validate trading strategies without requiring programming knowledge.
+                    StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included. Our platform helps you develop and validate trading strategies without requiring programming knowledge.
                   </p>
                 </CardContent>
               </Card>
@@ -588,7 +595,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Choose Your StratGen Plan</h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Join thousands of quantitative traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, and generate trading signals with automatic code generation.
+                Join thousands of quantitative traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, generate trading signals with automatic code generation, and learn faster with live training on best practices included.
               </p>
             </div>
             
@@ -597,7 +604,7 @@ export default function Home() {
                 <CardHeader className="text-center pb-8">
                   <CardTitle className="text-2xl font-bold">StratGen Premium</CardTitle>
                   <CardDescription className="text-lg">
-                    All-inclusive professional trading platform
+                    All-inclusive professional trading platform with live training on best practices included
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8">
@@ -643,6 +650,7 @@ export default function Home() {
                         "Robustness testing tools",
                         "Code export for all platforms (NinjaTrader, TradeStation, Python)",
                         "Strategy automation",
+                        "Live training on best practices included",
                         "24/7 priority support"
                       ].map((feature, index) => (
                         <div key={index} className="flex items-center gap-3">
@@ -712,7 +720,7 @@ export default function Home() {
               <div className="mb-8 md:mb-0">
                 <h3 className="font-bold text-lg mb-4">StratGen</h3>
                 <p className="text-muted-foreground mb-4 max-w-md">
-                  Professional algorithmic trading platform for quantitative research and trading with backtesting, robustness testing, and no-code strategy development.
+                  Professional algorithmic trading platform for quantitative research and trading with backtesting, robustness testing, no-code strategy development, and live training on best practices included.
                 </p>
               </div>
               
