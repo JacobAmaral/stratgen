@@ -1392,11 +1392,6 @@ export default function Changelog() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                                                Blog
-                                            </Link>
-                                        </li>
-                                        <li>
                                             <Link href="/changelog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                                 Changelog
                                             </Link>
