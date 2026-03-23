@@ -101,7 +101,7 @@ const features = [
   {
     icon: <LineChartIcon className="h-10 w-10 text-primary" />,
     title: "Advanced Signal Analysis",
-    description: "Test over 600 fundamental and technical signals including Moving Averages, RSI, MACD, Bollinger Bands, and more to identify powerful trading opportunities."
+    description: "Test over 1000 fundamental and technical signals to identify powerful trading opportunities."
   },
   {
     icon: <BarChartIcon className="h-10 w-10 text-primary" />,
@@ -122,6 +122,28 @@ const features = [
     icon: <DownloadIcon className="h-10 w-10 text-primary" />,
     title: "Robustness testing tools",
     description: "Validate your strategies with Monte Carlo simulations, walk-forward analysis, and stress testing to ensure they perform in various market conditions."
+  },
+  {
+    icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 3v18h18" />
+      <path d="M7 15l3-3 3 2 5-7" />
+      <path d="M7 10h.01" />
+      <path d="M10 7h.01" />
+      <path d="M13 13h.01" />
+    </svg>,
+    title: "Position Sizing Testing",
+    description: "Test sizing logic with fixed dollar risk, percentage equity, and fixed notional modes, plus pyramiding entry and exit types for more realistic strategy evaluation."
+  },
+  {
+    icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 7h18" />
+      <path d="M6 3h12" />
+      <path d="M6 11h12" />
+      <path d="M8 15h8" />
+      <path d="M10 19h4" />
+    </svg>,
+    title: "Portfolio Tracking",
+    description: "Save and load strategies into portfolios, monitor incubation performance, and run portfolio correlation analysis to understand how systems work together."
   },
   {
     icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

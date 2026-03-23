@@ -110,19 +110,13 @@ export default function Changelog() {
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Strategy Renaming in Portfolio:</strong> Added the ability to rename strategies directly in the portfolio menu.
+                                                <strong>Position Sizing Testing and Pyramiding:</strong> Added position sizing testing with multiple modes including fixed dollar risk, percentage equity, and fixed notional, along with pyramiding entry and exit types.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Position Sizing and Pyramiding:</strong> Added position sizing modes along with pyramiding entries and exits.
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                            <div>
-                                                <strong>Strategy Incubation Check:</strong> Added a strategy incubation check to improve validation workflows.
+                                                <strong>Portfolio Management and Analytics:</strong> Added a portfolio feature to save and load strategies, track incubation performance, rename strategies in the portfolio menu, and analyze portfolio correlations.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
