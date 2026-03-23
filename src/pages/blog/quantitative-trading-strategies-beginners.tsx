@@ -25,7 +25,7 @@ export default function QuantitativeTradingStrategiesBeginners() {
         <meta name="twitter:description" content="Learn the fundamentals of quantitative trading strategies. Discover how beginners can start with algorithmic trading, backtesting, and automated strategy development using StratGen." />
         <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
         <link rel="canonical" href="https://stratgen.com/blog/quantitative-trading-strategies-beginners" />
-        <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
         
         {/* JSON-LD Schema */}
         <script

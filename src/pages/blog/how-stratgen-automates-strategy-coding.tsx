@@ -25,7 +25,7 @@ export default function HowStratGenAutomatesStrategyCoding() {
         <meta name="twitter:description" content="Learn how StratGen automatically generates trading code for NinjaTrader, TradeStation, and Python without programming." />
         <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-9db68ff.png" />
         <link rel="canonical" href="https://stratgen.com/blog/how-stratgen-automates-strategy-coding" />
-        <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
         
         {/* JSON-LD Schema */}
         <script

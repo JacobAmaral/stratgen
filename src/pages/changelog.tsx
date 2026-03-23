@@ -20,7 +20,7 @@ export default function Changelog() {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://stratgen.com/changelog" />
                 <link rel="canonical" href="https://stratgen.com/changelog" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -86,13 +86,134 @@ export default function Changelog() {
                     <div className="max-w-4xl mx-auto space-y-8">
 
 
+                        {/* Version 1.0.3 */}
+                        <Card className="border-2 border-primary/20 shadow-lg">
+                            <CardHeader className="pb-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <CardTitle className="text-2xl">Version 1.0.3</CardTitle>
+                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                        Released: March 23, 2026
+                                    </div>
+                                </div>
+                            </CardHeader>
+
+                            <CardContent className="space-y-6">
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        New Features
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Strategy Renaming in Portfolio:</strong> Added the ability to rename strategies directly in the portfolio menu.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Position Sizing and Pyramiding:</strong> Added position sizing modes along with pyramiding entries and exits.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Strategy Incubation Check:</strong> Added a strategy incubation check to improve validation workflows.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Monte Carlo Recording:</strong> Added Monte Carlo recording support.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Template Compatibility:</strong> Updated templates to work with the new settings.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>AI Workflow Messaging:</strong> Added more info to the AI workflow message.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Strategy Name Normalization:</strong> Hardened strategy-name normalization at the source so invalid characters are cleaned before names are persisted or passed into walk-forward.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Combined Result Qualification:</strong> Downstream combined-result qualification now follows the selected goal metric and configured threshold instead of being hardcoded to RetDDGoal and Sharpe greater than or equal to 1.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <BugIcon className="h-5 w-5 text-orange-500" />
+                                        Bug Fixes & Reliability
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Tick Calculation Fix:</strong> Fixed an incorrect tick calculation.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Walk-Forward Continuity:</strong> Fixed walk-forward so it is continuous and matches NinjaTrader more closely.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>KAMA Code Export Fix:</strong> Fixed KAMA code export.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Backtest Loading Fix:</strong> Fixed a blank screen issue while loading backtests.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Walk-Forward Result Coverage:</strong> Fixed walk-forward missing some trade results and corrected mismatched data in some walk-forward workflows.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </CardContent>
+                        </Card>
+
                         {/* Version 1.0.2 */}
                         <Card className="border-2 border-primary/20 shadow-lg">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
                                         <CardTitle className="text-2xl">Version 1.0.2</CardTitle>
-                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: February 25, 2026

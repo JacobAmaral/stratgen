@@ -24,7 +24,7 @@ export default function BestPracticesBacktestingStratGen() {
         <meta name="twitter:description" content="Master professional backtesting methodologies with StratGen's institutional-grade engine for algorithmic trading strategy validation." />
         <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-3a930e3.png" />
         <link rel="canonical" href="https://stratgen.com/blog/best-practices-backtesting-stratgen" />
-        <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
         
         {/* JSON-LD Schema */}
         <script

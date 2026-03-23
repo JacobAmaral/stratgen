@@ -156,7 +156,7 @@ export default function Home() {
         <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, plus live training on best practices included." />
         <meta name="twitter:image" content="/stratgen_manual_images/homescreen.jpg" />
         <link rel="canonical" href="https://stratgen.com" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -331,7 +331,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 border-primary/20 text-primary">
-                  Version 1.0.2 Now Available
+                  Version 1.0.3 Now Available
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>

@@ -26,7 +26,7 @@ export default function UserManual() {
                 <meta name="twitter:description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
                 <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
                 <link rel="canonical" href="https://stratgen.com/user-manual" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
 
                 {/* JSON-LD Schema for Documentation */}
                 <script
