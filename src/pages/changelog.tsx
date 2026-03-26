@@ -86,13 +86,86 @@ export default function Changelog() {
                     <div className="max-w-4xl mx-auto space-y-8">
 
 
+                        {/* Version 1.0.31 */}
+                        <Card className="border-2 border-primary/20 shadow-lg">
+                            <CardHeader className="pb-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <CardTitle className="text-2xl">Version 1.0.31</CardTitle>
+                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                        Released: March 26, 2026
+                                    </div>
+                                </div>
+                            </CardHeader>
+
+                            <CardContent className="space-y-6">
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        New Features
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Incubation Month Setting:</strong> Added incubation month as a configurable setting.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Z-Score Added:</strong> Added z-score support.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Template Updates:</strong> Updated templates to work with the new settings.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <BugIcon className="h-5 w-5 text-orange-500" />
+                                        Bug Fixes & Reliability
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Pyramiding Guard:</strong> Disabled pyramiding when max entries is set to 1.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Threshold Consistency:</strong> Patched the threshold inconsistency issue.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </CardContent>
+                        </Card>
+
                         {/* Version 1.0.3 */}
                         <Card className="border-2 border-primary/20 shadow-lg">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
                                         <CardTitle className="text-2xl">Version 1.0.3</CardTitle>
-                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: March 23, 2026
