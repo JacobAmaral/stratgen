@@ -12,18 +12,18 @@ export default function UserManual() {
     return (
         <>
             <Head>
-                <title>StratGen User Manual v1.0.2 | Complete Guide to Algorithmic Trading Platform</title>
-                <meta name="description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform. Learn backtesting, signal generation, code generation for NinjaTrader, TradeStation, Python, and robustness testing." />
+                <title>StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform</title>
+                <meta name="description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform. Learn backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, NinjaTrader export, TradeStation export, Python export, and AI workflows." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing" />
-                <meta property="og:title" content="StratGen User Manual v1.0.2 | Complete Guide to Algorithmic Trading Platform" />
-                <meta property="og:description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+                <meta property="og:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://stratgen.com/user-manual" />
                 <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="StratGen User Manual v1.0.2 | Complete Guide to Algorithmic Trading Platform" />
-                <meta name="twitter:description" content="Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation." />
+                <meta name="twitter:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
+                <meta name="twitter:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
                 <link rel="canonical" href="https://stratgen.com/user-manual" />
                 <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
@@ -37,7 +37,7 @@ export default function UserManual() {
                                 "@context": "https://schema.org",
                                 "@type": "TechArticle",
                                 "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
-                                "description": "Complete 13-page user manual for StratGen v1.0.2 quantitative trading platform covering backtesting, signal generation, and automated code generation.",
+                                "description": "Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation.",
                                 "author": {
                                     "@type": "Organization",
                                     "name": "WeTradeLabs",
@@ -51,7 +51,7 @@ export default function UserManual() {
                                     "url": "https://stratgensoft.com/"
                                 },
                                 "datePublished": "2024-01-01",
-                                "dateModified": "2024-12-01",
+                                "dateModified": "2026-05-02",
                                 "mainEntityOfPage": {
                                     "@type": "WebPage",
                                     "@id": "https://stratgen.com/user-manual"
@@ -77,7 +77,7 @@ export default function UserManual() {
                                 "@context": "https://schema.org",
                                 "@type": "HowTo",
                                 "name": "How to Use StratGen for Quantitative Trading",
-                                "description": "Step-by-step guide to using StratGen's algorithmic trading platform for backtesting, signal generation, and code generation.",
+                                "description": "Step-by-step guide to using StratGen's algorithmic trading platform for backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and code generation.",
                                 "image": "https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png",
                                 "totalTime": "PT2H",
                                 "estimatedCost": {
@@ -178,8 +178,8 @@ export default function UserManual() {
                                 </h1>
                             </div>
                             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-                                Complete 13-page guide to mastering StratGen v1.0.2 for quantitative trading, backtesting, robustness testing,
-                                and automated code generation. Perfect for quantitative researchers and algorithmic strategy developers.
+                                Complete guide to mastering StratGen v1.0.4 for quantitative trading, backtesting, walk-forward validation,
+                                portfolio Monte Carlo, position sizing, robustness testing, AI workflows, and automated code generation.
                             </p>
                         </div>
                     </div>
@@ -205,18 +205,24 @@ export default function UserManual() {
                             >
                                 <ol className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2 list-decimal list-inside text-sm">
                                     <li><a href="#core-concepts" className="hover:underline">Core Concepts</a></li>
+                                    <li><a href="#latest-features" className="hover:underline">Latest Features</a></li>
                                     <li><a href="#launch" className="hover:underline">Launch StratGen</a></li>
                                     <li><a href="#settings-window" className="hover:underline">Settings Window</a></li>
                                     <li><a href="#signals-tab" className="hover:underline">Signals</a></li>
                                     <li><a href="#strategy-settings" className="hover:underline">Strategy Settings</a></li>
+                                    <li><a href="#position-sizing-pyramiding" className="hover:underline">Position Sizing & Pyramiding</a></li>
+                                    <li><a href="#advanced-exits" className="hover:underline">Advanced Exits</a></li>
                                     <li><a href="#walk-forward" className="hover:underline">Walk-Forward Settings</a></li>
+                                    <li><a href="#new-signal-types" className="hover:underline">New Signal Types</a></li>
                                     <li><a href="#import-data" className="hover:underline">Import Data</a></li>
+                                    <li><a href="#server-symbols" className="hover:underline">Symbol Search & Data Cache</a></li>
                                     <li><a href="#run-sim" className="hover:underline">Run Simulation</a></li>
                                     <li><a href="#results-list" className="hover:underline">Strategy Results</a></li>
                                     <li><a href="#dashboard" className="hover:underline">Backtest Dashboard</a></li>
                                     <li><a href="#generated-code" className="hover:underline">Generated Code</a></li>
                                     <li><a href="#monte-carlo" className="hover:underline">Monte Carlo</a></li>
                                     <li><a href="#portfolio" className="hover:underline">Portfolio</a></li>
+                                    <li><a href="#portfolio-monte-carlo" className="hover:underline">Portfolio Monte Carlo</a></li>
                                     <li><a href="#portfolio-equity" className="hover:underline">Portfolio Equity</a></li>
                                     <li><a href="#correlation" className="hover:underline">Correlation</a></li>
                                     <li><a href="#templates" className="hover:underline">Templates</a></li>
@@ -295,6 +301,42 @@ export default function UserManual() {
                                     Simple rule: smaller steps test more combinations (slower, more risk of overfitting). Bigger steps test fewer combinations
                                     (faster, more general).
                                 </p>
+                            </div>
+
+                            <h2 id="latest-features">Latest Features in v1.0.4 (What Changed)</h2>
+                            <p>
+                                If you used an older StratGen build, this section explains the newer tools that are easy to miss.
+                                These features matter because they change how you validate strategies, combine systems, and export code.
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h3 className="mt-0">Quick summary</h3>
+                                <ul className="mb-0">
+                                    <li><strong>Portfolio Monte Carlo</strong>: stress-tests the whole portfolio, not only one selected strategy.</li>
+                                    <li><strong>Position sizing testing</strong>: lets you test fixed size, fixed dollar risk, percent equity risk, and notional sizing behavior.</li>
+                                    <li><strong>Pyramiding controls</strong>: lets a strategy add to a winning or continuing position, then scale out correctly in NinjaTrader exports.</li>
+                                    <li><strong>Donchian, Elliott Wave, Z-Score, and expanded signal support</strong>: gives you more entry and exit logic to test.</li>
+                                    <li><strong>Reversal behavior</strong>: opposite signals can flip a position instead of forcing the system to wait until flat.</li>
+                                    <li><strong>AI Workflow improvements</strong>: workflows can automatically search, filter, combine, export, and retry more reliably.</li>
+                                    <li><strong>Server symbol search and history data caching</strong>: makes symbol setup and repeated data use faster.</li>
+                                </ul>
+                            </div>
+
+                            <h3>How to think about new features</h3>
+                            <p>
+                                Do not turn every new feature on at once. Add one new feature at a time, run a test, and compare the result to your previous baseline.
+                                If everything changes at once, you will not know which setting improved or damaged the strategy.
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Safe upgrade workflow</h4>
+                                <ol className="mb-0">
+                                    <li>Run an old-style simple strategy first: one entry rule, one exit rule, no pyramiding.</li>
+                                    <li>Save or write down the OOS Ret/DD, Sharpe, trades, and drawdown.</li>
+                                    <li>Enable one new feature, such as a Donchian signal or a different position sizing mode.</li>
+                                    <li>Run again and compare OOS first, not IS.</li>
+                                    <li>Only keep the new feature if it improves OOS or portfolio-level behavior.</li>
+                                </ol>
                             </div>
 
                             {/* 1 */}
@@ -448,6 +490,116 @@ export default function UserManual() {
 
 
 
+                            <h2 id="position-sizing-pyramiding">Position Sizing and Pyramiding</h2>
+                            <p>
+                                Position sizing answers this question: <strong>How big should each trade be?</strong> Pyramiding answers this question:
+                                <strong> Can the strategy add another entry while it is already in a trade?</strong>
+                            </p>
+
+                            <h3>Position sizing modes</h3>
+                            <p>
+                                StratGen can test different ways of sizing trades. The exact controls available depend on your current build and selected instrument,
+                                but the common modes are:
+                            </p>
+                            <ul>
+                                <li><strong>Fixed Position Size</strong>: always trade the same quantity. Example: always trade 1 contract.</li>
+                                <li><strong>Fixed Dollar Risk</strong>: size the trade so the dollar risk is near a target amount. Example: risk about $500 per trade.</li>
+                                <li><strong>Percent Equity Risk</strong>: size the trade based on a percent of account equity. Example: risk 1% of the account.</li>
+                                <li><strong>Fixed Notional</strong>: size by total market exposure. Example: keep each position near a fixed dollar value.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Beginner explanation</h4>
+                                <p className="mb-0">
+                                    A strategy can look good with 1 contract and terrible with oversized trades. Position sizing is not decoration.
+                                    It changes profit, drawdown, risk of ruin, and whether the strategy is realistic for your account.
+                                </p>
+                            </div>
+
+                            <h3>How to choose a position sizing mode</h3>
+                            <ul>
+                                <li><strong>Use Fixed Position Size</strong> when you want the cleanest research comparison between strategies.</li>
+                                <li><strong>Use Fixed Dollar Risk</strong> when you want each trade to risk roughly the same number of dollars.</li>
+                                <li><strong>Use Percent Equity Risk</strong> when you want position size to grow or shrink with the account.</li>
+                                <li><strong>Use Fixed Notional</strong> when you want exposure to stay similar across instruments with different prices.</li>
+                            </ul>
+
+                            <h3>Pyramiding</h3>
+                            <p>
+                                Pyramiding allows a strategy to add to an existing position. For example, if a long strategy is already long and another valid long
+                                entry signal appears, the strategy may add another unit instead of ignoring the signal.
+                            </p>
+                            <ul>
+                                <li><strong>Max Pyramid Entries</strong>: maximum number of entries allowed in the same direction.</li>
+                                <li><strong>Pyramiding Exit Mode</strong>: controls how exits reduce or close pyramided entries.</li>
+                                <li><strong>Scale-out behavior</strong>: newer NinjaTrader exports handle pyramiding exits so partial exits reduce the correct position size.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Common pyramiding mistake</h4>
+                                <p className="mb-0">
+                                    Pyramiding usually increases both profit potential and drawdown. If you turn it on, watch MaxDD, margin usage,
+                                    and the trade list. Do not assume more entries means a better strategy.
+                                </p>
+                            </div>
+
+                            <h3>Reversal behavior</h3>
+                            <p>
+                                StratGen now supports reversal-style behavior where an opposite signal can flip the position instead of waiting for the strategy
+                                to become flat first. Example: if the system is long and a short signal appears, the strategy can close the long and enter short.
+                            </p>
+                            <ul>
+                                <li><strong>Good use case</strong>: trend-following or regime-switching systems where long and short signals are opposites.</li>
+                                <li><strong>Risk</strong>: reversal systems can trade more often, which means slippage and commissions matter more.</li>
+                                <li><strong>What to check</strong>: compare trade count, average trade, and drawdown before and after enabling reversal behavior.</li>
+                            </ul>
+
+                            <h2 id="advanced-exits">Advanced Exits, Monthly Limits, and Incubation</h2>
+                            <p>
+                                Exits are where many strategies succeed or fail. A good entry with a bad exit can still lose money. StratGen includes several
+                                exit controls so you can test more realistic trade management.
+                            </p>
+
+                            <h3>N bars and N bars profit</h3>
+                            <ul>
+                                <li><strong>Exit after N bars</strong>: closes a trade after it has been open for a certain number of bars.</li>
+                                <li><strong>N bars profit</strong>: can be used to force or test exits after the trade has had time to work.</li>
+                                <li><strong>Why it matters</strong>: without a time-based exit, some strategies can sit in positions far longer than intended.</li>
+                            </ul>
+
+                            <h3>Monthly profit target and monthly stop loss</h3>
+                            <p>
+                                Monthly trade governor settings let you limit behavior by month. This is useful when you want a strategy to stop after it reaches
+                                a monthly profit target or stop after a monthly loss limit.
+                            </p>
+                            <ul>
+                                <li><strong>Monthly Profit Target</strong>: can stop or restrict trading after a target profit is reached for the month.</li>
+                                <li><strong>Monthly Stop Loss</strong>: can stop or restrict trading after the month reaches a loss threshold.</li>
+                                <li><strong>Why users use it</strong>: to avoid giving back gains after a good month or digging deeper after a bad month.</li>
+                            </ul>
+
+                            <h3>Incubation months</h3>
+                            <p>
+                                Incubation means waiting before trusting a strategy. In practice, it gives a strategy a period where it must prove itself
+                                before it is treated as ready.
+                            </p>
+                            <ul>
+                                <li><strong>Use incubation</strong> when you want a buffer between discovery and deployment.</li>
+                                <li><strong>Do not use incubation</strong> as a magic fix for bad OOS performance. It is a filter, not a cure.</li>
+                                <li><strong>Simple interpretation</strong>: if a strategy cannot survive a waiting period, it may not be stable enough.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Exit testing checklist</h4>
+                                <ol className="mb-0">
+                                    <li>Start with simple exits: stop loss, profit target, or N bars.</li>
+                                    <li>Add monthly limits only if they match how you would actually trade.</li>
+                                    <li>Check OOS trade count. Too few trades makes the result less trustworthy.</li>
+                                    <li>Check average trade after slippage and commissions. Tiny average trade can disappear live.</li>
+                                </ol>
+                            </div>
+
+
                             {/* 5 */}
                             {/* 5 */}
                             <h2 id="walk-forward">5) Walk-Forward & Realism (Recommended)</h2>
@@ -494,6 +646,60 @@ export default function UserManual() {
                                     The Monte Carlo button on the Walk-Forward Results page uses <strong>only OOS trades</strong>.
                                     This is deliberate: it is the strictest robustness test because it avoids “training period trades.”
                                 </p>
+                            </div>
+
+
+                            <h2 id="new-signal-types">New Signal Types: Donchian, Elliott Wave, Z-Score, and More</h2>
+                            <p>
+                                Newer StratGen versions added more signal families. Signals are still used the same way: you select them as possible entries
+                                or exits, set parameter ranges if needed, and let StratGen test combinations.
+                            </p>
+
+                            <h3>Donchian signals</h3>
+                            <p>
+                                Donchian signals compare price to recent highs or lows. They are commonly used for breakout and channel strategies.
+                            </p>
+                            <ul>
+                                <li><strong>Highest</strong>: looks at the highest value over a lookback period.</li>
+                                <li><strong>Lowest</strong>: looks at the lowest value over a lookback period.</li>
+                                <li><strong>Typical entry idea</strong>: price breaks above a recent high for long, or below a recent low for short.</li>
+                                <li><strong>Typical exit idea</strong>: price crosses back through a channel level or fails to continue.</li>
+                            </ul>
+                            <p>
+                                If a Donchian signal has a parameter such as P1, P1 is usually the lookback length. A larger lookback means a slower, wider channel.
+                                A smaller lookback means a faster, more sensitive channel.
+                            </p>
+
+                            <h3>Elliott Wave signals</h3>
+                            <p>
+                                Elliott Wave signals try to describe market structure and wave-like movement. They are more interpretive than simple moving-average
+                                rules, so you should validate them carefully.
+                            </p>
+                            <ul>
+                                <li><strong>Use them for</strong>: trend structure, continuation attempts, and possible reversal context.</li>
+                                <li><strong>Be careful</strong>: wave logic can look good in hindsight. Always check OOS and walk-forward.</li>
+                                <li><strong>Best practice</strong>: test Elliott Wave signals with simple exits first, then add complexity later.</li>
+                            </ul>
+
+                            <h3>Z-Score signals</h3>
+                            <p>
+                                Z-Score measures how far a value is from its normal range. In simple terms, it asks:
+                                <strong> Is this unusually high or unusually low compared with recent history?</strong>
+                            </p>
+                            <ul>
+                                <li><strong>Positive Z-Score</strong>: value is above its recent average.</li>
+                                <li><strong>Negative Z-Score</strong>: value is below its recent average.</li>
+                                <li><strong>Near zero</strong>: value is close to normal.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Signal selection checklist</h4>
+                                <ol className="mb-0">
+                                    <li>Pick signals that make logical sense for the market you are testing.</li>
+                                    <li>Use a small number of signals first. More signals means more combinations and more overfit risk.</li>
+                                    <li>Use parameter ranges that are realistic. Do not test every number just because you can.</li>
+                                    <li>After StratGen finds a result, read the selected entry and exit names. Make sure the strategy idea is understandable.</li>
+                                </ol>
                             </div>
 
 
@@ -558,6 +764,51 @@ export default function UserManual() {
                                     <li>If <strong>FilePath</strong> is wrong, StratGen cannot load that symbol.</li>
                                     <li>If <strong>Time format</strong> is wrong, bars may not parse correctly.</li>
                                 </ul>
+                            </div>
+
+
+                            <h2 id="server-symbols">Symbol Search, Server Symbols, and History Data Cache</h2>
+                            <p>
+                                Newer StratGen builds make symbol setup easier. You can still import your own CSV files, but StratGen also includes symbol search
+                                and server-supported symbol information so you spend less time hand-entering instrument details.
+                            </p>
+
+                            <h3>Symbol search</h3>
+                            <p>
+                                Symbol search helps you find a market without manually scrolling through a long symbol list. Search by the instrument name or ticker,
+                                then select the matching row.
+                            </p>
+                            <ul>
+                                <li><strong>Use search</strong> when you know the symbol, such as ES, NQ, CL, SPY, or BTCUSD.</li>
+                                <li><strong>Check the selected row</strong> before running. Make sure the point value and security type look right.</li>
+                                <li><strong>If two symbols look similar</strong>, confirm the exchange, asset class, and file path before testing.</li>
+                            </ul>
+
+                            <h3>Server-supported point values</h3>
+                            <p>
+                                Futures and other instruments need correct point values. If the point value is wrong, every PnL number can be wrong.
+                                StratGen includes improved server-supported symbol point values, but you should still verify any market you trade.
+                            </p>
+
+                            <h3>History data caching</h3>
+                            <p>
+                                History data caching stores previously loaded data so repeated runs can start faster. This is especially useful when you test
+                                the same symbol many times while changing signals or risk settings.
+                            </p>
+                            <ul>
+                                <li><strong>First run</strong>: may be slower because data has to be loaded and prepared.</li>
+                                <li><strong>Later runs</strong>: can be faster because cached history may be reused.</li>
+                                <li><strong>If data looks wrong</strong>: verify the original CSV or selected symbol. Caching makes repeated work faster, but it does not fix bad source data.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Data sanity checklist</h4>
+                                <ol className="mb-0">
+                                    <li>Confirm the symbol is the one you meant to test.</li>
+                                    <li>Confirm point value and margin before trusting futures results.</li>
+                                    <li>Confirm dates cover the full period you selected.</li>
+                                    <li>Run a small test first. If the equity curve is flat or weird, fix data before running a huge optimization.</li>
+                                </ol>
                             </div>
 
 
@@ -680,6 +931,13 @@ export default function UserManual() {
                                 <li><strong>What to do</strong>: copy all, paste into NinjaTrader, compile, then run in the Strategy Analyzer.</li>
                             </ul>
 
+                            <h4>NinjaTrader export notes for newer builds</h4>
+                            <ul>
+                                <li><strong>Pyramiding exits</strong>: newer exports handle scale-out behavior more correctly when pyramiding is enabled.</li>
+                                <li><strong>KAMA and newer indicators</strong>: generated code has been updated so newer signal types export more reliably.</li>
+                                <li><strong>Fill logic</strong>: always compare NinjaTrader Strategy Analyzer results with StratGen. Small differences can happen from platform fill rules.</li>
+                            </ul>
+
                             <h3>TradeStation code export (EasyLanguage)</h3>
                             <img
                                 src="/stratgen_manual_images/19-generated-code-tradestation.jpg"
@@ -714,6 +972,19 @@ export default function UserManual() {
                                 <h4 className="mt-0">Practical warning</h4>
                                 <p className="mb-0">
                                     Exported code is only as good as your validation. Always run Out-of-Sample, Walk-Forward, and Monte Carlo before trading live.
+                                </p>
+                            </div>
+
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Walk-forward-aware export</h4>
+                                <p>
+                                    If you export from walk-forward results, StratGen can generate code that changes parameters by historical walk-forward window.
+                                    This is different from a normal export, where one parameter set is used for the full backtest.
+                                </p>
+                                <p className="mb-0">
+                                    Use normal export for a simple static strategy. Use walk-forward-aware export when you intentionally want the exported strategy
+                                    to follow the parameter schedule discovered during walk-forward validation.
                                 </p>
                             </div>
 
@@ -784,12 +1055,83 @@ export default function UserManual() {
                             {/* 12 */}
                             <h2 id="portfolio">12) Portfolio</h2>
                             <img src="/stratgen_manual_images/12-portfolio-tab.jpg" alt="Portfolio tab" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>Combine multiple strategies into a single portfolio.</p>
+                            <p>
+                                The Portfolio tab lets you combine multiple strategies into one portfolio. This is important because a single strategy can look good
+                                but still be too dependent on one market, one signal family, or one time period.
+                            </p>
+
+                            <h3>How to add strategies to a portfolio</h3>
+                            <ol>
+                                <li>Go to the Strategy Results list.</li>
+                                <li>Left-click the strategy row you want to add.</li>
+                                <li>Click <strong>Add To Portfolio</strong>.</li>
+                                <li>Repeat for other strategies you want to combine.</li>
+                                <li>Open the Portfolio tab and review the combined result.</li>
+                            </ol>
+
+                            <h3>What makes a good portfolio candidate</h3>
+                            <ul>
+                                <li><strong>Different symbols</strong>: examples include NQ plus CL, or ES plus GC.</li>
+                                <li><strong>Different logic</strong>: trend-following plus mean-reversion can diversify better than two similar trend systems.</li>
+                                <li><strong>Different drawdown timing</strong>: one strategy should not lose money at the exact same time as every other strategy.</li>
+                                <li><strong>Acceptable standalone quality</strong>: do not add a bad strategy just because it is different.</li>
+                            </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Portfolio warning</h4>
+                                <p className="mb-0">
+                                    A portfolio is not automatically safer. If you combine five strategies that all lose during the same market regime,
+                                    you have multiplied the same risk five times.
+                                </p>
+                            </div>
+
+                            <h2 id="portfolio-monte-carlo">Portfolio Monte Carlo</h2>
+                            <p>
+                                Portfolio Monte Carlo stress-tests the combined portfolio instead of one individual strategy. This is one of the most important
+                                newer validation tools because it answers a portfolio-level question:
+                                <strong> If trade order and outcomes vary, does the combined account still survive?</strong>
+                            </p>
+
+                            <h3>Single-strategy Monte Carlo vs Portfolio Monte Carlo</h3>
+                            <ul>
+                                <li><strong>Single-strategy Monte Carlo</strong>: tests one selected strategy.</li>
+                                <li><strong>Portfolio Monte Carlo</strong>: tests the combined behavior of several strategies together.</li>
+                                <li><strong>Why portfolio Monte Carlo matters</strong>: the portfolio can fail even when each individual strategy looks acceptable.</li>
+                            </ul>
+
+                            <h3>How to use Portfolio Monte Carlo</h3>
+                            <ol>
+                                <li>Add two or more strategies to the portfolio.</li>
+                                <li>Open the Portfolio or Portfolio Equity view.</li>
+                                <li>Run the portfolio Monte Carlo option.</li>
+                                <li>Review the simulated equity paths, median profit, median drawdown, and median Ret/DD.</li>
+                                <li>If the simulated paths spread too widely or many paths collapse, reduce exposure or replace weak portfolio members.</li>
+                            </ol>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Simple portfolio Monte Carlo interpretation</h4>
+                                <ul className="mb-0">
+                                    <li><strong>Good</strong>: most paths remain profitable, drawdowns stay controlled, and median Ret/DD remains strong.</li>
+                                    <li><strong>Warning</strong>: a few paths survive but many paths are flat or deeply negative.</li>
+                                    <li><strong>Bad</strong>: results depend on one lucky strategy or one lucky sequence of trades.</li>
+                                </ul>
+                            </div>
 
                             {/* 13 */}
                             <h2 id="portfolio-equity">13) Portfolio Equity</h2>
                             <img src="/stratgen_manual_images/13-portfolio-equity.jpg" alt="Portfolio equity" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>View the combined equity curve of all portfolio strategies.</p>
+                            <p>
+                                Portfolio Equity shows the combined equity curve of all portfolio strategies. Use it to see whether the portfolio grows smoothly
+                                or whether one strategy dominates all gains and losses.
+                            </p>
+
+                            <h3>What to look for</h3>
+                            <ul>
+                                <li><strong>Smoother curve</strong>: usually better than a curve with violent spikes and crashes.</li>
+                                <li><strong>Lower combined drawdown</strong>: the portfolio should ideally reduce drawdown compared with trading everything separately.</li>
+                                <li><strong>Realistic growth</strong>: avoid portfolios where one extreme winner hides several weak strategies.</li>
+                                <li><strong>Buy and hold comparison</strong>: use it as context, not as the only decision rule.</li>
+                            </ul>
 
                             {/* 14 */}
                             <h2 id="correlation">Correlation (Diversification Check)</h2>
@@ -933,6 +1275,29 @@ export default function UserManual() {
                                 <li><strong>Example shown</strong>: FlipSideAndRetry (switch side and try again).</li>
                             </ul>
 
+                            <h3>Auto-combine behavior</h3>
+                            <p>
+                                AI Workflows can combine long and short candidates automatically when the workflow finds acceptable pieces.
+                                This is useful when one side performs well by itself but the final goal is a combined long/short strategy.
+                            </p>
+                            <ul>
+                                <li><strong>Long candidate</strong>: a strategy that passes the long-side filters.</li>
+                                <li><strong>Short candidate</strong>: a strategy that passes the short-side filters.</li>
+                                <li><strong>Combined candidate</strong>: long and short logic merged into one strategy view.</li>
+                                <li><strong>What to check</strong>: combined Ret/DD, combined drawdown, trade count, and whether one side carries the other side.</li>
+                            </ul>
+
+                            <h3>Export behavior</h3>
+                            <p>
+                                AI Workflow export is designed to save the useful result after the workflow finds a valid candidate. Newer builds removed an avoidable
+                                stall in this export path and normalized plain backtest portfolio export names so they use normal timestamped names.
+                            </p>
+                            <ul>
+                                <li><strong>If export succeeds</strong>: review the exported file and make sure the strategy name, symbol, and parameters match the result you selected.</li>
+                                <li><strong>If export seems slow</strong>: wait for the workflow status to finish before clicking repeatedly.</li>
+                                <li><strong>If multiple exports exist</strong>: use the timestamp and strategy name to identify the newest file.</li>
+                            </ul>
+
                             <h3>Controls and Status</h3>
                             <ul>
                                 <li><strong>Start</strong>: Begins the automated workflow with current settings.</li>
@@ -947,6 +1312,17 @@ export default function UserManual() {
                                 <li>Use Max Attempts and Max Runtime Minutes together to cap cost/time.</li>
                                 <li>If search stalls on one direction, FlipSideAndRetry helps maintain momentum.</li>
                             </ul>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">AI Workflow beginner setup</h4>
+                                <ol className="mb-0">
+                                    <li>Set a realistic Min Trades value first. Do not accept strategies with only a few trades.</li>
+                                    <li>Set Min Ret/DD to a value you would actually accept.</li>
+                                    <li>Use a Max Runtime Minutes limit so the workflow cannot run forever by accident.</li>
+                                    <li>Start with Combined evaluation if your goal is a single long/short system.</li>
+                                    <li>After a candidate is found, still run chart review, Monte Carlo, and walk-forward before trusting it.</li>
+                                </ol>
+                            </div>
 
                             <p><a href="#top">Back to top</a></p>
                         </article>
@@ -979,7 +1355,15 @@ export default function UserManual() {
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
+                                                Donchian, Elliott Wave, Z-Score, and other newer signal families
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
                                                 Advanced backtesting and robustness testing
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                Position sizing, pyramiding, reversal behavior, monthly exits, and incubation settings
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
@@ -996,6 +1380,14 @@ export default function UserManual() {
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
                                                 Out-of-sample testing and Monte Carlo simulations
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                Portfolio construction, portfolio equity, correlation checks, and portfolio Monte Carlo
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                AI Workflows, auto-combine behavior, workflow export, retry rules, and runtime limits
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
