@@ -726,35 +726,82 @@ export default function UserManual() {
                             </ul>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">CSV format (simple)</h4>
+                                <h4 className="mt-0">CSV format</h4>
                                 <p>
                                     The CSV must contain OHLCV rows in this order:
                                     <strong> Time, Open, High, Low, Close, Volume</strong>
                                 </p>
 
-                                <p className="mb-2">
-                                    Time format should be:
-                                    <code className="ml-2">MM/dd/yyyy HH:mm</code>
-                                </p>
+                                <p className="mb-2">Supported timestamp formats:</p>
+                                <ul>
+                                    <li>
+                                        <strong>Minute bars:</strong>{' '}
+                                        <code>MM/dd/yyyy HH:mm</code> or <code>yyyyMMdd HH:mm</code>
+                                    </li>
+                                    <li>
+                                        <strong>Second bars and ticks:</strong>{' '}
+                                        <code>MM/dd/yyyy HH:mm:ss</code> or <code>yyyyMMdd HH:mm:ss</code>
+                                    </li>
+                                </ul>
 
-                                <p className="mb-2">Example row (one bar):</p>
+                                <p className="mb-2">Example minute bar:</p>
                                 <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
                                     01/15/2026 09:30,21500.25,21510.75,21490.00,21505.50,12345
                                 </pre>
 
+                                <p className="mb-2">Example second bar:</p>
+                                <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
+                                    20260115 09:30:01,21500.25,21502.50,21499.75,21501.50,42
+                                </pre>
+
                                 <p className="mb-0">
-                                    One row per bar. Keep the values numeric. Do not add extra columns.
+                                    A header row is optional. Keep price and volume values numeric, keep rows in chronological
+                                    order from oldest to newest, and do not add extra columns.
                                 </p>
+                            </div>
+
+                            <h3>Importing tick data</h3>
+                            <p>
+                                Tick files use the same six-column OHLCV layout. Add one row per trade, repeat the trade price
+                                in the Open, High, Low, and Close columns, and place the trade size in Volume.
+                            </p>
+
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
+{`Time,Open,High,Low,Close,Volume
+20260115 09:30:01,21500.25,21500.25,21500.25,21500.25,2
+20260115 09:30:01,21500.50,21500.50,21500.50,21500.50,1
+20260115 09:30:01,21499.75,21499.75,21499.75,21499.75,3
+20260115 09:30:02,21500.00,21500.00,21500.00,21500.00,1`}
+                            </pre>
+
+                            <p>
+                                Multiple ticks may have the same whole-second timestamp. StratGen automatically consolidates
+                                all rows in that second into one second bar: the first trade becomes Open, the highest and
+                                lowest trades become High and Low, the final trade becomes Close, and positive trade sizes
+                                are added together for Volume.
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Tick import checklist</h4>
+                                <ol className="mb-0">
+                                    <li>Export trades in chronological order, oldest first.</li>
+                                    <li>Use a timestamp with seconds on every tick row.</li>
+                                    <li>Repeat the trade price in all four OHLC columns.</li>
+                                    <li>Use the individual trade size—not cumulative session volume—in the Volume column.</li>
+                                    <li>Select the CSV as the symbol&apos;s FilePath. StratGen detects the second/tick resolution during import.</li>
+                                </ol>
                             </div>
 
                             <h3>How to create the CSV (recommended)</h3>
                             <p>
                                 A helper strategy called <strong>StratGenDataPrinter.cs</strong> is included. It prints data in the correct format.
-                                It outputs each bar like this:
+                                Apply it to a minute, second, or tick data series in NinjaTrader, then point StratGen to the
+                                exported CSV. Minute and second bars are written as one row per bar. Tick exports are written
+                                as one trade row at a time.
                             </p>
 
                             <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
-                                Time (MM/dd/yyyy HH:mm), Open, High, Low, Close, Volume
+                                Time (MM/dd/yyyy HH:mm[:ss]), Open, High, Low, Close, Volume
                             </pre>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
@@ -763,6 +810,8 @@ export default function UserManual() {
                                     <li>If <strong>PointValue</strong> is wrong, PnL and drawdown can be wrong.</li>
                                     <li>If <strong>FilePath</strong> is wrong, StratGen cannot load that symbol.</li>
                                     <li>If <strong>Time format</strong> is wrong, bars may not parse correctly.</li>
+                                    <li>If tick Volume contains cumulative session volume, imported volume will be greatly overstated.</li>
+                                    <li>Tick rows are consolidated to one-second OHLCV bars; StratGen does not retain a separate bar for every same-second tick.</li>
                                 </ul>
                             </div>
 
