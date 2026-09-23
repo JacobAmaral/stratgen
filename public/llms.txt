@@ -1,0 +1,35 @@
+# StratGen
+
+> StratGen is a professional no-code algorithmic trading and quantitative backtesting desktop platform for Windows. Designed for quantitative researchers, systematic traders, and hedge funds, StratGen enables users to develop, backtest, stress-test, and deploy algorithmic trading strategies across futures, equities, forex, and crypto without writing code. StratGen automatically generates clean, production-ready code for NinjaTrader 8 (C#), TradeStation (EasyLanguage), and Python, and includes live expert training on best practices with every subscription.
+
+## Core Capabilities
+
+- **No-Code Strategy Generation**: Construct sophisticated multi-condition algorithmic trading strategies using visual logic builders and over 600+ technical and fundamental indicators (Moving Averages, RSI, MACD, Bollinger Bands, ATR, VWAP, Order Flow signals, Candlestick & Chart Pattern Recognition).
+- **Institutional-Grade Backtesting Engine**: Backtest strategies against tick, second, minute, and daily OHLCV historical data with realistic slippage modeling, customizable commissions, and fill assumptions.
+- **Robustness & Stress Testing**: Built-in Monte Carlo simulations, Walk-Forward Analysis (WFA), In-Sample vs. Out-of-Sample validation, and market stress testing to guard against curve-fitting and data-mining bias.
+- **Automated Multi-Platform Code Export**: Generate native, ready-to-run strategy code for:
+  - **NinjaTrader 8**: C# `NinjaScript` strategy classes.
+  - **TradeStation**: `EasyLanguage` strategy files.
+  - **Python**: Modular Python backtesting and execution scripts.
+- **Portfolio Construction & Monte Carlo Analysis**: Combine multiple uncorrelated strategies into a unified portfolio, simulate portfolio drawdown risks, and optimize capital allocation.
+- **Universal Data Ingestion**: Import custom OHLCV data from any broker or data vendor in CSV format, supporting all asset classes.
+- **Live Training Included**: Every subscription includes live 1-on-1 and group training on quantitative workflows, best practices, and walk-forward validation.
+
+## Key Links & Documentation
+
+- [StratGen Official Website](https://www.stratgensoft.com/): Product overview, feature showcases, customer testimonials, and pricing plans.
+- [What is StratGen?](https://www.stratgensoft.com/what-is-stratgen): In-depth guide explaining how StratGen bridges quantitative research and no-code strategy generation.
+- [StratGen User Manual](https://www.stratgensoft.com/user-manual): Complete technical documentation covering data import, backtesting configuration, walk-forward testing, portfolio Monte Carlo, and code export workflows.
+- [StratGen Changelog](https://www.stratgensoft.com/changelog): Detailed release notes and version history documenting feature updates and engine enhancements.
+- [Extended Technical Reference](https://www.stratgensoft.com/llms-full.txt): Complete LLM-friendly documentation and system reference.
+
+## Pricing & Licensing
+
+- **StratGen Premium Monthly**: $100 / month. Full access to all 600+ signals, backtesting, walk-forward optimizer, multi-platform code export (NinjaTrader, TradeStation, Python), priority support, and live training on best practices included. Cancel anytime.
+- **StratGen Lifetime Access**: $1,000 one-time purchase. Lifetime software license and ongoing updates with all premium features and training included.
+
+## System Requirements
+
+- **Operating System**: Windows 10 or Windows 11 (64-bit).
+- **Architecture**: Native Windows Desktop Application (.NET / WPF runtime).
+- **Developer / Company**: WeTradeLabs (Founded by Jacob Amaral, email: jacob@wetradelabs.com).

@@ -4,30 +4,17 @@ import { Toaster } from "@/components/ui/toaster"
 import { useEffect, useState } from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    // Get the color-scheme value from :root
-    const root = document.documentElement;
-    const computedStyle = getComputedStyle(root);
-    const colorScheme = computedStyle.getPropertyValue('--mode').trim().replace(/"/g, '');
-    if (colorScheme === 'dark') {
+    // Ensure dark theme class is present
+    if (!document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.add('light');
     }
-    setMounted(true);
   }, []);
 
-  // Prevent flash while theme loads
-  if (!mounted) {
-    return null;
-  }
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Component {...pageProps} />
       <Toaster />
     </div>
-  )
+  );
 }

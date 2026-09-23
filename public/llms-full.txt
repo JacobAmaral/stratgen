@@ -1,0 +1,103 @@
+# StratGen - Complete Technical Reference & Product Documentation
+
+Website: https://www.stratgensoft.com/
+Company: WeTradeLabs
+Lead Developer: Jacob Amaral (jacob@wetradelabs.com)
+Product: StratGen Algorithmic Trading & Backtesting Platform
+Platform: Windows Desktop Application (Windows 10 / Windows 11 64-bit)
+
+---
+
+## 1. Executive Summary
+
+StratGen is an institutional-grade, no-code algorithmic trading strategy builder, quantitative backtesting engine, and code generation platform for Windows. It is engineered for quantitative traders, systematic retail traders, portfolio managers, and trading strategy developers who want to discover, backtest, stress-test, and deploy robust trading systems without manual programming.
+
+StratGen automatically compiles trading rules and indicators into production-ready native code:
+- NinjaTrader 8 NinjaScript (C#)
+- TradeStation EasyLanguage (.eld / code)
+- Python (Pandas / Backtrader / vectorbt-compatible algorithmic scripts)
+
+Every license tier includes live training on quantitative best practices, out-of-sample testing, and strategy automation.
+
+---
+
+## 2. Key Modules & Technical Capabilities
+
+### 2.1 600+ Technical & Fundamental Signals
+StratGen contains a comprehensive library of over 600 indicators, statistical filters, and chart pattern recognition modules:
+- Trend Indicators: Simple Moving Average (SMA), Exponential Moving Average (EMA), Double EMA (DEMA), Triple EMA (TEMA), Weighted Moving Average (WMA), Hull Moving Average (HMA), Kaufman Adaptive Moving Average (KAMA), SuperTrend, Parabolic SAR, ADX, Aroon, Ichimoku Cloud.
+- Momentum & Oscillators: Relative Strength Index (RSI), Stochastic Oscillator, Stochastic RSI, MACD, Commodity Channel Index (CCI), Williams %R, Rate of Change (ROC), Money Flow Index (MFI), Ultimate Oscillator.
+- Volatility Bands & Envelopes: Bollinger Bands, Keltner Channels, Donchian Channels, Average True Range (ATR), Historical Volatility, Chaikin Volatility.
+- Volume & Order Flow: On-Balance Volume (OBV), Volume Weighted Average Price (VWAP), Chaikin Money Flow (CMF), Accumulation/Distribution (A/D), Volume Oscillator, Volume Profiles.
+- Pattern Recognition: Candlestick pattern detection (Doji, Hammer, Engulfing, Morning/Evening Star) and multi-bar chart patterns (Double Bottom, Double Top, Head & Shoulders, Inverse Head & Shoulders, Triangle Breakouts).
+- Fundamental & Macro Data Filters: Time-of-day filters, day-of-week filters, economic event window exclusions, and multi-timeframe condition checks.
+
+### 2.2 Institutional Backtesting Engine
+- High-Performance Historical Simulation: Fast multi-threaded execution across millions of price bars.
+- Granular Timeframes: Native support for Tick, Second (1s, 5s, 10s, 30s), Minute (1m, 5m, 15m, 60m), and Daily/Weekly OHLCV bars.
+- Realistic Execution Simulation: Configurable slippage (fixed ticks or percentage-based), bid-ask spread emulation, round-turn commissions per contract or share, and bar-magnifier intrabar order execution.
+- Performance Analytics: Computes Sharpe Ratio, Sortino Ratio, Calmar Ratio, Profit Factor, Win Rate, Maximum Drawdown (in dollars and percentage), Average Trade, Profit/Loss Ratio, Expectancy, Compound Annual Growth Rate (CAGR), and trade log distributions.
+
+### 2.3 Robustness & Validation Suite
+To prevent overfitting, curve-fitting, and data-mining bias, StratGen incorporates hedge-fund-grade statistical validation:
+- Walk-Forward Analysis (WFA): Automatically partitions data into sliding In-Sample (optimization) and Out-of-Sample (validation) windows to verify whether parameters generalize into unseen market regimes.
+- Monte Carlo Resampling & Permutation: Runs thousands of randomized trade sequence simulations, randomized trade dropouts, and slippage variations to compute confidence intervals on drawdowns and ruin probabilities.
+- Out-of-Sample (OOS) Testing: Strict data separation ensuring trading rules are never exposed to future evaluation data during generation.
+- Parameter Sensitivity & Heatmaps: Detects whether high-performing parameter sets are isolated "spikes" (curve-fitted anomalies) or stable plateaus of robustness.
+
+### 2.4 Automated Code Generation
+StratGen translates user-configured logic directly into clean, optimized source code:
+- NinjaTrader 8: Produces standard C# `NinjaScript` classes inheriting from `Strategy` with full parameter declarations, OnBarUpdate handlers, entry/exit order methods (`EnterLong`, `EnterShort`, `ExitLong`, `ExitShort`), and protective stop/target logic (`SetStopLoss`, `SetProfitTarget`).
+- TradeStation: Produces structured `EasyLanguage` files with `Input` parameters, `Vars`, conditional logic `If condition Then Buy ("LE") ...`, and built-in order management.
+- Python: Generates clean, vectorized Python scripts ready for local execution or cloud server deployment.
+
+### 2.5 Portfolio Builder & Monte Carlo Portfolio Stress Testing
+- Multi-Strategy Aggregation: Combine non-correlated strategies across different symbols (e.g. NQ, ES, CL, GC, BTC, AAPL) into a unified portfolio.
+- Correlation Matrix: Identify overlapping trade exposures and portfolio risk concentration.
+- Portfolio Drawdown Modeling: Simulate combined equity curves and drawdown periods under varying capital allocations.
+
+### 2.6 Data Ingestion
+- Universal CSV Import: Flexible column mapping for Date, Time, Open, High, Low, Close, Volume, and Open Interest.
+- Multi-Asset Support: Futures (E-mini, Micro E-mini, Commodities), Equities / ETFs, Cryptocurrencies, and Forex pairs.
+
+---
+
+## 3. Pricing and Plans
+
+1. **StratGen Premium Monthly**
+   - Price: $100 / month
+   - Full platform access, all 600+ signals, automated code generation for all platforms, unlimited backtesting, and live training on best practices included.
+   - Cancel anytime with no penalties.
+
+2. **StratGen Lifetime License**
+   - Price: $1,000 one-time payment
+   - Permanent license with all features, ongoing updates, and live training included.
+
+---
+
+## 4. Frequently Asked Questions (FAQ)
+
+### What is StratGen?
+StratGen is a professional no-code algorithmic trading desktop software for Windows. It provides quantitative traders with advanced backtesting, walk-forward optimization, Monte Carlo stress testing, and automatic code generation for NinjaTrader, TradeStation, and Python.
+
+### Do I need to know how to code to use StratGen?
+No. StratGen is built specifically to eliminate the coding barrier. You build, test, and validate trading strategies using intuitive visual builders, and StratGen writes the production C#, EasyLanguage, or Python code for you.
+
+### What asset classes does StratGen support?
+StratGen supports futures trading (e.g., CME, E-mini, Micro E-mini), equities & ETFs, cryptocurrencies, and forex. Any market data in OHLCV format can be imported and analyzed.
+
+### What export formats are supported?
+StratGen generates native code for NinjaTrader 8 (.cs NinjaScript), TradeStation EasyLanguage (.eld / code text), and Python.
+
+### What operating systems does StratGen run on?
+StratGen is a native desktop application designed for 64-bit Windows 10 and Windows 11.
+
+---
+
+## 5. Contact & Support
+
+- Website: https://www.stratgensoft.com/
+- Documentation: https://www.stratgensoft.com/user-manual
+- What is StratGen: https://www.stratgensoft.com/what-is-stratgen
+- Release History: https://www.stratgensoft.com/changelog
+- Email: jacob@wetradelabs.com

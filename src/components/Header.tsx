@@ -13,6 +13,9 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
+          <Link href="/what-is-stratgen" className="text-sm font-medium hover:text-primary transition-colors">
+            What is StratGen?
+          </Link>
           <Link href="/#features" className="text-sm font-medium hover:text-primary transition-colors">
             Features
           </Link>

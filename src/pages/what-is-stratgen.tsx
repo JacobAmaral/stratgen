@@ -16,47 +16,83 @@ export default function WhatIsStratGen() {
         <meta name="keywords" content="what is stratgen, algorithmic trading platform, quantitative trading software, no-code trading, systematic trading, backtesting platform, robustness testing, code generation, ninjatrader, tradestation, python" />
         <meta property="og:title" content="What is StratGen? | Professional No-Code Algorithmic Trading Platform" />
         <meta property="og:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://stratgen.com/what-is-stratgen" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <link rel="canonical" href="https://www.stratgensoft.com/what-is-stratgen" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:site_name" content="StratGen" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://www.stratgensoft.com/what-is-stratgen" />
+        <meta property="og:title" content="What is StratGen? | Professional No-Code Algorithmic Trading Platform" />
+        <meta property="og:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included." />
         <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="What is StratGen? | Professional No-Code Algorithmic Trading Platform" />
         <meta name="twitter:description" content="Discover StratGen - the professional no-code platform for quantitative traders with advanced backtesting, robustness testing, automatic code generation, and live training on best practices included." />
         <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/image-aefc7df.png" />
-        <link rel="canonical" href="https://stratgen.com/what-is-stratgen" />
-                <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
+        
+        <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
         
         {/* JSON-LD Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              "headline": "What is StratGen? Complete Guide to Professional Algorithmic Trading Platform",
-              "description": "Comprehensive guide explaining StratGen's no-code algorithmic trading platform for quantitative traders, systematic traders, and algorithmic strategy developers, including live training on best practices.",
-              "author": {
-                "@type": "Organization",
-                "name": "WeTradeLabs",
-                "email": "jacob@wetradelabs.com"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": "What is StratGen? Complete Guide to Professional Algorithmic Trading Platform",
+                "description": "Comprehensive guide explaining StratGen's no-code algorithmic trading platform for quantitative traders, systematic traders, and algorithmic strategy developers, including live training on best practices.",
+                "author": {
+                  "@type": "Organization",
+                  "name": "WeTradeLabs",
+                  "url": "https://www.stratgensoft.com/",
+                  "email": "jacob@wetradelabs.com"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "WeTradeLabs",
+                  "url": "https://www.stratgensoft.com/",
+                  "email": "jacob@wetradelabs.com"
+                },
+                "datePublished": "2024-01-01",
+                "dateModified": "2026-09-23",
+                "mainEntityOfPage": {
+                  "@type": "WebPage",
+                  "@id": "https://www.stratgensoft.com/what-is-stratgen"
+                },
+                "about": {
+                  "@type": "SoftwareApplication",
+                  "name": "StratGen",
+                  "url": "https://www.stratgensoft.com/",
+                  "applicationCategory": "FinancialApplication",
+                  "operatingSystem": "Windows 10, Windows 11"
+                }
               },
-              "publisher": {
-                "@type": "Organization",
-                "name": "WeTradeLabs",
-                "email": "jacob@wetradelabs.com"
-              },
-              "datePublished": "2024-01-01",
-              "dateModified": "2025-01-01",
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://stratgen.com/what-is-stratgen"
-              },
-              "about": {
-                "@type": "SoftwareApplication",
-                "name": "StratGen",
-                "applicationCategory": "FinancialApplication"
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.stratgensoft.com/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "What is StratGen?",
+                    "item": "https://www.stratgensoft.com/what-is-stratgen"
+                  }
+                ]
               }
-            })
+            ])
           }}
         />
       </Head>

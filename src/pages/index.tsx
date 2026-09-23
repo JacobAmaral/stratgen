@@ -168,16 +168,32 @@ export default function Home() {
         <meta name="description" content="Professional no-code algorithmic trading platform with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation & Python, and live training on best practices included." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="quantitative trading, quantitative research, backtesting, no-code, coding generation, robustness testing, futures trading, equities trading, crypto trading, algo trading, algorithmic trading, quant trading, trading signals, trading strategy, ninjatrader, tradestation, python" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <link rel="canonical" href="https://www.stratgensoft.com/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:site_name" content="StratGen" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://www.stratgensoft.com/" />
         <meta property="og:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
         <meta property="og:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, plus live training on best practices included." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://stratgen.com" />
-        <meta property="og:image" content="/stratgen_manual_images/homescreen.jpg" />
+        <meta property="og:image" content="https://www.stratgensoft.com/stratgen_manual_images/homescreen.jpg" />
+        <meta property="og:image:secure_url" content="https://www.stratgensoft.com/stratgen_manual_images/homescreen.jpg" />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:image:alt" content="StratGen Algorithmic Trading and Quantitative Backtesting Dashboard" />
+        <meta property="og:image:type" content="image/jpeg" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="StratGen | Professional Algorithmic Trading & Backtesting Platform" />
         <meta name="twitter:description" content="Professional-grade platform for quantitative traders with backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, plus live training on best practices included." />
-        <meta name="twitter:image" content="/stratgen_manual_images/homescreen.jpg" />
-        <link rel="canonical" href="https://stratgen.com" />
+        <meta name="twitter:image" content="https://www.stratgensoft.com/stratgen_manual_images/homescreen.jpg" />
+        <meta name="twitter:image:alt" content="StratGen Algorithmic Trading and Quantitative Backtesting Dashboard" />
+
         <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
         <script
           type="application/ld+json"
@@ -185,16 +201,23 @@ export default function Home() {
             __html: JSON.stringify([
               {
                 "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "StratGen",
+                "url": "https://www.stratgensoft.com/",
+                "description": "Professional Algorithmic Trading & Backtesting Platform for Quant Traders"
+              },
+              {
+                "@context": "https://schema.org",
                 "@type": "SoftwareApplication",
                 "name": "StratGen",
-                "url": "https://stratgensoft.com/",
+                "url": "https://www.stratgensoft.com/",
                 "applicationCategory": "FinancialApplication",
-                "operatingSystem": "Windows",
+                "operatingSystem": "Windows 10, Windows 11",
                 "offers": [
                   {
                     "@type": "Offer",
                     "name": "Monthly Subscription",
-                    "price": "99.00",
+                    "price": "100.00",
                     "priceCurrency": "USD",
                     "billingIncrement": "P1M",
                     "availability": "https://schema.org/InStock",
@@ -209,31 +232,36 @@ export default function Home() {
                     "url": "https://codealgotrading.com/l/pdp/coding-great-trading-bots"
                   }
                 ],
-                "description": "StratGen is a desktop app for designing, backtesting, and exporting algorithmic trading strategies for platforms like NinjaTrader and QuantConnect. Professional trading signal generator and backtesting platform for quantitative traders with automatic code generation and live training on best practices included.",
+                "description": "StratGen is a desktop app for designing, backtesting, and exporting algorithmic trading strategies for platforms like NinjaTrader, TradeStation, and Python. Professional trading signal generator and backtesting platform for quantitative traders with automatic code generation and live training on best practices included.",
                 "author": {
                   "@type": "Organization",
                   "name": "WeTradeLabs",
+                  "url": "https://www.stratgensoft.com/",
                   "email": "jacob@wetradelabs.com"
                 },
                 "featureList": [
                   "Advanced Signal Analysis with 600+ fundamental and technical signals",
                   "Signal Tester for strategy validation",
-                  "Advanced Backtesting Engine",
-                  "Robustness testing tools",
+                  "Advanced Backtesting Engine with tick and second data support",
+                  "Robustness testing tools including Walk-Forward Analysis and Monte Carlo",
                   "Import your own data, OHLCV data to test any instrument",
                   "Coding Generator for NinjaTrader, TradeStation, and Python",
                   "Live training on best practices included",
-                  "Powerful Dashboard with analytics"
+                  "Powerful Dashboard with analytics and portfolio construction"
                 ],
-                    "screenshot": "/stratgen_manual_images/homescreen.jpg"
+                "screenshot": "https://www.stratgensoft.com/stratgen_manual_images/homescreen.jpg"
               },
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "WeTradeLabs",
-                "url": "https://stratgensoft.com/",
+                "url": "https://www.stratgensoft.com/",
                 "email": "jacob@wetradelabs.com",
                 "description": "Developer of StratGen, professional trading software for quantitative traders and algorithmic strategy development with live training on best practices included.",
+                "founder": {
+                  "@type": "Person",
+                  "name": "Jacob Amaral"
+                },
                 "makesOffer": {
                   "@type": "Offer",
                   "itemOffered": {
@@ -256,7 +284,7 @@ export default function Home() {
                   {
                     "@type": "Offer",
                     "name": "Monthly Subscription",
-                    "price": "99.00",
+                    "price": "100.00",
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/InStock"
                   },

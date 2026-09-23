@@ -1,0 +1,16 @@
+{
+  "name": "StratGen | Algorithmic Trading & Backtesting Platform",
+  "short_name": "StratGen",
+  "description": "Professional no-code algorithmic trading and backtesting platform for quantitative traders with code generation for NinjaTrader, TradeStation, and Python.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#181a20",
+  "theme_color": "#8eedc7",
+  "icons": [
+    {
+      "src": "/stratgen_manual_images/newlogo2025.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

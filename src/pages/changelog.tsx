@@ -17,9 +17,26 @@ export default function Changelog() {
                 <meta name="keywords" content="stratgen changelog, updates, version history, algorithmic trading updates, backtesting platform updates, trading software releases" />
                 <meta property="og:title" content="StratGen Changelog | Version History & Updates" />
                 <meta property="og:description" content="Stay updated with the latest StratGen releases, new features, bug fixes, and improvements to our algorithmic trading and backtesting platform." />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <link rel="canonical" href="https://www.stratgensoft.com/changelog" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:site_name" content="StratGen" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://stratgen.com/changelog" />
-                <link rel="canonical" href="https://stratgen.com/changelog" />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:url" content="https://www.stratgensoft.com/changelog" />
+                <meta property="og:title" content="StratGen Changelog | Version History & Updates" />
+                <meta property="og:description" content="Stay updated with the latest StratGen releases, new features, bug fixes, and improvements to our algorithmic trading and backtesting platform." />
+                <meta property="og:image" content="https://www.stratgensoft.com/stratgen_manual_images/homescreen.jpg" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="StratGen Changelog | Version History & Updates" />
+                <meta name="twitter:description" content="Stay updated with the latest StratGen releases, new features, bug fixes, and improvements to our algorithmic trading and backtesting platform." />
+                <meta name="twitter:image" content="https://www.stratgensoft.com/stratgen_manual_images/homescreen.jpg" />
+
                 <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
                 <script
                     type="application/ld+json"
@@ -29,12 +46,13 @@ export default function Changelog() {
                             "@type": "WebPage",
                             "name": "StratGen Changelog",
                             "description": "Version history and updates for StratGen algorithmic trading platform",
-                            "url": "https://stratgen.com/changelog",
+                            "url": "https://www.stratgensoft.com/changelog",
                             "mainEntity": {
                                 "@type": "SoftwareApplication",
                                 "name": "StratGen",
+                                "url": "https://www.stratgensoft.com/",
                                 "applicationCategory": "FinancialApplication",
-                                "operatingSystem": "Windows"
+                                "operatingSystem": "Windows 10, Windows 11"
                             },
                             "breadcrumb": {
                                 "@type": "BreadcrumbList",
@@ -43,13 +61,13 @@ export default function Changelog() {
                                         "@type": "ListItem",
                                         "position": 1,
                                         "name": "Home",
-                                        "item": "https://stratgen.com"
+                                        "item": "https://www.stratgensoft.com/"
                                     },
                                     {
                                         "@type": "ListItem",
                                         "position": 2,
                                         "name": "Changelog",
-                                        "item": "https://stratgen.com/changelog"
+                                        "item": "https://www.stratgensoft.com/changelog"
                                     }
                                 ]
                             }

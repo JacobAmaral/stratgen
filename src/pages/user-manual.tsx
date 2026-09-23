@@ -18,14 +18,26 @@ export default function UserManual() {
                 <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing" />
                 <meta property="og:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
                 <meta property="og:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://stratgen.com/user-manual" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <link rel="canonical" href="https://www.stratgensoft.com/user-manual" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:site_name" content="StratGen" />
+                <meta property="og:type" content="article" />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:url" content="https://www.stratgensoft.com/user-manual" />
+                <meta property="og:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
+
+                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
                 <meta name="twitter:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
-                <link rel="canonical" href="https://stratgen.com/user-manual" />
+
                 <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
 
                 {/* JSON-LD Schema for Documentation */}
@@ -42,25 +54,26 @@ export default function UserManual() {
                                     "@type": "Organization",
                                     "name": "WeTradeLabs",
                                     "email": "jacob@wetradelabs.com",
-                                    "url": "https://stratgensoft.com/"
+                                    "url": "https://www.stratgensoft.com/"
                                 },
                                 "publisher": {
                                     "@type": "Organization",
                                     "name": "WeTradeLabs",
                                     "email": "jacob@wetradelabs.com",
-                                    "url": "https://stratgensoft.com/"
+                                    "url": "https://www.stratgensoft.com/"
                                 },
                                 "datePublished": "2024-01-01",
-                                "dateModified": "2026-05-02",
+                                "dateModified": "2026-09-23",
                                 "mainEntityOfPage": {
                                     "@type": "WebPage",
-                                    "@id": "https://stratgen.com/user-manual"
+                                    "@id": "https://www.stratgensoft.com/user-manual"
                                 },
                                 "about": {
                                     "@type": "SoftwareApplication",
                                     "name": "StratGen",
+                                    "url": "https://www.stratgensoft.com/",
                                     "applicationCategory": "FinancialApplication",
-                                    "operatingSystem": "Windows"
+                                    "operatingSystem": "Windows 10, Windows 11"
                                 },
                                 "keywords": [
                                     "stratgen user manual",
