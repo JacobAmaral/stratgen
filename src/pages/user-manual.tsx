@@ -220,7 +220,6 @@ export default function UserManual() {
                             >
                                 <ol className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2 list-decimal list-inside text-sm">
                                     <li><a href="#core-concepts" className="hover:underline">Core Concepts</a></li>
-                                    <li><a href="#latest-features" className="hover:underline">Latest Features (v1.3)</a></li>
                                     <li><a href="#launch" className="hover:underline">Launch StratGen</a></li>
                                     <li><a href="#settings-window" className="hover:underline">Settings Window</a></li>
                                     <li><a href="#signals-tab" className="hover:underline">Signals (Required, Entry, Exit)</a></li>
@@ -317,70 +316,6 @@ export default function UserManual() {
                                     Simple rule: smaller steps test more combinations (slower, more risk of overfitting). Bigger steps test fewer combinations
                                     (faster, more general).
                                 </p>
-                            </div>
-
-                            <h2 id="latest-features">Latest Features in v1.3 (What Changed)</h2>
-                            <p>
-                                StratGen v1.3 introduces major advancements in autonomous artificial intelligence, combinatorial search control,
-                                institutional risk guardrails, and platform engine parity. If you are upgrading from an earlier version,
-                                this section covers the key architectural additions and how to leverage them.
-                            </p>
-
-                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h3 className="mt-0">Quick summary of v1.3 additions</h3>
-                                <ul className="mb-0">
-                                    <li>
-                                        <strong>AI Copilot (Conversational Studio)</strong>: An integrated autonomous quant research assistant.
-                                        Instruct the copilot in natural English to build strategies, compile rules with Roslyn C#, execute in-sample backtests,
-                                        orchestrate multi-window Walk-Forward matrices, and export production code directly to your trading platforms.
-                                    </li>
-                                    <li>
-                                        <strong>Cloud BYOK (Bring Your Own Key) & Provider Hub</strong>: Full support for OpenRouter (accessing 100+ cutting-edge models),
-                                        Anthropic Claude (with organization Workspace ID support), OpenAI ChatGPT, and Google Gemini Cloud alongside the built-in StratGen Azores 1.0 quantitative engine.
-                                    </li>
-                                    <li>
-                                        <strong>Mandatory "Required" Signals Column</strong>: Alongside Entry and Exit choices, a dedicated "Required" column
-                                        lets you pin must-have baseline indicators (e.g. regime filters, Elliott Wave, or Choppiness thresholds) into every candidate combination.
-                                    </li>
-                                    <li>
-                                        <strong>Configurable Entry & Exit Rule Counts</strong>: Explicitly choose <code># Of Entry Rules</code> and <code># Of Exit Rules</code> (e.g. 1 or 2)
-                                        directly in the Settings window to govern rule complexity.
-                                    </li>
-                                    <li>
-                                        <strong>Backtest Optimization Ceiling Limit</strong>: Cap total strategy combinatorial permutations to prevent runaway runs on large signal pools.
-                                    </li>
-                                    <li>
-                                        <strong>Intraday Session Close Guardrails</strong>: Dedicated <code>Exit On Session Close</code> toggle and exact <code>Session Close Time</code> (e.g., 15:30)
-                                        prevent unintended overnight risk for day-trading systems while leaving swing strategies unconstrained.
-                                    </li>
-                                    <li>
-                                        <strong>Drawdown Formatted in Real Currency</strong>: Strategy results lists and charts display maximum drawdown in dollars (e.g. <code>-$29,942.50</code>)
-                                        along with return-to-drawdown (Ret/DD) ratios.
-                                    </li>
-                                    <li>
-                                        <strong>Bar-Close Engine Parity</strong>: Enforced bar-close profit target and stop loss exits to achieve 100% trade-for-trade parity between StratGen and NinjaTrader 8.
-                                    </li>
-                                    <li>
-                                        <strong>Server Symbol Search & Cached Datasets</strong>: Instant symbol lookup with pre-configured futures point values and automated history caching.
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <h3>How to think about new features</h3>
-                            <p>
-                                Do not turn every new feature on at once. Add one new feature at a time, run a test, and compare the result to your previous baseline.
-                                If everything changes at once, you will not know which setting improved or damaged the strategy.
-                            </p>
-
-                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">Safe upgrade workflow</h4>
-                                <ol className="mb-0">
-                                    <li>Run an old-style simple strategy first: one entry rule, one exit rule, no pyramiding.</li>
-                                    <li>Save or write down the OOS Ret/DD, Sharpe, trades, and drawdown.</li>
-                                    <li>Enable one new feature, such as a Donchian signal or a different position sizing mode.</li>
-                                    <li>Run again and compare OOS first, not IS.</li>
-                                    <li>Only keep the new feature if it improves OOS or portfolio-level behavior.</li>
-                                </ol>
                             </div>
 
                             {/* 1 */}
