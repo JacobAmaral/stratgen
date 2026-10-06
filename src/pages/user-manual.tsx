@@ -12,12 +12,12 @@ export default function UserManual() {
     return (
         <>
             <Head>
-                <title>StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform</title>
-                <meta name="description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform. Learn backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, NinjaTrader export, TradeStation export, Python export, and AI workflows." />
+                <title>StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform</title>
+                <meta name="description" content="Complete user manual for StratGen v1.3 quantitative trading platform. Master AI Copilot conversational strategy building, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, NinjaTrader export, TradeStation export, Python export, and AI workflows." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="keywords" content="stratgen user manual, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing" />
-                <meta property="og:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
-                <meta property="og:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
+                <meta name="keywords" content="stratgen user manual, ai copilot trading, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing, walk-forward optimization" />
+                <meta property="og:title" content="StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
                 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
                 <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -28,14 +28,14 @@ export default function UserManual() {
                 <meta property="og:type" content="article" />
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:url" content="https://www.stratgensoft.com/user-manual" />
-                <meta property="og:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
-                <meta property="og:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
+                <meta property="og:title" content="StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="StratGen User Manual v1.0.4 | Complete Guide to Algorithmic Trading Platform" />
-                <meta name="twitter:description" content="Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
+                <meta name="twitter:title" content="StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform" />
+                <meta name="twitter:description" content="Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
 
                 <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
@@ -48,8 +48,8 @@ export default function UserManual() {
                             {
                                 "@context": "https://schema.org",
                                 "@type": "TechArticle",
-                                "headline": "StratGen User Manual - Complete Guide for Quantitative Trading Platform",
-                                "description": "Complete user manual for StratGen v1.0.4 quantitative trading platform covering backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation.",
+                                "headline": "StratGen User Manual v1.3 - Complete Guide for Quantitative Trading Platform",
+                                "description": "Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation.",
                                 "author": {
                                     "@type": "Organization",
                                     "name": "WeTradeLabs",
@@ -63,7 +63,7 @@ export default function UserManual() {
                                     "url": "https://www.stratgensoft.com/"
                                 },
                                 "datePublished": "2024-01-01",
-                                "dateModified": "2026-09-23",
+                                "dateModified": "2026-10-06",
                                 "mainEntityOfPage": {
                                     "@type": "WebPage",
                                     "@id": "https://www.stratgensoft.com/user-manual"
@@ -77,13 +77,15 @@ export default function UserManual() {
                                 },
                                 "keywords": [
                                     "stratgen user manual",
+                                    "ai copilot trading",
                                     "algorithmic trading guide",
                                     "backtesting tutorial",
                                     "quantitative trading manual",
                                     "trading platform documentation",
                                     "no-code trading",
                                     "robustness testing",
-                                    "out-of-sample testing"
+                                    "out-of-sample testing",
+                                    "walk-forward optimization"
                                 ]
                             },
                             {
@@ -191,7 +193,7 @@ export default function UserManual() {
                                 </h1>
                             </div>
                             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-                                Complete guide to mastering StratGen v1.0.4 for quantitative trading, backtesting, walk-forward validation,
+                                Complete guide to mastering StratGen v1.3 for quantitative trading, AI Copilot, backtesting, walk-forward validation,
                                 portfolio Monte Carlo, position sizing, robustness testing, AI workflows, and automated code generation.
                             </p>
                         </div>
@@ -201,11 +203,11 @@ export default function UserManual() {
                 <section className="py-16 px-4 md:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                         <article className="sg-manual prose prose-invert max-w-none" id="top">
-                            <h1>StratGen User Manual</h1>
+                            <h1>StratGen User Manual (v1.3)</h1>
 
                             <p>
                                 StratGen is a professional-grade no-code platform for quantitative research and trading,
-                                designed for quant traders who demand rigorous out-of-sample testing and robustness analysis.
+                                designed for quant traders who demand rigorous out-of-sample testing, robustness analysis, and autonomous AI-assisted strategy engineering.
                             </p>
 
                             <p><strong>Get Started Now</strong><br />Available for Windows</p>
@@ -218,13 +220,13 @@ export default function UserManual() {
                             >
                                 <ol className="grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2 list-decimal list-inside text-sm">
                                     <li><a href="#core-concepts" className="hover:underline">Core Concepts</a></li>
-                                    <li><a href="#latest-features" className="hover:underline">Latest Features</a></li>
+                                    <li><a href="#latest-features" className="hover:underline">Latest Features (v1.3)</a></li>
                                     <li><a href="#launch" className="hover:underline">Launch StratGen</a></li>
                                     <li><a href="#settings-window" className="hover:underline">Settings Window</a></li>
-                                    <li><a href="#signals-tab" className="hover:underline">Signals</a></li>
-                                    <li><a href="#strategy-settings" className="hover:underline">Strategy Settings</a></li>
+                                    <li><a href="#signals-tab" className="hover:underline">Signals (Required, Entry, Exit)</a></li>
+                                    <li><a href="#strategy-settings" className="hover:underline">Strategy Settings & Rule Complexity</a></li>
                                     <li><a href="#position-sizing-pyramiding" className="hover:underline">Position Sizing & Pyramiding</a></li>
-                                    <li><a href="#advanced-exits" className="hover:underline">Advanced Exits</a></li>
+                                    <li><a href="#advanced-exits" className="hover:underline">Advanced Exits & Session Close</a></li>
                                     <li><a href="#walk-forward" className="hover:underline">Walk-Forward Settings</a></li>
                                     <li><a href="#new-signal-types" className="hover:underline">New Signal Types</a></li>
                                     <li><a href="#import-data" className="hover:underline">Import Data</a></li>
@@ -241,7 +243,8 @@ export default function UserManual() {
                                     <li><a href="#templates" className="hover:underline">Templates</a></li>
                                     <li><a href="#custom-signals" className="hover:underline">Custom Signals</a></li>
                                     <li><a href="#walk-forward-results" className="hover:underline">Walk-Forward Results</a></li>
-                                    <li><a href="#ai-workflows" className="hover:underline">AI Workflow</a></li>
+                                    <li><a href="#ai-workflows" className="hover:underline">AI Workflows</a></li>
+                                    <li><a href="#ai-copilot" className="hover:underline">AI Copilot (Conversational Studio)</a></li>
                                 </ol>
                             </nav>
 
@@ -316,22 +319,50 @@ export default function UserManual() {
                                 </p>
                             </div>
 
-                            <h2 id="latest-features">Latest Features in v1.0.4 (What Changed)</h2>
+                            <h2 id="latest-features">Latest Features in v1.3 (What Changed)</h2>
                             <p>
-                                If you used an older StratGen build, this section explains the newer tools that are easy to miss.
-                                These features matter because they change how you validate strategies, combine systems, and export code.
+                                StratGen v1.3 introduces major advancements in autonomous artificial intelligence, combinatorial search control,
+                                institutional risk guardrails, and platform engine parity. If you are upgrading from an earlier version,
+                                this section covers the key architectural additions and how to leverage them.
                             </p>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h3 className="mt-0">Quick summary</h3>
+                                <h3 className="mt-0">Quick summary of v1.3 additions</h3>
                                 <ul className="mb-0">
-                                    <li><strong>Portfolio Monte Carlo</strong>: stress-tests the whole portfolio, not only one selected strategy.</li>
-                                    <li><strong>Position sizing testing</strong>: lets you test fixed size, fixed dollar risk, percent equity risk, and notional sizing behavior.</li>
-                                    <li><strong>Pyramiding controls</strong>: lets a strategy add to a winning or continuing position, then scale out correctly in NinjaTrader exports.</li>
-                                    <li><strong>Donchian, Elliott Wave, Z-Score, and expanded signal support</strong>: gives you more entry and exit logic to test.</li>
-                                    <li><strong>Reversal behavior</strong>: opposite signals can flip a position instead of forcing the system to wait until flat.</li>
-                                    <li><strong>AI Workflow improvements</strong>: workflows can automatically search, filter, combine, export, and retry more reliably.</li>
-                                    <li><strong>Server symbol search and history data caching</strong>: makes symbol setup and repeated data use faster.</li>
+                                    <li>
+                                        <strong>AI Copilot (Conversational Studio)</strong>: An integrated autonomous quant research assistant.
+                                        Instruct the copilot in natural English to build strategies, compile rules with Roslyn C#, execute in-sample backtests,
+                                        orchestrate multi-window Walk-Forward matrices, and export production code directly to your trading platforms.
+                                    </li>
+                                    <li>
+                                        <strong>Cloud BYOK (Bring Your Own Key) & Provider Hub</strong>: Full support for OpenRouter (accessing 100+ cutting-edge models),
+                                        Anthropic Claude (with organization Workspace ID support), OpenAI ChatGPT, and Google Gemini Cloud alongside the built-in StratGen Azores 1.0 quantitative engine.
+                                    </li>
+                                    <li>
+                                        <strong>Mandatory "Required" Signals Column</strong>: Alongside Entry and Exit choices, a dedicated "Required" column
+                                        lets you pin must-have baseline indicators (e.g. regime filters, Elliott Wave, or Choppiness thresholds) into every candidate combination.
+                                    </li>
+                                    <li>
+                                        <strong>Configurable Entry & Exit Rule Counts</strong>: Explicitly choose <code># Of Entry Rules</code> and <code># Of Exit Rules</code> (e.g. 1 or 2)
+                                        directly in the Settings window to govern rule complexity.
+                                    </li>
+                                    <li>
+                                        <strong>Backtest Optimization Ceiling Limit</strong>: Cap total strategy combinatorial permutations to prevent runaway runs on large signal pools.
+                                    </li>
+                                    <li>
+                                        <strong>Intraday Session Close Guardrails</strong>: Dedicated <code>Exit On Session Close</code> toggle and exact <code>Session Close Time</code> (e.g., 15:30)
+                                        prevent unintended overnight risk for day-trading systems while leaving swing strategies unconstrained.
+                                    </li>
+                                    <li>
+                                        <strong>Drawdown Formatted in Real Currency</strong>: Strategy results lists and charts display maximum drawdown in dollars (e.g. <code>-$29,942.50</code>)
+                                        along with return-to-drawdown (Ret/DD) ratios.
+                                    </li>
+                                    <li>
+                                        <strong>Bar-Close Engine Parity</strong>: Enforced bar-close profit target and stop loss exits to achieve 100% trade-for-trade parity between StratGen and NinjaTrader 8.
+                                    </li>
+                                    <li>
+                                        <strong>Server Symbol Search & Cached Datasets</strong>: Instant symbol lookup with pre-configured futures point values and automated history caching.
+                                    </li>
                                 </ul>
                             </div>
 
@@ -360,10 +391,25 @@ export default function UserManual() {
                             {/* 2 */}
                             <h2 id="settings-window">2) Settings Window</h2>
                             <img src="/stratgen_manual_images/02-signals-tab-empty.jpg" alt="Settings window" className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg" />
-                            <p>The Settings window controls all strategy configuration including signals, risk, data, and portfolios.</p>
+                            <p>
+                                The Settings window is the primary operational hub of StratGen. It unifies strategy discovery, signal management, risk modeling, data feeds, and AI autonomous workflows.
+                            </p>
+                            <p>
+                                Use the left sidebar navigation to access all major modules:
+                            </p>
+                            <ul>
+                                <li><strong>Signals</strong>: Configure target symbols, historical date bounds, and select Required, Entry, and Exit indicators.</li>
+                                <li><strong>Settings</strong>: Set starting capital, profit targets, stop losses, trailing stops, rule counts, session close times, and optimization limits.</li>
+                                <li><strong>Import Data</strong>: View configured futures, stocks, or crypto instruments, adjust point values and margin, or import local CSV files.</li>
+                                <li><strong>Portfolio</strong>: Assemble multiple tested strategies into an aggregated portfolio to analyze combined drawdown and performance.</li>
+                                <li><strong>Templates</strong>: Save and load complete platform presets and parameter configurations.</li>
+                                <li><strong>Custom Signals</strong>: Write and compile custom C# MiniSignals to expand the platform's indicator library.</li>
+                                <li><strong>AI Workflows</strong>: Configure automated heuristic exploration sweeps, retry policies, and auto-combination cycles.</li>
+                                <li><strong>AI Copilot</strong>: Converse with the autonomous AI quantitative assistant to build, backtest, walk-forward validate, and export strategies in plain English.</li>
+                            </ul>
 
                             {/* 3 */}
-                            <h2 id="signals-tab">Signals (Entry and Exit Rules)</h2>
+                            <h2 id="signals-tab">Signals (Required, Entry, and Exit Rules)</h2>
                             <img
                                 src="/stratgen_manual_images/06-signals-selected.jpg"
                                 alt="Signals selected"
@@ -371,36 +417,47 @@ export default function UserManual() {
                             />
 
                             <p>
-                                Signals are the building blocks of strategies. In StratGen, you choose which signals can be used for <strong>Entry</strong> (start a trade)
-                                and which signals can be used for <strong>Exit</strong> (close a trade).
+                                Signals are the fundamental quantitative building blocks of StratGen strategies. In the Signals tab, you configure target symbols, date boundaries, and determine how indicators are utilized during candidate generation.
                             </p>
 
-                            <h3>Entry vs Exit (simple)</h3>
+                            <h3>Understanding the Three Signal Columns</h3>
                             <ul>
-                                <li><strong>Entry</strong>: “When do we open a position?”</li>
-                                <li><strong>Exit</strong>: “When do we close the position?”</li>
+                                <li>
+                                    <strong>Required</strong>: Forces the selected signal to appear in <em>every single strategy combination</em> generated during the simulation. This is especially useful for structural filters—such as requiring a regime indicator (e.g., Choppiness Index or Elliott Wave) or higher-timeframe trend condition.
+                                </li>
+                                <li>
+                                    <strong>Entry</strong>: Designates the signal as an entry trigger candidate. The discovery engine tests permutations across your chosen Entry signals.
+                                </li>
+                                <li>
+                                    <strong>Exit</strong>: Designates the signal as an indicator-based exit candidate.
+                                </li>
                             </ul>
 
-                            <h3>Parameterized signals (P1, P2)</h3>
+                            <h3>Multi-Symbol Testing</h3>
                             <p>
-                                Many signals include <strong>{`{P1}`}</strong> or <strong>{`{P2}`}</strong>. These are not errors. They are placeholders for numbers
-                                StratGen will test. You control the ranges using the P1 and P2 controls.
+                                You can test across multiple instruments simultaneously by entering a comma-delimited symbol list in the symbol box (for example: <code>CL1440, ES1440, GC1440</code>). StratGen will evaluate combinations against all specified datasets.
+                            </p>
+
+                            <h3>Parameterized Signals (P1, P2)</h3>
+                            <p>
+                                Many signals include <strong>{`{P1}`}</strong> or <strong>{`{P2}`}</strong>. These placeholders represent numeric parameters (such as moving average periods or volatility thresholds) that StratGen sweeps through during simulation. You can adjust the minimum, maximum, and step values in the parameter controls.
                             </p>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Beginner workflow (recommended)</h4>
                                 <ol className="mb-0">
-                                    <li>Select one symbol (example: NQ).</li>
-                                    <li>Select 1 to 3 Entry signals.</li>
-                                    <li>Select 1 to 2 Exit signals.</li>
-                                    <li>Set realistic slippage and commissions in Settings.</li>
-                                    <li>Run, then evaluate OOS performance first.</li>
+                                    <li>Select one symbol (example: NQ or ES).</li>
+                                    <li>Choose 1 mandatory <strong>Required</strong> filter or leave Required empty for unrestricted exploration.</li>
+                                    <li>Select 2 to 4 <strong>Entry</strong> signals.</li>
+                                    <li>Select 1 to 2 <strong>Exit</strong> signals.</li>
+                                    <li>Configure slippage, commissions, and exit parameters in the Settings tab.</li>
+                                    <li>Click <strong>Run</strong> and analyze Out-of-Sample (OOS) performance first.</li>
                                 </ol>
                             </div>
 
 
                             {/* 4 */}
-                            <h2 id="strategy-settings">4) Strategy Settings (Risk, Exits, OOS Split, Rule Count)</h2>
+                            <h2 id="strategy-settings">4) Strategy Settings & Rule Complexity</h2>
                             <img
                                 src="/stratgen_manual_images/03-settings-top.jpg"
                                 alt="Strategy settings"
@@ -408,54 +465,58 @@ export default function UserManual() {
                             />
 
                             <p>
-                                This tab is where you control “realism” and “risk.” It affects how strategies are tested and how trustworthy results are.
+                                The Strategy Settings tab controls execution reality, risk management parameters, rule complexity, and optimization constraints.
                             </p>
 
-                            <h3>Starting Cash</h3>
+                            <h3>Starting Cash and Time Zone</h3>
                             <p>
-                                <strong>Starting Cash</strong> is your starting account size for the backtest (example: 100000). This impacts percent return,
-                                and can impact position sizing (depending on your system rules).
+                                <strong>Starting Cash</strong> specifies the initial account balance for backtests (e.g., <code>100000</code>).
+                                The <strong>Time Zone</strong> dropdown aligns historical price timestamps with market session hours (e.g. Eastern Time US & Canada).
                             </p>
 
-                            <h3>Profit Target, Stop Loss, Trailing Stop</h3>
+                            <h3>Profit Target, Stop Loss, and Trailing Stop</h3>
                             <p>
-                                These settings define how a trade can exit. If a value is 0, that exit is effectively off.
+                                Configure protective risk orders using either dollar amounts (<code>$</code>) or percentage (<code>%</code>) via the adjacent dropdown:
                             </p>
                             <ul>
-                                <li><strong>Profit Target</strong>: take profits once price moves in your favor.</li>
-                                <li><strong>Stop Loss</strong>: cut losses when price moves against you.</li>
-                                <li><strong>Trail Stop</strong>: a stop that moves up as the trade becomes profitable.</li>
+                                <li><strong>Profit Target (min;max;step)</strong>: Take-profit order price threshold (e.g., <code>3000;5000;1000</code>).</li>
+                                <li><strong>Stop Loss (min;max;step)</strong>: Protective stop order price threshold (e.g., <code>3000;5000;1000</code>).</li>
+                                <li><strong>Trail Stop (min;max;step)</strong>: Trailing stop order that ratchets up to protect unrealized profits. Set to <code>0;0;1</code> to disable.</li>
                             </ul>
 
-                            <h3>Exit after N bars</h3>
-                            <p>
-                                This forces trades to exit after a certain number of bars. It is useful to stop “forever trades” that never close.
-                            </p>
+                            <h3>Monthly Governors and Time Exits</h3>
+                            <ul>
+                                <li><strong>Monthly Profit Target & Stop Loss</strong>: Caps trading activity once the monthly gain or loss boundary is hit.</li>
+                                <li><strong>Exit after n bars</strong>: Forces trades flat after holding for a designated bar count, eliminating stale positions.</li>
+                                <li><strong>Exit after n bars in profit</strong>: Automatically liquidates positions that remain in profit after a set duration.</li>
+                            </ul>
 
-                            <h3># Of Entry/Exit Rules (very important)</h3>
+                            <h3># Of Entry Rules & # Of Exit Rules</h3>
                             <p>
-                                This tells StratGen how many signals must be used together to form an entry or exit condition.
+                                These controls dictate how many signals are combined conjunctively (using boolean AND logic) to construct entry or exit triggers:
                             </p>
-
                             <ul>
                                 <li>
-                                    If <strong># Of Entry Rules = 1</strong>, StratGen tests entries like: <strong>Rule1</strong>.
+                                    <strong># Of Entry Rules = 1</strong>: Tests individual rules: <code>Rule1</code>.
                                 </li>
                                 <li>
-                                    If <strong># Of Entry Rules = 2</strong>, StratGen tests entries like: <strong>Rule1 AND Rule2</strong>.
-                                    Both must be true on the same bar to enter.
+                                    <strong># Of Entry Rules = 2</strong>: Tests pairs of rules that must both trigger on the same bar: <code>Rule1 && Rule2</code>.
                                 </li>
                                 <li>
-                                    Same idea for exits: if you set <strong># Of Exit Rules = 2</strong>, then <strong>ExitRule1 AND ExitRule2</strong>
-                                    must both be true to exit.
+                                    <strong># Of Exit Rules</strong>: Specifies how many exit signals must simultaneously trigger to close an open trade.
                                 </li>
                             </ul>
+
+                            <h3>Backtest Optimization Ceiling Limit</h3>
+                            <p>
+                                <strong>Backtest Optimization Ceiling Limit</strong> (default: <code>1000</code>) caps the maximum number of generated strategy combinations evaluated per run. This ensures swift simulation iterations even when large numbers of signals and parameter ranges are enabled.
+                            </p>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Beginner advice</h4>
                                 <ul className="mb-0">
-                                    <li>Start with 1 entry rule and 1 exit rule.</li>
-                                    <li>More rules creates more combinations, slower runs, and higher risk of overfitting.</li>
+                                    <li>Keep <strong># Of Entry Rules</strong> and <strong># Of Exit Rules</strong> set to 1 when first exploring an instrument.</li>
+                                    <li>Adding a second entry rule increases selectivity and reduces trade count, but requires sufficient data to avoid overfitting.</li>
                                 </ul>
                             </div>
 
@@ -638,26 +699,57 @@ export default function UserManual() {
                                 <li><strong>More windows</strong> means you see if the strategy works in different market conditions.</li>
                             </ul>
 
-                            <h3>Slippage and Commissions (make results realistic)</h3>
+                            <h3>Walk-Forward Configuration Parameters</h3>
                             <ul>
-                                <li><strong>Slippage %</strong>: a small penalty for imperfect fills.</li>
-                                <li><strong>Commissions $ per side</strong>: cost per entry and per exit.</li>
+                                <li><strong>Start Date & End Date</strong>: Defines the full chronological time span across which walk-forward windows are partitioned.</li>
+                                <li><strong>In-Sample Length (days)</strong>: The duration of each training segment (e.g. <code>365</code> days).</li>
+                                <li><strong>Out-of-Sample Length (days)</strong>: The duration of the subsequent validation segment tested with the optimal IS parameters (e.g. <code>365</code> days).</li>
+                                <li><strong>Minimum Trades</strong>: Filters out strategies with insufficient trade count (e.g. fewer than 3 to 10 trades) to prevent curve-fitting artifacts.</li>
+                                <li><strong>Portfolio Incubation Period (months)</strong>: Buffer period required before a strategy candidate can graduate into live portfolio allocation.</li>
+                                <li><strong>Out Of Sample %</strong>: Percentage of historical data reserved for unseen testing during single-split backtests.</li>
                             </ul>
+
+                            <h3>Slippage, Commissions, and Realistic Frictions</h3>
+                            <ul>
+                                <li><strong>Slippage (ticks)</strong>: Simulates real-world execution friction by penalizing trade fills by N ticks per fill (default: <code>2</code> ticks).</li>
+                                <li><strong>Commissions $ Per Side</strong>: Transaction fee applied on every trade entry and exit (default: <code>$2.00</code> per side).</li>
+                            </ul>
+
+                            <h3>Exit On Session Close & Session Close Time (Day Trading vs Swing)</h3>
+                            <p>
+                                StratGen includes dedicated session close execution gating to distinguish day-trading strategies from multi-day swing systems:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Exit On Session Close (checkbox)</strong>: When enabled, all open trades are forcefully liquidated at the designated time every day. This eliminates overnight margin requirements and gap risk.
+                                </li>
+                                <li>
+                                    <strong>Session Close Time (hours : minutes)</strong>: The exact cutoff time to liquidate intraday positions (for example, <code>15:30</code> for US stock index futures).
+                                </li>
+                                <li>
+                                    <strong>Swing Trading Note</strong>: For multi-day or daily swing strategies, leave <strong>Exit On Session Close unchecked</strong>. This allows positions to hold overnight and capture larger multi-day price expansions without premature liquidation at daily settlement.
+                                </li>
+                            </ul>
+
+                            <h3>Results Filter Metric</h3>
+                            <p>
+                                Specifies the quantitative metric used to rank and filter candidates across optimization passes (e.g. Ret/DD, Sharpe Ratio, Net Profit).
+                            </p>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Strong recommendation</h4>
                                 <ul className="mb-0">
-                                    <li>Walk-forward every strategy before exporting code.</li>
-                                    <li>Walk-forward gives you the maximum amount of OOS validation.</li>
-                                    <li>If walk-forward fails, treat it as a warning sign, even if IS looks amazing.</li>
+                                    <li>Walk-forward every strategy before exporting code to NinjaTrader, TradeStation, or Python.</li>
+                                    <li>Walk-forward gives you the maximum amount of out-of-sample validation across multiple market regimes.</li>
+                                    <li>If walk-forward fails or exhibits severe parameter instability, discard the strategy regardless of in-sample metrics.</li>
                                 </ul>
                             </div>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Walk-Forward Monte Carlo (OOS-only)</h4>
                                 <p className="mb-0">
-                                    The Monte Carlo button on the Walk-Forward Results page uses <strong>only OOS trades</strong>.
-                                    This is deliberate: it is the strictest robustness test because it avoids “training period trades.”
+                                    The Monte Carlo button on the Walk-Forward Results page evaluates <strong>strictly Out-of-Sample trades</strong> across all windows.
+                                    This provides an uncompromising robustness stress test by excluding all in-sample training periods.
                                 </p>
                             </div>
 
@@ -918,14 +1010,28 @@ export default function UserManual() {
                             />
 
                             <p>
-                                This table shows all strategies StratGen generated. You compare them by performance metrics like Net PnL, MaxDD (drawdown),
-                                Sharpe, and Ret/DD.
+                                This table displays all strategy combinations generated by the simulation engine. You can inspect, sort, and rank candidates using institutional performance metrics including Net PnL, MaxDD (formatted in real currency dollars, e.g. <code>-$29,942.50</code>), Ret/DD (Return over Drawdown), Sharpe Ratio, and Trade Count.
                             </p>
+
+                            <h3>Understanding the Results Columns</h3>
+                            <ul>
+                                <li><strong>ID</strong>: Unique identifier assigned to the strategy combination.</li>
+                                <li><strong>Data</strong>: Historical instrument dataset used (e.g. <code>es144</code> for ES 1440-minute daily bars).</li>
+                                <li><strong>Side</strong>: Directionality of the strategy (<code>Both</code>, <code>Long</code>, or <code>Short</code>).</li>
+                                <li><strong>Entry Params</strong>: Concrete parameter values assigned to your entry rules (e.g. <code>ATR(10) &lt; 100</code>).</li>
+                                <li><strong>Exit Params</strong>: Target and stop loss thresholds (e.g. <code>PT 4000 SL 3000</code>).</li>
+                                <li><strong>Net PnL</strong>: Cumulative simulated dollar profit or loss.</li>
+                                <li><strong>MaxDD</strong>: Maximum peak-to-trough equity drawdown expressed in dollars.</li>
+                                <li><strong>Ret/DD</strong>: Net PnL divided by Max Drawdown. Higher values indicate superior risk-adjusted return.</li>
+                                <li><strong>Sharpe</strong>: Risk-adjusted consistency score comparing mean returns to return volatility.</li>
+                                <li><strong># Trades</strong>: Total executed trades across the backtest window.</li>
+                                <li><strong>Start Date</strong>: Beginning date of the simulated backtest sample.</li>
+                            </ul>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Important: you must select a strategy first</h4>
                                 <p className="mb-0">
-                                    Before you can use <strong>Chart</strong>, <strong>Generate Code</strong>, <strong>Add To Portfolio</strong>, or <strong>Monte Carlo</strong>,
+                                    Before you can use <strong>Chart</strong>, <strong>NinjaTrader Code</strong>, <strong>TradeStation Code</strong>, <strong>Python Code</strong>, <strong>Param Heatmap</strong>, <strong>Add To Portfolio</strong>, or <strong>Monte Carlo</strong>,
                                     you must <strong>left-click a strategy row</strong> to select it.
                                 </p>
                             </div>
@@ -938,13 +1044,14 @@ export default function UserManual() {
 
                             <h3>Buttons on the right (simple)</h3>
                             <ul>
-                                <li><strong>Chart</strong>: opens the Backtest Dashboard for the selected strategy.</li>
-                                <li><strong>NinjaTrader Code</strong>: generates a NinjaTrader strategy file.</li>
-                                <li><strong>TradeStation Code</strong>: generates an EasyLanguage strategy.</li>
-                                <li><strong>Python Code</strong>: generates a Python algorithm template.</li>
-                                <li><strong>Monte Carlo</strong>: runs robustness testing (randomized equity paths).</li>
-                                <li><strong>Add To Portfolio</strong>: saves this strategy for portfolio testing.</li>
-                                <li><strong>Walk-Forward</strong>: runs walk-forward testing for deeper OOS validation.</li>
+                                <li><strong>Chart</strong>: Opens the Backtest Dashboard and equity curves for the selected strategy.</li>
+                                <li><strong>NinjaTrader Code</strong>: Generates an export-ready C# NinjaScript strategy file.</li>
+                                <li><strong>TradeStation Code</strong>: Generates an EasyLanguage strategy script.</li>
+                                <li><strong>Python Code</strong>: Generates a QuantConnect Lean Python algorithm template.</li>
+                                <li><strong>Monte Carlo</strong>: Runs randomized trade order robustness simulations.</li>
+                                <li><strong>Param Heatmap</strong>: Displays a 2D parameter sensitivity surface to verify stability around optimal parameters.</li>
+                                <li><strong>Add To Portfolio</strong>: Adds the selected strategy into the multi-strategy Portfolio tab.</li>
+                                <li><strong>Walk-Forward</strong>: Dispatches multi-window walk-forward validation for rigorous out-of-sample verification.</li>
                             </ul>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
@@ -1386,6 +1493,143 @@ export default function UserManual() {
                                 </ol>
                             </div>
 
+                            {/* 19 */}
+                            <h2 id="ai-copilot">19) AI Copilot (Conversational Strategy Studio)</h2>
+
+                            <p>
+                                StratGen v1.3 introduces the <strong>AI Copilot</strong>—an autonomous, conversational quantitative research studio integrated directly into the platform.
+                                Instead of manually configuring dozens of signal permutations, risk sliders, and optimization windows, you can simply converse with the AI Copilot in natural English.
+                            </p>
+                            <p>
+                                The Copilot doesn't just write text: it acts as an <strong>autonomous quantitative agent</strong>. It formulates strategy hypotheses, validates rules through a live C# Roslyn compiler, dispatches parallel backtest simulations, orchestrates multi-window Walk-Forward matrices, exports production code for NinjaTrader 8, TradeStation, and Python, and automatically persists winning strategies to your Portfolio folder.
+                            </p>
+
+                            <img
+                                src="/stratgen_manual_images/22-aicopilotpromptbox.jpg"
+                                alt="StratGen AI Copilot Studio & Prompt Interface"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <h3>Navigating to the AI Copilot</h3>
+                            <p>
+                                Open the <strong>Settings</strong> window and select <strong>AI Copilot</strong> from the left sidebar navigation. The Copilot window features two dedicated sub-tabs:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Copilot Chat & Tools</strong>: The primary workspace where you submit prompts, view real-time tool execution logs, inspect strategy metrics, and interact with the assistant.
+                                </li>
+                                <li>
+                                    <strong>AI Providers & Tokens</strong>: The configuration hub for selecting models and configuring Bring-Your-Own-Key (BYOK) cloud providers.
+                                </li>
+                            </ul>
+
+                            <h3>The Copilot Chat & Tools Interface</h3>
+                            <ul>
+                                <li>
+                                    <strong>Conversational Prompt Box</strong>: Enter natural-language instructions detailing instruments, bar intervals, indicators, risk constraints, or performance targets (e.g. <em>"Build a swing strategy for NQ on daily bars with a $5,000 stop loss and export it to NinjaTrader."</em>).
+                                </li>
+                                <li>
+                                    <strong>Active Execution Mode Badge</strong>: Located above the Send button (e.g. <code>StratGen Azores 1.0</code> / <code>Azores 1.0</code>), this badge shows the currently active provider and model. Hovering displays detailed provider diagnostics.
+                                </li>
+                                <li>
+                                    <strong>Pre-Configured Quick Prompt Chips</strong>: Rapidly trigger standardized quantitative workflows with a single click:
+                                    <ul>
+                                        <li><strong>Build Swing NQ Strategy</strong>: Constructs a daily NQ swing system with a $5,000 protective stop loss and exports verified NinjaTrader 8 C# code.</li>
+                                        <li><strong>Intraday ES Strategy</strong>: Builds a 5-minute ES intraday momentum or mean-reversion strategy with strict 15:30 session close exits.</li>
+                                        <li><strong>Energies Strategy</strong>: Dispatches multi-commodity energy future searches (e.g., CL, NG) with walk-forward matrix verification.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Message History & Copy Controls</strong>: Each assistant message and tool response card features an individual <strong>Copy</strong> button and timestamp, enabling instant copying of generated C# rules, backtest tables, or parameters.
+                                </li>
+                                <li>
+                                    <strong>Clear Chat</strong>: Resets the conversation transcript and clears the assistant's working context for a fresh research session.
+                                </li>
+                            </ul>
+
+                            <h3>Configuring AI Providers & Cloud BYOK</h3>
+                            <img
+                                src="/stratgen_manual_images/23-aicopilotproviders.jpg"
+                                alt="AI Provider Configuration & BYOK Keys"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                Under the <strong>AI Providers & Tokens</strong> sub-tab, StratGen provides institutional flexibility by supporting both native local models and cloud Bring-Your-Own-Key (BYOK) providers.
+                            </p>
+
+                            <h4>Supported Execution Modes & Providers</h4>
+                            <ul>
+                                <li>
+                                    <strong>StratGen Azores 1.0 Model</strong>: The native fine-tuned quantitative reasoning engine running directly in C#. Specialized for algorithmic rule formulation, risk boundaries, and backtest interpretation without requiring third-party cloud keys.
+                                </li>
+                                <li>
+                                    <strong>OpenRouter (Cloud BYOK)</strong>: Connects your OpenRouter API key to access hundreds of cutting-edge models (e.g. <code>openai/gpt-5.6-luna</code>, <code>anthropic/claude-3.5-sonnet</code>, Meta LLaMA 3, DeepSeek, Mistral).
+                                </li>
+                                <li>
+                                    <strong>Anthropic Claude (Cloud BYOK)</strong>: Direct API integration with Anthropic models (e.g. <code>claude-fable-5-1</code>). Supports both personal API keys and an optional <strong>Anthropic Workspace ID</strong> for organizational team keys.
+                                </li>
+                                <li>
+                                    <strong>OpenAI ChatGPT (Cloud BYOK)</strong>: Direct API integration with OpenAI models (e.g. <code>gpt-5.6-sol</code>, GPT-4o, GPT-4 Turbo).
+                                </li>
+                                <li>
+                                    <strong>Google Gemini Cloud (Cloud BYOK)</strong>: Direct integration with Google Cloud AI Studio (e.g. <code>gemini-3.8-flash</code>, Gemini 1.5 Pro).
+                                </li>
+                            </ul>
+
+                            <h4>Connection Handshake & Security</h4>
+                            <p>
+                                After entering your API keys, click <strong>Test Connection</strong> to perform an immediate live handshake with the remote endpoint. StratGen verifies your credentials, validates token balance and latency, and confirms readiness with a green confirmation message. Click <strong>Save Settings</strong> to securely persist encrypted credentials via the local KeyVault.
+                            </p>
+
+                            <h3>Autonomous Tool Execution & Walk-Forward in Action</h3>
+                            <img
+                                src="/stratgen_manual_images/24-aicopilotwalkforward.jpg"
+                                alt="Autonomous AI Tool Execution & Walk-Forward Optimization"
+                                className="mx-auto my-8 rounded-lg border border-border/40 shadow-lg"
+                            />
+
+                            <p>
+                                When the AI Copilot processes a prompt, it operates as a multi-step autonomous agent. It invokes specialized backend tools and streams its progress directly into the chat:
+                            </p>
+
+                            <ol>
+                                <li>
+                                    <strong>Roslyn C# Rule Validation</strong>:
+                                    The Copilot formulates concrete boolean indicator expressions (e.g. <code>High &gt; KeltnerUpper(20, 1.5) && PrevHigh1 &lt; KeltnerUpper(20, 1.5)</code>). Before running any simulation, it compiles the rules in real time using Microsoft's Roslyn C# compiler. If syntax or type errors occur, it automatically corrects them on the fly to guarantee 0 compile errors.
+                                </li>
+                                <li>
+                                    <strong>Multi-Core Backtest Simulation</strong>:
+                                    The verified rules are passed into StratGen's multi-threaded backtest engine. The Copilot evaluates performance and reports top candidate metrics (e.g., <em>Top Strategy Combo #286: Net Profit: $65,263.00 | Ret/DD: 4.93 | Max DD: $13,225.00 | Trades: 18</em>).
+                                </li>
+                                <li>
+                                    <strong>Walk-Forward Matrix Analysis</strong>:
+                                    To guard against overfitting, the Copilot automatically orchestrates a multi-window Walk-Forward optimization (e.g. <em>Simulating WF Window 1/6 (2020-01-01 - 2020-12-31)</em>). It evaluates in-sample parameter stability and verifies that performance holds on unseen out-of-sample data.
+                                </li>
+                                <li>
+                                    <strong>Real-Time Execution Controls & Status Bar</strong>:
+                                    While tools run, the Copilot interface displays a determinate progress bar and real-time status banner (e.g. <code>Simulating WF Window 1/6</code>). If you wish to halt a long optimization pass, click the red <strong>Stop</strong> button to instantly cancel execution.
+                                </li>
+                                <li>
+                                    <strong>Automated Code Generation & Portfolio Persistence</strong>:
+                                    Upon passing all robustness thresholds, the Copilot:
+                                    <ul>
+                                        <li>Generates production-grade code for <strong>NinjaTrader 8 (C#)</strong>, <strong>TradeStation (EasyLanguage)</strong>, or <strong>QuantConnect (Python)</strong>.</li>
+                                        <li>Automatically writes a structured JSON portfolio file (<code>Strat_&lt;Symbol&gt;_&lt;Timeframe&gt;_WFO.json</code>) directly into StratGen's <code>Portfolio/</code> folder, containing all trade ledgers, walk-forward matrices, and equity curves.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Copilot Prompting Best Practices</h4>
+                                <ul className="mb-0">
+                                    <li><strong>Specify Market & Timeframe</strong>: Always include the symbol and resolution (e.g., <code>NQ daily</code>, <code>5-minute ES</code>, or <code>CL 60-minute</code>).</li>
+                                    <li><strong>Define Risk Clear Boundaries</strong>: Mention exact dollar or percentage stops (e.g., <em>"$4,000 stop loss, $6,000 profit target, max drawdown under $20,000"</em>).</li>
+                                    <li><strong>Day Trading vs Swing Guidance</strong>: For intraday algorithms, explicitly request session liquidation (e.g., <em>"Exit on session close at 15:30"</em>). For multi-day swing strategies, state <em>"Swing strategy, hold overnight without session close exits"</em> to ensure maximum trend capture.</li>
+                                    <li><strong>Set Quality Targets</strong>: Instruct the Copilot to enforce strict filters (e.g., <em>"Require Ret/DD greater than 2.0 and minimum 30 trades"</em>).</li>
+                                </ul>
+                            </div>
+
                             <p><a href="#top">Back to top</a></p>
                         </article>
                     </div>
@@ -1409,43 +1653,51 @@ export default function UserManual() {
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Creating and testing quantitative trading strategies
+                                                AI Copilot natural-language strategy design, autonomous tools, and prompt engineering
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Using the 600+ technical and fundamental signals
+                                                Cloud BYOK AI Providers: OpenRouter, Anthropic Claude (with Workspace ID), OpenAI ChatGPT, and Google Gemini
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Donchian, Elliott Wave, Z-Score, and other newer signal families
+                                                Roslyn C# runtime rule validation and compile error self-healing
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Advanced backtesting and robustness testing
+                                                Creating and testing quantitative trading strategies with Required, Entry, and Exit rules
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Position sizing, pyramiding, reversal behavior, monthly exits, and incubation settings
+                                                Using the 600+ technical and fundamental signals (Donchian, Elliott Wave, Z-Score, KAMA)
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Importing custom OHLCV data for any instrument
+                                                Advanced backtesting, multi-core parallel simulation, and institutional robustness testing
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Automatic code generation for NinjaTrader, TradeStation, and Python
+                                                Position sizing, pyramiding, reversal behavior, monthly exits, incubation, and session close timing
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Strategy optimization and performance analysis
+                                                Importing custom OHLCV data, second bars, tick data, and server data cache
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Out-of-sample testing and Monte Carlo simulations
+                                                Automatic code generation for NinjaTrader 8 C#, TradeStation EasyLanguage, and QuantConnect Python
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Portfolio construction, portfolio equity, correlation checks, and portfolio Monte Carlo
+                                                Strategy optimization, parameter heatmaps, and performance analysis
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                Out-of-sample testing and Monte Carlo simulations (including OOS-only Walk-Forward Monte Carlo)
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                Portfolio construction, portfolio equity, correlation matrices, and Portfolio Monte Carlo
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
@@ -1453,11 +1705,7 @@ export default function UserManual() {
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Quantitative research methodologies and best practices
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Troubleshooting and advanced tips for optimal performance
+                                                Quantitative research methodologies and engine parity best practices
                                             </li>
                                         </ul>
                                     </div>
