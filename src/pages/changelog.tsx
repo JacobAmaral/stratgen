@@ -104,13 +104,146 @@ export default function Changelog() {
                     <div className="max-w-4xl mx-auto space-y-8">
 
 
+                        {/* Version 1.3 */}
+                        <Card className="border-2 border-primary/20 shadow-lg">
+                            <CardHeader className="pb-4">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <CardTitle className="text-2xl">Version 1.3</CardTitle>
+                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
+                                    </div>
+                                    <div className="text-sm text-muted-foreground">
+                                        Released: October 6, 2026
+                                    </div>
+                                </div>
+                            </CardHeader>
+
+                            <CardContent className="space-y-6">
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        New Features
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>AI Copilot Conversational Studio:</strong> Built-in autonomous quantitative assistant in Settings (<code>Settings -&gt; AI Copilot</code>). Formulate, backtest, walk-forward validate, and export algorithmic trading strategies in plain English without writing code.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Autonomous Tool Dispatching:</strong> AI Copilot autonomously compiles C# boolean rules, runs parallel backtest simulations, orchestrates multi-window Walk-Forward matrices, and formats performance metrics live.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Roslyn C# Live Rule Compilation:</strong> Validates strategy logic at runtime using the Microsoft Roslyn compiler, automatically self-correcting any syntax or type errors before simulations are launched.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Cloud BYOK (Bring Your Own Key) & Provider Hub:</strong> Support for OpenRouter (100+ models), Anthropic Claude (with Anthropic Workspace ID support), OpenAI ChatGPT, and Google Gemini Cloud, alongside the built-in StratGen Azores 1.0 quantitative engine.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Quick Prompt Chips:</strong> One-click automated workflows including <em>Build Swing NQ Strategy</em>, <em>Intraday ES Strategy</em> (with strict 15:30 session liquidation), and <em>Energies Strategy</em>.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Required Signals Column:</strong> Added a dedicated "Required" checkbox column in the Signals tab to mandate baseline indicators (regime filters, Elliott Wave, Choppiness Index) across all generated strategy combinations.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Configurable Rule Counts:</strong> Directly configure <code># Of Entry Rules</code> and <code># Of Exit Rules</code> in Strategy Settings to govern rule combination depth.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Intraday Session Close Guardrails:</strong> Dedicated <code>Exit On Session Close</code> toggle and exact <code>Session Close Time</code> (e.g. 15:30) prevent overnight margin risk for day-trading setups while allowing swing strategies to run unconstrained.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <ZapIcon className="h-5 w-5 text-primary" />
+                                        Improvements
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Dollar-Formatted Drawdown:</strong> Strategy Results and chart metrics now display maximum drawdown formatted in real currency dollars (e.g. <code>-$29,942.50</code>).
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>NinjaTrader 8 Parity:</strong> Enforced strict bar-close profit target and stop loss exits to achieve 100% trade execution parity between StratGen simulations and NinjaTrader 8.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Portfolio Persistence:</strong> Automated saving of winning candidates and rolling walk-forward matrices directly into the <code>Portfolio/</code> folder as structured JSON artifacts.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Backtest Optimization Ceiling:</strong> Introduced configurable ceiling limits to prevent combinatorial runaway and guarantee responsive search cycles.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                                        <BugIcon className="h-5 w-5 text-orange-500" />
+                                        Bug Fixes & Parity
+                                    </h3>
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Walk-Forward Custom Signal Persistence:</strong> Preserved custom MiniSignals across batch walk-forward candidates and out-of-sample windows.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Single-Combo Debug Isolation:</strong> Isolated single-combo debug replays to prevent ledger bloat during multi-combo runs.
+                                            </div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <strong>Donchian & KAMA Alignment:</strong> Resolved indicator lookback offsets and warmup gating to ensure exact match with NinjaTrader 8 indicators.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </CardContent>
+                        </Card>
+
                         {/* Version 1.1.4 */}
                         <Card className="border-2 border-primary/20 shadow-lg">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
                                         <CardTitle className="text-2xl">Version 1.1.4</CardTitle>
-                                        <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: July 6, 2026

@@ -94,6 +94,11 @@ const pricingTier = {
 // Features list
 const features = [
   {
+    icon: <ZapIcon className="h-10 w-10 text-primary" />,
+    title: "AI Copilot Conversational Studio",
+    description: "Design, backtest, and walk-forward validate quantitative strategies in plain English with autonomous Roslyn C# verification and instant code export."
+  },
+  {
     icon: <BellIcon className="h-10 w-10 text-primary" />,
     title: "Live Training on Best Practices Included",
     description: "Every StratGen plan includes live training on best practices so you can learn the workflow, ask questions in real time, and get up to speed faster."
@@ -381,7 +386,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 border-primary/20 text-primary">
-                  Version 1.1.4 Now Available
+                  Version 1.3 Available Now
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
