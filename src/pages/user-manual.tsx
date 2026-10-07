@@ -243,7 +243,7 @@ export default function UserManual() {
                                     <li><a href="#custom-signals" className="hover:underline">Custom Signals</a></li>
                                     <li><a href="#walk-forward-results" className="hover:underline">Walk-Forward Results</a></li>
                                     <li><a href="#ai-workflows" className="hover:underline">AI Workflows</a></li>
-                                    <li><a href="#ai-copilot" className="hover:underline">AI Copilot (Conversational Studio)</a></li>
+                                    <li><a href="#ai-copilot" className="hover:underline">AI Copilot (Conversational Studio, Local Bridge &amp; MCP)</a></li>
                                 </ol>
                             </nav>
 
@@ -1555,13 +1555,134 @@ export default function UserManual() {
                                 </li>
                             </ol>
 
+                            <h3 id="ai-bridge">StratGen Local Bridge &amp; HTTP Connection</h3>
+                            <p>
+                                StratGen embeds an ultra-low latency, zero-token-cost HTTP IPC server running locally on <code>http://127.0.0.1:5199</code> by default.
+                                This bridge exposes the entire StratGen algorithmic core—including Roslyn rule compilation, multi-threaded backtesting, rolling walk-forward optimization, and NinjaTrader 8 code generation—directly to local scripts, CLI agents, and external AI tools.
+                            </p>
+
+                            <h4>Enabling the Local Bridge in StratGen</h4>
+                            <ol>
+                                <li>Open <strong>Settings</strong> and navigate to <strong>AI Copilot</strong> &rarr; <strong>AI Providers &amp; Tokens</strong>.</li>
+                                <li>Select <strong>AntiGravity &amp; Gemini Bridge</strong> (or Local Bridge).</li>
+                                <li>Verify that <strong>Local Port</strong> is set to <code>5199</code> and <strong>Enable :5199</strong> is checked (active by default).</li>
+                                <li>Keep StratGen running in the background. The server starts automatically on application launch.</li>
+                            </ol>
+
+                            <h4>Connecting Common LLMs and CLI Agents</h4>
+                            <p>
+                                StratGen provides dedicated local ports and profiles for major agent ecosystems:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>AntiGravity &amp; Gemini (Port 5199)</strong>: Default zero-cost local bridge for Google DeepMind's AntiGravity coding assistant and local Gemini workflows.
+                                </li>
+                                <li>
+                                    <strong>Claude Code CLI (Port 5200)</strong>: Dedicated bridge for Anthropic's Claude Code command-line developer agent.
+                                </li>
+                                <li>
+                                    <strong>ChatGPT &amp; Codex CLI (Port 5201)</strong>: Dedicated bridge for OpenAI CLI and Codex local developer sessions.
+                                </li>
+                                <li>
+                                    <strong>Custom Python Scripts &amp; REST Tools</strong>: Any tool or script can issue standard JSON HTTP requests:
+                                    <ul>
+                                        <li><code>GET  /api/status</code>: Verify engine health, port, and available endpoints.</li>
+                                        <li><code>POST /api/compile</code>: Validate and compile C# Roslyn indicator rules.</li>
+                                        <li><code>POST /api/backtest</code>: Dispatch an institutional simulation pass.</li>
+                                        <li><code>POST /api/walkforward</code>: Run rolling multi-window WFO.</li>
+                                        <li><code>POST /api/codegen/ninjatrader</code>: Export verified NinjaTrader 8 C# strategies.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h3 id="ai-mcp">Model Context Protocol (MCP) Server Integration</h3>
+                            <p>
+                                StratGen v1.3 includes native support for Anthropic's <strong>Model Context Protocol (MCP)</strong>.
+                                Instead of setting up external Python wrapper scripts or sidecar servers, StratGen itself acts as an official MCP server over <strong>Server-Sent Events (SSE)</strong> at <code>/sse</code> and stateless JSON-RPC 2.0 at <code>/mcp</code>.
+                            </p>
+
+                            <h4>Connecting Claude Desktop</h4>
+                            <p>
+                                Open your Claude Desktop configuration file (<code>%APPDATA%\Claude\claude_desktop_config.json</code> on Windows or <code>~/Library/Application Support/Claude/claude_desktop_config.json</code> on macOS) and add:
+                            </p>
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`{
+  "mcpServers": {
+    "stratgen": {
+      "url": "http://127.0.0.1:5199/sse"
+    }
+  }
+}`}
+                            </pre>
+
+                            <h4>Connecting Cursor IDE &amp; Windsurf</h4>
+                            <p>
+                                In <strong>Cursor</strong>, navigate to <strong>Settings</strong> &rarr; <strong>Features</strong> &rarr; <strong>MCP Servers</strong> (or edit <code>.cursor/mcp.json</code>) and add:
+                            </p>
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`{
+  "mcpServers": {
+    "stratgen": {
+      "url": "http://127.0.0.1:5199/sse"
+    }
+  }
+}`}
+                            </pre>
+
+                            <h4>Remote AI Workspaces &amp; LAN Deployment (Windows Server)</h4>
+                            <p>
+                                If StratGen is hosted on a dedicated Windows machine or trading server and your AI workspace (Cursor, Claude, or a Linux-based AI container) runs on another machine in your local network (LAN):
+                            </p>
+                            <ol>
+                                <li>
+                                    Because StratGen binds strictly to <code>127.0.0.1</code> (loopback) for security, use Windows <code>netsh</code> portproxy on the host machine to allow LAN access:
+                                    <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto mt-2">
+{`netsh interface portproxy add v4tov4 listenport=5199 listenaddress=0.0.0.0 connectport=5199 connectaddress=127.0.0.1`}
+                                    </pre>
+                                </li>
+                                <li>
+                                    Ensure Windows Defender Firewall allows incoming TCP connections on port <code>5199</code>.
+                                </li>
+                                <li>
+                                    In your remote AI workspace, point the MCP URL to the host server's LAN IP:
+                                    <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto mt-2">
+{`{
+  "mcpServers": {
+    "stratgen": {
+      "url": "http://<WINDOWS-SERVER-IP>:5199/sse"
+    }
+  }
+}`}
+                                    </pre>
+                                </li>
+                            </ol>
+
+                            <h3>MCP &amp; AI Copilot Best Practices</h3>
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">Copilot Prompting Best Practices</h4>
+                                <h4 className="mt-0">Initial Handshake &amp; Validation Prompt</h4>
+                                <p className="text-sm text-muted-foreground">
+                                    When starting a new session with an MCP-connected model (Claude, Cursor, or GPT-4o), paste this validation prompt to perform an instant health check:
+                                </p>
+                                <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`You are connected to the StratGen Quant Engine via MCP. Please perform a full system scan:
+1. Check engine status and report active version and loaded port.
+2. List all available StratGen tools you now have access to.
+3. Query imported market data symbols to check available instruments and bar resolutions.
+4. Test Roslyn rule compilation with a simple test rule:
+   - Long Entry: Close > SMA(50) && RSI(14) > 55
+   - Short Entry: Close < SMA(50) && RSI(14) < 45
+Confirm when the engine connection is healthy and you are ready to design and backtest strategies.`}
+                                </pre>
+                            </div>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Quant Strategy Prompting Best Practices</h4>
                                 <ul className="mb-0">
-                                    <li><strong>Specify Market & Timeframe</strong>: Always include the symbol and resolution (e.g., <code>NQ daily</code>, <code>5-minute ES</code>, or <code>CL 60-minute</code>).</li>
+                                    <li><strong>Specify Market &amp; Timeframe</strong>: Always include the symbol and resolution (e.g., <code>NQ daily</code>, <code>5-minute ES</code>, or <code>CL 60-minute</code>).</li>
                                     <li><strong>Define Risk Clear Boundaries</strong>: Mention exact dollar or percentage stops (e.g., <em>"$4,000 stop loss, $6,000 profit target, max drawdown under $20,000"</em>).</li>
                                     <li><strong>Day Trading vs Swing Guidance</strong>: For intraday algorithms, explicitly request session liquidation (e.g., <em>"Exit on session close at 15:30"</em>). For multi-day swing strategies, state <em>"Swing strategy, hold overnight without session close exits"</em> to ensure maximum trend capture.</li>
-                                    <li><strong>Set Quality Targets</strong>: Instruct the Copilot to enforce strict filters (e.g., <em>"Require Ret/DD greater than 2.0 and minimum 30 trades"</em>).</li>
+                                    <li><strong>Enforce Multi-Window Robustness</strong>: Instruct the model to run rolling walk-forward optimization with at least 5 windows and an Out-of-Sample ratio of 30% to prevent curve fitting.</li>
+                                    <li><strong>Export Production Code</strong>: Ask the model to generate the final verified strategy in your preferred trading platform (e.g., <em>"Export to NinjaTrader 8 C# with custom inputs"</em>).</li>
                                 </ul>
                             </div>
 
