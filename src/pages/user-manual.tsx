@@ -243,7 +243,10 @@ export default function UserManual() {
                                     <li><a href="#custom-signals" className="hover:underline">Custom Signals</a></li>
                                     <li><a href="#walk-forward-results" className="hover:underline">Walk-Forward Results</a></li>
                                     <li><a href="#ai-workflows" className="hover:underline">AI Workflows</a></li>
-                                    <li><a href="#ai-copilot" className="hover:underline">AI Copilot (Conversational Studio, Local Bridge &amp; MCP)</a></li>
+                                    <li><a href="#ai-copilot" className="hover:underline">19) AI Copilot (Conversational Studio)</a></li>
+                                    <li><a href="#local-azores" className="hover:underline">20) StratGen Local Azores 1.0 Model</a></li>
+                                    <li><a href="#local-bridge" className="hover:underline">21) Local Bridge HTTP Connection</a></li>
+                                    <li><a href="#mcp-server" className="hover:underline">22) Model Context Protocol (MCP) Server</a></li>
                                 </ol>
                             </nav>
 
@@ -1555,97 +1558,445 @@ export default function UserManual() {
                                 </li>
                             </ol>
 
-                            <h3 id="ai-bridge">StratGen Local Bridge &amp; HTTP Connection</h3>
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Copilot Prompting Best Practices</h4>
+                                <ul className="mb-0">
+                                    <li><strong>Specify Market &amp; Timeframe</strong>: Always include the symbol and resolution (e.g., <code>NQ daily</code>, <code>5-minute ES</code>, or <code>CL 60-minute</code>).</li>
+                                    <li><strong>Define Clear Risk Boundaries</strong>: Mention exact dollar or percentage stops (e.g., <em>"$4,000 stop loss, $6,000 profit target, max drawdown under $20,000"</em>).</li>
+                                    <li><strong>Day Trading vs Swing Guidance</strong>: For intraday algorithms, explicitly request session liquidation (e.g., <em>"Exit on session close at 15:30"</em>). For multi-day swing strategies, state <em>"Swing strategy, hold overnight without session close exits"</em> to ensure maximum trend capture.</li>
+                                    <li><strong>Enforce Quality Thresholds</strong>: Instruct the Copilot to enforce strict statistical filters (e.g., <em>"Require Ret/DD greater than 2.0 and minimum 30 trades"</em>).</li>
+                                    <li><strong>Targeted Refinements</strong>: You can converse conversationally to refine results (e.g. <em>"Tighten the stop loss to $3,500 and re-run the backtest"</em> or <em>"Add an RSI filter to avoid buying when overbought"</em>).</li>
+                                </ul>
+                            </div>
+
+                            <p><a href="#top">Back to top</a></p>
+
+
+                            {/* 20 */}
+                            <h2 id="local-azores">20) StratGen Local Azores 1.0 Model (Zero-Token Offline Quant Engine)</h2>
+
                             <p>
-                                StratGen embeds an ultra-low latency, zero-token-cost HTTP IPC server running locally on <code>http://127.0.0.1:5199</code> by default.
-                                This bridge exposes the entire StratGen algorithmic core—including Roslyn rule compilation, multi-threaded backtesting, rolling walk-forward optimization, and NinjaTrader 8 code generation—directly to local scripts, CLI agents, and external AI tools.
+                                <strong>StratGen Azores 1.0</strong> is StratGen's proprietary, built-in quantitative reasoning and rule formulation engine.
+                                Unlike third-party cloud models that rely on external APIs, Azores 1.0 runs <strong>100% locally inside StratGen's compiled .NET assemblies</strong>.
+                                It was specifically engineered for quantitative trading firms, proprietary prop traders, and independent quants who demand absolute data privacy, zero token costs, and instant execution.
                             </p>
 
-                            <h4>Enabling the Local Bridge in StratGen</h4>
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h3 className="mt-0 text-primary">Why StratGen Azores 1.0 Matters</h3>
+                                <ul className="mb-0 space-y-2">
+                                    <li>
+                                        <strong>100% Air-Gapped &amp; Private</strong>: Your proprietary trading concepts, strategy rules, custom indicator formulas, and account data never leave your local machine. No prompts or backtest data are ever transmitted to OpenAI, Anthropic, Google, or any cloud server.
+                                    </li>
+                                    <li>
+                                        <strong>Zero Token Billing ($0.00 Forever)</strong>: Run hundreds of strategy iterations, multi-asset portfolio searches, and optimization passes without worrying about cloud API bills, token meters, or rate limits.
+                                    </li>
+                                    <li>
+                                        <strong>Instant Local Execution (Zero Latency)</strong>: Bypasses cloud HTTP round-trips, model queuing, and API throttling. Azores generates structured algorithmic hypotheses and rule expressions in milliseconds.
+                                    </li>
+                                    <li>
+                                        <strong>Zero-Setup Deployment</strong>: Pre-compiled directly into the standalone <code>StratGen.exe</code> binary. Does not require Python installations, Docker containers, CUDA drivers, or heavy local LLM host processes like Ollama or vLLM. It runs immediately on any Windows PC or laptop.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <h3>Core Architecture &amp; Autonomous Reasoning Pipeline</h3>
+                            <p>
+                                Azores 1.0 does not merely generate conversational text—it operates as a <strong>deterministic quantitative rule synthesizer</strong> directly coupled to StratGen's computational simulation core:
+                            </p>
+
                             <ol>
-                                <li>Open <strong>Settings</strong> and navigate to <strong>AI Copilot</strong> &rarr; <strong>AI Providers &amp; Tokens</strong>.</li>
-                                <li>Select <strong>AntiGravity &amp; Gemini Bridge</strong> (or Local Bridge).</li>
-                                <li>Verify that <strong>Local Port</strong> is set to <code>5199</code> and <strong>Enable :5199</strong> is checked (active by default).</li>
-                                <li>Keep StratGen running in the background. The server starts automatically on application launch.</li>
-                            </ol>
-
-                            <h4>Connecting Common LLMs and CLI Agents</h4>
-                            <p>
-                                StratGen provides dedicated local ports and profiles for major agent ecosystems:
-                            </p>
-                            <ul>
                                 <li>
-                                    <strong>AntiGravity &amp; Gemini (Port 5199)</strong>: Default zero-cost local bridge for Google DeepMind's AntiGravity coding assistant and local Gemini workflows.
-                                </li>
-                                <li>
-                                    <strong>Claude Code CLI (Port 5200)</strong>: Dedicated bridge for Anthropic's Claude Code command-line developer agent.
-                                </li>
-                                <li>
-                                    <strong>ChatGPT &amp; Codex CLI (Port 5201)</strong>: Dedicated bridge for OpenAI CLI and Codex local developer sessions.
-                                </li>
-                                <li>
-                                    <strong>Custom Python Scripts &amp; REST Tools</strong>: Any tool or script can issue standard JSON HTTP requests:
+                                    <strong>Natural-Language Quant Prompt Parsing</strong>:
+                                    Azores decodes plain English prompts and extracts key quantitative variables:
                                     <ul>
-                                        <li><code>GET  /api/status</code>: Verify engine health, port, and available endpoints.</li>
-                                        <li><code>POST /api/compile</code>: Validate and compile C# Roslyn indicator rules.</li>
-                                        <li><code>POST /api/backtest</code>: Dispatch an institutional simulation pass.</li>
-                                        <li><code>POST /api/walkforward</code>: Run rolling multi-window WFO.</li>
-                                        <li><code>POST /api/codegen/ninjatrader</code>: Export verified NinjaTrader 8 C# strategies.</li>
+                                        <li><strong>Target Symbols</strong>: Detects futures (e.g. <code>NQ</code>, <code>ES</code>, <code>YM</code>, <code>RTY</code>, <code>CL</code>, <code>GC</code>, <code>NG</code>), forex pairs, and crypto.</li>
+                                        <li><strong>Bar Resolutions</strong>: Identifies intraday intervals (<code>1m</code>, <code>5m</code>, <code>15m</code>, <code>30m</code>, <code>60m</code>), daily bars (<code>1440m</code>), or tick data.</li>
+                                        <li><strong>Risk Controls</strong>: Automatically parses dollar-based (e.g. <code>$5,000</code>) or percentage-based (<code>1.5%</code>) stop losses, profit targets, and trailing stops.</li>
+                                        <li><strong>Session Liquidation</strong>: Recognizes explicit time constraints (e.g. <em>"liquidate at 15:30"</em>) vs overnight swing holding.</li>
                                     </ul>
                                 </li>
-                            </ul>
-
-                            <h3 id="ai-mcp">Model Context Protocol (MCP) Server Integration</h3>
-                            <p>
-                                StratGen v1.3 includes native support for Anthropic's <strong>Model Context Protocol (MCP)</strong>.
-                                Instead of setting up external Python wrapper scripts or sidecar servers, StratGen itself acts as an official MCP server over <strong>Server-Sent Events (SSE)</strong> at <code>/sse</code> and stateless JSON-RPC 2.0 at <code>/mcp</code>.
-                            </p>
-
-                            <h4>Connecting Claude Desktop</h4>
-                            <p>
-                                Open your Claude Desktop configuration file (<code>%APPDATA%\Claude\claude_desktop_config.json</code> on Windows or <code>~/Library/Application Support/Claude/claude_desktop_config.json</code> on macOS) and add:
-                            </p>
-                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
-{`{
-  "mcpServers": {
-    "stratgen": {
-      "url": "http://127.0.0.1:5199/sse"
-    }
-  }
-}`}
-                            </pre>
-
-                            <h4>Connecting Cursor IDE &amp; Windsurf</h4>
-                            <p>
-                                In <strong>Cursor</strong>, navigate to <strong>Settings</strong> &rarr; <strong>Features</strong> &rarr; <strong>MCP Servers</strong> (or edit <code>.cursor/mcp.json</code>) and add:
-                            </p>
-                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
-{`{
-  "mcpServers": {
-    "stratgen": {
-      "url": "http://127.0.0.1:5199/sse"
-    }
-  }
-}`}
-                            </pre>
-
-                            <h4>Remote AI Workspaces &amp; LAN Deployment (Windows Server)</h4>
-                            <p>
-                                If StratGen is hosted on a dedicated Windows machine or trading server and your AI workspace (Cursor, Claude, or a Linux-based AI container) runs on another machine in your local network (LAN):
-                            </p>
-                            <ol>
                                 <li>
-                                    Because StratGen binds strictly to <code>127.0.0.1</code> (loopback) for security, use Windows <code>netsh</code> portproxy on the host machine to allow LAN access:
-                                    <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto mt-2">
-{`netsh interface portproxy add v4tov4 listenport=5199 listenaddress=0.0.0.0 connectport=5199 connectaddress=127.0.0.1`}
+                                    <strong>Roslyn C# Rule Synthesis</strong>:
+                                    Azores formulates valid boolean logic referencing StratGen's catalog of 600+ built-in technical indicators:
+                                    <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto my-2">
+{`// Example Azores formulated long entry rule:
+Open > BollingerBandHigh(20, 2.0) && PrevOpen1 < BollingerBandHigh(20, 2.0) && RSI(14) > 50 && KAMA(30) > SMA(50)`}
                                     </pre>
                                 </li>
                                 <li>
-                                    Ensure Windows Defender Firewall allows incoming TCP connections on port <code>5199</code>.
+                                    <strong>Autonomous Self-Healing Compilation</strong>:
+                                    Before executing a simulation, Azores compiles candidate rules in real time via Microsoft Roslyn. If a rule produces compile warnings or type mismatches, Azores analyzes compiler diagnostics in-memory and automatically rewrites the expression to guarantee 0 compile errors.
                                 </li>
                                 <li>
-                                    In your remote AI workspace, point the MCP URL to the host server's LAN IP:
-                                    <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto mt-2">
+                                    <strong>Multi-Core Simulation &amp; Robustness Checks</strong>:
+                                    Azores dispatches the verified rules across all CPU cores, evaluates in-sample metrics (Net Profit, Ret/DD, Max Drawdown, Win Rate, Trades), runs multi-window Walk-Forward matrices, and evaluates out-of-sample efficiency (WFE &ge; 70%).
+                                </li>
+                                <li>
+                                    <strong>Automated Code Export &amp; Portfolio Persistence</strong>:
+                                    Once robustness criteria are met, Azores generates verified C# code for NinjaTrader 8, EasyLanguage for TradeStation, or Python for QuantConnect, and automatically writes structured JSON portfolio artifacts (<code>Strat_<Symbol>_<Timeframe>_WFO.json</code>) directly to your <code>Portfolio/</code> directory.
+                                </li>
+                            </ol>
+
+                            <h3>Selecting Azores 1.0 in StratGen</h3>
+                            <ol>
+                                <li>Open <strong>Settings</strong> and click <strong>AI Copilot</strong> in the left sidebar.</li>
+                                <li>Switch to the <strong>AI Providers &amp; Tokens</strong> sub-tab.</li>
+                                <li>In the <strong>AI Provider</strong> dropdown, select <strong>StratGen Local (Azores 1.0)</strong>.</li>
+                                <li>Click <strong>Test Connection</strong>. You will immediately see a green confirmation: <code>Success! StratGen Azores 1.0 Model Active</code>.</li>
+                                <li>Click <strong>Save Settings</strong>. In the Copilot Chat workspace, the active mode badge will now display <code>StratGen Azores 1.0</code>.</li>
+                            </ol>
+
+                            <h3>Feature Comparison: Azores 1.0 vs Cloud BYOK</h3>
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full border-collapse border border-border/40 text-sm">
+                                    <thead>
+                                        <tr className="bg-muted/40">
+                                            <th className="border border-border/40 p-3 text-left">Feature</th>
+                                            <th className="border border-border/40 p-3 text-left">StratGen Azores 1.0</th>
+                                            <th className="border border-border/40 p-3 text-left">Cloud BYOK (OpenRouter / Claude / OpenAI)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">Cost per Prompt</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">$0.00 (Zero Token Billing)</td>
+                                            <td className="border border-border/40 p-3">Billed per token by third-party provider</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">Data Privacy</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">100% Offline / Air-Gapped</td>
+                                            <td className="border border-border/40 p-3">Prompts sent to cloud provider servers</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">Execution Latency</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">Instant (0–50ms)</td>
+                                            <td className="border border-border/40 p-3">2–10 seconds (network + cloud queue)</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">Internet Required?</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">No (Runs fully offline)</td>
+                                            <td className="border border-border/40 p-3">Yes (Active internet connection required)</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">API Key Required?</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">None needed</td>
+                                            <td className="border border-border/40 p-3">Requires user API key from OpenAI/Anthropic</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">C# Roslyn Rule Synthesis</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">Native deterministic compiler</td>
+                                            <td className="border border-border/40 p-3">LLM generated with self-correcting retry loop</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-3 font-semibold">Conversational Creativity</td>
+                                            <td className="border border-border/40 p-3">Deterministic quantitative focus</td>
+                                            <td className="border border-border/40 p-3 text-green-500 font-bold">Rich conversational explanations &amp; narrative</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p><a href="#top">Back to top</a></p>
+
+
+                            {/* 21 */}
+                            <h2 id="local-bridge">21) Local Bridge HTTP Connection (External LLMs, CLI Agents &amp; REST)</h2>
+
+                            <p>
+                                The <strong>StratGen Local Bridge</strong> is an embedded, high-throughput HTTP IPC (Inter-Process Communication) server powered by .NET's native <code>HttpListener</code>.
+                                It binds by default to <code>http://127.0.0.1:5199/api/</code> and runs directly inside the StratGen application process.
+                            </p>
+                            <p>
+                                The Local Bridge enables external AI tools, command-line coding agents (such as Google DeepMind's AntiGravity, Anthropic's Claude Code, and OpenAI's Codex), terminal scripts, and custom Python programs to control StratGen programmatically with <strong>zero token cost</strong>.
+                            </p>
+
+                            <h3>Dedicated Port Ecosystem &amp; Provider Profiles</h3>
+                            <p>
+                                StratGen organizes local tool interaction through dedicated port profiles:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>AntiGravity &amp; Gemini Bridge (Default: Port 5199)</strong>:
+                                    The primary local bridge for Google DeepMind's AntiGravity AI coding assistant and local Gemini workflows. Supports full strategy discovery, rule compilation, backtest dispatch, and portfolio management.
+                                </li>
+                                <li>
+                                    <strong>Claude Code CLI Bridge (Default: Port 5200)</strong>:
+                                    Dedicated profile configured to interface seamlessly with Anthropic's Claude Code terminal developer agent.
+                                </li>
+                                <li>
+                                    <strong>ChatGPT &amp; Codex CLI Bridge (Default: Port 5201)</strong>:
+                                    Dedicated profile for OpenAI CLI tools, Codex automation scripts, and custom local agent frameworks.
+                                </li>
+                                <li>
+                                    <strong>Custom Automated Pipelines &amp; Python Scripts</strong>:
+                                    Any programming language capable of sending HTTP GET and POST requests can invoke StratGen's backtest engine, retrieve loaded market data, or generate production code.
+                                </li>
+                            </ul>
+
+                            <h3>Enabling &amp; Configuring the Local Bridge</h3>
+                            <ol>
+                                <li>Open StratGen &rarr; <strong>Settings</strong> &rarr; <strong>AI Copilot</strong> &rarr; <strong>AI Providers &amp; Tokens</strong>.</li>
+                                <li>Select <strong>AntiGravity &amp; Gemini Bridge</strong> (or Local Bridge).</li>
+                                <li>
+                                    Ensure <strong>Local Port</strong> is set (default: <code>5199</code>) and the <strong>Enable :5199</strong> checkbox is checked.
+                                </li>
+                                <li>
+                                    Click <strong>Test Connection</strong> to verify that the local HTTP listener loop is active.
+                                </li>
+                                <li>
+                                    The server starts automatically whenever StratGen launches and shuts down cleanly when the application exits.
+                                </li>
+                            </ol>
+
+                            <h3>Complete REST API Reference</h3>
+                            <p>
+                                All endpoints accept and return standard JSON payloads (<code>Content-Type: application/json</code>) with CORS headers enabled:
+                            </p>
+
+                            <div className="overflow-x-auto my-6">
+                                <table className="w-full border-collapse border border-border/40 text-sm">
+                                    <thead>
+                                        <tr className="bg-muted/40">
+                                            <th className="border border-border/40 p-3 text-left">Method</th>
+                                            <th className="border border-border/40 p-3 text-left">Route</th>
+                                            <th className="border border-border/40 p-3 text-left">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-blue-400">GET</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/status</td>
+                                            <td className="border border-border/40 p-2">Returns server status, active port, version, and catalog of all 25 active endpoints.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-blue-400">GET</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/settings</td>
+                                            <td className="border border-border/40 p-2">Retrieves active StratGen settings (selected instruments, bar resolutions, risk parameters).</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/settings</td>
+                                            <td className="border border-border/40 p-2">Dynamically updates StratGen settings (e.g. Stop Loss, Profit Target, Date Ranges).</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-blue-400">GET</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/data/symbols</td>
+                                            <td className="border border-border/40 p-2">Lists all imported market data symbols, available bar resolutions (1m, 5m, daily), and date ranges.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-blue-400">GET</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/signals/available</td>
+                                            <td className="border border-border/40 p-2">Inspects 600+ technical indicators, parameter ranges, and indicator categories.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/signals/custom/register</td>
+                                            <td className="border border-border/40 p-2">Authors and registers a new C# MiniSignal class dynamically into memory.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/compile</td>
+                                            <td className="border border-border/40 p-2">Compiles and validates C# Roslyn entry and exit expressions; reports compiler diagnostics.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/backtest</td>
+                                            <td className="border border-border/40 p-2">Executes high-throughput backtest simulation for specified symbol, timeframe, and risk parameters.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/walkforward</td>
+                                            <td className="border border-border/40 p-2">Runs rolling multi-window Walk-Forward optimization with in-sample/out-of-sample ratios.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/codegen/ninjatrader</td>
+                                            <td className="border border-border/40 p-2">Generates ready-to-trade NinjaTrader 8 NinjaScript C# code with custom inputs and protective exits.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/codegen/python</td>
+                                            <td className="border border-border/40 p-2">Generates production Python algorithm code for QuantConnect / Lean.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/codegen/tradestation</td>
+                                            <td className="border border-border/40 p-2">Generates EasyLanguage strategy code for TradeStation.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-blue-400">GET</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/portfolio/summary</td>
+                                            <td className="border border-border/40 p-2">Summarizes active strategies in the Portfolio folder, aggregate net profit, and max drawdown.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/portfolio/build</td>
+                                            <td className="border border-border/40 p-2">Builds a multi-instrument diversified portfolio across specified futures symbols.</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="border border-border/40 p-2 font-mono text-xs font-bold text-green-400">POST</td>
+                                            <td className="border border-border/40 p-2 font-mono text-xs">/api/analysis/montecarlo</td>
+                                            <td className="border border-border/40 p-2">Runs Monte Carlo trade randomization (default: 1,000 simulations at 95% confidence).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h3>Python Automation Example</h3>
+                            <p>
+                                Here is how an external Python script can interact with StratGen's Local Bridge:
+                            </p>
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`import requests
+
+BASE_URL = "http://127.0.0.1:5199"
+
+# 1. Check Server Health
+status = requests.get(f"{BASE_URL}/api/status").json()
+print(f"StratGen Server Online: {status['server']} on port {status['port']}")
+
+# 2. Compile a C# Roslyn Trading Rule
+rule_payload = {
+    "long_entry": "Close > BollingerBandMiddle(20, 2.0) && RSI(14) > 55",
+    "short_entry": "Close < BollingerBandMiddle(20, 2.0) && RSI(14) < 45"
+}
+compile_res = requests.post(f"{BASE_URL}/api/compile", json=rule_payload).json()
+print("Rule Compilation:", compile_res)
+
+# 3. Dispatch an Institutional Backtest Pass
+backtest_payload = {
+    "symbol": "NQ",
+    "timeframe": "1m",
+    "entry_signal": "Open > BollingerBandHigh(20, 2.0)",
+    "stop_loss_pct": 1.5,
+    "profit_target_pct": 3.5,
+    "session_close_time": "15:30"
+}
+backtest_res = requests.post(f"{BASE_URL}/api/backtest", json=backtest_payload).json()
+print("Backtest Top Strategy:", backtest_res.get("top_strategy"))
+
+# 4. Generate NinjaTrader 8 Production Code
+codegen_payload = {
+    "strategy_name": "StratGen_NQ_Momentum",
+    "symbol": "NQ",
+    "timeframe": "1m",
+    "stop_loss_pct": 1.5,
+    "profit_target_pct": 3.5
+}
+code_res = requests.post(f"{BASE_URL}/api/codegen/ninjatrader", json=codegen_payload).json()
+print("Generated NinjaScript C# Length:", len(code_res.get("code", "")))`}
+                            </pre>
+
+                            <p><a href="#top">Back to top</a></p>
+
+
+                            {/* 22 */}
+                            <h2 id="mcp-server">22) Model Context Protocol (MCP) Server (Claude Desktop, Cursor, Windsurf &amp; LAN)</h2>
+
+                            <p>
+                                StratGen v1.3 features native, built-in support for Anthropic's <strong>Model Context Protocol (MCP)</strong>.
+                                MCP is the open industry standard enabling AI models (including Claude 3.5 Sonnet, GPT-4o, and Cursor) to securely discover and invoke specialized local tools.
+                            </p>
+                            <p>
+                                Unlike solutions that require external Python wrapper scripts (<code>fastmcp</code>) or Node.js sidecars, StratGen acts as an <strong>embedded native MCP server</strong>.
+                                It supports both standard HTTP with <strong>Server-Sent Events (SSE)</strong> at <code>/sse</code> and stateless JSON-RPC 2.0 at <code>/mcp</code> and <code>/message</code>.
+                            </p>
+
+                            <h3>StratGen Native MCP Tool Catalog</h3>
+                            <p>
+                                When an MCP client connects, StratGen automatically advertises its complete tool catalog via <code>tools/list</code> with full JSON parameter schemas:
+                            </p>
+                            <ul>
+                                <li><code>compile_strategy_rules</code>: Compiles and validates C# Roslyn indicator rules with real-time error diagnostics.</li>
+                                <li><code>run_lean_backtest</code>: Executes multi-core institutional backtest simulations on loaded market data.</li>
+                                <li><code>run_walkforward_analysis</code>: Executes rolling multi-window Walk-Forward optimization matrices.</li>
+                                <li><code>generate_ninjatrader_code</code>: Generates complete, compiled NinjaTrader 8 NinjaScript C# strategy classes.</li>
+                                <li><code>generate_python_code</code>: Exports clean Python algorithms for QuantConnect / Lean.</li>
+                                <li><code>generate_tradestation_code</code>: Exports verified EasyLanguage strategies for TradeStation.</li>
+                                <li><code>build_strategy_portfolio</code>: Dispatches multi-asset portfolio generation across user-selected futures.</li>
+                                <li><code>run_monte_carlo_analysis</code>: Conducts 1,000+ trade order randomization runs to stress-test maximum drawdown.</li>
+                                <li><code>get_imported_data_symbols</code>: Queries all currently loaded historical market data symbols and bar resolutions.</li>
+                                <li><code>get_available_signals</code>: Inspects 600+ technical indicators and parameter constraints.</li>
+                                <li><code>register_custom_signal</code>: Authors and hot-reloads custom C# MiniSignal technical studies at runtime.</li>
+                            </ul>
+
+                            <h3>Client Configuration Guides</h3>
+
+                            <h4>1. Claude Desktop</h4>
+                            <p>
+                                Open your Claude Desktop configuration file in a text editor:
+                            </p>
+                            <ul>
+                                <li><strong>Windows</strong>: <code>%APPDATA%\Claude\claude_desktop_config.json</code></li>
+                                <li><strong>macOS</strong>: <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
+                            </ul>
+                            <p>Add the StratGen SSE server to your <code>mcpServers</code> block:</p>
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`{
+  "mcpServers": {
+    "stratgen": {
+      "url": "http://127.0.0.1:5199/sse"
+    }
+  }
+}`}
+                            </pre>
+                            <p>Restart Claude Desktop. You will see a hammer icon indicating that StratGen's 20+ quant tools are connected and available.</p>
+
+                            <h4>2. Cursor IDE</h4>
+                            <p>
+                                In <strong>Cursor</strong>, navigate to <strong>Settings</strong> &rarr; <strong>Features</strong> &rarr; <strong>MCP Servers</strong> (or create <code>.cursor/mcp.json</code> in your project workspace):
+                            </p>
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`{
+  "mcpServers": {
+    "stratgen": {
+      "url": "http://127.0.0.1:5199/sse"
+    }
+  }
+}`}
+                            </pre>
+
+                            <h4>3. Windsurf IDE / Cascade</h4>
+                            <p>
+                                In <strong>Windsurf</strong>, edit your global MCP configuration file (<code>~/.codeium/windsurf/mcp_config.json</code>):
+                            </p>
+                            <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`{
+  "mcpServers": {
+    "stratgen": {
+      "url": "http://127.0.0.1:5199/sse"
+    }
+  }
+}`}
+                            </pre>
+
+                            <h3>Remote AI Workspaces &amp; LAN Deployment (Windows Server)</h3>
+                            <p>
+                                In professional trading setups, StratGen often runs on a high-spec Windows trading workstation or VPS, while the quant researcher interacts with AI tools from a laptop, Linux AI container, or remote workstation over the local network (LAN).
+                            </p>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Why <code>127.0.0.1</code> Requires Port Forwarding</h4>
+                                <p className="text-sm text-muted-foreground">
+                                    By default, StratGen binds strictly to <code>127.0.0.1</code> (loopback) to prevent unauthorized network access.
+                                    To allow another machine on your LAN to access the MCP server, proxy the port using Windows <code>netsh</code>:
+                                </p>
+                                <ol className="text-sm space-y-2 mb-0">
+                                    <li>
+                                        <strong>Run <code>netsh portproxy</code> on the StratGen Windows Server</strong> (in an Administrator command prompt):
+                                        <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-3 text-xs font-mono overflow-x-auto mt-1">
+{`netsh interface portproxy add v4tov4 listenport=5199 listenaddress=0.0.0.0 connectport=5199 connectaddress=127.0.0.1`}
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        <strong>Allow Port 5199 in Windows Firewall</strong>:
+                                        <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-3 text-xs font-mono overflow-x-auto mt-1">
+{`netsh advfirewall firewall add rule name="StratGen MCP Bridge" dir=in action=allow protocol=TCP localport=5199`}
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        <strong>Configure Your Remote AI Client</strong>: Point the MCP client to the Windows server's LAN IP address:
+                                        <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-3 text-xs font-mono overflow-x-auto mt-1">
 {`{
   "mcpServers": {
     "stratgen": {
@@ -1653,20 +2004,22 @@ export default function UserManual() {
     }
   }
 }`}
-                                    </pre>
-                                </li>
-                            </ol>
+                                        </pre>
+                                    </li>
+                                </ol>
+                            </div>
 
-                            <h3>MCP &amp; AI Copilot Best Practices</h3>
+                            <h3>MCP Prompt Engineering &amp; Best Practices</h3>
+
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">Initial Handshake &amp; Validation Prompt</h4>
+                                <h4 className="mt-0">1. Initial Connection Handshake &amp; Scan Prompt</h4>
                                 <p className="text-sm text-muted-foreground">
-                                    When starting a new session with an MCP-connected model (Claude, Cursor, or GPT-4o), paste this validation prompt to perform an instant health check:
+                                    Whenever you start a fresh session with Claude Desktop, Cursor, or your AI workspace, copy and paste this prompt to perform an instant end-to-end diagnostic scan:
                                 </p>
                                 <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
 {`You are connected to the StratGen Quant Engine via MCP. Please perform a full system scan:
-1. Check engine status and report active version and loaded port.
-2. List all available StratGen tools you now have access to.
+1. Check engine status and report the active version and active port.
+2. List all available StratGen tools you now have access to and summarize their capabilities.
 3. Query imported market data symbols to check available instruments and bar resolutions.
 4. Test Roslyn rule compilation with a simple test rule:
    - Long Entry: Close > SMA(50) && RSI(14) > 55
@@ -1676,14 +2029,24 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                             </div>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">Quant Strategy Prompting Best Practices</h4>
-                                <ul className="mb-0">
-                                    <li><strong>Specify Market &amp; Timeframe</strong>: Always include the symbol and resolution (e.g., <code>NQ daily</code>, <code>5-minute ES</code>, or <code>CL 60-minute</code>).</li>
-                                    <li><strong>Define Risk Clear Boundaries</strong>: Mention exact dollar or percentage stops (e.g., <em>"$4,000 stop loss, $6,000 profit target, max drawdown under $20,000"</em>).</li>
-                                    <li><strong>Day Trading vs Swing Guidance</strong>: For intraday algorithms, explicitly request session liquidation (e.g., <em>"Exit on session close at 15:30"</em>). For multi-day swing strategies, state <em>"Swing strategy, hold overnight without session close exits"</em> to ensure maximum trend capture.</li>
-                                    <li><strong>Enforce Multi-Window Robustness</strong>: Instruct the model to run rolling walk-forward optimization with at least 5 windows and an Out-of-Sample ratio of 30% to prevent curve fitting.</li>
-                                    <li><strong>Export Production Code</strong>: Ask the model to generate the final verified strategy in your preferred trading platform (e.g., <em>"Export to NinjaTrader 8 C# with custom inputs"</em>).</li>
-                                </ul>
+                                <h4 className="mt-0">2. Full Strategy Generation &amp; Walk-Forward Prompt</h4>
+                                <p className="text-sm text-muted-foreground">
+                                    Use this structured prompt template to command the AI model to execute an autonomous quant research workflow:
+                                </p>
+                                <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm font-mono overflow-x-auto">
+{`Act as an institutional quantitative portfolio manager. Using your StratGen MCP tools:
+1. Check loaded market data for NQ on 1440m (daily) bars.
+2. Formulate a swing trading trend-following hypothesis using Bollinger Bands and KAMA.
+3. Compile the trading rules through Roslyn to ensure zero syntax errors.
+4. Run an initial institutional backtest with:
+   - Stop Loss: $5,000 (dollar-based)
+   - Profit Target: None (let winners run)
+   - Trailing Stop: $3,500
+   - Overnight holding: Yes (do not liquidate at session close)
+5. If Ret/DD > 2.5, run a 6-window rolling Walk-Forward analysis (70% in-sample ratio).
+6. Verify that out-of-sample efficiency (WFE) exceeds 75%.
+7. Export the production-grade strategy into NinjaTrader 8 C# NinjaScript code.`}
+                                </pre>
                             </div>
 
                             <p><a href="#top">Back to top</a></p>
@@ -1710,6 +2073,18 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
                                                 AI Copilot natural-language strategy design, autonomous tools, and prompt engineering
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                StratGen Local Azores 1.0 offline quant engine (zero API keys, private local inference)
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                Local Bridge HTTP IPC connection for external LLMs, CLI agents, and custom Python automation
+                                            </li>
+                                            <li className="flex items-start gap-2">
+                                                <span className="text-primary mt-1">•</span>
+                                                Model Context Protocol (MCP) server integration for Claude Desktop, Cursor, Windsurf, and LAN netsh proxy
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
