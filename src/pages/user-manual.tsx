@@ -243,10 +243,10 @@ export default function UserManual() {
                                     <li><a href="#custom-signals" className="hover:underline">Custom Signals</a></li>
                                     <li><a href="#walk-forward-results" className="hover:underline">Walk-Forward Results</a></li>
                                     <li><a href="#ai-workflows" className="hover:underline">AI Workflows</a></li>
-                                    <li><a href="#ai-copilot" className="hover:underline">19) AI Copilot (Conversational Studio)</a></li>
-                                    <li><a href="#local-azores" className="hover:underline">20) StratGen Local Azores 1.0 Model</a></li>
-                                    <li><a href="#local-bridge" className="hover:underline">21) Local Bridge HTTP Connection</a></li>
-                                    <li><a href="#mcp-server" className="hover:underline">22) Model Context Protocol (MCP) Server</a></li>
+                                    <li><a href="#ai-copilot" className="hover:underline">AI Copilot (Conversational Studio)</a></li>
+                                    <li><a href="#local-azores" className="hover:underline">StratGen Local Azores 1.0 Model</a></li>
+                                    <li><a href="#local-bridge" className="hover:underline">Local Bridge HTTP Connection</a></li>
+                                    <li><a href="#mcp-server" className="hover:underline">Model Context Protocol (MCP) Server</a></li>
                                 </ol>
                             </nav>
 
@@ -1431,8 +1431,7 @@ export default function UserManual() {
                                 </ol>
                             </div>
 
-                            {/* 19 */}
-                            <h2 id="ai-copilot">19) AI Copilot (Conversational Strategy Studio)</h2>
+                            <h2 id="ai-copilot">AI Copilot (Conversational Strategy Studio)</h2>
 
                             <p>
                                 StratGen v1.3 introduces the <strong>AI Copilot</strong>—an autonomous, conversational quantitative research studio integrated directly into the platform.
@@ -1572,8 +1571,7 @@ export default function UserManual() {
                             <p><a href="#top">Back to top</a></p>
 
 
-                            {/* 20 */}
-                            <h2 id="local-azores">20) StratGen Local Azores 1.0 Model (Zero-Token Offline Quant Engine)</h2>
+                            <h2 id="local-azores">StratGen Local Azores 1.0 Model (Zero-Token Offline Quant Engine)</h2>
 
                             <p>
                                 <strong>StratGen Azores 1.0</strong> is StratGen's proprietary, built-in quantitative reasoning and rule formulation engine.
@@ -1699,8 +1697,7 @@ Open > BollingerBandHigh(20, 2.0) && PrevOpen1 < BollingerBandHigh(20, 2.0) && R
                             <p><a href="#top">Back to top</a></p>
 
 
-                            {/* 21 */}
-                            <h2 id="local-bridge">21) Local Bridge HTTP Connection (External LLMs, CLI Agents &amp; REST)</h2>
+                            <h2 id="local-bridge">Local Bridge HTTP Connection (External LLMs, CLI Agents &amp; REST)</h2>
 
                             <p>
                                 The <strong>StratGen Local Bridge</strong> is an embedded, high-throughput HTTP IPC (Inter-Process Communication) server powered by .NET's native <code>HttpListener</code>.
@@ -1890,8 +1887,7 @@ print("Generated NinjaScript C# Length:", len(code_res.get("code", "")))`}
                             <p><a href="#top">Back to top</a></p>
 
 
-                            {/* 22 */}
-                            <h2 id="mcp-server">22) Model Context Protocol (MCP) Server (Claude Desktop, Cursor, Windsurf &amp; LAN)</h2>
+                            <h2 id="mcp-server">Model Context Protocol (MCP) Server (Claude Desktop, Cursor, Windsurf &amp; LAN)</h2>
 
                             <p>
                                 StratGen v1.3 features native, built-in support for Anthropic's <strong>Model Context Protocol (MCP)</strong>.
