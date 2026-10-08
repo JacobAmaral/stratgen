@@ -1633,7 +1633,7 @@ Open > BollingerBandHigh(20, 2.0) && PrevOpen1 < BollingerBandHigh(20, 2.0) && R
                                 </li>
                                 <li>
                                     <strong>Automated Code Export &amp; Portfolio Persistence</strong>:
-                                    Once robustness criteria are met, Azores generates verified C# code for NinjaTrader 8, EasyLanguage for TradeStation, or Python for QuantConnect, and automatically writes structured JSON portfolio artifacts (<code>Strat_<Symbol>_<Timeframe>_WFO.json</code>) directly to your <code>Portfolio/</code> directory.
+                                    Once robustness criteria are met, Azores generates verified C# code for NinjaTrader 8, EasyLanguage for TradeStation, or Python for QuantConnect, and automatically writes structured JSON portfolio artifacts (<code>Strat_&lt;Symbol&gt;_&lt;Timeframe&gt;_WFO.json</code>) directly to your <code>Portfolio/</code> directory.
                                 </li>
                             </ol>
 
