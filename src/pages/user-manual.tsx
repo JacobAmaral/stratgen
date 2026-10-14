@@ -228,8 +228,8 @@ export default function UserManual() {
                                     <li><a href="#advanced-exits" className="hover:underline">Advanced Exits & Session Close</a></li>
                                     <li><a href="#walk-forward" className="hover:underline">Walk-Forward Settings</a></li>
                                     <li><a href="#new-signal-types" className="hover:underline">New Signal Types</a></li>
-                                    <li><a href="#import-data" className="hover:underline">Import Data</a></li>
-                                    <li><a href="#server-symbols" className="hover:underline">Symbol Search & Data Cache</a></li>
+                                    <li><a href="#import-data" className="hover:underline">Import Data & Open Interest</a></li>
+                                    <li><a href="#server-symbols" className="hover:underline">Symbol Search, Server Data & Cache</a></li>
                                     <li><a href="#run-sim" className="hover:underline">Run Simulation</a></li>
                                     <li><a href="#results-list" className="hover:underline">Strategy Results</a></li>
                                     <li><a href="#dashboard" className="hover:underline">Backtest Dashboard</a></li>
@@ -735,6 +735,35 @@ export default function UserManual() {
                                 <li><strong>Near zero</strong>: value is close to normal.</li>
                             </ul>
 
+                            <h3>Open Interest signals</h3>
+                            <p>
+                                <strong>Open Interest (OI)</strong> measures the total number of active, outstanding derivative contracts (futures or options) that have not been settled or closed out. Unlike volume (which measures transactional turnover during a specific bar), Open Interest tracks true capital commitment and institutional participation flowing into or out of an instrument.
+                            </p>
+                            <ul>
+                                <li><strong>Trend Confirmation (Rising OI)</strong>: When price advances while Open Interest increases, new institutional money is entering long positions, confirming strong trend continuation.</li>
+                                <li><strong>Liquidation / Exhaustion (Falling OI)</strong>: When price advances while Open Interest declines, the rally is fueled primarily by short covering rather than fresh accumulation, signaling a vulnerable or tired move.</li>
+                                <li><strong>Macro Liquidity Filter</strong>: Using absolute Open Interest thresholds ensures your strategy only trades during high-liquidity regimes, avoiding illiquid contract roll periods or low-participation sessions.</li>
+                            </ul>
+                            <p>
+                                StratGen includes <strong>8 Open Interest signal variations</strong> for entry, required, and exit rules:
+                            </p>
+                            <ul>
+                                <li><code>OpenInterest &gt; &#123;P1&#125;</code>: Requires Open Interest to exceed threshold P1 (e.g., verifying sufficient contract depth).</li>
+                                <li><code>OpenInterest &lt; &#123;P1&#125;</code>: Triggers when Open Interest falls below threshold P1.</li>
+                                <li><code>OpenInterest &lt;= &#123;P1&#125;</code>: Triggers when Open Interest is less than or equal to threshold P1.</li>
+                                <li><code>OpenInterest &gt; PrevOpenInterest&#123;P1&#125;</code>: Compares current Open Interest to the value P1 bars ago (e.g., rising OI momentum).</li>
+                                <li><code>OpenInterest &lt; PrevOpenInterest&#123;P1&#125;</code>: Compares current Open Interest to P1 bars ago (e.g., declining capital commitment).</li>
+                                <li><code>OpenInterest &lt;= PrevOpenInterest&#123;P1&#125;</code>: Open Interest is flat or dropping relative to P1 bars ago.</li>
+                                <li><code>PrevOpenInterest&#123;P1&#125; &gt; PrevOpenInterest&#123;P2&#125;</code>: Multi-period shift comparing historical Open Interest between lookback offsets P1 and P2.</li>
+                                <li><code>PrevOpenInterest&#123;P1&#125; &lt;= PrevOpenInterest&#123;P2&#125;</code>: Multi-period shift testing whether Open Interest at offset P1 was less than or equal to offset P2.</li>
+                            </ul>
+                            <p>
+                                <strong>Parameter ranges:</strong> Threshold levels (P1) typically sweep from <code>100,000</code> to <code>500,000</code> contracts (customizable to your symbol&apos;s open interest profile), while lookback offsets (P1, P2) range from <code>1</code> to <code>3</code> bars.
+                            </p>
+                            <p>
+                                <strong>Live Trading &amp; Code Export:</strong> All Open Interest rules export directly to production-grade C# for NinjaTrader 8 (interfacing with <code>COT(4).Cot4</code> / Open Interest series), TradeStation EasyLanguage (<code>OpenInt</code>), and QuantConnect Python (<code>self.Securities[self.symbol].OpenInterest</code>) with 100% execution parity.
+                            </p>
+
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
                                 <h4 className="mt-0">Signal selection checklist</h4>
                                 <ol className="mb-0">
@@ -747,7 +776,7 @@ export default function UserManual() {
 
 
                             {/* 6 */}
-                            <h2 id="import-data">6) Import Data (CSV Requirements)</h2>
+                            <h2 id="import-data">6) Import Data (CSV Requirements &amp; Open Interest)</h2>
                             <img
                                 src="/stratgen_manual_images/05-import-data.jpg"
                                 alt="Import data"
@@ -756,7 +785,7 @@ export default function UserManual() {
 
                             <p>
                                 StratGen loads historical price data from CSV files on your computer. Each symbol row points to one CSV file.
-                                If the CSV format is wrong, the symbol will not load correctly.
+                                StratGen supports standard 6-column OHLCV data as well as enhanced 7-column data with Open Interest.
                             </p>
 
                             <h3>What the table columns mean</h3>
@@ -768,12 +797,31 @@ export default function UserManual() {
                                 <li><strong>FilePath</strong>: full path to the CSV file on your PC.</li>
                             </ul>
 
-                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">CSV format</h4>
-                                <p>
-                                    The CSV must contain OHLCV rows in this order:
-                                    <strong> Time, Open, High, Low, Close, Volume</strong>
+                            <div className="rounded-xl border border-primary/40 bg-primary/10 p-6 my-8">
+                                <h4 className="mt-0 text-primary">Crash-Proof Backward Compatibility</h4>
+                                <p className="mb-0">
+                                    <strong>Legacy 6-column CSV files are 100% supported.</strong> If your existing CSV files only contain 
+                                    <code>Time, Open, High, Low, Close, Volume</code>, StratGen will <strong>never crash or fail</strong> a backtest. 
+                                    The bar loader automatically detects 6-column files and safely assigns a default Open Interest of <code>0</code>. 
+                                    You do not need to re-export existing historical datasets to keep running backtests or walk-forward simulations.
                                 </p>
+                            </div>
+
+                            <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
+                                <h4 className="mt-0">Supported CSV layouts</h4>
+                                <p>
+                                    StratGen parses two primary bar formats:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>7-Column Format (Recommended for Derivatives):</strong><br />
+                                        <code>Time, Open, High, Low, Close, Volume, OpenInterest</code>
+                                    </li>
+                                    <li>
+                                        <strong>6-Column Format (Standard OHLCV):</strong><br />
+                                        <code>Time, Open, High, Low, Close, Volume</code>
+                                    </li>
+                                </ul>
 
                                 <p className="mb-2">Supported timestamp formats:</p>
                                 <ul>
@@ -787,41 +835,46 @@ export default function UserManual() {
                                     </li>
                                 </ul>
 
-                                <p className="mb-2">Example minute bar:</p>
+                                <p className="mb-2">Example 7-column minute bar (with Open Interest):</p>
+                                <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
+                                    01/15/2026 09:30,21500.25,21510.75,21490.00,21505.50,12345,348250
+                                </pre>
+
+                                <p className="mb-2">Example 6-column minute bar (classic OHLCV):</p>
                                 <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
                                     01/15/2026 09:30,21500.25,21510.75,21490.00,21505.50,12345
                                 </pre>
 
                                 <p className="mb-2">Example second bar:</p>
                                 <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
-                                    20260115 09:30:01,21500.25,21502.50,21499.75,21501.50,42
+                                    20260115 09:30:01,21500.25,21502.50,21499.75,21501.50,42,348250
                                 </pre>
 
                                 <p className="mb-0">
-                                    A header row is optional. Keep price and volume values numeric, keep rows in chronological
-                                    order from oldest to newest, and do not add extra columns.
+                                    A header row is optional. Keep price, volume, and open interest values numeric, keep rows in chronological
+                                    order from oldest to newest.
                                 </p>
                             </div>
 
                             <h3>Importing tick data</h3>
                             <p>
-                                Tick files use the same six-column OHLCV layout. Add one row per trade, repeat the trade price
-                                in the Open, High, Low, and Close columns, and place the trade size in Volume.
+                                Tick files use the same OHLCV/OI layout. Add one row per trade, repeat the trade price
+                                in the Open, High, Low, and Close columns, place the trade size in Volume, and optionally append Open Interest.
                             </p>
 
                             <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
-{`Time,Open,High,Low,Close,Volume
-20260115 09:30:01,21500.25,21500.25,21500.25,21500.25,2
-20260115 09:30:01,21500.50,21500.50,21500.50,21500.50,1
-20260115 09:30:01,21499.75,21499.75,21499.75,21499.75,3
-20260115 09:30:02,21500.00,21500.00,21500.00,21500.00,1`}
+{`Time,Open,High,Low,Close,Volume,OpenInterest
+20260115 09:30:01,21500.25,21500.25,21500.25,21500.25,2,348250
+20260115 09:30:01,21500.50,21500.50,21500.50,21500.50,1,348250
+20260115 09:30:01,21499.75,21499.75,21499.75,21499.75,3,348250
+20260115 09:30:02,21500.00,21500.00,21500.00,21500.00,1,348252`}
                             </pre>
 
                             <p>
                                 Multiple ticks may have the same whole-second timestamp. StratGen automatically consolidates
                                 all rows in that second into one second bar: the first trade becomes Open, the highest and
-                                lowest trades become High and Low, the final trade becomes Close, and positive trade sizes
-                                are added together for Volume.
+                                lowest trades become High and Low, the final trade becomes Close, positive trade sizes
+                                are added together for Volume, and the latest trade&apos;s Open Interest is retained.
                             </p>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
@@ -831,20 +884,24 @@ export default function UserManual() {
                                     <li>Use a timestamp with seconds on every tick row.</li>
                                     <li>Repeat the trade price in all four OHLC columns.</li>
                                     <li>Use the individual trade size—not cumulative session volume—in the Volume column.</li>
+                                    <li>Optionally include Open Interest in column 7.</li>
                                     <li>Select the CSV as the symbol&apos;s FilePath. StratGen detects the second/tick resolution during import.</li>
                                 </ol>
                             </div>
 
                             <h3>How to create the CSV (recommended)</h3>
                             <p>
-                                A helper strategy called <strong>StratGenDataPrinter.cs</strong> is included. It prints data in the correct format.
-                                Apply it to a minute, second, or tick data series in NinjaTrader, then point StratGen to the
-                                exported CSV. Minute and second bars are written as one row per bar. Tick exports are written
-                                as one trade row at a time.
+                                A helper strategy called <strong>StratGenDataPrinter.cs</strong> is included in the installation directory. 
+                                It exports historical bars directly from NinjaTrader 8 into the exact 7-column format required by StratGen, 
+                                automatically querying NinjaTrader&apos;s native <code>COT(4).Cot4</code> / Open Interest data series.
+                            </p>
+                            <p>
+                                Apply <code>StratGenDataPrinter.cs</code> to any minute, second, or tick chart in NinjaTrader 8, specify your target folder, 
+                                and it will write clean chronological data with:
                             </p>
 
                             <pre className="whitespace-pre-wrap rounded-lg bg-black/30 p-4 text-sm">
-                                Time (MM/dd/yyyy HH:mm[:ss]), Open, High, Low, Close, Volume
+                                Time (MM/dd/yyyy HH:mm[:ss]), Open, High, Low, Close, Volume, OpenInterest
                             </pre>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
@@ -855,15 +912,28 @@ export default function UserManual() {
                                     <li>If <strong>Time format</strong> is wrong, bars may not parse correctly.</li>
                                     <li>If tick Volume contains cumulative session volume, imported volume will be greatly overstated.</li>
                                     <li>Tick rows are consolidated to one-second OHLCV bars; StratGen does not retain a separate bar for every same-second tick.</li>
+                                    <li>Legacy 6-column files work seamlessly—StratGen defaults missing Open Interest to 0 so you never experience crashes.</li>
                                 </ul>
                             </div>
 
 
-                            <h2 id="server-symbols">Symbol Search, Server Symbols, and History Data Cache</h2>
+                            <h2 id="server-symbols">Symbol Search, Included Server Data, and History Data Cache</h2>
                             <p>
-                                Newer StratGen builds make symbol setup easier. You can still import your own CSV files, but StratGen also includes symbol search
-                                and server-supported symbol information so you spend less time hand-entering instrument details.
+                                StratGen streamlines your workflow by eliminating manual data friction. You can import your own custom CSV files anytime, 
+                                but StratGen also includes built-in institutional server data, symbol search, and automatic history caching so you can begin testing immediately.
                             </p>
+
+                            <h3>Included server data</h3>
+                            <p>
+                                StratGen comes pre-configured with high-quality, verified historical data for key futures markets, eliminating the need to manually export CSVs from your trading platform:
+                            </p>
+                            <ul>
+                                <li><strong>Pre-loaded symbols:</strong> <code>NQ</code> (E-mini Nasdaq 100), <code>ES</code> (E-mini S&amp;P 500), <code>CL</code> (Crude Oil), <code>GC</code> (Gold), <code>YM</code> (E-mini Dow), <code>RTY</code> (Russell 2000), <code>6E</code> (Euro FX), <code>ZB</code> (30-Year Treasury Bond), and popular micro contracts.</li>
+                                <li><strong>Multiple resolutions:</strong> Pre-built timeframes include <strong>1-Minute, 5-Minute, 15-Minute, 60-Minute, and Daily</strong> bars.</li>
+                                <li><strong>Local storage directory:</strong> Server datasets are cached locally in your <code>StratGen/ServerData</code> directory for blazing-fast simulation speeds without internet lag.</li>
+                                <li><strong>Automatic startup sync:</strong> On application launch, StratGen checks the cloud server repository for recent daily bars and updates your local cache seamlessly.</li>
+                                <li><strong>Zero-configuration backtesting:</strong> You can select a server symbol, choose your rule set, and start running multi-core simulations within seconds of installing StratGen.</li>
+                            </ul>
 
                             <h3>Symbol search</h3>
                             <p>
@@ -2108,7 +2178,7 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Importing custom OHLCV data, second bars, tick data, and server data cache
+                                                Importing custom OHLCV data, Open Interest (7-column CSVs), second bars, tick data, and included server data cache
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
