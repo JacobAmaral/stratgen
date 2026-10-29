@@ -128,31 +128,31 @@ export default function Changelog() {
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>v2 Tensor Backtest &amp; Walk-Forward Engine:</strong> All-new in-memory vectorized <code>MemoryMappedBarTensor</code> execution engine delivering orders-of-magnitude faster multi-combo backtesting and rolling Walk-Forward Optimization directly in-process with zero external process launch overhead.
+                                                <strong>v2 Tensor Backtest &amp; Walk-Forward Engine:</strong> New in-memory v2 Tensor Engine that significantly speeds up backtesting and walk-forward optimization.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Sub-Second Backtests &amp; Ultra-Fast 6-Window Walk-Forward:</strong> Pre-evaluates unique boolean expression bitmasks in parallel using 64-bit hardware bit-scanning, completing multi-combo sweeps in milliseconds and full 6-window rolling Walk-Forward runs (Long + Short + Combined OOS Replay) in ~1–2 seconds across multi-year 1-minute and daily datasets.
+                                                <strong>Faster Multi-Window Walk-Forward:</strong> Evaluate strategy combinations and rolling walk-forward windows in seconds across multi-year datasets.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>True Chronological Multi-Window OOS Replay:</strong> Native out-of-sample multi-window stitcher that replays Long, Short, and Combined (<code>Side = Both</code>) walk-forward windows chronologically on a continuous bar tensor and refreshes every window row&apos;s <code>OOS_PnL</code>, <code>OOS_Sharpe</code>, <code>OOS_MaxDD</code>, and <code>Trades</code> directly from the combined OOS trade ledger.
+                                                <strong>Continuous Out-of-Sample Replay:</strong> Replay Long, Short, and Combined walk-forward windows chronologically and keep window summary metrics synced with the combined trade ledger.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Multi-Contract Pyramiding in v2 Tensor Engine:</strong> Full support for scaling into winning positions up to 10+ contracts (<code>PositionEntryMode = &quot;Pyramiding&quot;</code>, <code>MaxPyramidEntries</code>) across In-Sample sweeps, Out-of-Sample walk-forward windows, portfolio replays, and exported NinjaTrader 8 strategies.
+                                                <strong>Pyramiding in v2 Tensor Engine:</strong> Added multi-contract pyramiding support across backtests, walk-forward windows, portfolio replays, and code exports.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Monthly Profit Target &amp; Monthly Stop Loss Governors:</strong> Native intra-month realized + unrealized PnL governors (<code>monthProfitTarget</code>, <code>monthStopLoss</code>) with automatic monthly lockouts and new-month resets across both the v2 Tensor Engine and generated NinjaTrader 8 code.
+                                                <strong>Monthly Profit Target &amp; Stop Loss Limits:</strong> Added monthly profit target and monthly stop loss risk controls with automatic monthly resets.
                                             </div>
                                         </li>
                                     </ul>
@@ -167,13 +167,13 @@ export default function Changelog() {
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Zero-Allocation Tensor Indicator Cache:</strong> Thread-safe memory-mapped OHLCV tensors and cached indicator arrays (<code>SMA</code>, <code>EMA</code>, <code>WMA</code>, <code>HMA</code>, <code>KAMA</code>, <code>RSI</code>, <code>ATR</code>, <code>ADX</code>, <code>CCI</code>, <code>MFI</code>, <code>MACD</code>, <code>Bollinger</code>, <code>Keltner</code>, <code>Donchian</code>, <code>SuperTrend</code>, <code>VWAP</code>, <code>Hurst</code>, <code>ZScore</code>, and custom Roslyn <code>MiniSignal</code> bitmasks) shared across all worker threads.
+                                                <strong>Shared Indicator Caching:</strong> Pre-computed indicators and custom signals are now cached in memory and shared across parallel backtest threads.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Instant Portfolio &amp; Walk-Forward Persistence:</strong> Seamless export of v2 Tensor backtest winners and true-combined walk-forward reports directly into the <code>Portfolio/</code> directory with complete trade ledgers, order logs, and equity curves.
+                                                <strong>Faster Portfolio Saving:</strong> Streamlined saving backtest winners and walk-forward results directly to the portfolio with full trade logs and equity curves.
                                             </div>
                                         </li>
                                     </ul>
@@ -188,13 +188,13 @@ export default function Changelog() {
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>100% NinjaTrader 8 Next-Bar Open Fill Parity:</strong> Aligned <code>Calculate.OnBarClose</code> market-order execution so entry and exit signals evaluated at bar close fill at the next bar&apos;s Open (clamped to <code>[Low, High]</code> with tick slippage), matching NinjaTrader 8 trade timestamps, fill prices, and PnL 1-to-1.
+                                                <strong>Order Fill Alignment:</strong> Updated bar-close signals to fill at the next bar&apos;s open price with slippage for more accurate trade execution parity.
                                             </div>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Keltner Channel &amp; Lagged Price-vs-Indicator Parity:</strong> Aligned <code>KeltnerUpper</code>/<code>KeltnerLower</code> with NinjaTrader 8&apos;s <code>Typical Price + SMA(Range, period)</code> definition, matched <code>BarsRequiredToTrade = 1</code> warmup gating, and synchronized lagged OHLCV-to-indicator comparisons (e.g. <code>PrevClose1 &gt; SMA(5)[1]</code>).
+                                                <strong>Indicator &amp; Lookback Fixes:</strong> Aligned Keltner Channel calculations, warmup bars, and historical bar lookback comparisons with exported strategy code.
                                             </div>
                                         </li>
                                     </ul>

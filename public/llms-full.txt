@@ -32,10 +32,10 @@ StratGen contains a comprehensive library of over 600 indicators, statistical fi
 - Pattern Recognition: Candlestick pattern detection (Doji, Hammer, Engulfing, Morning/Evening Star) and multi-bar chart patterns (Double Bottom, Double Top, Head & Shoulders, Inverse Head & Shoulders, Triangle Breakouts).
 - Fundamental & Macro Data Filters: Time-of-day filters, day-of-week filters, economic event window exclusions, and multi-timeframe condition checks.
 
-### 2.2 Institutional v2 Tensor Backtesting & Walk-Forward Engine
-- Ultra-Fast Vectorized In-Memory Execution: Powered by `MemoryMappedBarTensor` and 64-bit hardware bit-scanning, completing multi-combo backtest sweeps in milliseconds and full 6-window rolling Walk-Forward Optimizations (Long + Short + Combined OOS Replay) in ~1–2 seconds.
+### 2.2 Institutional Backtesting & Walk-Forward Engine
+- High-Speed v2 Tensor Execution: In-memory execution engine that runs multi-combo backtests and rolling walk-forward optimizations in seconds across millions of price bars.
 - Granular Timeframes: Native support for Tick, Second (1s, 5s, 10s, 30s), Minute (1m, 5m, 15m, 60m), and Daily/Weekly OHLCV bars.
-- Realistic Execution & 100% NinjaTrader 8 Parity: Next-bar Open fills clamped to `[Low, High]` with configurable tick slippage, round-turn commissions per contract or share, multi-contract pyramiding (`MaxPyramidEntries`), and monthly profit target / stop loss governors.
+- Realistic Execution Simulation: Next-bar open order fills with configurable tick slippage, round-turn commissions per contract or share, multi-contract pyramiding, and monthly profit target / stop loss limits.
 - Performance Analytics: Computes Sharpe Ratio, Sortino Ratio, Calmar Ratio, Profit Factor, Win Rate, Maximum Drawdown (in dollars and percentage), Average Trade, Profit/Loss Ratio, Expectancy, Compound Annual Growth Rate (CAGR), and trade log distributions.
 
 ### 2.3 Robustness & Validation Suite

@@ -212,9 +212,9 @@ export default function WhatIsStratGen() {
                     <div className="flex items-start gap-4">
                       <TrendingUpIcon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="text-lg font-semibold mb-2">Institutional-Grade v2 Tensor Backtesting &amp; Walk-Forward</h3>
+                        <h3 className="text-lg font-semibold mb-2">Institutional-Grade Backtesting &amp; Walk-Forward</h3>
                         <p className="text-muted-foreground">
-                          Powered by our in-memory vectorized v2 Tensor Engine, StratGen evaluates multi-combo backtest sweeps in milliseconds and multi-window rolling Walk-Forward Optimizations in seconds—complete with realistic slippage modeling, commission calculations, multi-contract pyramiding, monthly PnL governors, and 100% NinjaTrader 8 execution parity.
+                          Powered by our v2 Tensor Engine, StratGen runs backtests and multi-window walk-forward optimizations in seconds—complete with realistic slippage modeling, commission calculations, pyramiding, and detailed performance metrics.
                         </p>
                       </div>
                     </div>

@@ -96,7 +96,7 @@ const features = [
   {
     icon: <ZapIcon className="h-10 w-10 text-primary" />,
     title: "v2 Tensor Backtest & Walk-Forward Engine",
-    description: "Run multi-combo backtest sweeps in milliseconds and 6-window rolling Walk-Forward Optimizations in ~1–2 seconds with our in-memory vectorized MemoryMappedBarTensor engine and 100% NinjaTrader 8 execution parity."
+    description: "Run backtests and multi-window walk-forward optimizations in seconds with our new v2 Tensor Engine for fast, accurate strategy testing."
   },
   {
     icon: <ZapIcon className="h-10 w-10 text-primary" />,
@@ -391,7 +391,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 border-primary/20 text-primary">
-                  Version 1.4 Available Now — Ultra-Fast v2 Tensor Engine
+                  Version 1.4 Available Now
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
