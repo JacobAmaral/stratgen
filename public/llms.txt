@@ -5,7 +5,7 @@
 ## Core Capabilities
 
 - **No-Code Strategy Generation**: Construct sophisticated multi-condition algorithmic trading strategies using visual logic builders and over 600+ technical and fundamental indicators (Moving Averages, RSI, MACD, Bollinger Bands, ATR, VWAP, Order Flow signals, Candlestick & Chart Pattern Recognition).
-- **Institutional-Grade Backtesting Engine**: Backtest strategies against tick, second, minute, and daily OHLCV historical data with realistic slippage modeling, customizable commissions, and fill assumptions.
+- **Institutional-Grade v2 Tensor Backtesting Engine**: Ultra-fast in-memory vectorized `MemoryMappedBarTensor` execution engine that evaluates multi-combo backtest sweeps in milliseconds and 6-window rolling Walk-Forward Optimizations in ~1–2 seconds across tick, second, minute, and daily OHLCV historical data with realistic slippage modeling, customizable commissions, multi-contract pyramiding, monthly PnL governors, and 100% NinjaTrader 8 execution parity.
 - **Robustness & Stress Testing**: Built-in Monte Carlo simulations, Walk-Forward Analysis (WFA), In-Sample vs. Out-of-Sample validation, and market stress testing to guard against curve-fitting and data-mining bias.
 - **Automated Multi-Platform Code Export**: Generate native, ready-to-run strategy code for:
   - **NinjaTrader 8**: C# `NinjaScript` strategy classes.

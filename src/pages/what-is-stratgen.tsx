@@ -61,7 +61,7 @@ export default function WhatIsStratGen() {
                   "email": "jacob@wetradelabs.com"
                 },
                 "datePublished": "2024-01-01",
-                "dateModified": "2026-09-23",
+                "dateModified": "2026-10-29",
                 "mainEntityOfPage": {
                   "@type": "WebPage",
                   "@id": "https://www.stratgensoft.com/what-is-stratgen"
@@ -212,9 +212,9 @@ export default function WhatIsStratGen() {
                     <div className="flex items-start gap-4">
                       <TrendingUpIcon className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="text-lg font-semibold mb-2">Institutional-Grade Backtesting</h3>
+                        <h3 className="text-lg font-semibold mb-2">Institutional-Grade v2 Tensor Backtesting &amp; Walk-Forward</h3>
                         <p className="text-muted-foreground">
-                          Test your strategies against historical data with realistic market conditions, including slippage modeling, commission calculations, and bid-ask spread simulation. Our backtesting engine provides detailed performance metrics and statistical analysis.
+                          Powered by our in-memory vectorized v2 Tensor Engine, StratGen evaluates multi-combo backtest sweeps in milliseconds and multi-window rolling Walk-Forward Optimizations in seconds—complete with realistic slippage modeling, commission calculations, multi-contract pyramiding, monthly PnL governors, and 100% NinjaTrader 8 execution parity.
                         </p>
                       </div>
                     </div>

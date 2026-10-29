@@ -12,12 +12,12 @@ export default function UserManual() {
     return (
         <>
             <Head>
-                <title>StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform</title>
-                <meta name="description" content="Complete user manual for StratGen v1.3 quantitative trading platform. Master AI Copilot conversational strategy building, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, NinjaTrader export, TradeStation export, Python export, and AI workflows." />
+                <title>StratGen User Manual v1.4 | Complete Guide to Algorithmic Trading Platform</title>
+                <meta name="description" content="Complete user manual for StratGen v1.4 quantitative trading platform. Master the ultra-fast v2 Tensor Engine, AI Copilot conversational strategy building, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, NinjaTrader export, TradeStation export, Python export, and AI workflows." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="keywords" content="stratgen user manual, ai copilot trading, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing, walk-forward optimization" />
-                <meta property="og:title" content="StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform" />
-                <meta property="og:description" content="Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
+                <meta name="keywords" content="stratgen user manual, v2 tensor engine, ai copilot trading, algorithmic trading guide, backtesting tutorial, quantitative trading manual, trading platform documentation, no-code trading, robustness testing, out-of-sample testing, walk-forward optimization" />
+                <meta property="og:title" content="StratGen User Manual v1.4 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete user manual for StratGen v1.4 quantitative trading platform covering the v2 Tensor Engine, AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
                 <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
                 <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -28,14 +28,14 @@ export default function UserManual() {
                 <meta property="og:type" content="article" />
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:url" content="https://www.stratgensoft.com/user-manual" />
-                <meta property="og:title" content="StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform" />
-                <meta property="og:description" content="Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
+                <meta property="og:title" content="StratGen User Manual v1.4 | Complete Guide to Algorithmic Trading Platform" />
+                <meta property="og:description" content="Complete user manual for StratGen v1.4 quantitative trading platform covering the v2 Tensor Engine, AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta property="og:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="StratGen User Manual v1.3 | Complete Guide to Algorithmic Trading Platform" />
-                <meta name="twitter:description" content="Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
+                <meta name="twitter:title" content="StratGen User Manual v1.4 | Complete Guide to Algorithmic Trading Platform" />
+                <meta name="twitter:description" content="Complete user manual for StratGen v1.4 quantitative trading platform covering the v2 Tensor Engine, AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation." />
                 <meta name="twitter:image" content="https://assets.co.dev/dc630d7c-c620-481b-9ee9-1959feae8edc/stratgen_user_manualv0.9-01-1c9001e.png" />
 
                 <link rel="icon" href="/stratgen_manual_images/newlogo2025.ico" />
@@ -48,8 +48,8 @@ export default function UserManual() {
                             {
                                 "@context": "https://schema.org",
                                 "@type": "TechArticle",
-                                "headline": "StratGen User Manual v1.3 - Complete Guide for Quantitative Trading Platform",
-                                "description": "Complete user manual for StratGen v1.3 quantitative trading platform covering AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation.",
+                                "headline": "StratGen User Manual v1.4 - Complete Guide for Quantitative Trading Platform",
+                                "description": "Complete user manual for StratGen v1.4 quantitative trading platform covering the v2 Tensor Engine, AI Copilot, backtesting, walk-forward testing, portfolio Monte Carlo, signal generation, position sizing, and automated code generation.",
                                 "author": {
                                     "@type": "Organization",
                                     "name": "WeTradeLabs",
@@ -63,7 +63,7 @@ export default function UserManual() {
                                     "url": "https://www.stratgensoft.com/"
                                 },
                                 "datePublished": "2024-01-01",
-                                "dateModified": "2026-10-06",
+                                "dateModified": "2026-10-29",
                                 "mainEntityOfPage": {
                                     "@type": "WebPage",
                                     "@id": "https://www.stratgensoft.com/user-manual"
@@ -193,7 +193,7 @@ export default function UserManual() {
                                 </h1>
                             </div>
                             <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-                                Complete guide to mastering StratGen v1.3 for quantitative trading, AI Copilot, backtesting, walk-forward validation,
+                                Complete guide to mastering StratGen v1.4 for quantitative trading, the v2 Tensor Engine, AI Copilot, backtesting, walk-forward validation,
                                 portfolio Monte Carlo, position sizing, robustness testing, AI workflows, and automated code generation.
                             </p>
                         </div>
@@ -203,7 +203,7 @@ export default function UserManual() {
                 <section className="py-16 px-4 md:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                         <article className="sg-manual prose prose-invert max-w-none" id="top">
-                            <h1>StratGen User Manual (v1.3)</h1>
+                            <h1>StratGen User Manual (v1.4)</h1>
 
                             <p>
                                 StratGen is a professional-grade no-code platform for quantitative research and trading,
