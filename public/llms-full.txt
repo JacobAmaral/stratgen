@@ -84,7 +84,7 @@ StratGen is a professional no-code algorithmic trading desktop software for Wind
 No. StratGen is built specifically to eliminate the coding barrier. You build, test, and validate trading strategies using intuitive visual builders, and StratGen writes the production C#, EasyLanguage, or Python code for you.
 
 ### What asset classes does StratGen support?
-StratGen supports futures trading (e.g., CME, E-mini, Micro E-mini), equities & ETFs, cryptocurrencies, and forex. Any market data in OHLCV format can be imported and analyzed.
+StratGen supports futures trading, equities & ETFs, cryptocurrencies, and forex. Users can import their own custom OHLCV data in CSV format to analyze any instrument.
 
 ### What export formats are supported?
 StratGen generates native code for NinjaTrader 8 (.cs NinjaScript), TradeStation EasyLanguage (.eld / code text), and Python.

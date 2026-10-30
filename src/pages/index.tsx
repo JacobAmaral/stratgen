@@ -79,8 +79,8 @@ const pricingTier = {
   features: [
     "600+ technical and fundamental signals",
     "Institutional-grade backtesting",
-    "Import data from any source",
-    "All market data sources",
+    "Import your own custom OHLCV data",
+    "Support for all major asset classes",
     "Strategy optimization",
     "Robustness testing tools",
     "Code export for all platforms (NinjaTrader, TradeStation, Python)",
@@ -704,8 +704,8 @@ export default function Home() {
                       {[
                         "600+ technical and fundamental signals",
                         "Institutional-grade backtesting",
-                        "Import data from any source",
-                        "All market data sources",
+                        "Import your own custom OHLCV data",
+                        "Support for all major asset classes",
                         "Strategy optimization",
                         "Robustness testing tools",
                         "Code export for all platforms (NinjaTrader, TradeStation, Python)",

@@ -229,7 +229,7 @@ export default function UserManual() {
                                     <li><a href="#walk-forward" className="hover:underline">Walk-Forward Settings</a></li>
                                     <li><a href="#new-signal-types" className="hover:underline">New Signal Types</a></li>
                                     <li><a href="#import-data" className="hover:underline">Import Data & Open Interest</a></li>
-                                    <li><a href="#server-symbols" className="hover:underline">Symbol Search, Server Data & Cache</a></li>
+                                    <li><a href="#symbol-search-cache" className="hover:underline">Symbol Search & History Cache</a></li>
                                     <li><a href="#run-sim" className="hover:underline">Run Simulation</a></li>
                                     <li><a href="#results-list" className="hover:underline">Strategy Results</a></li>
                                     <li><a href="#dashboard" className="hover:underline">Backtest Dashboard</a></li>
@@ -917,48 +917,36 @@ export default function UserManual() {
                             </div>
 
 
-                            <h2 id="server-symbols">Symbol Search, Included Server Data, and History Data Cache</h2>
+                            <h2 id="symbol-search-cache">Symbol Search and History Data Cache</h2>
                             <p>
-                                StratGen streamlines your workflow by eliminating manual data friction. You can import your own custom CSV files anytime, 
-                                but StratGen also includes built-in institutional server data, symbol search, and automatic history caching so you can begin testing immediately.
+                                StratGen streamlines your workflow when working with your imported custom CSV datasets. You can import your own custom OHLCV CSV files anytime, 
+                                and StratGen includes symbol search and automatic local history caching so repeated backtests run quickly.
                             </p>
-
-                            <h3>Included server data</h3>
-                            <p>
-                                StratGen comes pre-configured with high-quality, verified historical data for key futures markets, eliminating the need to manually export CSVs from your trading platform:
-                            </p>
-                            <ul>
-                                <li><strong>Pre-loaded symbols:</strong> <code>NQ</code> (E-mini Nasdaq 100), <code>ES</code> (E-mini S&amp;P 500), <code>CL</code> (Crude Oil), <code>GC</code> (Gold), <code>YM</code> (E-mini Dow), <code>RTY</code> (Russell 2000), <code>6E</code> (Euro FX), <code>ZB</code> (30-Year Treasury Bond), and popular micro contracts.</li>
-                                <li><strong>Multiple resolutions:</strong> Pre-built timeframes include <strong>1-Minute, 5-Minute, 15-Minute, 60-Minute, and Daily</strong> bars.</li>
-                                <li><strong>Local storage directory:</strong> Server datasets are cached locally in your <code>StratGen/ServerData</code> directory for blazing-fast simulation speeds without internet lag.</li>
-                                <li><strong>Automatic startup sync:</strong> On application launch, StratGen checks the cloud server repository for recent daily bars and updates your local cache seamlessly.</li>
-                                <li><strong>Zero-configuration backtesting:</strong> You can select a server symbol, choose your rule set, and start running multi-core simulations within seconds of installing StratGen.</li>
-                            </ul>
 
                             <h3>Symbol search</h3>
                             <p>
-                                Symbol search helps you find a market without manually scrolling through a long symbol list. Search by the instrument name or ticker,
+                                Symbol search helps you find an imported market without manually scrolling through a long symbol list. Search by the instrument name or ticker,
                                 then select the matching row.
                             </p>
                             <ul>
-                                <li><strong>Use search</strong> when you know the symbol, such as ES, NQ, CL, SPY, or BTCUSD.</li>
+                                <li><strong>Use search</strong> when you know the symbol you imported, such as ES, NQ, CL, SPY, or BTCUSD.</li>
                                 <li><strong>Check the selected row</strong> before running. Make sure the point value and security type look right.</li>
-                                <li><strong>If two symbols look similar</strong>, confirm the exchange, asset class, and file path before testing.</li>
+                                <li><strong>If two symbols look similar</strong>, confirm the asset class and local CSV file path before testing.</li>
                             </ul>
 
-                            <h3>Server-supported point values</h3>
+                            <h3>Symbol point values</h3>
                             <p>
                                 Futures and other instruments need correct point values. If the point value is wrong, every PnL number can be wrong.
-                                StratGen includes improved server-supported symbol point values, but you should still verify any market you trade.
+                                Always verify the point value and initial margin for any custom market data you import.
                             </p>
 
                             <h3>History data caching</h3>
                             <p>
-                                History data caching stores previously loaded data so repeated runs can start faster. This is especially useful when you test
-                                the same symbol many times while changing signals or risk settings.
+                                History data caching stores previously loaded custom CSV data in memory so repeated runs can start faster. This is especially useful when you test
+                                the same imported symbol many times while changing signals or risk settings.
                             </p>
                             <ul>
-                                <li><strong>First run</strong>: may be slower because data has to be loaded and prepared.</li>
+                                <li><strong>First run</strong>: may be slower because your CSV data has to be loaded and prepared.</li>
                                 <li><strong>Later runs</strong>: can be faster because cached history may be reused.</li>
                                 <li><strong>If data looks wrong</strong>: verify the original CSV or selected symbol. Caching makes repeated work faster, but it does not fix bad source data.</li>
                             </ul>
@@ -2178,7 +2166,7 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>
-                                                Importing custom OHLCV data, Open Interest (7-column CSVs), second bars, tick data, and included server data cache
+                                                Importing your own custom OHLCV data, Open Interest (7-column CSVs), second bars, and tick data
                                             </li>
                                             <li className="flex items-start gap-2">
                                                 <span className="text-primary mt-1">•</span>

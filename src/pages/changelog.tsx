@@ -731,12 +731,6 @@ export default function Changelog() {
                                         <li className="flex items-start gap-3">
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
-                                                <strong>Symbol Coverage Expansion:</strong> Added server-side symbols, more server-side symbols, and micro contracts in server-side variables.
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                            <div>
                                                 <strong>Symbol Search:</strong> Added symbol search.
                                             </div>
                                         </li>
@@ -810,12 +804,6 @@ export default function Changelog() {
                                             <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
                                             <div>
                                                 <strong>Result Write Contention Fix:</strong> Resolved result file write contention (`UnauthorizedAccessException`).
-                                            </div>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <CheckIcon className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                                            <div>
-                                                <strong>Server Symbol Point Values:</strong> Fixed point values on server-side symbols.
                                             </div>
                                         </li>
                                     </ul>
