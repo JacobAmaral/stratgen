@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
+    unoptimized: true,
     domains: ["assets.co.dev", "images.unsplash.com"],
   },
   webpack: (config, context) => {
