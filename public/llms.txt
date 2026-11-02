@@ -21,6 +21,8 @@
 - [What is StratGen?](https://www.stratgensoft.com/what-is-stratgen): In-depth guide explaining how StratGen bridges quantitative research and no-code strategy generation.
 - [StratGen User Manual](https://www.stratgensoft.com/user-manual): Complete technical documentation covering data import, backtesting configuration, walk-forward testing, portfolio Monte Carlo, and code export workflows.
 - [StratGen Changelog](https://www.stratgensoft.com/changelog): Detailed release notes and version history documenting feature updates and engine enhancements.
+- [Privacy Policy](https://www.stratgensoft.com/privacy-policy): Official Privacy Policy for StratGen software and website operated by WeTradeLabs Inc.
+- [Terms & Conditions](https://www.stratgensoft.com/terms-and-conditions): End-User License Agreement (EULA), Terms of Service, and CFTC Rule 4.41 Risk Disclosures by WeTradeLabs Inc.
 - [Extended Technical Reference](https://www.stratgensoft.com/llms-full.txt): Complete LLM-friendly documentation and system reference.
 
 ## Pricing & Licensing
@@ -32,4 +34,4 @@
 
 - **Operating System**: Windows 10 or Windows 11 (64-bit).
 - **Architecture**: Native Windows Desktop Application (.NET / WPF runtime).
-- **Developer / Company**: WeTradeLabs (Founded by Jacob Amaral, email: jacob@wetradelabs.com).
+- **Developer / Company**: WeTradeLabs Inc. (Founded by Jacob Amaral, email: jacob@wetradelabs.com).

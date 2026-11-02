@@ -384,11 +384,11 @@ export default function WhatIsStratGen() {
               <div className="mb-8 md:mb-0">
                 <h3 className="font-bold text-lg mb-4">StratGen</h3>
                 <p className="text-muted-foreground mb-4 max-w-md">
-                  Professional algorithmic trading platform for quantitative research and trading with backtesting, robustness testing, no-code strategy development, and live training on best practices included.
+                  Professional algorithmic trading platform by WeTradeLabs Inc. for quantitative research and trading with backtesting, robustness testing, no-code strategy development, and live training on best practices included.
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-3">
+              <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-4">
                 <div>
                   <h4 className="text-sm font-semibold mb-4">Platform</h4>
                   <ul className="space-y-3">
@@ -412,6 +412,11 @@ export default function WhatIsStratGen() {
                         User Manual
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Pricing
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 
@@ -421,6 +426,11 @@ export default function WhatIsStratGen() {
                     <li>
                       <Link href="/what-is-stratgen" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         What is StratGen?
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/changelog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Changelog
                       </Link>
                     </li>
                     <li>
@@ -435,6 +445,27 @@ export default function WhatIsStratGen() {
                     </li>
                   </ul>
                 </div>
+
+                <div>
+                  <h4 className="text-sm font-semibold mb-4">Legal</h4>
+                  <ul className="space-y-3">
+                    <li>
+                      <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Privacy Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/terms-and-conditions" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Terms &amp; Conditions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/#disclaimer" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                        Trading Risk Disclosure
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
                 
                 <div>
                   <h4 className="text-sm font-semibold mb-4">Contact</h4>
@@ -445,10 +476,18 @@ export default function WhatIsStratGen() {
               </div>
             </div>
             
-            <div className="mt-8 pt-8 border-t border-border/40 text-center">
+            <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
               <p className="text-sm text-muted-foreground">
-                © 2025 StratGen. All rights reserved.
+                © {new Date().getFullYear()} WeTradeLabs Inc. All rights reserved. StratGen™ is a trademark of WeTradeLabs Inc.
               </p>
+              <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                <Link href="/privacy-policy" className="hover:text-primary transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms-and-conditions" className="hover:text-primary transition-colors">
+                  Terms &amp; Conditions
+                </Link>
+              </div>
             </div>
           </div>
         </footer>
