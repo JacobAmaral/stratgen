@@ -80,10 +80,10 @@ export default function Changelog() {
                 <Header />
 
                 {/* Hero Section */}
-                <section className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-background">
+                <section className="py-14 md:py-16 px-4 sm:px-6 lg:px-8 border-b border-border/80">
                     <div className="max-w-4xl mx-auto">
-                        <div className="mb-8">
-                            <Button variant="ghost" size="sm" asChild className="mb-4">
+                        <div>
+                            <Button variant="ghost" size="sm" asChild className="mb-6 -ml-3 text-muted-foreground hover:text-foreground">
                                 <Link href="/">
                                     <ArrowLeftIcon className="mr-2 h-4 w-4" />
                                     Back to Home
@@ -93,7 +93,7 @@ export default function Changelog() {
                                 StratGen Changelog
                             </h1>
                             <p className="text-xl text-muted-foreground">
-                                Stay updated with the latest features, improvements, and bug fixes in StratGen's algorithmic trading platform.
+                                Release history, new features, engine improvements, and bug fixes for the StratGen Windows desktop platform.
                             </p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.4</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.4</h2>
                                         <Badge className="bg-primary text-primary-foreground">Latest</Badge>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
@@ -207,7 +207,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.3</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.3</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: October 6, 2026
@@ -340,7 +340,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.1.4</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.1.4</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: July 6, 2026
@@ -386,7 +386,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.0.4</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.0.4</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: April 29, 2026
@@ -513,7 +513,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.0.31</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.0.31</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: March 26, 2026
@@ -586,7 +586,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.0.3</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.0.3</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: March 23, 2026
@@ -701,7 +701,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 1.0.2</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 1.0.2</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: February 25, 2026
@@ -816,7 +816,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 0.9.9</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 0.9.9</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: January 12, 2026
@@ -887,7 +887,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 0.9.8</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 0.9.8</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: December 10, 2025
@@ -951,7 +951,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 0.9.7</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 0.9.7</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: October 27, 2025
@@ -1014,7 +1014,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 0.9.6</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 0.9.6</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: October 17, 2025
@@ -1083,7 +1083,7 @@ export default function Changelog() {
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
-                                        <CardTitle className="text-2xl">Version 0.9.5</CardTitle>
+                                        <h2 className="text-2xl font-bold tracking-tight">Version 0.9.5</h2>
                                     </div>
                                     <div className="text-sm text-muted-foreground">
                                         Released: October 1, 2025
@@ -1145,7 +1145,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.9.4</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.9.4</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: September 15, 2025
                                     </div>
@@ -1206,7 +1206,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.9.3</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.9.3</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: September 5, 2025
                                     </div>
@@ -1249,7 +1249,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.9.2</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.9.2</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: August 29, 2025
                                     </div>
@@ -1277,7 +1277,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.9.1</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.9.1</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: August 21, 2025
                                     </div>
@@ -1368,7 +1368,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.9</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.9</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: August 7, 2025
                                     </div>
@@ -1429,7 +1429,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.8</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.8</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: August 1, 2025
                                     </div>
@@ -1490,7 +1490,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.7</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.7</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: July 24, 2025
                                     </div>
@@ -1563,7 +1563,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.6</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.6</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: July 2025
                                     </div>
@@ -1654,7 +1654,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.5</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.5</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: January 2025
                                     </div>
@@ -1697,7 +1697,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.4</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.4</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: December 2024
                                     </div>
@@ -1746,7 +1746,7 @@ export default function Changelog() {
                         <Card className="border border-border/40">
                             <CardHeader className="pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="text-2xl">Version 0.3</CardTitle>
+                                    <h2 className="text-2xl font-bold tracking-tight">Version 0.3</h2>
                                     <div className="text-sm text-muted-foreground">
                                         Released: November 2024
                                     </div>
@@ -1823,23 +1823,23 @@ export default function Changelog() {
                 </section>
 
                 {/* Footer */}
-                <footer className="py-12 px-4 md:px-6 lg:px-8 border-t">
+                <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border">
                     <div className="max-w-7xl mx-auto">
-                        <div className="flex flex-col md:flex-row justify-between items-start">
-                            <div className="mb-8 md:mb-0">
-                                <h3 className="font-bold text-lg mb-4">StratGen</h3>
-                                <p className="text-muted-foreground mb-4 max-w-md">
-                                    Professional algorithmic trading platform for quantitative research and trading with backtesting, robustness testing, and no-code strategy development.
+                        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+                            <div className="max-w-sm">
+                                <p className="font-bold text-lg text-foreground mb-3">StratGen</p>
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    Professional algorithmic trading platform by WeTradeLabs Inc. for quantitative research, backtesting, robustness validation, and automated code export.
                                 </p>
                             </div>
 
-                                <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-4">
+                            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Platform</h4>
-                                    <ul className="space-y-3">
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Platform</p>
+                                    <ul className="space-y-2.5">
                                         <li>
                                             <Link href="/#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                                                Features
+                                                Capabilities
                                             </Link>
                                         </li>
                                         <li>
@@ -1866,15 +1866,15 @@ export default function Changelog() {
                                 </div>
 
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Resources</h4>
-                                    <ul className="space-y-3">
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Resources</p>
+                                    <ul className="space-y-2.5">
                                         <li>
                                             <Link href="/what-is-stratgen" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                                 What is StratGen?
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/changelog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                            <Link href="/changelog" className="text-sm text-primary font-medium transition-colors">
                                                 Changelog
                                             </Link>
                                         </li>
@@ -1892,8 +1892,8 @@ export default function Changelog() {
                                 </div>
 
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Legal</h4>
-                                    <ul className="space-y-3">
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Legal</p>
+                                    <ul className="space-y-2.5">
                                         <li>
                                             <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                                 Privacy Policy
@@ -1913,19 +1913,19 @@ export default function Changelog() {
                                 </div>
 
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Contact</h4>
-                                    <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
-                                        Contact Us
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Contact</p>
+                                    <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm text-primary hover:text-primary/80 font-medium">
+                                        jacob@wetradelabs.com
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-                            <p className="text-sm text-muted-foreground">
+                        <div className="mt-10 pt-8 border-t border-border/60 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                            <p className="text-xs text-muted-foreground">
                                 © {new Date().getFullYear()} WeTradeLabs Inc. All rights reserved. StratGen™ is a trademark of WeTradeLabs Inc.
                             </p>
-                            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-6 text-xs text-muted-foreground">
                                 <Link href="/privacy-policy" className="hover:text-primary transition-colors">
                                     Privacy Policy
                                 </Link>

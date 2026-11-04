@@ -174,10 +174,10 @@ export default function UserManual() {
                 <Header />
 
                 {/* Hero Section */}
-                <section className="relative py-12 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-background">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="flex items-center gap-4 mb-8">
-                            <Button variant="outline" size="sm" asChild>
+                <section className="py-14 md:py-16 px-4 sm:px-6 lg:px-8 border-b border-border/80">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="mb-6">
+                            <Button variant="ghost" size="sm" asChild className="-ml-3 text-muted-foreground hover:text-foreground">
                                 <Link href="/">
                                     <ArrowLeftIcon className="h-4 w-4 mr-2" />
                                     Back to Home
@@ -185,34 +185,29 @@ export default function UserManual() {
                             </Button>
                         </div>
 
-                        <div className="text-center mb-12">
-                            <div className="flex items-center justify-center gap-3 mb-4">
-                                <BookOpenIcon className="h-8 w-8 text-primary" />
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3">
+                                <BookOpenIcon className="h-7 w-7 text-primary flex-shrink-0" />
                                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-                                    StratGen User Manual
+                                    StratGen User Manual (v1.4)
                                 </h1>
                             </div>
-                            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-                                Complete guide to mastering StratGen v1.4 for quantitative trading, the v2 Tensor Engine, AI Copilot, backtesting, walk-forward validation,
-                                portfolio Monte Carlo, position sizing, robustness testing, AI workflows, and automated code generation.
+                            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                                Technical documentation for StratGen v1.4 covering the v2 Tensor Engine, AI Copilot, backtesting, walk-forward validation, portfolio Monte Carlo, position sizing, robustness testing, AI workflows, and automated code generation.
                             </p>
                         </div>
                     </div>
                 </section>
                 {/* Table Content and Manual Text */}
-                <section className="py-16 px-4 md:px-6 lg:px-8">
+                <section className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                         <article className="sg-manual prose prose-invert max-w-none" id="top">
-                            <h1>StratGen User Manual (v1.4)</h1>
-
-                            <p>
+                            <p className="lead">
                                 StratGen is a professional-grade no-code platform for quantitative research and trading,
                                 designed for quant traders who demand rigorous out-of-sample testing, robustness analysis, and autonomous AI-assisted strategy engineering.
                             </p>
 
-                            <p><strong>Get Started Now</strong><br />Available for Windows</p>
-
-                            <h2 className="mt-12 mb-4 text-center">Table of Contents</h2>
+                            <h2 className="mt-8 mb-4">Table of Contents</h2>
 
                             <nav
                                 aria-label="Table of contents"
@@ -1075,7 +1070,7 @@ export default function UserManual() {
                             </p>
 
                             <div className="rounded-xl border border-border/40 bg-muted/20 p-6 my-8">
-                                <h4 className="mt-0">Important</h4>
+                                <h3 className="mt-0">Important</h3>
                                 <p className="mb-0">
                                     You must <strong>left-click</strong> a strategy in the results list to select it before generating code.
                                 </p>
@@ -1559,7 +1554,7 @@ export default function UserManual() {
                                     <strong>StratGen Azores 1.0 Model</strong>: The native fine-tuned quantitative reasoning engine running directly in C#. Specialized for algorithmic rule formulation, risk boundaries, and backtest interpretation without requiring third-party cloud keys.
                                 </li>
                                 <li>
-                                    <strong>OpenRouter (Cloud BYOK)</strong>: Connects your OpenRouter API key to access hundreds of cutting-edge models (e.g. <code>openai/gpt-5.6-luna</code>, <code>anthropic/claude-3.5-sonnet</code>, Meta LLaMA 3, DeepSeek, Mistral).
+                                    <strong>OpenRouter (Cloud BYOK)</strong>: Connects your OpenRouter API key to access hundreds of frontier and open-weight models (e.g. <code>openai/gpt-5.6-luna</code>, <code>anthropic/claude-3.5-sonnet</code>, Meta LLaMA 3, DeepSeek, Mistral).
                                 </li>
                                 <li>
                                     <strong>Anthropic Claude (Cloud BYOK)</strong>: Direct API integration with Anthropic models (e.g. <code>claude-fable-5-1</code>). Supports both personal API keys and an optional <strong>Anthropic Workspace ID</strong> for organizational team keys.
@@ -2112,188 +2107,91 @@ Confirm when the engine connection is healthy and you are ready to design and ba
 
 
                 {/* Manual Information */}
-                <section className="py-12 px-4 md:px-6 lg:px-8 bg-muted/30">
-                    <div className="max-w-6xl mx-auto">
-                        <Card className="border border-border/40 shadow-lg">
-                            <CardContent className="p-8">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div>
-                                        <h3 className="text-lg font-semibold mb-4">What's Covered in This Manual</h3>
-                                        <ul className="space-y-2 text-muted-foreground">
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Getting started with StratGen platform setup
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                AI Copilot natural-language strategy design, autonomous tools, and prompt engineering
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                StratGen Local Azores 1.0 offline quant engine (zero API keys, private local inference)
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Local Bridge HTTP IPC connection for external LLMs, CLI agents, and custom Python automation
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Model Context Protocol (MCP) server integration for Claude Desktop, Cursor, Windsurf, and LAN netsh proxy
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Cloud BYOK AI Providers: OpenRouter, Anthropic Claude (with Workspace ID), OpenAI ChatGPT, and Google Gemini
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Roslyn C# runtime rule validation and compile error self-healing
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Creating and testing quantitative trading strategies with Required, Entry, and Exit rules
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Using the 600+ technical and fundamental signals (Donchian, Elliott Wave, Z-Score, KAMA)
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Advanced backtesting, multi-core parallel simulation, and institutional robustness testing
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Position sizing, pyramiding, reversal behavior, monthly exits, incubation, and session close timing
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Importing your own custom OHLCV data, Open Interest (7-column CSVs), second bars, and tick data
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Automatic code generation for NinjaTrader 8 C#, TradeStation EasyLanguage, and QuantConnect Python
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Strategy optimization, parameter heatmaps, and performance analysis
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Out-of-sample testing and Monte Carlo simulations (including OOS-only Walk-Forward Monte Carlo)
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Portfolio construction, portfolio equity, correlation matrices, and Portfolio Monte Carlo
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                AI Workflows, auto-combine behavior, workflow export, retry rules, and runtime limits
-                                            </li>
-                                            <li className="flex items-start gap-2">
-                                                <span className="text-primary mt-1">•</span>
-                                                Quantitative research methodologies and engine parity best practices
-                                            </li>
-                                        </ul>
-                                    </div>
+                <section className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-card/30">
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <h2 className="text-2xl font-bold text-foreground">Manual Reference &amp; Direct Support</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="space-y-4">
+                                <h3 className="text-lg font-semibold text-foreground">Topics Covered in This Manual</h3>
+                                <ul className="space-y-2 text-sm text-muted-foreground">
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Getting started with StratGen platform setup
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        AI Copilot natural-language strategy design, autonomous tools, and prompt engineering
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        StratGen Local Azores 1.0 offline quant engine (zero API keys, private local inference)
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Local Bridge HTTP IPC connection for external LLMs, CLI agents, and custom Python automation
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Model Context Protocol (MCP) server integration for Claude Desktop, Cursor, Windsurf, and LAN netsh proxy
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Cloud BYOK AI Providers: OpenRouter, Anthropic Claude, OpenAI ChatGPT, and Google Gemini
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Roslyn C# runtime rule validation and compile error self-healing
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Using the 600+ technical and fundamental signals (Donchian, Elliott Wave, Z-Score, KAMA)
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="text-primary mt-0.5">•</span>
+                                        Backtesting, walk-forward validation, Monte Carlo, position sizing, and multi-platform code export
+                                    </li>
+                                </ul>
+                            </div>
 
-                                    <div>
-                                        <h3 className="text-lg font-semibold mb-4">Need Help?</h3>
-                                        <p className="text-muted-foreground mb-4">
-                                            If you have questions about using StratGen or need additional support with quantitative research,
-                                            our team is here to help you maximize your trading strategy development.
-                                        </p>
-                                        <Button asChild>
-                                            <a href="mailto:jacob@wetradelabs.com?subject=StratGen%20Support&body=Hi%2C%20I%20need%20help%20with%20StratGen.%20Please%20assist%20me%20with%3A%0A%0A">
-                                                <DownloadIcon className="h-4 w-4 mr-2" />
-                                                Contact Support
-                                            </a>
-                                        </Button>
-                                    </div>
+                            <div className="space-y-4 border-l border-border pl-6">
+                                <h3 className="text-lg font-semibold text-foreground">Need Technical Help?</h3>
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    If you have questions about configuring StratGen, importing custom OHLCV data, or interpreting walk-forward and Monte Carlo outputs, contact our team directly.
+                                </p>
+                                <div className="flex flex-wrap gap-3 pt-2">
+                                    <Button asChild>
+                                        <a href="mailto:jacob@wetradelabs.com?subject=StratGen%20Support&body=Hi%2C%20I%20need%20help%20with%20StratGen.%20Please%20assist%20me%20with%3A%0A%0A">
+                                            <DownloadIcon className="h-4 w-4 mr-2" />
+                                            Contact Support
+                                        </a>
+                                    </Button>
+                                    <Button variant="outline" asChild>
+                                        <Link href="/changelog">View Changelog</Link>
+                                    </Button>
                                 </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </section>
-
-                {/* Additional Resources Section */}
-                <section className="py-12 px-4 md:px-6 lg:px-8">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="text-center mb-8">
-                            <h2 className="text-3xl font-bold mb-4">Additional Resources</h2>
-                            <p className="text-xl text-muted-foreground">
-                                Explore more resources to get the most out of StratGen
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <Card className="border border-border/40">
-                                <CardHeader>
-                                    <CardTitle className="text-lg">Platform Features</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground mb-4">
-                                        Learn about all the powerful features available in StratGen for quantitative trading and research.
-                                    </p>
-                                    <Button variant="outline" size="sm" asChild>
-                                        <Link href="/#features">
-                                            View Features
-                                        </Link>
-                                    </Button>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="border border-border/40">
-                                <CardHeader>
-                                    <CardTitle className="text-lg">Screenshots</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground mb-4">
-                                        See StratGen's interface in action with detailed screenshots of key features.
-                                    </p>
-                                    <Button variant="outline" size="sm" asChild>
-                                        <Link href="/#screenshots">
-                                            View Screenshots
-                                        </Link>
-                                    </Button>
-                                </CardContent>
-                            </Card>
-
-                            <Card className="border border-border/40">
-                                <CardHeader>
-                                    <CardTitle className="text-lg">FAQ</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground mb-4">
-                                        Find answers to common questions about StratGen's algorithmic trading platform.
-                                    </p>
-                                    <Button variant="outline" size="sm" asChild>
-                                        <Link href="/#faq">
-                                            View FAQ
-                                        </Link>
-                                    </Button>
-                                </CardContent>
-                            </Card>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Footer */}
-                <footer className="py-12 px-4 md:px-6 lg:px-8 border-t">
+                <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border">
                     <div className="max-w-7xl mx-auto">
-                        <div className="flex flex-col md:flex-row justify-between items-start">
-                            <div className="mb-8 md:mb-0">
-                                <h3 className="font-bold text-lg mb-4">StratGen</h3>
-                                <p className="text-muted-foreground mb-4 max-w-md">
-                                    Professional algorithmic trading platform by WeTradeLabs Inc. for quantitative research and trading with backtesting, robustness testing, and no-code strategy development.
+                        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+                            <div className="max-w-sm">
+                                <p className="font-bold text-lg text-foreground mb-3">StratGen</p>
+                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                    Professional algorithmic trading platform by WeTradeLabs Inc. for quantitative research, backtesting, robustness validation, and automated code export.
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-4">
+                            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Platform</h4>
-                                    <ul className="space-y-3">
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Platform</p>
+                                    <ul className="space-y-2.5">
                                         <li>
                                             <Link href="/#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                                                Features
+                                                Capabilities
                                             </Link>
                                         </li>
                                         <li>
@@ -2307,7 +2205,7 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/user-manual" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                            <Link href="/user-manual" className="text-sm text-primary font-medium transition-colors">
                                                 User Manual
                                             </Link>
                                         </li>
@@ -2320,8 +2218,8 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                 </div>
 
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Resources</h4>
-                                    <ul className="space-y-3">
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Resources</p>
+                                    <ul className="space-y-2.5">
                                         <li>
                                             <Link href="/what-is-stratgen" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                                 What is StratGen?
@@ -2346,8 +2244,8 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                 </div>
 
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Legal</h4>
-                                    <ul className="space-y-3">
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Legal</p>
+                                    <ul className="space-y-2.5">
                                         <li>
                                             <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                                 Privacy Policy
@@ -2367,19 +2265,19 @@ Confirm when the engine connection is healthy and you are ready to design and ba
                                 </div>
 
                                 <div>
-                                    <h4 className="text-sm font-semibold mb-4">Contact</h4>
-                                    <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
-                                        Contact Us
+                                    <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Contact</p>
+                                    <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm text-primary hover:text-primary/80 font-medium">
+                                        jacob@wetradelabs.com
                                     </a>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-                            <p className="text-sm text-muted-foreground">
+                        <div className="mt-10 pt-8 border-t border-border/60 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                            <p className="text-xs text-muted-foreground">
                                 © {new Date().getFullYear()} WeTradeLabs Inc. All rights reserved. StratGen™ is a trademark of WeTradeLabs Inc.
                             </p>
-                            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-6 text-xs text-muted-foreground">
                                 <Link href="/privacy-policy" className="hover:text-primary transition-colors">
                                     Privacy Policy
                                 </Link>

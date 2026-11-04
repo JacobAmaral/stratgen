@@ -1,176 +1,197 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import { CheckIcon, ArrowRightIcon, LineChartIcon, BarChartIcon, BellIcon, ZapIcon, SettingsIcon, DownloadIcon } from "lucide-react";
-import { 
-  ChartContainer, 
-  ChartTooltip, 
-  ChartTooltipContent,
-  ChartLegend,
-  ChartLegendContent
-} from "@/components/ui/chart";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  ReferenceLine,
-  ResponsiveContainer,
-  Scatter
-} from "recharts";
+import { CheckIcon, ArrowRightIcon } from "lucide-react";
 
-// Mock data for the demo chart
-const mockPriceData = [
-  { date: "2025-04-01", price: 50000, sma20: 49000, sma50: 48000 },
-  { date: "2025-04-02", price: 51000, sma20: 49200, sma50: 48100 },
-  { date: "2025-04-03", price: 52000, sma20: 49500, sma50: 48200 },
-  { date: "2025-04-04", price: 51500, sma20: 49700, sma50: 48300 },
-  { date: "2025-04-05", price: 51200, sma20: 49900, sma50: 48400 },
-  { date: "2025-04-06", price: 52500, sma20: 50100, sma50: 48500 },
-  { date: "2025-04-07", price: 53000, sma20: 50400, sma50: 48700 },
-  { date: "2025-04-08", price: 54000, sma20: 50800, sma50: 48900 },
-  { date: "2025-04-09", price: 53500, sma20: 51000, sma50: 49100 },
-  { date: "2025-04-10", price: 53200, sma20: 51200, sma50: 49300 },
-  { date: "2025-04-11", price: 54500, sma20: 51500, sma50: 49500 },
-  { date: "2025-04-12", price: 55000, sma20: 51800, sma50: 49700 },
-  { date: "2025-04-13", price: 56000, sma20: 52200, sma50: 49900 },
-  { date: "2025-04-14", price: 55500, sma20: 52500, sma50: 50100 },
-  { date: "2025-04-15", price: 55200, sma20: 52700, sma50: 50300 },
-  { date: "2025-04-16", price: 56500, sma20: 53000, sma50: 50500 },
-  { date: "2025-04-17", price: 57000, sma20: 53300, sma50: 50700 },
-  { date: "2025-04-18", price: 58000, sma20: 53700, sma50: 50900 },
-  { date: "2025-04-19", price: 57500, sma20: 54000, sma50: 51100 },
-  { date: "2025-04-20", price: 57200, sma20: 54200, sma50: 51300 },
+const capabilityGroups = [
+  {
+    groupTitle: "Strategy Discovery & AI Studio",
+    groupSummary:
+      "Search across hundreds of parameterized indicators or build and compile strategies conversationally in plain English.",
+    items: [
+      {
+        tag: "AI Copilot + Roslyn C#",
+        title: "AI Copilot Conversational Studio",
+        description:
+          "Design, backtest, and walk-forward validate quantitative strategies in plain English with autonomous Roslyn C# verification and instant code export.",
+      },
+      {
+        tag: "Offline LLM Engine",
+        title: "StratGen Local Azores 1.0 & Cloud BYOK",
+        description:
+          "Execute zero-token local quantitative synthesis directly on your Windows machine, or connect OpenRouter, Claude, OpenAI, and Gemini via local API keys.",
+      },
+      {
+        tag: "600+ Signals",
+        title: "Advanced Signal Analysis",
+        description:
+          "Test over 600 technical and fundamental signals—including Moving Averages, RSI, MACD, Donchian, Elliott Wave, Z-Score, and Open Interest—to isolate repeatable market edges.",
+      },
+      {
+        tag: "Custom OHLCV & Tick",
+        title: "Import Your Own Market Data",
+        description:
+          "Import custom OHLCV, tick, or Open Interest CSV datasets to test futures, equities, forex, crypto, or proprietary series with automatic history caching.",
+      },
+    ],
+  },
+  {
+    groupTitle: "v2 Tensor Validation & Risk Engineering",
+    groupSummary:
+      "Stress-test candidate systems against out-of-sample data, parameter sensitivity, and realistic execution frictions before risking capital.",
+    items: [
+      {
+        tag: "v2 Tensor Engine",
+        title: "v2 Tensor Backtest & Walk-Forward Engine",
+        description:
+          "Run high-speed backtests and multi-window walk-forward optimizations in seconds with realistic slippage, commissions, and session-close handling.",
+      },
+      {
+        tag: "Out-of-Sample & Stress",
+        title: "Comprehensive Backtesting & Optimization",
+        description:
+          "Evaluate strategies across strict In-Sample discovery and Out-of-Sample verification splits to filter out curve-fit parameter sets.",
+      },
+      {
+        tag: "Monte Carlo",
+        title: "Robustness Testing Suite",
+        description:
+          "Validate drawdown distributions and tail risk using single-strategy and portfolio-level Monte Carlo simulations, rolling walk-forward matrices, and stress testing.",
+      },
+      {
+        tag: "Risk & Pyramiding",
+        title: "Position Sizing & Portfolio Tracking",
+        description:
+          "Model fixed dollar risk, percentage equity, fixed notional sizing, and pyramiding scale-ins, then combine systems to inspect portfolio correlation and incubation performance.",
+      },
+    ],
+  },
+  {
+    groupTitle: "Execution Code Export & Live Onboarding",
+    groupSummary:
+      "Move validated strategies directly into your brokerage execution platform with zero manual translation.",
+    items: [
+      {
+        tag: "C# · EasyLanguage · Python",
+        title: "Automatic Code Generation",
+        description:
+          "Export selected strategies or walk-forward parameter schedules as ready-to-compile code for NinjaTrader (NinjaScript C#), TradeStation (EasyLanguage), and Python.",
+      },
+      {
+        tag: "MCP & Local HTTP Bridge",
+        title: "External Agent & IDE Integration",
+        description:
+          "Connect Claude Desktop, Cursor, Windsurf, or custom Python scripts directly to StratGen's engine via the built-in Model Context Protocol (MCP) server and Local HTTP Bridge.",
+      },
+      {
+        tag: "Included with Every Plan",
+        title: "Live Training on Best Practices",
+        description:
+          "Every StratGen license includes live training on quantitative workflow best practices so you can master data setup, out-of-sample validation, and deployment faster.",
+      },
+    ],
+  },
 ];
 
-// Mock buy/sell signals
-const buySignals = [
-  { date: "2025-04-06", price: 52500 },
-  { date: "2025-04-16", price: 56500 },
+const platformModules = [
+  {
+    id: "dashboard",
+    title: "Backtest & Portfolio Dashboard",
+    spec: "Equity Curves · Drawdown · Trade Ledger",
+    description:
+      "Inspect In-Sample vs. Out-of-Sample equity progression, Return-to-Drawdown ratios, Sharpe metrics, and trade-by-trade execution logs across markets.",
+    image: "/stratgen_manual_images/dashboard.jpg",
+    alt: "StratGen algorithmic trading dashboard showing real-time market data, backtesting results, and quantitative analysis for futures and crypto trading",
+  },
+  {
+    id: "signaltester",
+    title: "Signal Tester & Parameter Sweep",
+    spec: "600+ Built-In Signals · Min;Max;Step Grid",
+    description:
+      "Configure Required, Entry, and Exit signal rules with tunable P1/P2 parameter ranges across multi-symbol watchlists.",
+    image: "/stratgen_manual_images/signaltester.jpg",
+    alt: "StratGen signal tester interface for quantitative trading analysis with 600+ technical indicators for algorithmic trading strategies",
+  },
+  {
+    id: "advbacktest",
+    title: "Walk-Forward & Robustness Matrix",
+    spec: "Rolling Windows · Monte Carlo · OOS Verification",
+    description:
+      "Verify parameter stability across rolling historical windows and run Monte Carlo simulations to measure worst-case drawdown probabilities.",
+    image: "/stratgen_manual_images/advbacktest.jpg",
+    alt: "StratGen advanced backtesting interface with robustness testing, Monte Carlo simulations, and out-of-sample analysis for algorithmic trading",
+  },
+  {
+    id: "codinggen",
+    title: "Multi-Platform Code Generator",
+    spec: "NinjaTrader C# · TradeStation · Python",
+    description:
+      "Generate clean, ready-to-compile strategy scripts for NinjaTrader, TradeStation EasyLanguage, and Python directly from any validated backtest row.",
+    image: "/stratgen_manual_images/codinggen.jpg",
+    alt: "StratGen automatic code generator for NinjaTrader, TradeStation, and Python - no-code algorithmic trading strategy export",
+  },
 ];
 
-const sellSignals = [
-  { date: "2025-04-09", price: 53500 },
-  { date: "2025-04-19", price: 57500 },
+const faqs = [
+  {
+    question: "What is StratGen and how does it help with algorithmic trading?",
+    answer:
+      "StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides backtesting, walk-forward and Monte Carlo robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included. It lets you research and validate rule-based trading strategies without writing boilerplate platform code.",
+  },
+  {
+    question: "Can I use StratGen for futures trading, equities trading, and crypto trading?",
+    answer:
+      "Yes. StratGen supports all major asset classes including futures, equities, crypto, and forex. You can import custom OHLCV or tick CSV data from any source to test strategies across different markets and instruments.",
+  },
+  {
+    question: "How many technical indicators and signals does StratGen offer?",
+    answer:
+      "StratGen includes over 600 technical and fundamental signals—such as Moving Averages, RSI, MACD, Bollinger Bands, Donchian Channels, Elliott Wave, Z-Score, and Open Interest—plus a C# MiniSignal editor for compiling custom indicators.",
+  },
+  {
+    question: "What platforms can I export my trading strategies to?",
+    answer:
+      "StratGen automatically generates ready-to-use strategy code for NinjaTrader (NinjaScript C#), TradeStation (EasyLanguage), and Python, including both static parameter exports and walk-forward-aware parameter schedules.",
+  },
+  {
+    question: "What robustness testing tools are available?",
+    answer:
+      "StratGen includes Out-of-Sample (OOS) data splitting, multi-window Walk-Forward Optimization, single-strategy and portfolio Monte Carlo simulations, and cross-strategy correlation matrices to verify how systems perform across changing market regimes.",
+  },
+  {
+    question: "Is StratGen suitable for quantitative traders and systematic researchers?",
+    answer:
+      "Yes. StratGen is built specifically for quantitative traders who require strict In-Sample / Out-of-Sample separation, realistic slippage and commission modeling, position sizing rules, and fast iteration via the v2 Tensor Engine.",
+  },
+  {
+    question: "What operating systems does StratGen support?",
+    answer:
+      "StratGen is a native desktop application for Windows 10 and Windows 11, executing backtests and local AI Copilot workflows directly on your hardware for maximum speed and data privacy.",
+  },
+  {
+    question: "How does the backtesting engine work?",
+    answer:
+      "The v2 Tensor Engine evaluates your entry, exit, and required signal rules against historical bar or tick data with configurable slippage, commissions, profit targets, stop losses, trailing stops, session close flattens, and pyramiding rules.",
+  },
 ];
 
-// Chart configuration
-const chartConfig = {
-  price: { label: "Price", color: "#3b82f6" },
-  sma20: { label: "SMA (20)", color: "#4ade80" },
-  sma50: { label: "SMA (50)", color: "#f97316" },
-  buy: { label: "Buy Signal", color: "#22c55e" },
-  sell: { label: "Sell Signal", color: "#ef4444" },
-};
-
-// Pricing tier
-const pricingTier = {
-  name: "StratGen Premium",
-  monthlyPrice: "$100",
-  lifetimePrice: "$1000",
-  description: "All-inclusive professional trading platform with live training on best practices included",
-  features: [
-    "600+ technical and fundamental signals",
-    "Institutional-grade backtesting",
-    "Import your own custom OHLCV data",
-    "Support for all major asset classes",
-    "Strategy optimization",
-    "Robustness testing tools",
-    "Code export for all platforms (NinjaTrader, TradeStation, Python)",
-    "Strategy automation",
-    "Live training on best practices included",
-    "24/7 priority support"
-  ],
-  cta: "Get Started Today"
-};
-
-// Features list
-const features = [
-  {
-    icon: <ZapIcon className="h-10 w-10 text-primary" />,
-    title: "v2 Tensor Backtest & Walk-Forward Engine",
-    description: "Run backtests and multi-window walk-forward optimizations in seconds with our new v2 Tensor Engine for fast, accurate strategy testing."
-  },
-  {
-    icon: <ZapIcon className="h-10 w-10 text-primary" />,
-    title: "AI Copilot Conversational Studio",
-    description: "Design, backtest, and walk-forward validate quantitative strategies in plain English with autonomous Roslyn C# verification and instant code export."
-  },
-  {
-    icon: <BellIcon className="h-10 w-10 text-primary" />,
-    title: "Live Training on Best Practices Included",
-    description: "Every StratGen plan includes live training on best practices so you can learn the workflow, ask questions in real time, and get up to speed faster."
-  },
-  {
-    icon: <LineChartIcon className="h-10 w-10 text-primary" />,
-    title: "Advanced Signal Analysis",
-    description: "Test over 1000 fundamental and technical signals to identify powerful trading opportunities."
-  },
-  {
-    icon: <BarChartIcon className="h-10 w-10 text-primary" />,
-    title: "Comprehensive Backtesting",
-    description: "Test your trading strategies against historical data to validate performance before risking real capital."
-  },
-  {
-    icon: <ZapIcon className="h-10 w-10 text-primary" />,
-    title: "Strategy Optimization",
-    description: "Fine-tune your trading strategies with our optimization engine that helps identify the most robust parameters."
-  },
-  {
-    icon: <SettingsIcon className="h-10 w-10 text-primary" />,
-    title: "Import your own data",
-    description: "Import OHLCV data to test any instrument - stocks, forex, crypto, or custom datasets for comprehensive backtesting."
-  },
-  {
-    icon: <DownloadIcon className="h-10 w-10 text-primary" />,
-    title: "Robustness testing tools",
-    description: "Validate your strategies with Monte Carlo simulations, walk-forward analysis, and stress testing to ensure they perform in various market conditions."
-  },
-  {
-    icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 3v18h18" />
-      <path d="M7 15l3-3 3 2 5-7" />
-      <path d="M7 10h.01" />
-      <path d="M10 7h.01" />
-      <path d="M13 13h.01" />
-    </svg>,
-    title: "Position Sizing Testing",
-    description: "Test sizing logic with fixed dollar risk, percentage equity, and fixed notional modes, plus pyramiding entry and exit types for more realistic strategy evaluation."
-  },
-  {
-    icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 7h18" />
-      <path d="M6 3h12" />
-      <path d="M6 11h12" />
-      <path d="M8 15h8" />
-      <path d="M10 19h4" />
-    </svg>,
-    title: "Portfolio Tracking",
-    description: "Save and load strategies into portfolios, monitor incubation performance, and run portfolio correlation analysis to understand how systems work together."
-  },
-  {
-    icon: <svg className="h-10 w-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-      <line x1="16" y1="13" x2="8" y2="13" />
-      <line x1="16" y1="17" x2="8" y2="17" />
-      <polyline points="10 9 9 9 8 9" />
-    </svg>,
-    title: "Automatic Code Generation",
-    description: "Export your strategies as ready-to-use code for NinjaTrader, TradeStation, and Python without writing a single line of code yourself."
-  }
+const includedFeatures = [
+  "600+ technical and fundamental signals",
+  "v2 Tensor Backtest & Walk-Forward Engine",
+  "AI Copilot Studio (Local Azores 1.0 & Cloud BYOK)",
+  "Import custom OHLCV, tick, and Open Interest CSV data",
+  "Support for futures, equities, crypto, and forex",
+  "Single-strategy & portfolio Monte Carlo robustness suite",
+  "Code export for NinjaTrader, TradeStation, and Python",
+  "Built-in MCP Server & Local HTTP Bridge for external agents",
+  "Live training on best practices included",
+  "Priority email support & continuous v1.x updates",
 ];
 
 export default function Home() {
-  const [selectedPricingTier, setSelectedPricingTier] = useState<string>("monthly");
-  
   return (
     <>
       <Head>
@@ -227,7 +248,7 @@ export default function Home() {
                   {
                     "@type": "Offer",
                     "name": "Monthly Subscription",
-                    "price": "100.00",
+                    "price": "99.00",
                     "priceCurrency": "USD",
                     "billingIncrement": "P1M",
                     "availability": "https://schema.org/InStock",
@@ -294,13 +315,13 @@ export default function Home() {
                   {
                     "@type": "Offer",
                     "name": "Monthly Subscription",
-                    "price": "100.00",
+                    "price": "99.00",
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/InStock"
                   },
                   {
                     "@type": "Offer",
-                    "name": "Lifetime Access", 
+                    "name": "Lifetime Access",
                     "price": "1000.00",
                     "priceCurrency": "USD",
                     "availability": "https://schema.org/InStock"
@@ -310,503 +331,383 @@ export default function Home() {
               {
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "What is StratGen and how does it help with algorithmic trading?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included. Our platform helps you develop and validate trading strategies without requiring programming knowledge."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can I use StratGen for futures trading, equities trading, and crypto trading?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes, StratGen supports all major asset classes including futures trading, equities trading, crypto trading, and forex. You can import OHLCV data from any source to test strategies across different markets and instruments."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How many technical indicators and signals does StratGen offer?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "StratGen provides access to over 600 technical and fundamental signals including Moving Averages, RSI, MACD, Bollinger Bands, and many more. This comprehensive library allows for extensive quantitative analysis and strategy development."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What platforms can I export my trading strategies to?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "StratGen automatically generates ready-to-use code for NinjaTrader, TradeStation, and Python. This no-code approach means you can develop sophisticated algorithmic trading strategies and deploy them across multiple platforms without writing any code yourself."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What robustness testing tools are available?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "StratGen includes comprehensive robustness testing tools such as Monte Carlo simulations, walk-forward analysis, out-of-sample testing, and stress testing. These tools help ensure your strategies perform consistently across different market conditions."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Is StratGen suitable for quantitative traders and quant trading?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Absolutely. StratGen is specifically designed for quantitative traders who demand rigorous analysis and validation. Our platform provides institutional-grade backtesting, advanced statistical analysis, and comprehensive performance metrics essential for quant trading."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "What operating systems does StratGen support?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "StratGen is available for Windows, providing a robust desktop platform for algorithmic trading and strategy development."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How does the backtesting engine work?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Our advanced backtesting engine allows you to test trading strategies against historical data with detailed performance metrics. It includes features like slippage modeling, commission calculations, and realistic market conditions to provide accurate strategy validation."
-                    }
+                "mainEntity": faqs.map((faq) => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
                   }
-                ]
+                }))
               }
             ])
           }}
         />
       </Head>
-      
+
       <div className="bg-background min-h-screen flex flex-col">
         <Header />
-        
-        {/* Hero Section */}
-        <section id="home" className="relative py-20 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-primary/10 to-background">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 border-primary/20 text-primary">
-                  Version 1.4 Available Now
-                </Badge>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Algorithmic Trading & Backtesting with <span className="text-primary">StratGen</span>
-                </h1>
-                <p className="text-xl text-muted-foreground">
-                  The professional-grade no-code platform for quantitative research and trading, designed for quant traders who demand rigorous out-of-sample testing and robustness analysis, with live training on best practices included.
+
+        <main className="flex-1">
+          {/* Hero Section */}
+          <section id="home" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-border/80">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <div className="lg:col-span-5 space-y-6">
+                  <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
+                    Algorithmic Trading &amp; Backtesting with{" "}
+                    <span className="text-primary">StratGen</span>
+                  </h1>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    The Windows desktop platform for quantitative research and systematic strategy development. Run high-speed backtests on the v2 Tensor Engine, validate with multi-window walk-forward and Monte Carlo tests, export ready-to-compile code for NinjaTrader, TradeStation, and Python, and get up to speed with live training on best practices included.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    <Button size="lg" className="font-semibold" asChild>
+                      <a href="#pricing">
+                        View Plans &amp; Pricing <ArrowRightIcon className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                    <Button size="lg" variant="outline" className="font-medium" asChild>
+                      <Link href="/user-manual">Read v1.4 User Manual</Link>
+                    </Button>
+                  </div>
+
+                  <dl className="grid grid-cols-2 gap-x-6 gap-y-4 pt-6 border-t border-border/80 text-sm">
+                    <div>
+                      <dt className="text-muted-foreground">Core Engine</dt>
+                      <dd className="font-semibold text-foreground mt-0.5 tabular-nums">v2 Tensor &amp; Walk-Forward</dd>
+                    </div>
+                    <div>
+                      <dt className="text-muted-foreground">Signal Library</dt>
+                      <dd className="font-semibold text-foreground mt-0.5 tabular-nums">600+ Built-In &amp; C# Custom</dd>
+                    </div>
+                    <div>
+                      <dt className="text-muted-foreground">Code Export</dt>
+                      <dd className="font-semibold text-foreground mt-0.5">NinjaTrader · TradeStation · Python</dd>
+                    </div>
+                    <div>
+                      <dt className="text-muted-foreground">Platform &amp; Onboarding</dt>
+                      <dd className="font-semibold text-foreground mt-0.5">Windows 10/11 + Live Training</dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <div className="lg:col-span-7">
+                  <figure className="rounded-md overflow-hidden border border-border bg-card shadow-2xl">
+                    <div className="flex items-center justify-between px-4 py-2.5 border-b border-border bg-secondary/60 text-xs text-muted-foreground font-mono">
+                      <span>StratGen v1.4 — Quantitative Research &amp; Walk-Forward Studio</span>
+                      <span className="tabular-nums text-primary">Windows x64</span>
+                    </div>
+                    <div className="relative aspect-video w-full bg-background">
+                      <Image
+                        src="/stratgen_manual_images/homescreen.jpg"
+                        alt="StratGen professional algorithmic trading platform dashboard displaying advanced backtesting results, quantitative analysis charts, and trading signals for automated strategy development"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 58vw"
+                        style={{ objectFit: "contain" }}
+                        priority
+                      />
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Capabilities Architecture Section */}
+          <section id="features" className="py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-border/80">
+            <div className="max-w-7xl mx-auto">
+              <div className="max-w-3xl mb-16">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+                  Built for Rigorous Quantitative Validation
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  StratGen replaces fragile curve-fitting and manual coding with a structured engineering workflow: discover candidate edges across 600+ signals, stress-test them on unseen Out-of-Sample data, and export production strategy code.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="font-medium" asChild>
-                    <a href="#pricing">
-                      Get Started Now <ArrowRightIcon className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <CheckIcon className="h-4 w-4 text-primary" /> Available for Windows
-                </div>
               </div>
-              
-              <div className="rounded-lg overflow-hidden border border-border/40 shadow-xl">
-                {/* StratGen Application Image */}
-                <div className="relative h-[400px] w-full overflow-hidden">
-                  <Image 
-                    src="/stratgen_manual_images/homescreen.jpg"
-                    alt="StratGen professional algorithmic trading platform dashboard displaying advanced backtesting results, quantitative analysis charts, and trading signals for automated strategy development"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Features Section */}
-        <section id="features" className="py-20 px-4 md:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Features for Quantitative & Algo Traders</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                StratGen combines advanced algorithmic trading tools with no-code simplicity and live training on best practices included to help you develop robust strategies for quantitative research and trading.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <Card key={index} className="border border-border/40">
-                  <CardHeader>
-                    <div className="mb-4">{feature.icon}</div>
-                    <CardTitle>{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* Screenshots Section */}
-        <section id="screenshots" className="py-20 px-4 md:px-6 lg:px-8 bg-muted/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">See StratGen's Algorithmic Trading Tools in Action</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Explore our no-code platform designed for quantitative traders and algorithmic strategy developers.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Screenshot 1 - Dashboard */}
-              <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Powerful Dashboard</h3>
-                  <p className="text-muted-foreground mb-4">Monitor multiple markets and strategies at a glance.</p>
-                </div>
-                <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src="/stratgen_manual_images/dashboard.jpg"
-                        alt="StratGen algorithmic trading dashboard showing real-time market data, backtesting results, and quantitative analysis for futures and crypto trading"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Screenshot 2 - Signal Tester */}
-              <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Signal Tester</h3>
-                  <p className="text-muted-foreground mb-4">Test and validate trading signals with comprehensive analysis tools.</p>
-                </div>
-                <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src="/stratgen_manual_images/signaltester.jpg"
-                        alt="StratGen signal tester interface for quantitative trading analysis with 600+ technical indicators for algorithmic trading strategies"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Screenshot 3 - Backtesting */}
-              <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Advanced Backtesting</h3>
-                  <p className="text-muted-foreground mb-4">Test your strategies against historical data with detailed performance metrics.</p>
-                </div>
-                <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src="/stratgen_manual_images/advbacktest.jpg"
-                        alt="StratGen advanced backtesting interface with robustness testing, Monte Carlo simulations, and out-of-sample analysis for algorithmic trading"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Screenshot 4 - Coding Generator */}
-              <div className="rounded-lg overflow-hidden border border-border/40 shadow-lg bg-card">
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">Coding Generator</h3>
-                  <p className="text-muted-foreground mb-4">Automatically generate code for NinjaTrader, TradeStation and Python.</p>
-                </div>
-                <div className="bg-gradient-to-br from-primary/5 to-primary/20 p-8 flex items-center justify-center h-[300px]">
-                  <div className="w-full h-full bg-card rounded-md border border-border/40 shadow-md overflow-hidden">
-                    <div className="relative w-full h-full">
-                      <Image 
-                        src="/stratgen_manual_images/codinggen.jpg"
-                        alt="StratGen automatic code generator for NinjaTrader, TradeStation, and Python - no-code algorithmic trading strategy export"
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* FAQ Section */}
-        <section id="faq" className="py-20 px-4 md:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-muted-foreground">
-                Common questions about StratGen's algorithmic trading and backtesting platform
-              </p>
-            </div>
-            
-            <div className="space-y-6">
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">What is StratGen and how does it help with algorithmic trading?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    StratGen is a professional no-code algorithmic trading platform designed for quantitative traders. It provides advanced backtesting, robustness testing, automatic code generation for NinjaTrader, TradeStation, and Python, and live training on best practices included. Our platform helps you develop and validate trading strategies without requiring programming knowledge.
-                  </p>
-                </CardContent>
-              </Card>
 
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">Can I use StratGen for futures trading, equities trading, and crypto trading?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Yes, StratGen supports all major asset classes including futures trading, equities trading, crypto trading, and forex. You can import OHLCV data from any source to test strategies across different markets and instruments.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">How many technical indicators and signals does StratGen offer?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    StratGen provides access to over 600 technical and fundamental signals including Moving Averages, RSI, MACD, Bollinger Bands, and many more. This comprehensive library allows for extensive quantitative analysis and strategy development.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">What platforms can I export my trading strategies to?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    StratGen automatically generates ready-to-use code for NinjaTrader, TradeStation, and Python. This no-code approach means you can develop sophisticated algorithmic trading strategies and deploy them across multiple platforms without writing any code yourself.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">What robustness testing tools are available?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    StratGen includes comprehensive robustness testing tools such as Monte Carlo simulations, walk-forward analysis, out-of-sample testing, and stress testing. These tools help ensure your strategies perform consistently across different market conditions.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">Is StratGen suitable for quantitative traders and quant trading?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Absolutely. StratGen is specifically designed for quantitative traders who demand rigorous analysis and validation. Our platform provides institutional-grade backtesting, advanced statistical analysis, and comprehensive performance metrics essential for quant trading.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">What operating systems does StratGen support?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    StratGen is available for Windows, providing a robust desktop platform for algorithmic trading and strategy development.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border border-border/40">
-                <CardHeader>
-                  <CardTitle className="text-lg">How does the backtesting engine work?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Our advanced backtesting engine allows you to test trading strategies against historical data with detailed performance metrics. It includes features like slippage modeling, commission calculations, and realistic market conditions to provide accurate strategy validation.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 md:px-6 lg:px-8" id="pricing">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Choose Your StratGen Plan</h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Join thousands of quantitative traders who use StratGen's no-code platform to develop robust strategies, perform backtesting, generate trading signals with automatic code generation, and learn faster with live training on best practices included.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-2 border-primary/20 shadow-xl">
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-2xl font-bold">StratGen Premium</CardTitle>
-                  <CardDescription className="text-lg">
-                    All-inclusive professional trading platform with live training on best practices included
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-8">
-                  {/* Pricing Options */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Monthly Plan */}
-                    <div className="border border-border/40 rounded-lg p-6 text-center">
-                      <h3 className="text-lg font-semibold mb-2">Monthly</h3>
-                      <div className="text-3xl font-bold mb-4">$99<span className="text-lg font-normal text-muted-foreground">/month</span></div>
-                      <Button size="lg" className="w-full font-medium" asChild>
-                        <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6G695380H8515921NNBFO5IQ" target="_blank" rel="noopener noreferrer">
-                          Subscribe Monthly <ArrowRightIcon className="ml-2 h-4 w-4" />
-                        </a>
-                      </Button>
-                    </div>
-                    
-                    {/* Lifetime Plan */}
-                    <div className="border-2 border-primary rounded-lg p-6 text-center relative">
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                        <Badge className="bg-primary text-primary-foreground px-3 py-1">Save $188</Badge>
+              <div className="divide-y divide-border border-t border-b border-border">
+                {capabilityGroups.map((group, groupIdx) => (
+                  <div
+                    key={group.groupTitle}
+                    className="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12"
+                  >
+                    <div className="lg:col-span-4 space-y-3">
+                      <div className="font-mono text-xs text-primary tabular-nums">
+                        0{groupIdx + 1} / 0{capabilityGroups.length}
                       </div>
-                      <h3 className="text-lg font-semibold mb-2">Lifetime</h3>
-                      <div className="text-3xl font-bold mb-2">$1000<span className="text-lg font-normal text-muted-foreground"> one-time</span></div>
-                      <div className="text-sm text-muted-foreground mb-4">Lifetime access</div>
-                      <Button size="lg" className="w-full font-medium" asChild>
-                        <a href="https://codealgotrading.com/l/pdp/coding-great-trading-bots" target="_blank" rel="noopener noreferrer">
-                          Buy Lifetime <ArrowRightIcon className="ml-2 h-4 w-4" />
-                        </a>
-                      </Button>
+                      <h3 className="text-2xl font-bold tracking-tight text-foreground">
+                        {group.groupTitle}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {group.groupSummary}
+                      </p>
                     </div>
-                  </div>
-                  
-                  {/* Features List */}
-                  <div className="border-t border-border/40 pt-8">
-                    <h4 className="text-lg font-semibold mb-6 text-center">Everything Included:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {[
-                        "600+ technical and fundamental signals",
-                        "Institutional-grade backtesting",
-                        "Import your own custom OHLCV data",
-                        "Support for all major asset classes",
-                        "Strategy optimization",
-                        "Robustness testing tools",
-                        "Code export for all platforms (NinjaTrader, TradeStation, Python)",
-                        "Strategy automation",
-                        "Live training on best practices included",
-                        "24/7 priority support"
-                      ].map((feature, index) => (
-                        <div key={index} className="flex items-center gap-3">
-                          <CheckIcon className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+
+                    <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-8">
+                      {group.items.map((item) => (
+                        <div key={item.title} className="space-y-2 border-l border-border pl-5">
+                          <div className="font-mono text-xs text-primary">
+                            {item.tag}
+                          </div>
+                          <h4 className="text-base font-semibold text-foreground">
+                            {item.title}
+                          </h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {item.description}
+                          </p>
                         </div>
                       ))}
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-                  {/* Refund Policy */}
-                  <div className="border-t border-border/40 pt-6">
-                    <div className="bg-muted/30 rounded-lg p-4">
-                      <h5 className="font-semibold mb-2 text-center">Subscription &amp; Licensing Policy</h5>
-                      <p className="text-sm text-muted-foreground text-center">
-                        We do not offer refunds. Monthly subscriptions can be canceled at any time and will not be billed thereafter. Lifetime access is a one-time purchase. By subscribing or purchasing, you agree to WeTradeLabs Inc.&apos;s{" "}
-                        <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium">
-                          Terms &amp; Conditions
-                        </Link>{" "}
-                        and{" "}
-                        <Link href="/privacy-policy" className="text-primary hover:underline font-medium">
-                          Privacy Policy
-                        </Link>
-                        .
+          {/* Screenshots / Workbench Section */}
+          <section id="screenshots" className="py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-card/40 border-b border-border/80">
+            <div className="max-w-7xl mx-auto">
+              <div className="max-w-3xl mb-14">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+                  Inside the StratGen Desktop Workbench
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Inspect the actual Windows interface used to configure signal rules, evaluate out-of-sample equity curves, run walk-forward matrices, and generate platform code.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {platformModules.map((mod) => (
+                  <figure
+                    key={mod.id}
+                    className="rounded-md overflow-hidden border border-border bg-card flex flex-col justify-between"
+                  >
+                    <figcaption className="p-6 border-b border-border space-y-2">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <h3 className="text-lg font-semibold text-foreground">
+                          {mod.title}
+                        </h3>
+                        <span className="font-mono text-xs text-primary">
+                          {mod.spec}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {mod.description}
                       </p>
+                    </figcaption>
+                    <div className="relative aspect-video w-full bg-background">
+                      <Image
+                        src={mod.image}
+                        alt={mod.alt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section id="pricing" className="py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-border/80">
+            <div className="max-w-7xl mx-auto">
+              <div className="max-w-3xl mb-14">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+                  Straightforward Licensing with Live Training Included
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Every StratGen license unlocks the full desktop software—including the v2 Tensor Engine, AI Copilot, all 600+ signals, unlimited code exports, and live training on best practices.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Monthly Plan */}
+                <div className="lg:col-span-4 rounded-md border border-border bg-card p-7 flex flex-col justify-between space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-bold text-foreground">Monthly License</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Flexible month-to-month access. Cancel anytime with no future billing.
+                    </p>
+                    <div className="pt-2 flex items-baseline gap-1.5 tabular-nums">
+                      <span className="text-4xl font-bold text-foreground">$99</span>
+                      <span className="text-sm text-muted-foreground">USD / month</span>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        
 
-        
-        {/* Risk Disclaimer Section */}
-        <section id="disclaimer" className="py-12 px-4 md:px-6 lg:px-8 bg-muted/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2">Risk Disclaimer</h2>
-            </div>
-            <div className="prose prose-sm max-w-4xl mx-auto text-muted-foreground">
-              <div className="bg-card border border-border/40 rounded-lg p-6 shadow-sm">
-                <h3 className="text-lg font-medium mb-4">Trading Risk Disclosure</h3>
-                <p className="mb-3">
-                  <strong>Risk of Loss:</strong> Trading in financial markets involves substantial risk of loss and is not suitable for all investors. The value of investments can go down as well as up, and investors may lose all of their investment.
-                </p>
-                <p className="mb-3">
-                  <strong>No Guarantees:</strong> StratGen is a tool designed to assist with trading decisions, but it does not guarantee profits or prevent losses. Past performance of any trading system or methodology is not necessarily indicative of future results.
-                </p>
-                <p className="mb-3">
-                  <strong>Software Limitations:</strong> While StratGen is designed to be reliable and accurate, technical issues, data errors, or other factors may affect its performance. Users should not rely solely on the software for trading decisions.
-                </p>
-                <p className="mb-3">
-                  <strong>Hypothetical Performance:</strong> Any backtesting results, simulations, or hypothetical performance shown are for illustrative purposes only. They do not represent actual trading and may not account for all market factors or risks.
-                </p>
-                <p className="mb-3">
-                  <strong>Professional Advice:</strong> The information provided by StratGen is not intended to be a substitute for professional financial advice. We recommend consulting with a qualified financial advisor before making investment decisions.
-                </p>
-                <p className="mb-3">
-                  <strong>User Responsibility:</strong> Users are solely responsible for their trading decisions and should conduct their own research and due diligence before placing trades based on signals generated by StratGen.
-                </p>
-                <p>
-                  By using StratGen, you acknowledge that you have read and understood this risk disclaimer, our{" "}
-                  <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium">
-                    Terms &amp; Conditions
-                  </Link>
-                  , and our{" "}
-                  <Link href="/privacy-policy" className="text-primary hover:underline font-medium">
-                    Privacy Policy
-                  </Link>
-                  , and agree to assume full responsibility for your trading decisions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Footer */}
-        <footer id="footer" className="py-12 px-4 md:px-6 lg:px-8 border-t">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start">
-              <div className="mb-8 md:mb-0">
-                <h3 className="font-bold text-lg mb-4">StratGen</h3>
-                <p className="text-muted-foreground mb-4 max-w-md">
-                  Professional algorithmic trading platform by WeTradeLabs Inc. for quantitative research and trading with backtesting, robustness testing, no-code strategy development, and live training on best practices included.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-4">
-                <div>
-                  <h4 className="text-sm font-semibold mb-4">Platform</h4>
+                  <Button size="lg" variant="outline" className="w-full font-semibold" asChild>
+                    <a
+                      href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-6G695380H8515921NNBFO5IQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Subscribe Monthly <ArrowRightIcon className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Lifetime Plan */}
+                <div className="lg:col-span-4 rounded-md border-2 border-primary bg-card p-7 flex flex-col justify-between space-y-6">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-2">
+                      <h3 className="text-xl font-bold text-foreground">Lifetime License</h3>
+                      <span className="font-mono text-xs font-semibold text-primary tabular-nums">
+                        Save $188 vs. Year 1
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      One-time purchase for permanent desktop access and all future v1.x updates.
+                    </p>
+                    <div className="pt-2 flex items-baseline gap-1.5 tabular-nums">
+                      <span className="text-4xl font-bold text-foreground">$1,000</span>
+                      <span className="text-sm text-muted-foreground">USD one-time</span>
+                    </div>
+                  </div>
+
+                  <Button size="lg" className="w-full font-semibold" asChild>
+                    <a
+                      href="https://codealgotrading.com/l/pdp/coding-great-trading-bots"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Buy Lifetime Access <ArrowRightIcon className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Included Checklist & Policy */}
+                <div className="lg:col-span-4 rounded-md border border-border bg-background p-7 space-y-6">
+                  <h3 className="text-base font-semibold text-foreground">
+                    Included in Both Plans
+                  </h3>
                   <ul className="space-y-3">
+                    {includedFeatures.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <CheckIcon className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="border-t border-border pt-5 space-y-1.5">
+                    <p className="text-xs font-semibold text-foreground">
+                      Subscription &amp; Licensing Policy
+                    </p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      All sales are final; we do not offer refunds. Monthly subscriptions can be canceled at any time and will not be billed thereafter. Lifetime access is a one-time purchase. By subscribing or purchasing, you agree to WeTradeLabs Inc.&apos;s{" "}
+                      <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium">
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link href="/privacy-policy" className="text-primary hover:underline font-medium">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section id="faq" className="py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-border/80">
+            <div className="max-w-7xl mx-auto">
+              <div className="max-w-3xl mb-14">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Technical answers regarding supported markets, signal libraries, validation workflows, and code export.
+                </p>
+              </div>
+
+              <dl className="divide-y divide-border border-t border-b border-border">
+                {faqs.map((faq) => (
+                  <div
+                    key={faq.question}
+                    className="py-7 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8"
+                  >
+                    <dt className="md:col-span-5 text-base font-semibold text-foreground">
+                      {faq.question}
+                    </dt>
+                    <dd className="md:col-span-7 text-sm sm:text-base text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </section>
+
+          {/* Risk Disclaimer Section */}
+          <section id="disclaimer" className="py-16 px-4 sm:px-6 lg:px-8 bg-card/30">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div className="lg:col-span-4">
+                  <h2 className="text-xl font-bold text-foreground mb-2">
+                    Trading Risk Disclosure
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    Mandatory financial and software disclaimers for quantitative research and automated trading.
+                  </p>
+                </div>
+                <div className="lg:col-span-8 space-y-3 text-xs sm:text-sm text-muted-foreground leading-relaxed border-l border-border pl-6">
+                  <p>
+                    <strong className="text-foreground">Risk of Loss:</strong> Trading in financial markets involves substantial risk of loss and is not suitable for all investors. The value of investments can go down as well as up, and investors may lose all of their investment.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">No Guarantees:</strong> StratGen is a tool designed to assist with trading decisions, but it does not guarantee profits or prevent losses. Past performance of any trading system or methodology is not necessarily indicative of future results.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Software Limitations:</strong> While StratGen is designed to be reliable and accurate, technical issues, data errors, or other factors may affect its performance. Users should not rely solely on the software for trading decisions.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Hypothetical Performance:</strong> Any backtesting results, simulations, or hypothetical performance shown are for illustrative purposes only. They do not represent actual trading and may not account for all market factors or risks.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Professional Advice:</strong> The information provided by StratGen is not intended to be a substitute for professional financial advice. We recommend consulting with a qualified financial advisor before making investment decisions.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">User Responsibility:</strong> Users are solely responsible for their trading decisions and should conduct their own research and due diligence before placing trades based on signals generated by StratGen.
+                  </p>
+                  <p>
+                    By using StratGen, you acknowledge that you have read and understood this risk disclaimer, our{" "}
+                    <Link href="/terms-and-conditions" className="text-primary hover:underline font-medium">
+                      Terms &amp; Conditions
+                    </Link>
+                    , and our{" "}
+                    <Link href="/privacy-policy" className="text-primary hover:underline font-medium">
+                      Privacy Policy
+                    </Link>
+                    , and agree to assume full responsibility for your trading decisions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        {/* Footer */}
+        <footer id="footer" className="py-12 px-4 sm:px-6 lg:px-8 border-t border-border">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+              <div className="max-w-sm">
+                <p className="font-bold text-lg text-foreground mb-3">StratGen</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Professional algorithmic trading platform by WeTradeLabs Inc. for quantitative research, backtesting, robustness validation, and automated code export, with live training on best practices included.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+                <div>
+                  <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Platform</p>
+                  <ul className="space-y-2.5">
                     <li>
                       <Link href="/#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        Features
+                        Capabilities
                       </Link>
                     </li>
                     <li>
@@ -831,10 +732,10 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h4 className="text-sm font-semibold mb-4">Resources</h4>
-                  <ul className="space-y-3">
+                  <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Resources</p>
+                  <ul className="space-y-2.5">
                     <li>
                       <Link href="/what-is-stratgen" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         What is StratGen?
@@ -859,8 +760,8 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold mb-4">Legal</h4>
-                  <ul className="space-y-3">
+                  <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Legal</p>
+                  <ul className="space-y-2.5">
                     <li>
                       <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         Privacy Policy
@@ -878,21 +779,21 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div>
-                  <h4 className="text-sm font-semibold mb-4">Contact</h4>
-                  <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-primary hover:text-primary/80 font-medium">
-                    Contact Us
+                  <p className="text-xs font-semibold tracking-wider text-foreground mb-4">Contact</p>
+                  <a href="mailto:jacob@wetradelabs.com?subject=StratGen&body=Hey%2C%20I%20am%20interested%20in%20StratGen%20and%20wanted%20to%20know%20more!" className="text-sm text-primary hover:text-primary/80 font-medium">
+                    jacob@wetradelabs.com
                   </a>
                 </div>
               </div>
             </div>
-            
-            <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-              <p className="text-sm text-muted-foreground">
+
+            <div className="mt-10 pt-8 border-t border-border/60 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+              <p className="text-xs text-muted-foreground">
                 © {new Date().getFullYear()} WeTradeLabs Inc. All rights reserved. StratGen™ is a trademark of WeTradeLabs Inc.
               </p>
-              <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-6 text-xs text-muted-foreground">
                 <Link href="/privacy-policy" className="hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
